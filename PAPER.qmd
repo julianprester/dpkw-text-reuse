@@ -30,23 +30,6 @@ csl: https://raw.githubusercontent.com/citation-style-language/styles/master/apa
 link-citations: true
 ---
 
-<!--
-Architecture (2026-08-20)
-
-- Intro: Lindberg funnel. Do not argue the process model here.
-- Conceptual Development: signaling account → where it runs out → three properties of circulating text, derived from that break (not a third theory). No propositions. No $15/$20.
-- Method / Findings: Lindberg 2024. One event (exact reuse). Table 4 operationalizes. Table 6 is the one results table. Findings walk that table.
-- Theory Development: after the facts. Name the two registers. P1–P3. Figure 7.
-- Discussion: contributions only once the model exists.
-
-Locked
-- Text reuse only. STM is the follow-up paper.
-- Exact match (J = 1.0) is the core. J ≥ 0.7 is robustness.
-- Directionality is complementary. Timestamps are profile-level.
-- Numbers from results/BIBLE.md only (360,599). Never mix the 415,254 sample.
-- Named construct: platform legitimation scripts / self-presentation templates. Not vicarious signaling.
--->
-
 ## Introduction
 
 Before a freelancer on an online labor platform can ever demonstrate quality, they must become recognizable. The platform asks each new worker for a public profile: a title, a description, a rate. There is no employer to vouch for them, no human resources department to frame their skills, no professional association to certify their standing. The worker who has just registered — no hours, no jobs, no ratings — faces a simple, consequential task: write a description that will make a stranger trust them with paid work. And the platform itself shows them how, because every other worker's profile is visible. The most natural thing for a newcomer to do, under uncertainty, is to look at what established workers have written and to borrow.
@@ -61,11 +44,7 @@ The question matters for three reasons. First, if the profile text is copied rat
 
 To answer it, we conducted a data-driven, computationally intensive study of textual reuse in online labor market self-presentation [@BerenteSeidelSafadi2019; @MirandaBerenteSeidelEtAl2022]. We collected 360,599 public worker profiles from Upwork, detected sentences that appear verbatim across profiles using text reuse methods [@WilkersonEtAl2015], and examined how that reuse is structured. We find that reuse is widespread: more than a quarter of public profiles contain at least one sentence that appears verbatim in another profile, and the reused sentences are concentrated in a small repertoire of occupation-neutral virtue claims. That repertoire is not organized by occupation — within-occupation reuse is flat at every level of similarity — but by country, and it is concentrated among workers charging less. We develop these findings into a two-register model of platform self-presentation: a pooling register at market entry, where workers assemble their profiles from circulating scripts that claim membership, and a separating register once workers possess a platform-verified track record. Our study makes three contributions. Empirically, it provides the first population-scale account of the structure of textual reuse in freelancer self-presentation. Theoretically, it shows that the signaling account describes only the second act of a worker's presentation — that differentiation is preceded by a legitimation stage the theory never modeled, and that the scripts which solve entry also hold workers in an interchangeable, low-rate register. Methodologically, it demonstrates text reuse as an instrument for studying imitation at the level of markets.
 
----
-
 ## Conceptual Development
-
-<!-- Croidieu: argument, not codebook. Miranda: short, sensitizing. Stop before propositions. -->
 
 ### The Signaling Account of Self-Presentation
 
@@ -94,8 +73,6 @@ Once a signal can be pasted, the object of study is no longer the individual por
 **Positional alignment** is the third. The signaling account expects newcomers to differentiate: they have the most to prove and the least verified history. Cheap, reused text, if it is doing quality work, should not systematically mark the low-rate pole. The membership problem implies the reverse. Actors become recognizable in a field not only by acquiring costly credentials but also by adopting a form that already counts as legitimate — where legitimacy means a generalized perception that one's presentation is proper and appropriate in that field [@Suchman1995]. Croidieu and Kim [-@CroidieuKim2018] show that pathway for amateur radio operators, who gained standing as field experts without professionalizing. The analogue here is the freelancer who becomes legible as a platform worker without a track record. If reused language marks the low-rate, low-experience pole, we are looking at pooling among entrants rather than separation: workers who look alike because looking alike is the entry requirement. Where reused language sits in the distribution of rates, jobs, and experience tells us which of those two jobs the description is doing.
 
 These three properties are what the rest of the paper measures. They do not commit us to a membership theory, a genre theory, or a repaired signaling theory. They specify what would have to be true of circulating text for each reading to stand. If reuse is occupational, rises with similarity, and sits among higher-rate workers, the received account survives in the description field. If it is occupation-flat, locally transmitted, and concentrated where costly signals are absent, the description is doing membership work first. Naming that pattern, and locating signaling after it, is the task of the theory development, not of this section.
-
----
 
 ## Research Method
 
@@ -204,8 +181,6 @@ Computational detection is not the end of the analysis [@Nelson2020]. In the ref
 
 The close reading is illustration of form, not a second study of script content. We do not code a full typology of reused sentences in this paper, and we do not project copied sentences onto a topic model of the whole corpus. Those are the natural next analyses once the structure of reuse is established. What we need here is enough reading to say what kind of language circulates, and enough structure to say how it is organized.
 
----
-
 ## Findings
 
 We present the findings in three steps, mirroring the analytic sequence. First we establish that reuse is a genuine, widespread event and describe the form it takes. We then examine how that event is structured along the three properties the conceptual development made relevant: occupational specificity, transmission proximity, and positional alignment. Finally we summarize the structure in a comparison of two segments of the market. All quantities are computed on the 360,599-worker analytic sample; the main text reports exact matches (J = 1.0) unless a threshold is stated.
@@ -313,8 +288,6 @@ Third, the country result is not driven by a few large markets. Restricting the 
 
 Fourth, the directionality pattern is stable across operationalizations. The prestige gradient holds for high-confidence and medium-confidence directed edges alike, and it strengthens, rather than weakens, for pairs that cross both country and occupation boundaries — 73.5% of edges flow downward among the most distant pairs. We emphasize again that these are descriptive patterns on profile-level timestamps, not identifications of individual acts of copying.
 
----
-
 ## Theory Development
 
 Our findings show that textual self-presentation on the platform is organized into two registers: a large pool whose descriptions are assembled from a small repertoire of circulating scripts, and a majority outside the pool whose descriptions are shorter, more distinctive, and associated with higher rates. The pattern is not what the signaling account predicts for the point of self-presentation, and it is not what occupational genre predicts for the content of professional language. In this section we interpret that pattern and develop the theory it supports. Following the abductive logic of computationally intensive theory development [@Lindberg2020; @MirandaBerenteSeidelEtAl2022], we triangulate the structural findings with the scripts themselves as qualitative evidence, and with the literatures on signaling, legitimacy, and mimetic isomorphism. As in the findings, propositions are stated relative to the baseline provided by the register outside the script pool.
@@ -388,8 +361,6 @@ flowchart LR
   B2 --> B3
 ```
 
----
-
 ## Discussion
 
 This research examined how textual self-presentation is organized in an online labor market, using text reuse to observe the circulation of profile language across 360,599 public worker profiles. We found that a large share of the market's self-presentation is assembled from a small repertoire of occupation-neutral virtue scripts, that those scripts circulate along country lines rather than occupational ones, and that they concentrate among workers at the lower-rate pole of the market. Below we detail the implications for theory and practice, state the limitations, and suggest future research.
@@ -426,13 +397,9 @@ For clients, the findings counsel discounting virtue prose. The most polished cl
 
 Several limitations define the study's boundaries. The data are cross-sectional: we observe the two registers at one point in time and infer the passage between them, so the trap proposition is the most direct target for longitudinal work on cohorts of script adopters. Our directionality evidence is a pattern, not pair-level identification — profile timestamps do not record when a sentence was written — and the theoretical reading is a reading of the pattern, not of any worker's motive; interviews with workers about how they wrote their profiles would test it directly. The study is bounded to one platform, one language, and one moment. Upwork's unusually open visibility regime may make it an upper bound on the phenomenon, and the 2023 snapshot predates the saturation of generative AI in profile writing — if LLMs now author descriptions at scale, circulation may have shifted from sentence reuse to template reuse, a question for the 2025 data. Finally, the boundaries of our constructs are research decisions, not discoveries: the registers are poles of a continuous distribution, robust to the definition of reuse rather than cleanly separated by it. A focused content analysis of the copied repertoire — what the scripts claim and how they are built — remains the natural follow-up, now that its structure is established.
 
----
-
 ## Conclusion
 
 Online labor markets are usually theorized as signaling environments, in which workers differentiate themselves through costly self-presentation. This study shows that a large share of the market is doing something prior, and different: assembling profiles from circulating, occupation-neutral scripts that claim membership rather than quality. Differentiation happens, but it comes later, and by other means — the platform-verified record that cannot be copied. The theoretical consequence is a boundary condition on signaling's most successful account: in markets where the medium of self-presentation is public and its forms are reusable, recognition precedes separation, and the forms that enable entry are the same forms that hold workers at the bottom of the market. The task for future research is to watch the passage — to track whether workers escape the register they entered, and what, if anything, funds the exit.
-
----
 
 ## References
 

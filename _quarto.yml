@@ -1,0 +1,13 @@
+project:
+  type: default
+  render:
+    - PAPER.qmd
+
+format:
+  html:
+    toc: true
+    number-sections: true
+    toc-location: left
+    mermaid:
+      theme: default
+  docx: default

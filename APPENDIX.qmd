@@ -1,0 +1,114 @@
+# Appendices {.unnumbered}
+
+These appendices document sample construction, the text-reuse pipeline, and the measurement of occupational specificity, transmission proximity, and positional alignment. The main text reports exact-match results. Near-copy (J ≥ 0.7) and the J ≥ 0.3 bound appear only as robustness.
+
+## Appendix A. Sample Construction and Preprocessing {#sec-app-sample}
+
+### Collection
+
+We collected freelancer profiles from Upwork through the platform's public REST API in September 2023. The starting list of profile identifiers spanned every occupational category the platform uses. We applied no filter on occupation, experience, geography, or earnings. The unit of collection is the public profile at the time of the scrape.
+
+Profile visibility is an architectural fact of the platform, not a sampling choice. Profiles are public by default. The platform sets a profile to private after 90 days of inactivity, and workers can hide a profile at any time. The corpus is therefore the public, active population — the workers a client or another freelancer can actually read — not the full registry of accounts.
+
+For each profile we stored the worker identifier, title, description, country, primary occupation list, self-reported hourly rate, total hours, total jobs, rating, and the profile-level timestamps `created_at` and `updated_at`.
+
+### Analytic sample
+
+A profile enters the analytic sample if it has a description that yields at least one sentence of 8 to 50 words after cleaning (Appendix B). Profiles whose remaining content vocabulary is vanishingly rare — no non-stop, non-numeric word that appears more than 100 times in the corpus — are also excluded, because they cannot support a stable comparison of reused language. The resulting analytic sample is 360,599 workers.
+
+@tbl-sample summarizes the sample. Median hours and jobs are low: the typical public profile has little verified history. That is the population for whom a membership problem is live.
+
+| | Value |
+|---|---|
+| Workers | 360,599 |
+| Median hours worked | 9 |
+| Median jobs completed | 4 |
+| Mean description length (words) | 165 |
+| Occupations (largest) | Web, Mobile & Software Dev; Design & Creative; Customer Service; Accounting & Consulting; Admin Support |
+| Countries (largest) | Pakistan; India; United States; Philippines; Bangladesh |
+
+: Analytic sample {#tbl-sample}
+
+### Occupation and country
+
+The platform stores occupations as a list. We take the first listed category as the primary occupation (for example, `Web, Mobile & Software Dev`). Country is the profile's self-reported country. Both fields are missing for a small share of workers; pairs with a missing value on a given field are dropped from comparisons that use that field, not from the reuse detection itself.
+
+## Appendix B. Detecting Text Reuse {#sec-app-reuse}
+
+### Why text reuse
+
+Two descriptions can share a theme without sharing a sentence. Topic models and other bag-of-words measures recover the first and miss the second [@GrimmerStewart2013]. Legislative scholars faced the same problem when they needed to know whether two bills shared a provision rather than a topic, and turned to text reuse [@WilkersonEtAl2015; @LinderEtAl2020]. We do the same. A reuse event is observable overlap in wording, not inferred thematic kinship.
+
+### Sentence corpus
+
+We treat the sentence as the unit of comparison because profile descriptions are assembled from discrete claims. A worker who copies typically takes a sentence, not a whole page, and often substitutes an occupation word while leaving the rest intact.
+
+Cleaning is light. We normalize line breaks and collapse repeated whitespace. We do not strip stopwords or digits before comparison: those tokens are part of the wording we are trying to match. We then split each description with a standard sentence tokenizer and retain sentences of 8 to 50 words. The lower bound drops fragments (`I am a freelancer.`). The upper bound drops run-on lists that are closer to documents than to claims. Remaining sentences are lowercased. Each sentence receives a stable identifier tied to its worker.
+
+### Candidate generation and scoring
+
+Comparing every sentence to every other sentence is quadratic in the size of the corpus and is not feasible. We use the standard two-stage design from large-scale reuse detection [@WilkersonEtAl2015].
+
+First, each sentence is represented as the set of its word 5-grams and hashed with a 240-permutation MinHash signature. Locality-sensitive hashing with 60 bands then returns candidate pairs that are likely to share shingles. Second, we compute the exact Jaccard similarity of the 5-gram sets for every candidate:
+
+$$
+J(A,B) = \frac{|A \cap B|}{|A \cup B|}
+$$
+
+The procedure yields 12.5 million scored sentence pairs. We drop pairs in which both sentences belong to the same worker.
+
+Word 5-grams preserve order, so two sentences that share a vocabulary but not a sequence do not match. They also tolerate a short substitution (an occupation or technology word) without treating the rest of the sentence as new. We implemented the pipeline in R with the `textreuse` package [@Mullen2016].
+
+### Thresholds
+
+Jaccard similarity is a continuous score. We use three cutoffs, each with a different role.
+
+- **Exact (J = 1.0).** The two sentences are identical after lowercasing. This is the evidentiary core of the paper. It is the hardest standard to dismiss as convergent phrasing.
+- **Near-copy (J ≥ 0.7).** The sentences share most of their 5-grams. Manual inspection of candidates in this band shows occupation or tool substitutions inside an otherwise copied claim. We use this band for robustness and to define script-pool membership (Appendix C).
+- **Sensitivity (J ≥ 0.3).** A loose bound used only to check that qualitative conclusions do not flip when the definition of reuse is relaxed. We do not interpret pairs in this band as copies.
+
+A worker is involved in reuse at a given threshold if at least one of that worker's sentences appears in a cross-worker pair at or above the threshold. *Copied share* is the proportion of the worker's sentences that are so involved.
+
+### What this is not
+
+The method detects overlap. It does not observe the act of copying. Two workers may share a sentence because one copied the other, because both copied a third profile, because both used a tutorial, an agency template, or a course, or because a later editor generated the text. We interpret overlap as evidence that a form is circulating, not as a verdict on any one worker's intent.
+
+The method is also not a genealogy of authorship. Profile timestamps do not record when a sentence was written (Appendix C).
+
+## Appendix C. Operationalizing the Structure of Reuse {#sec-app-ops}
+
+All structural measures are defined on the reuse events from Appendix B. We do not introduce a second corpus or a second detector.
+
+### Form: scripts
+
+A *script* is a sentence text that appears, verbatim, in many profiles. We count distinct workers per unique sentence string. The most-shared sentences are few relative to the corpus: the single most frequent sentence appears in 479 profiles (0.14% of workers) and the top 100 sentences account for about half of exact-match pairs. That combination — concentration of pairs in a small set of sentences, without any sentence becoming platform-wide boilerplate — is what we mean by a repertoire.
+
+We close-read the leading scripts to establish form. The reading asks what kind of claim the sentence makes (a virtue pledge, a process promise, a call to action, a tool list), not which topic model it would load on.
+
+### Occupational specificity
+
+For each scored sentence pair we record whether the two workers share a primary occupation. We then compute the share of pairs that are within-occupation inside successive similarity bands (below 0.5, 0.5–0.7, 0.7–0.8, 0.8–0.9, and 0.9–1.0). Occupational genre and skill signaling both predict that this share should rise as wording converges. A flat series is the occupation-neutral result reported in Table 6.
+
+As a secondary check we also compute Newman's assortativity on the worker-level reuse graph at several Jaccard thresholds, relative to the occupation mix that random mixing would produce. The banded pair share is the quantity in the main text; assortativity is a robustness view of the same comparison.
+
+### Transmission proximity
+
+Country match is defined analogously. The quantity in Table 6 is the lift in the exact-match rate for same-country pairs relative to different-country pairs. Assortativity on country, again relative to random mixing, is the secondary check. We report both because a high volume of pairs among large countries can inflate raw same-country counts without implying homophily.
+
+### Positional alignment
+
+*Script-pool membership* is a worker-level indicator: the worker has at least one sentence in a cross-worker pair at J ≥ 0.7. Workers in the pool are compared with workers outside it on hourly rate, jobs completed, hours, and description length. This is a contrast of registers, not a contrast of “sources” with “imitators.”
+
+*Prestige* is a composite of standardized $\log(1 + \text{hours})$ and $\log(1 + \text{jobs})$. For a directed pair we compute the difference between the earlier worker and the later worker on this composite, and the share of pairs in which the earlier worker ranks higher.
+
+### Directionality protocol
+
+`created_at` and `updated_at` are properties of the profile, not of a sentence. A worker who joined in 2018 and edited a description in 2023 has a late `updated_at` even if the shared sentence was already on the page. We therefore do not treat timestamps as sentence authorship, and we do not make directionality a main claim.
+
+For the complementary pattern we assign a tentative source and copier with a three-tier rule:
+
+- **High confidence.** The two `created_at` values differ by more than 90 days, and the later worker's `updated_at` is after the earlier worker's `updated_at`.
+- **Medium confidence.** The `created_at` gap exceeds 90 days, but the `updated_at` order is missing or inconsistent.
+- **Low confidence.** The `created_at` gap is 90 days or less. We break the tie with the prestige composite and flag the pair as uncertain.
+
+Pairs with a missing `created_at` remain undirected. Prestige-gradient statistics in the main text use the directed set and are reported as a pattern. Earliest-adopter checks on the most-shared sentences — whether the first profile in the sample to carry a given sentence sits in a higher-jobs tier — are a second, sentence-level view of the same question. Neither is pair-level identification.

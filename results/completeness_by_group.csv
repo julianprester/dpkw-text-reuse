@@ -1,0 +1,5 @@
+group,n,mean_complete,mean_words,pct_has_title,pct_has_rate,pct_has_occ,median_hours,median_jobs
+A: Originators,77,4,254.5,100,100,100,1640.8,28
+B: High-consumers,7327,3.988,189.7,100,100,99.4,0,1
+C: Non-copiers,175671,3.955,129,99.9,100,97.7,5.5,3
+D: All workers,360599,3.965,165.1,99.9,100,97.9,9,4

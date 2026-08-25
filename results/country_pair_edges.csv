@@ -1,0 +1,21 @@
+pair,same_country,n
+India <-> Pakistan,FALSE,380094
+Pakistan <-> Pakistan,TRUE,310885
+Pakistan <-> Philippines,FALSE,238702
+Bangladesh <-> Pakistan,FALSE,233529
+Pakistan <-> United States,FALSE,219910
+India <-> India,TRUE,161466
+India <-> Philippines,FALSE,156234
+Bangladesh <-> India,FALSE,154062
+India <-> United States,FALSE,151196
+Nigeria <-> Pakistan,FALSE,143844
+Philippines <-> United States,FALSE,98996
+Bangladesh <-> Philippines,FALSE,98097
+India <-> Nigeria,FALSE,95964
+Philippines <-> Philippines,TRUE,92694
+Bangladesh <-> United States,FALSE,87592
+Bangladesh <-> Bangladesh,TRUE,70599
+Pakistan <-> Ukraine,FALSE,67954
+Nigeria <-> Philippines,FALSE,63003
+Nigeria <-> United States,FALSE,58772
+Bangladesh <-> Nigeria,FALSE,56091

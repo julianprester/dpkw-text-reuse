@@ -1,0 +1,5 @@
+community_distance,n_edges,pct_src_higher,mean_delta_pres,median_delta_pres,se_delta
+1_same_country_same_occ,114732,71.41,1.3274,1.1417,0.00646
+2_same_country_diff_occ,324347,71.59,1.328,1.1417,0.00383
+3_diff_country_same_occ,573459,73.12,1.4431,1.3204,0.00294
+4_diff_country_diff_occ,2615055,73.46,1.4341,1.315,0.00136

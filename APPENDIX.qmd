@@ -47,7 +47,7 @@ Cleaning is light. We normalize line breaks and collapse repeated whitespace. We
 
 ### Candidate generation and scoring
 
-Comparing every sentence to every other sentence is quadratic in the size of the corpus and is not feasible. We use the standard two-stage design from large-scale reuse detection [@WilkersonEtAl2015].
+Comparing every sentence to every other sentence is quadratic in the size of the corpus and is not feasible. We use the standard two-stage design from large-scale reuse detection [@WilkersonEtAl2015; @Broder1997].
 
 First, each sentence is represented as the set of its word 5-grams and hashed with a 240-permutation MinHash signature. Locality-sensitive hashing with 60 bands then returns candidate pairs that are likely to share shingles. Second, we compute the exact Jaccard similarity of the 5-gram sets for every candidate:
 

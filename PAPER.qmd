@@ -356,7 +356,7 @@ flowchart LR
   end
   A1 --> A2 --> A4
   A3 --> A2
-  A4 -. "exit requires costly record" .-> B1
+  A4 -. "transition requires costly record" .-> B1
   B1 --> B2 --> B4
   B2 --> B3
 ```

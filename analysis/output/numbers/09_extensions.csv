@@ -1,0 +1,18 @@
+name,value,note
+E1_icc_disjoint,0.147277,"between-script share of adjusted log-rate variance, each worker assigned to one random script"
+E1_icc_disjoint_null,0.035264,... random groups
+E1_icc_net_of_city,0.123844,between-script share after also removing city means (cities >= 30 workers)
+E1_icc_net_of_city_null,0.0261079,... random groups
+E2_effect_in_sd_0_jobs,-0.240527,rate gap (fully shared vs authored) in SDs of log rate within record group
+E2_effect_in_sd_1_9_jobs,-0.360604,rate gap (fully shared vs authored) in SDs of log rate within record group
+E2_effect_in_sd_10_49_jobs,-0.433671,rate gap (fully shared vs authored) in SDs of log rate within record group
+E2_effect_in_sd_50__jobs,-0.373831,rate gap (fully shared vs authored) in SDs of log rate within record group
+E3_sh_enc,-22.9792,% rate difference per unit share of profile in shared sentences of this move
+E3_sh_ass,-33.2395,% rate difference per unit share of profile in shared sentences of this move
+E3_sh_cap,-18.4977,% rate difference per unit share of profile in shared sentences of this move
+E3_sh_oth,-21.1856,% rate difference per unit share of profile in shared sentences of this move
+E4_first_sentence_shared,0.805014,"% rate difference when the opening sentence is shared, holding the shared share constant"
+E4_first_shared_prevalence,0.0517482,share of profiles (>=3 sentences) whose opening sentence is shared
+E5_share1_no_agency,-25.8263,"% rate difference fully shared vs authored, excluding agency members"
+E5_share1_all,-24.839,... all workers
+E6_kenya_writing_share,0.00695652,share of Kenya-(VE/ES/DE/RS/IT/ZA) sharing pairs where both list Writing first

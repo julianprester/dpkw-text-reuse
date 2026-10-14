@@ -1,0 +1,44 @@
+NOTE: 239,882 fixed-effects (1,536,270 observations) removed because of only 0 or only 1 outcomes or singletons.
+NOTE: 239,882 fixed-effects (1,536,270 observations) removed because of only 0 or only 1 outcomes or singletons.
+                              model                    term     est       se       z odds_ratio
+                             <char>                  <char>   <num>    <num>   <num>      <num>
+ 1:              M1 main (FE logit)                   lspec -0.9126 0.008350 -109.30      0.401
+ 2:              M1 main (FE logit)                  number -1.0676 0.016279  -65.58      0.344
+ 3:              M1 main (FE logit)           funcassurance  0.7096 0.012133   58.49      2.033
+ 4:              M1 main (FE logit)   funcencounter formula  1.6047 0.017544   91.46      4.976
+ 5:              M1 main (FE logit)               funcother  0.5252 0.011887   44.18      1.691
+ 6:              M1 main (FE logit)                   first -1.1935 0.016237  -73.51      0.303
+ 7:              M1 main (FE logit)                    last  0.3500 0.012675   27.62      1.419
+ 8:              M1 main (FE logit)                  lwords -1.3235 0.012295 -107.64      0.266
+ 9: M1 x verified record (FE logit)                   lspec -1.2472 0.030076  -41.47      0.287
+10: M1 x verified record (FE logit)                  number -0.8635 0.056998  -15.15      0.422
+11: M1 x verified record (FE logit)           funcassurance  0.7117 0.012149   58.58      2.037
+12: M1 x verified record (FE logit)   funcencounter formula  1.6041 0.017557   91.36      4.973
+13: M1 x verified record (FE logit)               funcother  0.5246 0.011893   44.11      1.690
+14: M1 x verified record (FE logit)                   first -1.1903 0.016264  -73.19      0.304
+15: M1 x verified record (FE logit)                    last  0.3485 0.012684   27.47      1.417
+16: M1 x verified record (FE logit)                  lwords -1.3235 0.012300 -107.60      0.266
+17: M1 x verified record (FE logit)    lspec:record1-9 jobs  0.2681 0.032338    8.29      1.307
+18: M1 x verified record (FE logit)  lspec:record10-49 jobs  0.3854 0.033961   11.35      1.470
+19: M1 x verified record (FE logit)    lspec:record50+ jobs  0.5921 0.035643   16.61      1.808
+20: M1 x verified record (FE logit)   number:record1-9 jobs -0.1533 0.061645   -2.49      0.858
+21: M1 x verified record (FE logit) number:record10-49 jobs -0.2716 0.064906   -4.18      0.762
+22: M1 x verified record (FE logit)   number:record50+ jobs -0.3015 0.068017   -4.43      0.740
+23:                 M1 LPM (FE OLS)                   lspec -0.0375 0.000327 -114.84         NA
+24:                 M1 LPM (FE OLS)                  number -0.0399 0.000577  -69.13         NA
+25:                 M1 LPM (FE OLS)           funcassurance  0.0271 0.000483   56.07         NA
+26:                 M1 LPM (FE OLS)   funcencounter formula  0.1109 0.001065  104.11         NA
+27:                 M1 LPM (FE OLS)               funcother  0.0168 0.000433   38.70         NA
+28:                 M1 LPM (FE OLS)                   first -0.0357 0.000460  -77.72         NA
+29:                 M1 LPM (FE OLS)                    last  0.0150 0.000581   25.88         NA
+30:                 M1 LPM (FE OLS)                  lwords -0.0621 0.000544 -114.19         NA
+                              model                    term     est       se       z odds_ratio
+                             <char>                  <char>   <num>    <num>   <num>      <num>
+       record lspec_effect number_effect  or_lspec or_number
+       <char>        <num>         <num>     <num>     <num>
+1:     0 jobs   -1.2471998     -0.863451 0.2873082 0.4217043
+2:   1-9 jobs   -0.9791483     -1.016782 0.3756309 0.3617573
+3: 10-49 jobs   -0.8618421     -1.135020 0.4223833 0.3214156
+4:   50+ jobs   -0.6550629     -1.164958 0.5194094 0.3119359
+
+[numbers] wrote 13 entries to analysis/output/numbers/12_model1.csv 

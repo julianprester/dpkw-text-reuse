@@ -1,0 +1,13 @@
+name,value,note
+near_pairs_total,1871361,cross-worker sentence pairs with 0.5 <= J < 1
+edit_pairs_sampled,400000,near-copy pairs aligned
+edit_ops,1340374,word-level edit operations
+edits_per_pair_median,2,median number of word edits per near-copy pair
+edit_rate_number,0.396368,share of tokens of this class that are substituted or deleted in near-copy pairs
+edit_rate_occupation_informative,0.395645,share of tokens of this class that are substituted or deleted in near-copy pairs
+edit_rate_other_content_word,0.139144,share of tokens of this class that are substituted or deleted in near-copy pairs
+edit_rate_pronoun_voice,0.102937,share of tokens of this class that are substituted or deleted in near-copy pairs
+edit_rate_function_word,0.0924671,share of tokens of this class that are substituted or deleted in near-copy pairs
+pairs_any_number_edit,0.0460339,share of near-copy pairs with >=1 edited number
+pairs_any_occinfo_edit,0.152987,share of near-copy pairs with >=1 edited occupation-informative word
+pairs_any_pronoun_edit,0.306402,"share of near-copy pairs with >=1 edited pronoun (voice change, e.g. I/we)"

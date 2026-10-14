@@ -1,0 +1,6 @@
+Warning message:
+In scan(file = file, what = what, sep = sep, quote = quote, dec = dec,  :
+  embedded nul(s) found in input
+done in 2.8 min
+
+[numbers] wrote 7 entries to analysis/output/numbers/01_corpus.csv 

@@ -1,0 +1,14 @@
+name,value,note
+baseline_same_occ,0.161242,P(two random reuse-frame workers share first-listed occupation)
+baseline_same_country,0.085275,P(two random reuse-frame workers share country)
+baseline_same_city,0.00447753,P(two random reuse-frame workers share city)
+scripts_ge20,691,scripts with >=20 adopters
+occbound_share_specific_scripts,0.625453,"adoption-weighted share occupation-bound, scripts with occupation-informative words (>=20 adopters)"
+occbound_share_generic_scripts,0.35789,... scripts without occupation-informative words
+local_share_specific_scripts,0.722954,"adoption-weighted share local (country conc >= 2), specific scripts"
+local_share_generic_scripts,0.486946,... generic scripts
+families_multi,1215,"template families: >=2 scripts that co-occur (overlap coefficient >= 0.5, >=3 co-adopters)"
+families_multi_ge5,383,template families with >=5 scripts
+adoptions_in_multi_families,0.280935,share of all script adoptions that belong to a multi-script family
+burst_peak6_median_family,0.39726,median share of a family's dated adoptions inside its busiest 6-month window (families with >=30 dated adopters)
+burst_peak6_baseline,0.281617,same statistic for all dated profile creations (platform growth baseline)

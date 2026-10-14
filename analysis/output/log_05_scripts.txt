@@ -1,0 +1,161 @@
+            occ_scope  geo_scope scripts adoptions adoption_share
+               <char>     <char>   <int>     <int>          <num>
+1: cross-occupational translocal     157     10729      0.3343409
+2: cross-occupational      local     229      8474      0.2640698
+3:   occupation-bound      local     223      8389      0.2614210
+4:   occupation-bound translocal      82      4498      0.1401683
+   specific scripts adoptions med_occ_conc share_occ_bound med_cty_conc share_local
+     <lgcl>   <int>     <int>        <num>           <num>        <num>       <num>
+1:    FALSE     557     26849     1.664566       0.3578904     2.643177   0.4869455
+2:     TRUE     134      5241     2.660268       0.6254532     5.270992   0.7229536
+         move scripts adoptions share_occ_bound share_local
+       <char>   <int>     <int>           <num>       <num>
+1:  encounter     187     10685       0.2765559   0.3005147
+2:      other     221      7882       0.5633088   0.7652880
+3:  character     103      5618       0.2698469   0.4339623
+4:    process     114      4993       0.4552373   0.7280192
+5: capability      40      1674       0.5698925   0.5513740
+6: credential      16       752       0.6502660   0.4494681
+7:   identity       9       324       0.3024691   0.3827160
+8:     agency       1       162       1.0000000   1.0000000
+    adopters occ_conc                    top_occ cty_conc top_country
+       <int>    <num>                     <char>    <num>      <char>
+ 1:       23      6.2 Web, Mobile & Software Dev      1.2    Pakistan
+ 2:       22      6.2 Web, Mobile & Software Dev      2.9       India
+ 3:       25      6.2 Web, Mobile & Software Dev      9.0       India
+ 4:       52      6.0 Web, Mobile & Software Dev      3.0    Pakistan
+ 5:       33      5.8 Web, Mobile & Software Dev      5.2       India
+ 6:       30      5.8 Web, Mobile & Software Dev      1.5       India
+ 7:       27      5.7 Web, Mobile & Software Dev      2.1    Pakistan
+ 8:       22      5.6 Web, Mobile & Software Dev      5.4    Pakistan
+ 9:       22      5.6 Web, Mobile & Software Dev      8.7       India
+10:       22      5.6 Web, Mobile & Software Dev      7.8       India
+11:       40      5.6 Web, Mobile & Software Dev      2.0       India
+12:       20      5.6 Web, Mobile & Software Dev      3.0       India
+13:       20      5.6 Web, Mobile & Software Dev      1.2       India
+14:       32      5.4 Web, Mobile & Software Dev      5.2       India
+15:       47      5.4 Web, Mobile & Software Dev      1.9       India
+                                                                                                    text
+                                                                                                  <char>
+ 1:                                     please do not hesitate to reach out with any questions you have.
+ 2: taking web development as a profession not only fulfills my pocket but also my heart because it has 
+ 3:                                                             i assure you to provide the following 1.
+ 4:                                               i can also help maintain and update existing websites.
+ 5:                      please feel free to reach out if you are interested in discussing your project.
+ 6:                                       my priorities are quality and respect of deadlines and budget.
+ 7:                                  i am a friendly, professional worker who will be happy to help you.
+ 8: you will always be getting prompt answers from me, and you will stay up to date regarding your proje
+ 9: i understand the needs and goals of the organization/individual and can find ways to help them reali
+10:                                                                  i care for your time and mine also.
+11:                         i will work with you to discover what you need and create the best solution.
+12:                                        you can pick me with an assurance of honest and best service.
+13:                  if you would like to work together or have any questions feel free to get in touch.
+14:                  i take pride in my work and always respect the time, efforts that i put in my work!
+15: when working on a new project, i like to speak with my clients so that i can have a clear understand
+    adopters cty_conc top_country top_country_share city_conc agency_share
+       <int>    <num>      <char>             <num>     <num>        <num>
+ 1:       27     11.7     Vietnam                 1      51.5         0.04
+ 2:       21     11.7 Philippines                 1       1.1         0.05
+ 3:       46     11.7 Philippines                 1       2.2         0.04
+ 4:       23     11.7    Pakistan                 1      65.3         0.00
+ 5:       78     11.7  Bangladesh                 1      20.1         0.01
+ 6:       45     11.7 Philippines                 1       1.1         0.07
+ 7:       46     11.7 Philippines                 1       0.9         0.07
+ 8:       25     11.7   Sri Lanka                 1       3.0         0.08
+ 9:       38     11.7   Sri Lanka                 1       1.9         0.05
+10:       51     11.7  Bangladesh                 1       9.1         0.10
+11:       34     11.7  Bangladesh                 1      11.1         0.03
+12:       28     11.7    Pakistan                 1      26.0         0.25
+13:       25     11.7  Bangladesh                 1      15.6         0.12
+14:       29     11.7  Bangladesh                 1      14.9         0.03
+15:       32     11.7     Vietnam                 1      36.5         0.00
+16:       26     11.7    Pakistan                 1     106.5         0.00
+17:       38     11.7 Philippines                 1       1.9         0.08
+18:       39     11.7 Philippines                 1       2.1         0.08
+19:       41     11.7 Philippines                 1       1.6         0.10
+20:       42     11.7 Philippines                 1       1.6         0.07
+    adopters cty_conc top_country top_country_share city_conc agency_share
+       <int>    <num>      <char>             <num>     <num>        <num>
+                                                                                                    text
+                                                                                                  <char>
+ 1:                 i'm not the kind of 9-to-5 person who just waits until 5 pm to shut down the laptop.
+ 2:                                if you liked what you see on my profile, kindly send me an interview.
+ 3:                                     if my profile is fit for the job, i am just one invitation away.
+ 4:   thanks for looking at my profile and i hope you can give me a chance to show my talent and skills.
+ 5:                                      i will be glad to help you and will show you my previous works.
+ 6: we could always start off with a small project with shared risk and then keep going if you're happy 
+ 7:                                                          chances are that you'll be more than happy.
+ 8:        a self-motivated, organized, responsible, diligent person who wants to reach the best result.
+ 9:                                                           thank you for your time in reviewing this.
+10:                                              login registration form, sign in- signup page creation.
+11:                                                              never take a lot of projects at a time.
+12:           if it's a yes, it would definitely be a long-term & profitable partnership for both of us.
+13:                           also handy with lead generation, email marketing & social media marketing.
+14: as my education media was "english" & as i am an "engineer & mba" - i have to maintain good english 
+15: i cannot promise that i can 100% deliver the result that you are looking for but i can guarantee tha
+16:                                                    * expert in using directories and tools linkedin.
+17:                                                      luckily, this is exactly what i do for clients.
+18:                                                           and if you need help in that department...
+19:                                                            send me a proposal and we'll get started.
+20:            now, if you're still not 100% convinced this will be worth your investment, i understand.
+                                                                                                    text
+                                                                                                  <char>
+    scripts family_adopters max_script                                                                                       lead
+      <int>           <int>      <int>                                                                                     <char>
+ 1:     102             915        483                                  my focus is on giving more than what i expect to receive.
+ 2:      33             812        353                                                   i look forward to hearing from you soon!
+ 3:      32             775        715                                                  i am looking forward to working with you.
+ 4:       7             637        530 whether you're trying to win work, list your services or even create a whole online store 
+ 5:      31             576        385                                                   i look forward to working with you soon.
+ 6:      72             472        127                               i assure you that you will always be satisfied with my work.
+ 7:       2             459        453                   regular communication is really important to me, so let's keep in touch!
+ 8:      41             400        134                             if you are interested in my services, feel free to contact me.
+ 9:      79             347        106                                                 thank you so much for visiting my profile.
+10:      17             303        184 i'm flexible with my working hours and am happy to work closely with any existing freelanc
+11:      50             295         48 i can work with minimal supervision, communicate and give updates on the status of my work
+12:     203             282        162 we always prefer to keep our work transparent, and for this reason, we like to be in touch
+13:       9             275        259                                                  i am looking forward to hearing from you.
+14:       2             269        268                                          let's work together to bring your vision to life!
+15:      21             230        135               so, if you hire me, i can assure you that you will not regret your decision.
+16:      10             218        139                      i strive in a positive workplace, but i can also work under pressure.
+17:      15             217        150                   i will be happy to help you to find the best solution for your business.
+18:       1             215        215                                 i'll fully project manage your brief from start to finish.
+19:       1             199        199 i'll fully project manage your brief from start to finish regular communication is really 
+20:      30             194         70 i am thankful to upwork that gave me the opportunity to learn and help me to polish my ski
+    scripts family_adopters max_script                                                                                       lead
+      <int>           <int>      <int>                                                                                     <char>
+    family     peak6 span_months family_adopters                                                                             lead
+     <int>     <num>       <int>           <int>                                                                           <char>
+ 1:  16169 0.9479167           8             124                                  i guarantee you will be satisfied with my work!
+ 2:   1646 0.7096774          14             218            i strive in a positive workplace, but i can also work under pressure.
+ 3:   3010 0.6862745          20             199 i'll fully project manage your brief from start to finish regular communication 
+ 4:   1594 0.6656347          25             637 whether you're trying to win work, list your services or even create a whole onl
+ 5:  16138 0.5841584          26             215                       i'll fully project manage your brief from start to finish.
+ 6:   4767 0.5000000          19             144 before talking about qualifications and professional abilities, i would like to 
+ 7:  12755 0.5000000          13             121                                 let's collaborate and bring your vision to life.
+ 8:    807 0.4905660          22             269                                let's work together to bring your vision to life!
+ 9:   6412 0.4801762          25             459         regular communication is really important to me, so let's keep in touch!
+10:  17737 0.4666667          17              99                 i can stretch myself according to my client's work requirements.
+11:     74 0.4159292          35             915                        my focus is on giving more than what i expect to receive.
+12:   1186 0.4000000          30             775                                        i am looking forward to working with you.
+13:   2963 0.4000000          20             151 no matter the length of the project my goal is to make your business run smoothe
+14:  11094 0.3972603          26             151                  looking forward to expanding my knowledge and working with you!
+15:  29999 0.3870968          15             151                                 let's work together to bring your ideas to life!
+    quarter profiles any_shared
+     <char>    <int>      <num>
+ 1:  2020Q2      575  0.1930435
+ 2:  2020Q3      890  0.1955056
+ 3:  2020Q4     1864  0.2510730
+ 4:  2021Q1     1986  0.2170191
+ 5:  2021Q2     4747  0.2498420
+ 6:  2021Q3     8163  0.2251623
+ 7:  2021Q4     6279  0.2414397
+ 8:  2022Q1     6000  0.2465000
+ 9:  2022Q2     4035  0.2706320
+10:  2022Q3     5820  0.2628866
+11:  2022Q4     4118  0.2819330
+12:  2023Q1     5352  0.2722347
+13:  2023Q2    10977  0.2214631
+14:  2023Q3     4957  0.2432923
+
+[numbers] wrote 13 entries to analysis/output/numbers/05_scripts.csv 

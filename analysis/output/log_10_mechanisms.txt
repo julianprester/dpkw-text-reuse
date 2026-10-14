@@ -1,0 +1,31 @@
+    tenure       pct workers  sd_lrate
+    <char>     <num>   <int>     <num>
+1:   <1 yr -26.20412   52506 0.8147380
+2: 1-2 yrs -25.51336   54406 0.7778621
+3: 2-4 yrs -24.20534  114096 0.7800866
+4: 4-7 yrs -23.32526   75986 0.7997932
+5:  7+ yrs -26.68866   55992 0.7956930
+    tenure       pct
+    <char>     <num>
+1:   <1 yr -25.96776
+2: 1-2 yrs -24.56643
+3: 2-4 yrs -21.82609
+4: 4-7 yrs -17.95886
+5:  7+ yrs -19.68210
+                    occupation        pct workers
+                        <char>      <num>   <int>
+ 1:            IT & Networking -61.983876    7170
+ 2:          Sales & Marketing -45.076261   14200
+ 3:    Accounting & Consulting -41.149999   30772
+ 4:   Data Science & Analytics -36.148436    5384
+ 5:              Admin Support -35.961592   29734
+ 6:                       None -35.717552    7210
+ 7:                      Legal -34.765209    2463
+ 8:           Customer Service -19.898207   37688
+ 9:          Design & Creative -17.501927   49949
+10: Web, Mobile & Software Dev -15.284484  110019
+11: Engineering & Architecture -15.150678   21036
+12:                Translation  -9.860505   20120
+13:                    Writing  -4.985949   17238
+
+[numbers] wrote 13 entries to analysis/output/numbers/10_mechanisms.csv 

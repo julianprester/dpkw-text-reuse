@@ -1,0 +1,12 @@
+| Stage | Count |
+| --- | ---: |
+| Profile input rows | 360,599 |
+| After common-vocabulary filter | 360,271 |
+| At least one qualifying sentence | 353,099 |
+| Model 1: eligible sentences (profiles with at least two units) | 2,309,694 |
+| Model 1: mixed profiles (identifying sentences) | 86,956 (773,424 sentences) |
+| Model 2: eligible asking rate and description age | 352,986 |
+
+: Sample accounting {#tbl-sample-flow}
+
+*Note.* The Model 1 logit drops profiles without variation in exact sharing. Model 2 restricts posted rates to USD 3–500 and requires observed description age. These frames are not interchangeable.

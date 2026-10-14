@@ -1,0 +1,9 @@
+name,value,note
+ids_rows,415329,rows in ids.csv (excluding header)
+ids_unique,415254,unique worker identifiers requested
+ids_duplicate_rows,75,duplicate identifier rows removed
+profiles_usable,360599,responses containing a profile; equals the analysis input rows
+profiles_inaccessible,54655,responses containing an error instead of a profile
+profiles_inaccessible_share,0.131618,inaccessible responses / unique identifiers requested
+profiles_error_removed,54013,error: profile no longer available
+profiles_error_notfound,642,error: freelancer profile not found

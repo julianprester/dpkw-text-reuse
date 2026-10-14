@@ -1,0 +1,12 @@
+| Measure | Mean | SD | Median | P25 | P75 |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| Posted hourly rate (USD) | 24.60 | 26.30 | 18.00 | 10.00 | 30.00 |
+| Completed jobs | 21.14 | 75.22 | 4.00 | 1.00 | 15.00 |
+| Recorded hours | 858.91 | 2765.44 | 9.00 | 0.00 | 326.17 |
+| Qualifying sentences | 6.62 | 5.14 | 5.00 | 3.00 | 9.00 |
+| Description characters | 1084.88 | 829.47 | 872.00 | 492.00 | 1430.00 |
+| Description age (years) | 3.88 | 3.03 | 3.07 | 1.71 | 5.45 |
+
+: Descriptive statistics in the Model 2 frame {#tbl-sample-descriptives}
+
+*Note.* 352,986 workers. Description/profile age is measured from description creation to September 8, 2023, the latest observed edit; it is not account tenure. Rates are asking prices, not realized wages.

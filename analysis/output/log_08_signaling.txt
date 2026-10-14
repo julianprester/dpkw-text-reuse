@@ -1,0 +1,63 @@
+                          model           term          est          se       pct      n odds_ratio
+                         <char>         <char>        <num>       <num>     <num>  <int>      <num>
+1: M1 logit any shared sentence          ljobs  0.132961635 0.022816797 14.220618 352986  1.1422062
+2: M1 logit any shared sentence         lhours  0.033117547 0.008705717  3.367204 352986  1.0336720
+3: M1 logit any shared sentence     agencyTRUE  0.135184658 0.068506121 14.474815 352986  1.1447482
+4: M1 logit any shared sentence          n_occ -0.036018910 0.016441680 -3.537795 352986  0.9646221
+5: M1 logit any shared sentence         lchars  0.374626171 0.046542961 45.444760 352986  1.4544476
+6: M1 logit any shared sentence       log(n_c)  0.651689955 0.048950331 91.878074 352986  1.9187807
+7: M1 logit any shared sentence text_datedTRUE  0.006485195 0.030001681  0.650627 352986  1.0065063
+8: M1 logit any shared sentence   rating_f<4.8  0.012270707 0.033016399  1.234630 352986  1.0123463
+                        model      term         est          se       pct      n
+                       <char>    <char>       <num>       <num>     <num>  <int>
+1: M2 log rate ~ profile type typelight -0.09263165 0.007664353  -8.84708 352986
+2: M2 log rate ~ profile type typeheavy -0.16866543 0.017793917 -15.52085 352986
+3: M2 log rate ~ profile type  typefull -0.20910271 0.032239014 -18.86881 352986
+                    model             term         est          se        pct      n     bin workers
+                   <char>           <char>       <num>       <num>      <num>  <int>  <char>   <int>
+ 1: M2 dose-response bins  share_bin(0,.1] -0.05486449 0.010608592  -5.338659 352986  (0,.1]   12344
+ 2: M2 dose-response bins share_bin(.1,.2] -0.09526270 0.008398434  -9.086592 352986 (.1,.2]   23957
+ 3: M2 dose-response bins share_bin(.2,.3] -0.12845390 0.008908364 -12.054590 352986 (.2,.3]   11710
+ 4: M2 dose-response bins share_bin(.3,.4] -0.12798923 0.011347399 -12.013714 352986 (.3,.4]   12233
+ 5: M2 dose-response bins share_bin(.4,.5] -0.14690305 0.017616582 -13.662232 352986 (.4,.5]   10059
+ 6: M2 dose-response bins share_bin(.5,.6] -0.18417725 0.022048314 -16.821165 352986 (.5,.6]    3983
+ 7: M2 dose-response bins share_bin(.6,.7] -0.18901077 0.015661468 -17.222241 352986 (.6,.7]    4752
+ 8: M2 dose-response bins share_bin(.7,.8] -0.22847008 0.022396747 -20.424990 352986 (.7,.8]    4549
+ 9: M2 dose-response bins share_bin(.8,.9] -0.27865692 0.040222435 -24.320050 352986 (.8,.9]    2682
+10: M2 dose-response bins  share_bin(.9,1] -0.20497008 0.031699121 -18.532831 352986  (.9,1]    5141
+       record share1_effect         se pct_full_vs_authored workers
+       <char>         <num>      <num>                <num>   <int>
+1:     0 jobs    -0.1988843 0.02593236            -18.03553   45310
+2:   1-9 jobs    -0.2795471 0.03234762            -24.38739  191210
+3: 10-49 jobs    -0.3316495 0.03670198            -28.22612   81143
+4:   50+ jobs    -0.2940424 0.03782186            -25.47551   35323
+     rating        est         se       pct
+     <char>      <num>      <num>     <num>
+1:  unrated -0.2198660 0.02541857 -19.73736
+2:   >=4.95 -0.2823145 0.03776745 -24.59635
+3: 4.8-4.95 -0.3281965 0.03874755 -27.97785
+4:     <4.8 -0.3298906 0.03020317 -28.09976
+                                               model    term         est         se        pct      n
+                                              <char>  <char>       <num>      <num>      <num>  <int>
+1: M4 log rate ~ composition (ref: authored generic)  sh_gen -0.32923924 0.03393101 -28.052913 352986
+2: M4 log rate ~ composition (ref: authored generic) sh_spec -0.14964194 0.02911917 -13.898378 352986
+3: M4 log rate ~ composition (ref: authored generic) or_spec  0.05752233 0.01706650   5.920892 352986
+                                             model    term        est         se       pct      n
+                                            <char>  <char>      <num>      <num>     <num>  <int>
+1: M5 log rate ~ shared share by script popularity  sh_pop -0.2779776 0.06093608 -24.26862 352986
+2: M5 log rate ~ shared share by script popularity  sh_mid -0.4825356 0.06258387 -38.27836 352986
+3: M5 log rate ~ shared share by script popularity sh_rare -0.2278432 0.01756315 -20.37509 352986
+                               model   term       est         se      pct      n odds_ratio
+                              <char> <char>     <num>      <num>    <num>  <int>      <num>
+1: M6 logit rating < 4.8 (jobs >= 5) share1 0.2288206 0.01813272 25.71164 165591   1.257116
+                              model   term       est        se      pct     n odds_ratio
+                             <char> <char>     <num>     <num>    <num> <int>      <num>
+1: M7 logit >=1 job (tenure < 1 yr) share1 0.2212587 0.2123848 24.76462 52562   1.247646
+                              model   term        est         se       pct     n
+                             <char> <char>      <num>      <num>     <num> <int>
+1: M7b log rate, first-year workers share1 -0.2675006 0.04320473 -23.47101 52506
+                                                             model                           term        est          se      pct     n
+                                                            <char>                         <char>      <num>       <num>    <num> <int>
+1: M9 single-source (cloned) vs assembled, copiers with >=2 shared I(best_partner_cover == 1)TRUE 0.06571372 0.004638766 6.792095 48735
+
+[numbers] wrote 25 entries to analysis/output/numbers/08_signaling.csv 

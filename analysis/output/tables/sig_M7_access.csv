@@ -1,0 +1,2 @@
+model,term,est,se,pct,n,odds_ratio
+M7 logit >=1 job (tenure < 1 yr),share1,0.221258698414221,0.212384814827258,24.7646152899651,52562,1.24764615289965

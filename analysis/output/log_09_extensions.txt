@@ -1,0 +1,40 @@
+       record  sd_lrate workers     effect  effect_sd
+       <fctr>     <num>   <int>      <num>      <num>
+1:     0 jobs 0.8268705   45310 -0.1988843 -0.2405266
+2:   1-9 jobs 0.7752200  191210 -0.2795471 -0.3606036
+3: 10-49 jobs 0.7647497   81143 -0.3316495 -0.4336707
+4:   50+ jobs 0.7865660   35323 -0.2940424 -0.3738306
+     term       pct
+   <char>     <num>
+1: sh_enc -22.97919
+2: sh_ass -33.23949
+3: sh_cap -18.49769
+4: sh_oth -21.18562
+          partner     N
+           <char> <int>
+ 1:      Pakistan 22226
+ 2:   Philippines 14486
+ 3:         India 11509
+ 4:    Bangladesh  8708
+ 5: United States  4507
+ 6:       Nigeria  3761
+ 7:         Egypt  2546
+ 8:       Ukraine  2139
+ 9:       Vietnam  1157
+10:     Indonesia  1140
+11:        Serbia   977
+12:     Sri Lanka   875
+                         k_occ                      p_occ     N
+                        <char>                     <char> <int>
+ 1:                    Writing                Translation   187
+ 2:              Admin Support                Translation   124
+ 3:                    Writing Web, Mobile & Software Dev   115
+ 4:                    Writing              Admin Support   105
+ 5:           Customer Service                Translation   103
+ 6:                Translation                Translation    93
+ 7: Web, Mobile & Software Dev Web, Mobile & Software Dev    92
+ 8:              Admin Support Web, Mobile & Software Dev    84
+ 9:    Accounting & Consulting                Translation    83
+10:           Customer Service Web, Mobile & Software Dev    81
+
+[numbers] wrote 17 entries to analysis/output/numbers/09_extensions.csv 

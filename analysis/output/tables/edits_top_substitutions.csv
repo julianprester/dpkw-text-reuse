@@ -1,0 +1,301 @@
+x,y,N,cx,cy
+i,i'm,6429,pronoun/voice,pronoun/voice
+thank,thanks,3410,other content word,other content word
+situation,situations,3182,other content word,other content word
+my,this,2081,pronoun/voice,function word
+ask,contact,1899,other content word,other content word
+i,i'll,1884,pronoun/voice,function word
+i,we,1699,pronoun/voice,pronoun/voice
+becomes,succeeds,1521,other content word,other content word
+project,projects,1516,other content word,other content word
+work,works,1253,other content word,other content word
+together,with,1225,other content word,function word
+from,with,1147,function word,function word
+let's,ready,1146,function word,other content word
+for,in,1132,function word,function word
+hello,hi,1128,other content word,other content word
+i,my,1064,pronoun/voice,pronoun/voice
+you,your,1038,pronoun/voice,pronoun/voice
+hearing,working,952,other content word,other content word
+relation,relationships,893,other content word,other content word
+regret,reject,879,other content word,other content word
+soon,thank,820,other content word,other content word
+delivering,delivery,801,other content word,other content word
+client,clients,801,other content word,other content word
+you,you're,753,pronoun/voice,pronoun/voice
+queries,questions,705,other content word,other content word
+creative,creative.i,704,other content word,other content word
+soon,thanks,695,other content word,other content word
+free,hesitate,694,other content word,other content word
+for,to,681,function word,function word
+don't,feel,673,function word,other content word
+education,educational,671,other content word,other content word
+contact,message,654,other content word,other content word
+contact,let's,622,other content word,function word
+don,don't,604,other content word,function word
+question,questions,584,other content word,other content word
+contact,reach,572,other content word,other content word
+reviews,satisfaction,540,other content word,other content word
+relation,relations,535,other content word,other content word
+i,looking,532,pronoun/voice,other content word
+my,the,520,pronoun/voice,function word
+work,working,515,other content word,other content word
+contact,get,512,other content word,other content word
+client's,clients,498,other content word,other content word
+bio,profile,471,other content word,other content word
+need,needs,464,other content word,other content word
+me,out,464,pronoun/voice,function word
+design,project,459,other content word,other content word
+life,reality,446,other content word,other content word
+receive,recieve,426,other content word,other content word
+of,to,411,function word,function word
+developer,engineer,410,occupation-informative,occupation-informative
+all,soon,409,function word,other content word
+do,help,406,function word,other content word
+net,we,402,occupation-informative,pronoun/voice
+needs,project,400,other content word,other content word
+a,an,396,function word,function word
+look,looking,382,other content word,other content word
+overview,profile,381,other content word,other content word
+don't,please,379,function word,other content word
+position,situations,379,other content word,other content word
+business,project,378,other content word,other content word
+always,development,375,other content word,other content word
+my,your,371,pronoun/voice,pronoun/voice
+developer,web,371,occupation-informative,other content word
+needs,requirements,367,other content word,other content word
+feel,please,365,other content word,other content word
+am,can,363,function word,other content word
+a,the,357,function word,function word
+further,in,357,function word,function word
+let's,looking,353,function word,other content word
+introduction,profile,344,other content word,other content word
+design,your,344,other content word,pronoun/voice
+i,i'd,330,pronoun/voice,function word
+for,with,327,function word,function word
+her,you,325,function word,pronoun/voice
+do,don't,322,function word,function word
+cheers,soon,317,other content word,other content word
+brief,project,316,other content word,other content word
+business,businesses,314,other content word,other content word
+review,reviews,314,other content word,other content word
+wordppess,wordpress,312,other content word,occupation-informative
+in,requirements,300,function word,other content word
+essential,important,299,other content word,other content word
+problems,situations,299,other content word,other content word
+feedback,reviews,293,other content word,other content word
+for,resilience,292,function word,other content word
+that,which,291,function word,function word
+the,your,287,function word,pronoun/voice
+considering,visiting,279,other content word,other content word
+success,your,279,other content word,pronoun/voice
+oriented,reviews,278,other content word,other content word
+next,projects,277,other content word,other content word
+i'm,whether,277,pronoun/voice,other content word
+satisfied,saying,275,other content word,other content word
+extraordinarily,extremely,274,other content word,other content word
+strength,strengths,272,other content word,other content word
+hello,welcome,272,other content word,other content word
+ensure,provide,269,other content word,other content word
+can,will,268,other content word,function word
+aspect,facet,268,other content word,other content word
+greetings,hello,265,other content word,other content word
+if,whether,261,function word,other content word
+i'll,i'm,261,function word,pronoun/voice
+regards,soon,260,other content word,other content word
+great,wow,259,other content word,other content word
+a,am,258,function word,function word
+further,requirements,257,function word,other content word
+again,soon,256,function word,other content word
+business,goals,256,other content word,other content word
+call,time,249,other content word,other content word
+online,project,248,other content word,other content word
+d,soon,248,other content word,other content word
+soon,today,247,other content word,other content word
+collaborating,working,245,other content word,other content word
+relationship,relationships,241,other content word,other content word
+online,website,240,other content word,other content word
+i,whether,239,pronoun/voice,other content word
+project,store,237,other content word,other content word
+online,saas,235,other content word,other content word
+experienced,will,235,other content word,function word
+javascript,php,234,occupation-informative,occupation-informative
+store,website,231,other content word,other content word
+application,profile,229,occupation-informative,other content word
+service,services,229,other content word,other content word
+am,i'm,229,function word,pronoun/voice
+portfolio,profile,227,other content word,other content word
+reviews,trust,226,other content word,other content word
+achieve,succeed,218,other content word,other content word
+project,writing,217,other content word,occupation-informative
+ask,message,214,other content word,other content word
+communication,communications,213,other content word,other content word
+fruition,life,211,other content word,other content word
+client,quality,210,other content word,other content word
+reacting,treating,207,other content word,other content word
+if,then,207,function word,function word
+inquiries,questions,206,occupation-informative,other content word
+i,let's,206,pronoun/voice,function word
+fulfills,fulfils,203,other content word,other content word
+my,our,200,pronoun/voice,pronoun/voice
+if,suppose,199,function word,other content word
+concerns,situations,199,other content word,other content word
+about,my,196,function word,pronoun/voice
+a,your,194,function word,pronoun/voice
+then,well,192,function word,other content word
+me,us,192,pronoun/voice,pronoun/voice
+exceeding,over,190,other content word,function word
+regular,regularly,188,other content word,other content word
+in,me,188,function word,pronoun/voice
+let's,soon,187,function word,other content word
+to,with,187,function word,function word
+i'm,m,186,pronoun/voice,other content word
+profile,resume,184,other content word,other content word
+adnan,soon,184,other content word,other content word
+an,your,183,function word,pronoun/voice
+goals,objectives,182,other content word,other content word
+let's,lets,182,function word,other content word
+contact,i,180,other content word,pronoun/voice
+let's,please,177,function word,other content word
+collaborate,work,177,other content word,other content word
+experienced,i,176,other content word,pronoun/voice
+css,css3,176,occupation-informative,occupation-informative
+guys,soon,175,other content word,other content word
+ask,reach,173,other content word,other content word
+over,over_,173,function word,other content word
+upwork,you,172,other content word,pronoun/voice
+best,soon,172,other content word,other content word
+client,customer,171,other content word,occupation-informative
+interview,requirements,170,other content word,other content word
+fantastic,you,170,other content word,pronoun/voice
+client,client's,170,other content word,other content word
+drop,send,167,other content word,other content word
+in,soon,166,function word,other content word
+in,on,163,function word,function word
+project,requirements,162,other content word,other content word
+project,team,161,other content word,other content word
+cooperation,details,161,other content word,other content word
+let,let's,160,other content word,function word
+ensure,over,160,other content word,function word
+shortly,soon,160,other content word,other content word
+services,solutions,159,other content word,other content word
+soon,soonest,159,other content word,other content word
+chat,talk,159,other content word,other content word
+and,soon,158,function word,other content word
+100,delivering,158,number,other content word
+business,online,158,other content word,other content word
+great,you,157,other content word,pronoun/voice
+i'm,ii'm,157,pronoun/voice,other content word
+description,profile,155,other content word,other content word
+hello,thanks,154,other content word,other content word
+on,soon,154,function word,other content word
+client,i,152,other content word,pronoun/voice
+thanks,you,150,other content word,pronoun/voice
+3,5,149,number,number
+4,5,149,number,number
+responsive,responsiveness,149,occupation-informative,other content word
+relation,relationship,147,other content word,other content word
+this,through,146,function word,function word
+a,have,146,function word,function word
+achieve,grow,145,other content word,other content word
+extremely,immensely,145,other content word,other content word
+am,experienced,145,function word,other content word
+profile,profiles,145,other content word,other content word
+for,of,144,function word,function word
+idea,situations,143,other content word,other content word
+a,i,143,function word,pronoun/voice
+me,would,142,pronoun/voice,function word
+ready,want,141,other content word,other content word
+graphic,project,141,occupation-informative,other content word
+100,client,141,number,other content word
+wheter,whether,141,other content word,other content word
+life,the,140,other content word,function word
+design,development,140,other content word,other content word
+php,wordpress,140,occupation-informative,occupation-informative
+to,touch,140,function word,other content word
+are,whether,139,function word,other content word
+far,profile,138,other content word,other content word
+online,video,138,other content word,other content word
+help,the,138,other content word,function word
+regular,reguler,138,other content word,other content word
+najmul,you,137,other content word,pronoun/voice
+becomes,is,137,other content word,function word
+i,treating,137,pronoun/voice,other content word
+next,success,137,other content word,other content word
+can,still,137,other content word,other content word
+business,store,137,other content word,other content word
+functional,working,136,other content word,other content word
+am,i,136,function word,pronoun/voice
+software,web,135,other content word,other content word
+details,information,135,other content word,other content word
+hello,hey,135,other content word,other content word
+send,shoot,135,other content word,other content word
+list,online,134,other content word,other content word
+and,to,134,function word,function word
+script,store,133,other content word,other content word
+stor,store,133,other content word,other content word
+bring,you,132,other content word,pronoun/voice
+branding,online,132,other content word,other content word
+hole,whole,131,other content word,other content word
+however,whether,131,other content word,other content word
+i,you're,131,pronoun/voice,pronoun/voice
+this,your,130,function word,pronoun/voice
+weather,whether,129,other content word,other content word
+attention,consideration,128,other content word,other content word
+network,online,128,other content word,other content word
+in,out,128,function word,function word
+i,i've,128,pronoun/voice,pronoun/voice
+am,are,128,function word,function word
+where,whether,128,function word,other content word
+halp,help,127,other content word,other content word
+i'm,you're,127,pronoun/voice,pronoun/voice
+position,project,127,other content word,other content word
+awesome,wow,127,other content word,other content word
+communicatin,communication,126,other content word,other content word
+are,want,125,function word,other content word
+i,ican,125,pronoun/voice,other content word
+he,help,125,function word,other content word
+store,topology,125,other content word,other content word
+application,store,124,occupation-informative,other content word
+new,online,124,other content word,other content word
+project's,projects,124,other content word,other content word
+deliver,delivery,122,other content word,other content word
+freelancer,project,121,other content word,other content word
+1,client,121,number,other content word
+looking,ready,121,other content word,other content word
+started,to,120,other content word,function word
+can,is,120,other content word,function word
+whatever,whether,120,other content word,other content word
+_i,i,119,other content word,pronoun/voice
+3,4,119,number,number
+client,passion,119,other content word,other content word
+client,focus,119,other content word,other content word
+get,reach,118,other content word,other content word
+designer,developer,118,occupation-informative,occupation-informative
+be,help,118,function word,other content word
+please,you,118,other content word,pronoun/voice
+brand,online,117,other content word,other content word
+receive,recive,117,other content word,other content word
+do,feel,117,function word,other content word
+businesses,online,117,other content word,other content word
+and,reviews,117,function word,other content word
+able,can,116,other content word,other content word
+and,as,116,function word,function word
+ohi,online,116,other content word,other content word
+shop,whole,116,other content word,other content word
+new,the,115,other content word,function word
+in,with,115,function word,function word
+amazing,extraordinary,115,other content word,other content word
+awards,work,115,other content word,other content word
+i,name,115,pronoun/voice,other content word
+i'm,im,115,pronoun/voice,other content word
+fully,will,115,other content word,function word
+platform,store,115,other content word,other content word
+free,not,114,other content word,function word
+cooperation,discussion,114,other content word,other content word
+my,store,114,pronoun/voice,other content word
+help,zubair,114,other content word,other content word
+design,store,114,other content word,other content word
+my,through,113,pronoun/voice,function word
+project,translation,113,other content word,occupation-informative
+design,projects,113,other content word,other content word

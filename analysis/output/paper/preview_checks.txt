@@ -1,0 +1,6 @@
+Quarto preview checks passed (1.9.37).
+Project preview: HTTP 200 at /; index redirects to PAPER.html.
+Project manuscript route: HTTP 200 at /PAPER.html.
+Direct PAPER.qmd preview: HTTP 200 at /PAPER.html.
+Both manuscript responses contain resolved numerical variables.
+Temporary test servers stopped; no .gitignore created.

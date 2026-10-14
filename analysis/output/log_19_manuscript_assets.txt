@@ -1,0 +1,2 @@
+>>> analysis/19_manuscript_assets.R
+Manuscript assets assembled; saved estimates and quotations checked.

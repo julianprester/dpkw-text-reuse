@@ -1,0 +1,17 @@
+| Check | M1 allocation | Authored-specific | Shared-generic | Shared-specific | Family share | Shared-generic: 0 → 50+ jobs |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| Main specification | Retained | +6.0% | -27.9% | -13.7% | 6.4% | -23.0% → -30.0% |
+| Sharing at J ≥ .7 | Retained | +5.6% | -27.1% | -13.9% | 6.4% | -22.8% → -28.8% |
+| Sentences ≥ 15 words | Retained | +3.4% | -23.0% | -16.1% | — | -16.4% → -26.1% |
+| Exclude agency members | Retained | +5.7% | -28.4% | -15.2% | 5.7% | -22.7% → -29.2% |
+| Stricter specificity | Retained | +9.5% | -27.4% | +7.0% | — | -22.9% → -28.5% |
+| Within-one-day edit subset | Retained | +5.4% | -29.2% | -14.5% | 1.8% | -22.4% → -46.8% |
+| Ten largest countries | Retained | +7.5% | -27.9% | -12.7% | — | -23.5% → -28.7% |
+| Exclude ≥ 90% shared profiles | Retained | +6.2% | -30.1% | -16.5% | — | -29.9% → -30.7% |
+| Model 1 linear probability | Retained | — | — | — | — | — |
+| Rating < 4.8 (≥ 5 jobs) | — | No association | OR 1.21 | OR 1.66 | — | — |
+| Hours conditional on rate | — | No association | +31% (1+hours) | +87% (1+hours) | — | — |
+
+: Robustness and outcome triangulation {#tbl-robustness}
+
+*Note.* Rate rows show full-unit composition contrasts against authored-generic text; family share is family/(family + residual) variance, excluding city variance. ‘Retained’ denotes the saved joint allocation signature, not validation of every dictionary label. The stricter rule uses maximum word KL ≥ 1 bit and changes the Model 1 specificity scale. The LPM row changes only Model 1; Model 2 is not an independent new rate fit. The two outcome rows are not price-discount tests. Blank family entries were not refit.

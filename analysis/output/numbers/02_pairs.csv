@@ -1,0 +1,35 @@
+name,value,note
+pairs_scored,12455938,candidate sentence pairs returned by MinHash/LSH and scored with exact Jaccard
+validation_pairs,3000,randomly sampled pairs re-scored from the rebuilt corpus
+validation_agreement,1,share of re-scored pairs whose Jaccard equals the stored score
+pairs_same_worker,4069,pairs of two sentences from the same profile (dropped)
+pairs_cross_J1.0,2308074,cross-worker sentence pairs with J >= 1.0
+pairs_cross_J0.9,2362905,cross-worker sentence pairs with J >= 0.9
+pairs_cross_J0.7,2839670,cross-worker sentence pairs with J >= 0.7
+pairs_cross_J0.5,4179435,cross-worker sentence pairs with J >= 0.5
+pairs_cross_J0.3,7150863,cross-worker sentence pairs with J >= 0.3
+lsh_pdetect_J0.2,0.0916058,P(pair becomes an LSH candidate | Jaccard)
+lsh_pdetect_J0.3,0.386134,P(pair becomes an LSH candidate | Jaccard)
+lsh_pdetect_J0.4,0.789022,P(pair becomes an LSH candidate | Jaccard)
+lsh_pdetect_J0.5,0.97919,P(pair becomes an LSH candidate | Jaccard)
+lsh_pdetect_J0.6,0.999758,P(pair becomes an LSH candidate | Jaccard)
+lsh_pdetect_J0.7,1,P(pair becomes an LSH candidate | Jaccard)
+scripts,77654,exact-match clusters (sets of identical sentences held by >=2 workers)
+script_instances,254632,sentences that belong to an exact-match cluster
+scripts_dyadic_share,0.662838,share of scripts held by exactly 2 workers
+adoptions_dyadic_share,0.404772,share of script adoptions in dyadic scripts
+scripts_over100,48,scripts with more than 100 adopters
+script_max_adopters,715,adopters of the most widely shared script
+top100_share_pairs,0.712945,share of exact-match sentence pairs within the 100 most-adopted scripts (pair-weighted)
+top100_share_adoptions,0.0557473,share of script adoptions in the 100 most-adopted scripts (adoption-weighted)
+workers_involved_J1,91424,workers with >=1 sentence in a cross-worker pair at J >= 1.0
+workers_involved_share_J1,0.258919,share of reuse-frame workers
+workers_involved_J09,92465,workers with >=1 sentence in a cross-worker pair at J >= 0.9
+workers_involved_share_J09,0.261867,share of reuse-frame workers
+workers_involved_J07,103283,workers with >=1 sentence in a cross-worker pair at J >= 0.7
+workers_involved_share_J07,0.292504,share of reuse-frame workers
+workers_involved_J05,131004,workers with >=1 sentence in a cross-worker pair at J >= 0.5
+workers_involved_share_J05,0.371012,share of reuse-frame workers
+workers_involved_J03,168054,workers with >=1 sentence in a cross-worker pair at J >= 0.3
+workers_involved_share_J03,0.47594,share of reuse-frame workers
+reuse_frame_workers,353099,workers with >=1 codable sentence

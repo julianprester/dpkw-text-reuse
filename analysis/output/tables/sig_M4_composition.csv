@@ -1,0 +1,4 @@
+model,term,est,se,pct,n
+M4 log rate ~ composition (ref: authored generic),sh_gen,-0.329239238887102,0.0339310122981345,-28.0529129254532,352986
+M4 log rate ~ composition (ref: authored generic),sh_spec,-0.149641938024013,0.0291191710308782,-13.8983781594583,352986
+M4 log rate ~ composition (ref: authored generic),or_spec,0.0575223285867438,0.0170664959780309,5.92089210289646,352986

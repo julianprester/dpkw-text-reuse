@@ -1,0 +1,9 @@
+name,value,note
+m1_sentences_all,2309694,codable sentences in profiles with >= 2 codable sentences
+m1_sentences_used,773424,sentences in profiles with within-profile variation in sharing (identifying sample)
+m1_profiles_used,86956,profiles in the identifying sample
+m1_or_lspec,0.410183,odds ratio of being shared per log-unit of occupation-informative words (within profile)
+m1_or_number,0.333913,"odds ratio, sentence contains a number (quantified claim)"
+m1_or_assurance,1.97252,"odds ratio, assurance vs individuating claim"
+m1_or_encounter,4.11474,"odds ratio, encounter formula vs individuating claim"
+m1_or_rel,3.48422,"odds ratio, last vs first qualifying sentence of the same profile (relative position 1 vs 0)"

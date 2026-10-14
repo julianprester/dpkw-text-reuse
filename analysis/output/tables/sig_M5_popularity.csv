@@ -1,0 +1,4 @@
+model,term,est,se,pct,n
+M5 log rate ~ shared share by script popularity,sh_pop,-0.277977566138041,0.060936075499467,-24.2686189202741,352986
+M5 log rate ~ shared share by script popularity,sh_mid,-0.482535585930513,0.0625838725760544,-38.2783599196447,352986
+M5 log rate ~ shared share by script popularity,sh_rare,-0.227843248464478,0.0175631517344293,-20.3750936683037,352986

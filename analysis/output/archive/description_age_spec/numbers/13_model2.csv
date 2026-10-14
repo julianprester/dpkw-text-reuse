@@ -1,0 +1,29 @@
+name,value,note
+m2_workers,352986,"workers in the model frame (asking rate 3-500 USD, tenure observed)"
+m2_sharers,91410,... of whom share at least one sentence verbatim
+m2_families,29603,template families represented among sharers
+m2_cities,29128,city groups
+m2_pct_authored_spec,5.94711,"% rate difference, profile entirely authored-specific vs entirely authored-generic"
+m2_pct_shared_gen,-27.8986,"% rate difference, entirely shared-generic vs authored-generic"
+m2_pct_shared_spec,-13.687,"% rate difference, entirely shared-specific vs authored-generic"
+m2_shared_gen_pct_0_jobs,-23.0786,"% rate difference, entirely shared-generic vs authored-generic, within record group"
+m2_shared_spec_pct_0_jobs,-7.82635,"% rate difference, entirely shared-specific vs authored-generic, within record group"
+m2_authored_spec_pct_0_jobs,3.13224,"% rate difference, entirely authored-specific vs authored-generic, within record group"
+m2_shared_gen_pct_1_9_jobs,-26.7668,"% rate difference, entirely shared-generic vs authored-generic, within record group"
+m2_shared_spec_pct_1_9_jobs,-12.2459,"% rate difference, entirely shared-specific vs authored-generic, within record group"
+m2_authored_spec_pct_1_9_jobs,7.48708,"% rate difference, entirely authored-specific vs authored-generic, within record group"
+m2_shared_gen_pct_10_49_jobs,-31.8665,"% rate difference, entirely shared-generic vs authored-generic, within record group"
+m2_shared_spec_pct_10_49_jobs,-18.3568,"% rate difference, entirely shared-specific vs authored-generic, within record group"
+m2_authored_spec_pct_10_49_jobs,4.95082,"% rate difference, entirely authored-specific vs authored-generic, within record group"
+m2_shared_gen_pct_50__jobs,-29.9591,"% rate difference, entirely shared-generic vs authored-generic, within record group"
+m2_shared_spec_pct_50__jobs,-16.0712,"% rate difference, entirely shared-specific vs authored-generic, within record group"
+m2_authored_spec_pct_50__jobs,3.73843,"% rate difference, entirely authored-specific vs authored-generic, within record group"
+m2_var_family,0.0233885,variance of template-family random intercepts (sharers)
+m2_var_city,0.0125711,variance of city random intercepts
+m2_var_resid,0.3402,residual variance
+m2_icc_provenance,0.0643269,"provenance share: family variance / (family + residual), among sharers, net of all fixed effects and city"
+m2_lr_chisq_family,1560.42,"likelihood-ratio chi-square, adding template-family random intercepts"
+m2_lr_p_family,0,p-value (boundary; conservative)
+m2ml_pct_authored_spec,3.07925,multilevel model: authored-specific share (0 jobs reference for interactions)
+m2ml_pct_shared_gen,-18.685,multilevel model: shared-generic share
+m2ml_pct_shared_spec,-6.30774,multilevel model: shared-specific share

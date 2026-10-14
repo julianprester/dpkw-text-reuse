@@ -1,0 +1,39 @@
+model,term,est,se,pct
+"M2 composition (FE, country-clustered)",authored_spec,0.0650995542831901,0.0164484066852381,6.72652699244265
+"M2 composition (FE, country-clustered)",shared_gen,-0.340740527829752,0.0366209401574751,-28.8756567857126
+"M2 composition (FE, country-clustered)",shared_spec,-0.16429024625838,0.0304367410728778,-15.1504286569192
+"M2 composition (FE, country-clustered)",record1-9 jobs,-0.0865636574577058,0.0155555717095664,-8.29228318744997
+"M2 composition (FE, country-clustered)",record10-49 jobs,-0.052641603637581,0.0183462149856104,-5.12800306550246
+"M2 composition (FE, country-clustered)",record50+ jobs,-0.11815159310311,0.0251491100287789,-11.143865736691
+"M2 composition (FE, country-clustered)",ljobs,0.108248953173119,0.00957611330011049,11.4325125633601
+"M2 composition (FE, country-clustered)",lhours,0.0112031844096524,0.00311504356134966,1.12661750924128
+"M2 composition (FE, country-clustered)",rating_f>=4.95,-0.0169904199498732,0.0131157172634063,-1.68468967541945
+"M2 composition (FE, country-clustered)",rating_f4.8-4.95,-0.0504494120620852,0.0147273487298184,-4.91979734303807
+"M2 composition (FE, country-clustered)",rating_f<4.8,-0.102466248612998,0.0191846461968557,-9.73913864685479
+"M2 composition (FE, country-clustered)",agencyTRUE,0.152323892817237,0.0269846248052277,16.453736064142
+"M2 composition (FE, country-clustered)",n_occ,-0.0313773722298801,0.00618659725388182,-3.08902110600715
+"M2 composition (FE, country-clustered)",lchars,0.0732532941669298,0.0235345559057118,7.60030476961309
+"M2 composition (FE, country-clustered)",log(n_c),-0.00820384291805534,0.0125304244201835,-0.817028323424118
+"M2 composition (FE, country-clustered)",text_datedTRUE,-0.0550232188812194,0.0104227060186703,-5.35368281176115
+"M2 x verified record (FE, country-clustered)",authored_spec,0.0369130551204359,0.021424266438557,3.76028026654967
+"M2 x verified record (FE, country-clustered)",shared_gen,-0.263459920186656,0.022363413050824,-23.1611581313533
+"M2 x verified record (FE, country-clustered)",shared_spec,-0.0859644314703332,0.0273365097558997,-8.23731307217733
+"M2 x verified record (FE, country-clustered)",record1-9 jobs,-0.109439362012496,0.0120658225914174,-10.3663485243376
+"M2 x verified record (FE, country-clustered)",record10-49 jobs,-0.0521077582512225,0.0156986622634675,-5.07734256641066
+"M2 x verified record (FE, country-clustered)",record50+ jobs,-0.109782267507005,0.0284869641966109,-10.3970791267742
+"M2 x verified record (FE, country-clustered)",ljobs,0.108333042607646,0.00968709901483386,11.4418832543121
+"M2 x verified record (FE, country-clustered)",lhours,0.0113086778482204,0.00305385441557197,1.13728626658514
+"M2 x verified record (FE, country-clustered)",rating_f>=4.95,-0.0171529103402823,0.0129888895614884,-1.70066367073175
+"M2 x verified record (FE, country-clustered)",rating_f4.8-4.95,-0.0504977815018385,0.0145872509322468,-4.92439620794906
+"M2 x verified record (FE, country-clustered)",rating_f<4.8,-0.102134169350362,0.0190809767844561,-9.70915990918868
+"M2 x verified record (FE, country-clustered)",agencyTRUE,0.152596414525794,0.0269900975422486,16.4854765600527
+"M2 x verified record (FE, country-clustered)",n_occ,-0.0313652538867657,0.0061566157726425,-3.08784669839745
+"M2 x verified record (FE, country-clustered)",lchars,0.0731907545482904,0.0237136145984665,7.59357569800629
+"M2 x verified record (FE, country-clustered)",log(n_c),-0.00842453974015438,0.0125653337792898,-0.838915274800334
+"M2 x verified record (FE, country-clustered)",text_datedTRUE,-0.0549712628421489,0.0103530574900159,-5.34876523625968
+"M2 x verified record (FE, country-clustered)",authored_spec:d1,0.0440968194301505,0.0273618392762154,4.50835343825529
+"M2 x verified record (FE, country-clustered)",authored_spec:d2,0.0180710711044969,0.0393826008057193,1.82353409285669
+"M2 x verified record (FE, country-clustered)",authored_spec:d3,0.00094181358592127,0.0486162162138667,0.0942257231602905
+"M2 x verified record (FE, country-clustered)",d1:shared_any,-0.0615056159616885,0.0348034196624587,-5.96523352318593
+"M2 x verified record (FE, country-clustered)",d2:shared_any,-0.138588527786394,0.029202740391877,-12.9413823209546
+"M2 x verified record (FE, country-clustered)",d3:shared_any,-0.112221866015596,0.0390297056659464,-10.6154078533994

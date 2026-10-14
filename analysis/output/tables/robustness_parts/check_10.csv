@@ -1,0 +1,2 @@
+check,m1_n,m1_lspec,m1_lspec_se,m1_number,m1_number_se,m1_assurance,m1_encounter,m1_rel,dv,m2_n,m2_authored_spec,m2_authored_spec_se,m2_shared_gen,m2_shared_gen_se,m2_shared_spec,m2_shared_spec_se,m2_shared_gen_0jobs,m2_shared_gen_50plus,m2_shared_gen_50plus_se
+Alternative outcome: rating < 4.8 (>= 5 jobs),773424,-0.891150911641769,0.00833678208464728,-1.0968756386894,0.0162149612135314,0.679309809348418,1.41457621303989,1.24824345630082,lowrating,165591,0.0162117024179114,0.0271440172126526,0.190209594709052,0.0398918989175615,0.506289630182985,0.0424383094378517,,,

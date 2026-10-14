@@ -1,0 +1,10 @@
+| Record | Authored-specific | Shared-generic | Shared-specific |
+| --- | ---: | ---: | ---: |
+| 0 jobs | +3.2% [-0.9, 7.4] | -23.0% [-26.2, -19.8] | -7.8% [-12.4, -2.8] |
+| 1–9 jobs | +7.5% [4.3, 10.7] | -26.8% [-32.3, -20.8] | -12.2% [-18.4, -5.6] |
+| 10–49 jobs | +4.9% [-1.9, 12.3] | -31.9% [-36.2, -27.2] | -18.3% [-22.6, -13.9] |
+| 50+ jobs | +3.7% [-4.0, 12.1] | -30.0% [-34.4, -25.2] | -16.1% [-21.6, -10.1] |
+
+: Full-unit composition contrasts by completed-job group (Model 2b) {#tbl-model2-record-slopes}
+
+*Note.* Percent asking-rate differences relative to authored-generic composition, with approximate 95% intervals using the saved delta-method SEs. These are hypothetical whole-composition contrasts, not effects of one reused sentence or changes experienced by a typical worker.

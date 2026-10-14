@@ -1,0 +1,79 @@
+>>> analysis/14_robustness.R
+
+===== Main specification 
+NOTE: 239,882 fixed-effects (1,536,270 observations) removed because of only 0 or only 1 outcomes or singletons.
+NOTE: 239,882 fixed-effects (1,536,270 observations) removed because of only 0 or only 1 outcomes or singletons.
+
+===== Shared = near-copy (J >= 0.7) 
+NOTE: 229,817 fixed-effects (1,447,311 observations) removed because of only 0 or only 1 outcomes or singletons.
+NOTE: 229,817 fixed-effects (1,447,311 observations) removed because of only 0 or only 1 outcomes or singletons.
+
+===== Long sentences only (>= 15 words) 
+NOTE: 268,464 fixed-effects (1,181,479 observations) removed because of only 0 or only 1 outcomes or singletons.
+NOTE: 268,464 fixed-effects (1,181,479 observations) removed because of only 0 or only 1 outcomes or singletons.
+
+===== Excluding agency members 
+NOTE: 209,613 fixed-effects (1,317,859 observations) removed because of only 0 or only 1 outcomes or singletons.
+NOTE: 209,613 fixed-effects (1,317,859 observations) removed because of only 0 or only 1 outcomes or singletons.
+The variable 'agencyTRUE' has been removed because of collinearity (see $collin.var).
+The variable 'agencyTRUE' has been removed because of collinearity (see $collin.var).
+
+===== Stricter specificity (max word KL >= 1) 
+NOTE: 239,882 fixed-effects (1,536,270 observations) removed because of only 0 or only 1 outcomes or singletons.
+NOTE: 239,882 fixed-effects (1,536,270 observations) removed because of only 0 or only 1 outcomes or singletons.
+
+===== Never-edited profiles (text written at creation) 
+NOTE: 43,703 fixed-effects (257,435 observations) removed because of only 0 or only 1 outcomes or singletons.
+NOTE: 43,703 fixed-effects (257,435 observations) removed because of only 0 or only 1 outcomes or singletons.
+The variable 'text_datedTRUE' has been removed because of collinearity (see $collin.var).
+The variable 'text_datedTRUE' has been removed because of collinearity (see $collin.var).
+fixed-effect model matrix is rank deficient so dropping 1 column / coefficient
+fixed-effect model matrix is rank deficient so dropping 1 column / coefficient
+
+===== Ten largest countries 
+NOTE: 171,570 fixed-effects (1,129,036 observations) removed because of only 0 or only 1 outcomes or singletons.
+NOTE: 171,570 fixed-effects (1,129,036 observations) removed because of only 0 or only 1 outcomes or singletons.
+
+===== Excluding fully templated profiles (>= 90% shared) 
+NOTE: 236,123 fixed-effects (1,512,221 observations) removed because of only 0 or only 1 outcomes or singletons.
+NOTE: 236,123 fixed-effects (1,512,221 observations) removed because of only 0 or only 1 outcomes or singletons.
+
+===== Linear probability model for Model 1 
+
+===== Alternative outcome: rating < 4.8 (>= 5 jobs) 
+NOTE: 239,882 fixed-effects (1,536,270 observations) removed because of only 0 or only 1 outcomes or singletons.
+NOTE: 239,882 fixed-effects (1,536,270 observations) removed because of only 0 or only 1 outcomes or singletons.
+The variable 'record50+ jobs' has been removed because of collinearity (see $collin.var).
+
+===== Alternative outcome: log hours at a given rate 
+NOTE: 239,882 fixed-effects (1,536,270 observations) removed because of only 0 or only 1 outcomes or singletons.
+NOTE: 239,882 fixed-effects (1,536,270 observations) removed because of only 0 or only 1 outcomes or singletons.
+Indices: <check>, <dv>
+                                                 check        dv P1_authorship_allocation P2a_authorship_premium P2b_commons_discount_generic
+                                                <char>    <char>                   <lgcl>                 <lgcl>                       <lgcl>
+ 1:                                 Main specification     lrate                     TRUE                   TRUE                         TRUE
+ 2:                      Shared = near-copy (J >= 0.7)     lrate                     TRUE                   TRUE                         TRUE
+ 3:                  Long sentences only (>= 15 words)     lrate                     TRUE                   TRUE                         TRUE
+ 4:                           Excluding agency members     lrate                     TRUE                   TRUE                         TRUE
+ 5:            Stricter specificity (max word KL >= 1)     lrate                     TRUE                   TRUE                         TRUE
+ 6:   Never-edited profiles (text written at creation)     lrate                     TRUE                   TRUE                         TRUE
+ 7:                              Ten largest countries     lrate                     TRUE                   TRUE                         TRUE
+ 8: Excluding fully templated profiles (>= 90% shared)     lrate                     TRUE                   TRUE                         TRUE
+ 9:               Linear probability model for Model 1     lrate                     TRUE                   TRUE                         TRUE
+10:      Alternative outcome: rating < 4.8 (>= 5 jobs) lowrating                       NA                  FALSE                         TRUE
+11:     Alternative outcome: log hours at a given rate    lhours                       NA                     NA                         TRUE
+    P2b_shared_specific_discount P2c_provenance P2c_lr_chisq P3_non_substitution sender_relaxation
+                          <lgcl>          <num>        <num>              <lgcl>            <lgcl>
+ 1:                         TRUE     0.06432690           NA                TRUE              TRUE
+ 2:                         TRUE     0.06422209           NA                TRUE              TRUE
+ 3:                         TRUE             NA           NA                TRUE              TRUE
+ 4:                         TRUE     0.05709110           NA                TRUE              TRUE
+ 5:                        FALSE             NA           NA                TRUE              TRUE
+ 6:                         TRUE     0.01771235      61.4953                TRUE              TRUE
+ 7:                         TRUE             NA           NA                TRUE              TRUE
+ 8:                         TRUE             NA           NA                TRUE              TRUE
+ 9:                         TRUE             NA           NA                TRUE             FALSE
+10:                         TRUE             NA           NA                  NA                NA
+11:                           NA             NA           NA                  NA                NA
+
+[numbers] wrote 1 entries to analysis/output/numbers/14_robustness.csv 

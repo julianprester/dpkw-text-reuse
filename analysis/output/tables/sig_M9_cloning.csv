@@ -1,0 +1,2 @@
+model,term,est,se,pct,n
+"M9 single-source (cloned) vs assembled, copiers with >=2 shared",I(best_partner_cover == 1)TRUE,0.0657137231792707,0.00463876596992104,6.79209523863575,48735

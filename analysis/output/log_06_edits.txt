@@ -1,0 +1,68 @@
+                      cls  tokens edited edit_rate
+                   <char>   <int>  <int>     <num>
+1:                 number   29518  11700 0.3963683
+2: occupation-informative  195703  77429 0.3956454
+3:     other content word 3068228 426926 0.1391442
+4:          pronoun/voice  831323  85574 0.1029371
+5:          function word 2019940 186778 0.0924671
+Key: <cls>
+                      cls      FALSE       TRUE
+                   <char>      <num>      <num>
+1:          function word 0.09383565 0.09011647
+2:                 number 0.39664311 0.39557970
+3: occupation-informative 0.48145959 0.30208564
+4:     other content word 0.14561140 0.12459450
+5:          pronoun/voice 0.10245802 0.10541316
+             x             y     N                 cx                 cy
+        <char>        <char> <int>             <char>             <char>
+ 1:          i           i'm  6429      pronoun/voice      pronoun/voice
+ 2:      thank        thanks  3410 other content word other content word
+ 3:  situation    situations  3182 other content word other content word
+ 4:         my          this  2081      pronoun/voice      function word
+ 5:        ask       contact  1899 other content word other content word
+ 6:          i          i'll  1884      pronoun/voice      function word
+ 7:          i            we  1699      pronoun/voice      pronoun/voice
+ 8:    becomes      succeeds  1521 other content word other content word
+ 9:    project      projects  1516 other content word other content word
+10:       work         works  1253 other content word other content word
+11:   together          with  1225 other content word      function word
+12:       from          with  1147      function word      function word
+13:      let's         ready  1146      function word other content word
+14:        for            in  1132      function word      function word
+15:      hello            hi  1128 other content word other content word
+16:          i            my  1064      pronoun/voice      pronoun/voice
+17:        you          your  1038      pronoun/voice      pronoun/voice
+18:    hearing       working   952 other content word other content word
+19:   relation relationships   893 other content word other content word
+20:     regret        reject   879 other content word other content word
+21:       soon         thank   820 other content word other content word
+22: delivering      delivery   801 other content word other content word
+23:     client       clients   801 other content word other content word
+24:        you        you're   753      pronoun/voice      pronoun/voice
+25:    queries     questions   705 other content word other content word
+26:   creative    creative.i   704 other content word other content word
+27:       soon        thanks   695 other content word other content word
+28:       free      hesitate   694 other content word other content word
+29:        for            to   681      function word      function word
+30:      don't          feel   673      function word other content word
+31:  education   educational   671 other content word other content word
+32:    contact       message   654 other content word other content word
+33:    contact         let's   622 other content word      function word
+34:        don         don't   604 other content word      function word
+35:   question     questions   584 other content word other content word
+36:    contact         reach   572 other content word other content word
+37:    reviews  satisfaction   540 other content word other content word
+38:   relation     relations   535 other content word other content word
+39:          i       looking   532      pronoun/voice other content word
+40:         my           the   520      pronoun/voice      function word
+             x             y     N                 cx                 cy
+        <char>        <char> <int>             <char>             <char>
+   rel_bin      N      share
+     <num>  <int>      <num>
+1:       0 634621 0.47346561
+2:       1 130566 0.09741013
+3:       2  23820 0.01777116
+4:       3  54817 0.04089679
+5:       4 496550 0.37045631
+
+[numbers] wrote 12 entries to analysis/output/numbers/06_edits.csv 

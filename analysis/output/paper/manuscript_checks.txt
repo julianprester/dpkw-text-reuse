@@ -1,0 +1,9 @@
+Manuscript software QA passed.
+Source files expanded: 11
+Numerical variables resolved: 108
+Citation keys found: 60
+Caption identifiers: 19
+Local images: 6
+Saved coefficients, input hashes, retained control specification, and 29 excerpts checked.
+Project preview entry and manuscript redirect target checked.
+This is production QA, not interpretive reliability or causal validation.

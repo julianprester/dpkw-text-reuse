@@ -1,0 +1,3 @@
+>>> analysis/tests/qual_review_tests.R
+Wrote internal coding summaries and measurement diagnostics to /tmp/RtmpVTP9uP/qual-tests-16d883ae6/review 
+Qualitative software QA passed: coverage, counts, diagnostics and input validation.

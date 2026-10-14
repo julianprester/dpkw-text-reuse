@@ -1,0 +1,86 @@
+
+KL quantiles:
+  50%   75%   90%   95%   99% 
+0.280 0.663 1.178 1.458 2.700 
+
+Examples around the cut-off:
+            token n_workers    kl                  modal_occ
+           <char>     <int> <num>                     <char>
+ 1:    captivates      1067  0.47                    Writing
+ 2:         adobe     24833  0.48  Other - Design & Creative
+ 3: methodologies      2514  0.52 Web, Mobile & Software Dev
+ 4:  dramatically       118  0.46          Sales & Marketing
+ 5:       defects       281  0.49 Web, Mobile & Software Dev
+ 6:    intriguing       243  0.54                    Writing
+ 7:    properties       855  0.49           Customer Service
+ 8:    digestible       235  0.54                    Writing
+ 9:     leadpages       243  0.55          Sales & Marketing
+10:         coder       349  0.52 Web, Mobile & Software Dev
+11:         maven       366  0.50            IT & Networking
+12:   subscribers      1105  0.47          Sales & Marketing
+13:       density       145  0.54          Sales & Marketing
+14:           crm      6180  0.48            IT & Networking
+15:        labels       690  0.46          Design & Creative
+16:     additions       140  0.48 Engineering & Architecture
+17:         fonts       534  0.47          Design & Creative
+18:         filed       218  0.47                      Legal
+19:  imaginations       140  0.52                    Writing
+20:       careers       248  0.50    Accounting & Consulting
+21:    catalogues       224  0.54          Design & Creative
+22:         exams       313  0.51                Translation
+23:        titled       107  0.48                    Writing
+24:         punch       131  0.52                    Writing
+25:          card      3498  0.46          Design & Creative
+            token n_workers    kl                  modal_occ
+           <char>     <int> <num>                     <char>
+
+Top informative tokens by occupation:
+                     modal_occ        token n_workers    kl
+                        <char>       <char>     <int> <num>
+ 1: Web, Mobile & Software Dev    developer     44165  1.02
+ 2: Web, Mobile & Software Dev    wordpress     30083  0.63
+ 3: Web, Mobile & Software Dev applications     24497  0.61
+ 4: Web, Mobile & Software Dev       mobile     22893  0.81
+ 5: Web, Mobile & Software Dev         user     21764  0.51
+---                                                        
+74:                      Legal   commercial      5718  0.62
+75:                      Legal        legal      4479  1.74
+76:                      Legal          law      2794  1.88
+77:                      Legal    contracts      2661  0.69
+78:                      Legal   compliance      2567  0.88
+
+KL of some generic words:
+            token n_workers    kl                  modal_occ
+           <char>     <int> <num>                     <char>
+ 1:       autocad      4078 3.156 Engineering & Architecture
+ 2:    quickbooks      3767 2.422    Accounting & Consulting
+ 3:   translation     10550 1.757                Translation
+ 4:          logo     14997 0.685  Other - Design & Creative
+ 5:     wordpress     30083 0.625 Web, Mobile & Software Dev
+ 6:           seo     29794 0.384          Sales & Marketing
+ 7:         excel     23507 0.308   Data Science & Analytics
+ 8:         brief      1979 0.080                      Legal
+ 9:      deadline      4490 0.063                Translation
+10:        honest      3391 0.057              Admin Support
+11: communication     39150 0.023  Other - Design & Creative
+12:    freelancer     18859 0.021              Admin Support
+13:        skills     85569 0.020           Customer Service
+14:       clients     77374 0.010  Other - Design & Creative
+15:    experience    177853 0.008  Other - Design & Creative
+16:       quality     65022 0.008                    Writing
+17:          work    125288 0.005                    Writing
+           used  (Mb) gc trigger   (Mb)  max used   (Mb)
+Ncells  3560250 190.2    9475100  506.1   9475100  506.1
+Vcells 70509312 538.0  502981093 3837.5 627647672 4788.6
+                macro       move sentences share_specific exact_copied      share
+               <char>     <char>     <int>          <num>        <num>      <num>
+1:              other      other    809678      0.6113146   0.10912980 0.34661541
+2: capability-bearing credential    363580      0.7762693   0.05385335 0.15564512
+3:          assurance    process    344972      0.5474705   0.13138458 0.14767921
+4: capability-bearing capability    260124      0.7636127   0.08653181 0.11135660
+5:          assurance  character    257172      0.5147878   0.12455866 0.11009287
+6:  encounter formula  encounter    155828      0.3017301   0.25103319 0.06670848
+7: capability-bearing   identity    119892      0.8386882   0.04481533 0.05132462
+8:       agency voice     agency     24709      0.5426768   0.09449998 0.01057769
+
+[numbers] wrote 13 entries to analysis/output/numbers/03_content.csv 

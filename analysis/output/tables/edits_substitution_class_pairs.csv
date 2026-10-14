@@ -1,0 +1,26 @@
+ca,cb,N,share
+other content word,other content word,120537,0.499008499169954
+other content word,function word,17162,0.0710485897504895
+function word,other content word,16424,0.0679933596353595
+function word,function word,14006,0.0579831341361937
+pronoun/voice,pronoun/voice,12669,0.0524481169763986
+occupation-informative,other content word,9909,0.0410220531311969
+other content word,occupation-informative,9328,0.0386167838942178
+occupation-informative,occupation-informative,7976,0.0330196685613509
+function word,pronoun/voice,6058,0.0250793821645767
+other content word,pronoun/voice,5829,0.0241313500556814
+pronoun/voice,other content word,5776,0.0239119365108279
+pronoun/voice,function word,5675,0.0234938088121447
+number,number,3171,0.0131275537873676
+occupation-informative,function word,1769,0.00732344454426151
+function word,occupation-informative,1453,0.00601524303155001
+number,other content word,775,0.00320840560870699
+other content word,number,725,0.00300141169846783
+occupation-informative,pronoun/voice,615,0.00254602509594168
+pronoun/voice,occupation-informative,591,0.00244666801902688
+number,function word,324,0.00134132053834976
+function word,number,310,0.0012833622434828
+number,occupation-informative,169,0.000699639416608363
+occupation-informative,number,167,0.000691359660198797
+pronoun/voice,number,75,0.000310490865358741
+number,pronoun/voice,60,0.000248392692286993

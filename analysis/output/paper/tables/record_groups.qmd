@@ -1,0 +1,9 @@
+| Record | Workers | Share |
+| --- | ---: | ---: |
+| 0 jobs | 45,310 | 12.8% |
+| 1–9 jobs | 191,210 | 54.2% |
+| 10–49 jobs | 81,143 | 23.0% |
+| 50+ jobs | 35,323 | 10.0% |
+
+: Completed-job groups in the Model 2 frame {#tbl-record-groups}
+

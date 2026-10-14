@@ -1,0 +1,5 @@
+name,value,note
+sheet_profiles,150,profiles in the coding sheets
+sheet_sentences,1401,numbered (codable) sentences
+sheet_segments_other,594,"other text segments shown for context (headings, fragments, run-on lists)"
+sheet_near_copies,100,numbered sentences that are near-copies (0.5 <= J < 1) -> slot coding

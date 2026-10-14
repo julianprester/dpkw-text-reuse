@@ -1,0 +1,17 @@
+| Check | M1 sentences | Worker outcome N | Specificity estimate (SE) | Number estimate (SE) |
+| --- | ---: | ---: | ---: | ---: |
+| Main specification | 773,424 | 352,986 | -0.891 (0.008) | -1.097 (0.016) |
+| Sharing at J ≥ .7 | 862,383 | 352,986 | -0.875 (0.008) | -0.902 (0.015) |
+| Sentences ≥ 15 words | 281,654 | 336,344 | -0.937 (0.012) | -1.478 (0.024) |
+| Exclude agency members | 613,672 | 303,412 | -0.956 (0.010) | -1.060 (0.019) |
+| Stricter specificity | 773,424 | 352,986 | -1.333 (0.015) | -1.076 (0.016) |
+| Within-one-day edit subset | 127,030 | 65,718 | -0.942 (0.021) | -1.085 (0.041) |
+| Ten largest countries | 640,609 | 260,855 | -0.847 (0.009) | -1.105 (0.017) |
+| Exclude ≥ 90% shared profiles | 760,869 | 347,646 | -0.900 (0.008) | -1.078 (0.016) |
+| Model 1 linear probability | 2,309,694 | 352,986 | -0.037 (0.000) | -0.040 (0.001) |
+| Rating < 4.8 (≥ 5 jobs) | 773,424 | 165,591 | -0.891 (0.008) | -1.097 (0.016) |
+| Hours conditional on rate | 773,424 | 352,986 | -0.891 (0.008) | -1.097 (0.016) |
+
+: Robustness samples and selected Model 1 coefficients {#tbl-robustness-samples}
+
+*Note.* Model 1 entries are logit coefficients except the LPM row. Alternative-outcome entries repeat main Model 1 rather than estimating new allocation relationships. The stricter rule uses maximum word KL, not log(1 + informative types). The ≥ 15-word check retains original qualifying-sentence position indicators.

@@ -17,7 +17,7 @@ library(data.table)
 
 # LOAD DATA
 
-dpkw_data <- read.csv("profiles.csv")
+dpkw_data <- read.csv("data/profiles.csv")
 
 dpkw_df <- tibble(
   worker = dpkw_data$worker_id,
@@ -103,3 +103,5 @@ corpus <- TextReuseCorpus(
 buckets <- lsh(corpus, bands = 60, progress = TRUE)
 candidates <- lsh_candidates(buckets)
 similar_pairs <- lsh_compare(candidates, corpus, jaccard_similarity, progress = TRUE)
+
+write.csv(similar_pairs, "similar_pairs.csv")

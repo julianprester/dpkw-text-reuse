@@ -1,0 +1,17 @@
+| Check | Authored-specific (SE) | Shared-generic (SE) | Shared-specific (SE) |
+| --- | ---: | ---: | ---: |
+| Main specification | 0.058 (0.017) | -0.327 (0.034) | -0.147 (0.029) |
+| Sharing at J ≥ .7 | 0.055 (0.017) | -0.317 (0.032) | -0.149 (0.027) |
+| Sentences ≥ 15 words | 0.034 (0.011) | -0.262 (0.029) | -0.176 (0.030) |
+| Exclude agency members | 0.055 (0.016) | -0.334 (0.036) | -0.165 (0.026) |
+| Stricter specificity | 0.090 (0.024) | -0.320 (0.033) | 0.067 (0.030) |
+| Within-one-day edit subset | 0.053 (0.017) | -0.345 (0.041) | -0.157 (0.049) |
+| Ten largest countries | 0.072 (0.024) | -0.326 (0.040) | -0.136 (0.040) |
+| Exclude ≥ 90% shared profiles | 0.060 (0.017) | -0.359 (0.031) | -0.180 (0.031) |
+| Model 1 linear probability | 0.058 (0.017) | -0.327 (0.034) | -0.147 (0.029) |
+| Rating < 4.8 (≥ 5 jobs) | 0.016 (0.027) | 0.190 (0.040) | 0.506 (0.042) |
+| Hours conditional on rate | -0.042 (0.035) | 0.267 (0.065) | 0.624 (0.138) |
+
+: Robustness worker-level coefficients {#tbl-robustness-coefficients}
+
+*Note.* Country-clustered SEs. Rate rows are log-rate coefficients without record interactions; the rating row is log odds and the hours row uses log(1 + recorded hours). Outcome-specific controls are described in Appendix D. The LPM row repeats the main worker-level estimates.

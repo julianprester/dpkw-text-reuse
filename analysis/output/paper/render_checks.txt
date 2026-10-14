@@ -1,0 +1,7 @@
+Rendered-output checks passed.
+HTML: 5 figure captions, 14 table captions; 37 reference entries.
+DOCX archive integrity passed; no unresolved numerical shortcodes or references in either format.
+Age-controlled sample and variance values appear in both outputs; internal profile identifiers absent.
+Static HTML title block, Model 2 table and robustness table visually inspected.
+Source numerical/citation/quotation QA: analysis/output/paper/manuscript_checks.txt.
+This is production QA, not interpretive reliability or causal validation.

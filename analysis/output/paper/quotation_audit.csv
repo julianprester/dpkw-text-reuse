@@ -1,0 +1,30 @@
+key,source,internal_case,pos,kind,quotation,adopters
+risk1,sentence,P002,11,exact,We could always start off with a small project with shared risk and then keep going if you're happy with my work.,45
+risk2,sentence,P002,12,exact,Chances are that you'll be more than happy.,46
+guarantee,sentence,P065,5,exact,I guarantee you will be satisfied with my work!,121
+pride,sentence,P065,9,exact,I take pride in leaving all of my clients satisfied.,14
+contact,sentence,P112,13,exact,Please contact me so we can discuss how we can work together to fully meet your business needs!,179
+testimonial,sentence,P043,6,exact,But don't just take my word for it!,84
+close1,sentence,P043,20,exact,I am excited to collaborate with you and bring your vision to life.,5
+close2,sentence,P043,21,exact,Let's work together to create something truly extraordinary!,8
+shopify1,sentence,P149,1,exact,Over the last 5 years I have been working as a Shopify developer.,5
+shopify2,sentence,P149,2,exact,"I am specialized in Shopify front-end, back-end and Shopify speed optimization.",9
+slot-base,pair,N039,,pair,We always prefer to keep our work transparent,
+slot-web,pair,N039,,pair,We always prefer to keep our web development & application development work transparent,
+slot-crm,pair,N086,,pair,We always prefer to keep our CRM development & consultation work transparent,
+number-label,pair,N075,,pair,100% satisfaction: I focus on providing value to all of my clients and earning their trust,
+review-label,pair,N075,,pair,Client reviews: I focus on providing value to all of my clients and earning their trust,
+pledge,sentence,P016,2,exact,"I believe in creating original, engaging design solutions that resonate with your audience and are functional based on your unique needs.",28
+open15,sentence,P016,1,variant,I am a full time freelance graphic designer with over 15 years of professional experience,
+open3,sentence,P101,1,variant,"Hi, I am full time freelance graphic designer and illustrator with over 3 years of professional experience",
+developer,sentence,P060,1,exact,I'm a developer with experience in building websites for small and medium sized businesses.,335
+virtue1,sentence,P137,8,exact,Over-delivering: this is core to my work as a freelancer.,425
+virtue2,sentence,P137,9,exact,My focus is on giving more than what I expect to receive.,483
+virtue3,sentence,P137,13,exact,Kindness: one of the biggest aspects of my life that I implement in every facet of my life.,284
+reply,sentence,P057,4,exact,I always reply within 24 hours if we don't have an on-going project.,7
+warned,sentence,P057,5,exact,"You will be warned about any delays, vacations and emergency situations beforehand.",8
+winwork,sentence,P060,2,exact,"Whether you're trying to win work, list your services or even create a whole online store — I can help!",530
+seo1,sentence,P081,2,exact,I am a high-end SEO expert and specialized in increasing the amount of traffic to websites.,4
+seo2,sentence,P081,5,exact,"My expertise lies in ecommerce, WordPress, Joomla, Shopify, Wix and local SEO.",5
+migration,sentence,P112,9,exact,I have also a lot of experience with migration from SharePoint on-premise to SharePoint online (Office 365).,3
+reviews,sentence,P137,7,exact,The client reviews and feedback on my profile are immensely important to me and the value that I provide.,235

@@ -1,0 +1,18 @@
+| Predictor | 2a: Composition (SE) | 2b: Record interactions (SE) | 2c: Multilevel (SE) |
+| --- | ---: | ---: | ---: |
+| Authored-specific share | 0.058 (0.017) | 0.031 (0.020) | 0.031 (0.010) |
+| Shared-generic share | -0.327 (0.034) | -0.262 (0.021) | -0.206 (0.017) |
+| Shared-specific share | -0.147 (0.029) | -0.081 (0.027) | -0.065 (0.018) |
+| Authored-specific × 1–9 jobs | — | 0.041 (0.027) | 0.037 (0.011) |
+| Authored-specific × 10–49 jobs | — | 0.017 (0.038) | 0.012 (0.013) |
+| Authored-specific × 50+ jobs | — | 0.005 (0.048) | -0.002 (0.017) |
+| Shared share × 1–9 jobs | — | -0.049 (0.033) | 0.005 (0.018) |
+| Shared share × 10–49 jobs | — | -0.122 (0.024) | -0.069 (0.020) |
+| Shared share × 50+ jobs | — | -0.094 (0.031) | -0.049 (0.022) |
+| City variance | — | — | 0.01257 |
+| Circulation-family variance | — | — | 0.02340 |
+| Residual variance | — | — | 0.34022 |
+
+: Model 2: profile composition, verified records, and circulation families {#tbl-model2}
+
+*Note.* Selected coefficients; dependent variable: log posted USD hourly rate; N = 352,986 throughout. Omitted composition: authored-generic share. All forms include country and first-listed-occupation effects, completed-job groups, log(1 + jobs), log(1 + hours), rating bands, a five-degree-of-freedom description-age spline, agency membership, occupation count, log description characters, and log qualifying-sentence count. Forms 2a/2b have country-clustered SEs. Form 2c has model-based SEs and ML city and sharer-only family random effects. In 2b/2c, composition main effects refer to zero jobs; shared-share interactions shift both shared categories equally. ML SEs are not country-clustered.

@@ -1,0 +1,5 @@
+type,profiles,med_sent,share
+authored (0%),261675,5,0.741081113228868
+lightly templated (<1/3),48382,9,0.137021062081739
+heavily templated (1/3-0.9),37699,6,0.106766091096265
+fully templated (>=0.9),5343,5,0.0151317335931283

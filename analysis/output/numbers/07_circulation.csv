@@ -1,0 +1,35 @@
+name,value,note
+worker_pairs_J03,5828573,worker pairs sharing >=1 sentence pair at J >= 0.3
+worker_pairs_exact,1689837,worker pairs sharing >=1 identical sentence
+lift_agency_J03_05,1.00863,"homophily lift over random mixing: agency [0.3,0.5)"
+r_agency_J03_05,0.0270036,"assortativity r: agency [0.3,0.5)"
+lift_agency_exact,1.03778,homophily lift over random mixing: agency exact
+r_agency_exact,0.110497,assortativity r: agency exact
+lift_city_key_J03_05,1.47558,"homophily lift over random mixing: city_key [0.3,0.5)"
+r_city_key_J03_05,0.00295373,"assortativity r: city_key [0.3,0.5)"
+lift_city_key_exact,4.09456,homophily lift over random mixing: city_key exact
+r_city_key_exact,0.0207921,assortativity r: city_key exact
+lift_country_J03_05,1.32985,"homophily lift over random mixing: country [0.3,0.5)"
+r_country_J03_05,0.0381977,"assortativity r: country [0.3,0.5)"
+lift_country_exact,1.88933,homophily lift over random mixing: country exact
+r_country_exact,0.115173,assortativity r: country exact
+lift_occ1_J03_05,1.19989,"homophily lift over random mixing: occ1 [0.3,0.5)"
+r_occ1_J03_05,0.0471397,"assortativity r: occ1 [0.3,0.5)"
+lift_occ1_exact,1.4665,homophily lift over random mixing: occ1 exact
+r_occ1_exact,0.115097,assortativity r: occ1 exact
+lift_occ_exact_generic_only,1.38309,"occupational lift, pairs sharing only generic sentences"
+lift_country_exact_generic_only,1.76385,"country lift, pairs sharing only generic sentences"
+cohort_lift30_same_city,3.05285,P(created within 30 days of each other) exact-sharing pairs / matched random pairs
+cohort_lift7_same_city,4.35755,"same, within 7 days"
+cohort_lift30_same_country__other_city,2.18457,P(created within 30 days of each other) exact-sharing pairs / matched random pairs
+cohort_lift7_same_country__other_city,2.65623,"same, within 7 days"
+cohort_lift30_other_country,2.00466,P(created within 30 days of each other) exact-sharing pairs / matched random pairs
+cohort_lift7_other_country,2.20228,"same, within 7 days"
+status_cor_obs,0.165522,correlation of log asking rates within exact-sharing pairs
+status_cor_null,0.0885557,... in pairs where the partner is replaced by a random worker from the same country x occupation
+precedence_pairs,777391,exact-sharing worker pairs whose edit intervals do not overlap (order of holding the text is known)
+precedence_pairs_share,0.460039,... share of all exact-sharing worker pairs
+precedence_earlier_higher_prestige_obs,0.421386,share of ordered sharing pairs where the earlier holder has higher tenure-adjusted prestige
+precedence_earlier_higher_prestige_null,0.492703,... random ordered pairs
+precedence_earlier_higher_rate_obs,0.503164,share where the earlier holder has the higher adjusted asking rate
+precedence_earlier_higher_rate_null,0.501398,... random ordered pairs

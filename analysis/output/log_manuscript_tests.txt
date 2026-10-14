@@ -1,0 +1,2 @@
+>>> analysis/tests/manuscript_tests.R
+Manuscript software QA passed: variables, citations, references, assets, coefficients, controls and quotations.

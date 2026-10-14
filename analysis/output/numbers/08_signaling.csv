@@ -1,0 +1,26 @@
+name,value,note
+model_frame_workers,353099,reuse-frame workers in the model frame
+M0_any_shared_raw,-19.5223,"% raw difference in asking rate, any shared sentence vs none"
+M0_any_shared_country_fe,-5.45681,... with country fixed effects only
+M0_any_shared_full,-12.3263,... with full controls
+M2_typelight,-8.84708,% difference in asking rate vs fully authored profiles (controls)
+M2_typeheavy,-15.5208,% difference in asking rate vs fully authored profiles (controls)
+M2_typefull,-18.8688,% difference in asking rate vs fully authored profiles (controls)
+M3_share1_0_jobs,-18.0355,"% rate difference, fully shared vs fully authored profile, within record group"
+M3_share1_1_9_jobs,-24.3874,"% rate difference, fully shared vs fully authored profile, within record group"
+M3_share1_10_49_jobs,-28.2261,"% rate difference, fully shared vs fully authored profile, within record group"
+M3_share1_50__jobs,-25.4755,"% rate difference, fully shared vs fully authored profile, within record group"
+M4_sh_gen,-28.0529,% rate difference for a profile made entirely of this kind of sentence vs entirely authored-generic
+M4_sh_spec,-13.8984,% rate difference for a profile made entirely of this kind of sentence vs entirely authored-generic
+M4_or_spec,5.92089,% rate difference for a profile made entirely of this kind of sentence vs entirely authored-generic
+M5_sh_pop,-24.2686,% rate difference per unit share of profile in shared sentences of this popularity
+M5_sh_mid,-38.2784,% rate difference per unit share of profile in shared sentences of this popularity
+M5_sh_rare,-20.3751,% rate difference per unit share of profile in shared sentences of this popularity
+M6_or_low_rating_share1,1.25712,odds ratio of a rating < 4.8 for a fully shared vs fully authored profile (>= 5 jobs)
+M7_or_first_job_share1,1.24765,"odds ratio of having >=1 job, fully shared vs fully authored, first-year workers"
+M7b_rate_share1_newcomers,-23.471,"% rate difference, fully shared vs authored, first-year workers"
+M8_icc_scripts_obs,0.175412,share of variance in adjusted log rate between scripts (adopters of scripts with >=20 adopters)
+M8_icc_scripts_null,0.0216176,same statistic for random groups of copiers of identical sizes
+M8_icc_scripts_within_country_obs,0.175412,between-script variance share after removing country means
+M8_icc_scripts_within_country_null,0.0213038,... random groups
+M9_cloned_vs_assembled,6.7921,"% rate difference, single-source vs multi-source copiers (same shared share)"

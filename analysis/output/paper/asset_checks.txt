@@ -1,0 +1,7 @@
+Publication assets assembled from saved estimates, without re-estimation.
+Tables: model coefficients, explicitly labeled SEs, and normal-approximation intervals.
+Figures: publication labels replace earlier causal or actor-direction wording.
+Original age spline retained; tenure_yrs is DESCRIPTION/PROFILE AGE, distinct from job/hour experience controls.
+Within-one-day edit status does not establish that text preceded any completed work.
+Quotation checks: all 29 excerpts found in saved exact-shared, variant, or near-copy-pair units.
+Model 2 frame check: 352986 workers.

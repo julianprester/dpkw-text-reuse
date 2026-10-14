@@ -1,0 +1,14 @@
+     size scripts adoptions script_share adoption_share
+   <fctr>   <int>     <int>        <num>          <num>
+1:      2   51472    102944 0.6628377160     0.40477183
+2:    3-5   20037     70402 0.2580292065     0.27681794
+3:   6-20    5507     49950 0.0709171453     0.19640147
+4: 21-100     590     20754 0.0075978057     0.08160393
+5:   >100      48     10276 0.0006181266     0.04040483
+
+Prevalence:
+       exact    near07       J05       J03
+       <num>     <num>     <num>     <num>
+1: 0.2589189 0.2925044 0.3710121 0.4759402
+
+[numbers] wrote 34 entries to analysis/output/numbers/02_pairs.csv 

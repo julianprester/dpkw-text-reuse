@@ -1,0 +1,14 @@
+name,value,note
+lexicon_tokens,9173,word types used by >=100 workers in original sentences
+lexicon_informative,3010,occupation-informative word types (KL >= 0.5 bits)
+move_share_other,0.346615,share of codable sentences coded to this move
+move_share_credential,0.155645,share of codable sentences coded to this move
+move_share_process,0.147679,share of codable sentences coded to this move
+move_share_capability,0.111357,share of codable sentences coded to this move
+move_share_character,0.110093,share of codable sentences coded to this move
+move_share_encounter,0.0667085,share of codable sentences coded to this move
+move_share_identity,0.0513246,share of codable sentences coded to this move
+move_share_agency,0.0105777,share of codable sentences coded to this move
+specific_share_all,0.624185,share of sentences with >=1 occupation-informative word
+specific_share_original,0.651757,... among sentences without an exact cross-worker match
+specific_share_copied,0.398819,... among exact-copied sentences

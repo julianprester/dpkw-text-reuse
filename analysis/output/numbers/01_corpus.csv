@@ -1,0 +1,8 @@
+name,value,note
+profiles_raw,360599,rows in data/profiles.csv (unique worker ids)
+profiles_filtered,360271,"profiles with >=1 non-stopword, non-numeric word that occurs >100 times in corpus"
+sentences,2335955,codable sentences (8-50 words)
+workers_with_sentences,353099,workers with >=1 codable sentence (reuse frame)
+reference_date,20230908,max(updated_at) = latest observed profile edit; tenure is measured to this date
+text_dated_profiles,65763,reuse-frame profiles never edited after the day of creation
+agency_share,0.140448,share of reuse-frame profiles flagged as agency members

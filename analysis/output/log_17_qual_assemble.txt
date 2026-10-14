@@ -1,0 +1,11 @@
+{
+  "coverage": {
+    "1_sentences": 1401,
+    "1_profiles_language": 150,
+    "2_slots": 100,
+    "2_profiles_structure": 150,
+    "3_pairs": 100
+  },
+  "repeated_text_review_rows": 0,
+  "amendments": 43
+}

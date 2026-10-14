@@ -1,0 +1,105 @@
+         band attribute       n     obs     exp  lift       r
+       <fctr>    <char>   <int>   <num>   <num> <num>   <num>
+ 1: [0.3,0.5)    agency 2679302 0.76437 0.75783  1.01 0.02700
+ 2: [0.5,0.7)    agency 1073418 0.76883 0.75496  1.02 0.05662
+ 3: [0.7,0.9)    agency  359127 0.76768 0.75276  1.02 0.06033
+ 4:   [0.9,1)    agency   26889 0.75470 0.71079  1.06 0.15180
+ 5:     exact    agency 1689837 0.77336 0.74520  1.04 0.11050
+ 6: [0.3,0.5)  city_key 2678426 0.00911 0.00617  1.48 0.00295
+ 7: [0.5,0.7)  city_key 1072791 0.01355 0.00638  2.12 0.00721
+ 8: [0.7,0.9)  city_key  358861 0.01414 0.00636  2.22 0.00783
+ 9:   [0.9,1)  city_key   26887 0.02046 0.00686  2.98 0.01369
+10:     exact  city_key 1689145 0.02733 0.00667  4.09 0.02079
+11: [0.3,0.5)   country 2679302 0.13802 0.10378  1.33 0.03820
+12: [0.5,0.7)   country 1073418 0.16793 0.10854  1.55 0.06662
+13: [0.7,0.9)   country  359127 0.17816 0.10830  1.65 0.07834
+14:   [0.9,1)   country   26889 0.21983 0.11462  1.92 0.11883
+15:     exact   country 1689837 0.21662 0.11466  1.89 0.11517
+16: [0.3,0.5)      occ1 2596894 0.22897 0.19083  1.20 0.04714
+17: [0.5,0.7)      occ1 1043555 0.25688 0.19676  1.31 0.07484
+18: [0.7,0.9)      occ1  348440 0.25096 0.18553  1.35 0.08033
+19:   [0.9,1)      occ1   26014 0.29869 0.20324  1.47 0.11979
+20:     exact      occ1 1648959 0.29022 0.19790  1.47 0.11510
+         band attribute       n     obs     exp  lift       r
+       <fctr>    <char>   <int>   <num>   <num> <num>   <num>
+                         subset       n   obs   exp  lift      r attribute
+                         <char>   <int> <num> <num> <num>  <num>    <char>
+1:              all exact pairs 1648959 0.290 0.198  1.47 0.1151      occ1
+2:            no agency members 1215808 0.266 0.176  1.51 0.1096      occ1
+3:       generic sentences only 1391287 0.261 0.189  1.38 0.0893      occ1
+4: includes a specific sentence  257672 0.446 0.256  1.74 0.2556      occ1
+5:              all exact pairs 1689837 0.217 0.115  1.89 0.1152   country
+6:            no agency members 1245112 0.207 0.107  1.94 0.1120   country
+7:       generic sentences only 1425623 0.193 0.110  1.76 0.0940   country
+8: includes a specific sentence  264214 0.343 0.153  2.24 0.2242   country
+                      level  pairs within30_obs within30_null within7_obs within7_null lift30 lift7
+                     <char>  <int>        <num>         <num>       <num>        <num>  <num> <num>
+1:                same city  46160       0.1251        0.0410      0.0663      0.01521   3.05  4.36
+2: same country, other city 200000       0.0596        0.0273      0.0182      0.00686   2.18  2.66
+3:            other country 200000       0.0485        0.0242      0.0127      0.00578   2.00  2.20
+    pairs   mad_obs  mad_null   cor_obs   cor_null
+    <int>     <num>     <num>     <num>      <num>
+1: 299699 0.7677912 0.8167112 0.1655221 0.08855571
+
+Strongest cross-country ties (>= 200 pairs):
+                       a                    b     N        share     expected     lift
+                  <char>               <char> <int>        <num>        <num>    <num>
+ 1:                Kenya            Venezuela   671 0.0005090000 0.0002299644 2.213386
+ 2:                Kenya         South Africa   480 0.0003641133 0.0001937686 1.879114
+ 3:                Kenya                Spain   590 0.0004475559 0.0002429145 1.842442
+ 4:              Germany                Kenya   717 0.0005438942 0.0003018467 1.801889
+ 5:                Kenya               Serbia   977 0.0007411223 0.0004616180 1.605488
+ 6:            Indonesia               Turkey   464 0.0003519762 0.0002430984 1.447875
+ 7: United Arab Emirates       United Kingdom   231 0.0001752295 0.0001226289 1.428942
+ 8:                Italy                Kenya   647 0.0004907944 0.0003464883 1.416482
+ 9:               Turkey              Ukraine   816 0.0006189926 0.0004376214 1.414448
+10:         South Africa        United States   484 0.0003671476 0.0002628411 1.396843
+11:       United Kingdom        United States  1736 0.0013168764 0.0009449113 1.393651
+12:               Canada       United Kingdom   327 0.0002480522 0.0001803366 1.375496
+13:                Egypt               Turkey   678 0.0005143100 0.0003767116 1.365262
+14:               Canada        United States  1568 0.0011894368 0.0008774098 1.355623
+15:                Nepal               Turkey   262 0.0001987452 0.0001484902 1.338439
+16:            Indonesia                Nepal   430 0.0003261848 0.0002443644 1.334830
+17:            Sri Lanka United Arab Emirates   207 0.0001570239 0.0001178287 1.332645
+18:               Brazil        United States   588 0.0004460388 0.0003365617 1.325281
+19:                Egypt                Italy   374 0.0002837049 0.0002148481 1.320491
+20:            Indonesia                Italy   240 0.0001820566 0.0001386452 1.313112
+                       a                    b     N        share     expected     lift
+                  <char>               <char> <int>        <num>        <num>    <num>
+
+Within-country lifts:
+                       a                    b      N         share       expected      lift
+                  <char>               <char>  <int>         <num>          <num>     <num>
+ 1:              Vietnam              Vietnam   2522 0.00191311195 0.000113938735 16.790707
+ 2:            Sri Lanka            Sri Lanka    913 0.00069257383 0.000089651789  7.725154
+ 3:              Ukraine              Ukraine   4623 0.00350686619 0.000648223974  5.409961
+ 4:               Brazil               Brazil     67 0.00005082415 0.000012319401  4.125537
+ 5:                Kenya                Kenya   6043 0.00458403469 0.001249280367  3.669340
+ 6:            Venezuela            Venezuela     47 0.00003565276 0.000010582821  3.368928
+ 7:          Philippines          Philippines  64775 0.04913633085 0.015867562195  3.096653
+ 8:            Argentina            Argentina     54 0.00004096275 0.000013946020  2.937236
+ 9:           Bangladesh           Bangladesh  51518 0.03907997673 0.015166749511  2.576688
+10:              Germany              Germany     59 0.00004475559 0.000018232789  2.454676
+11:            Indonesia            Indonesia    640 0.00048548440 0.000200028596  2.427075
+12:               Turkey               Turkey    228 0.00017295382 0.000073860474  2.341629
+13:              Nigeria              Nigeria   6009 0.00455824334 0.002155405211  2.114796
+14:                Nepal                Nepal    208 0.00015778243 0.000074631755  2.114146
+15:        United States        United States   5910 0.00448314497 0.002298686430  1.950307
+16:               Serbia               Serbia    106 0.00008040835 0.000042642786  1.885626
+17:                Egypt                Egypt   1075 0.00081546207 0.000480336750  1.697688
+18:                India                India  85187 0.06462024880 0.039294272682  1.644521
+19:                Italy                Italy     52 0.00003944561 0.000024024663  1.641880
+20:       United Kingdom       United Kingdom    209 0.00015854100 0.000097105167  1.632673
+21:               Canada               Canada    173 0.00013123250 0.000083726947  1.567387
+22:         South Africa         South Africa     14 0.00001061997 0.000007513577  1.413438
+23:                Spain                Spain     22 0.00001668853 0.000011808290  1.413289
+24:             Pakistan             Pakistan 127552 0.09675704009 0.070988808190  1.362990
+25: United Arab Emirates United Arab Emirates     67 0.00005082415 0.000038715340  1.312765
+                       a                    b      N         share       expected      lift
+                  <char>               <char>  <int>         <num>          <num>     <num>
+                                 set earlier_higher_prestige_adj earlier_higher_rate_adj
+                              <char>                       <num>                   <num>
+1:               exact-sharing pairs                   0.4213864               0.5031641
+2: random pairs, same interval order                   0.4927033               0.5013985
+
+[numbers] wrote 34 entries to analysis/output/numbers/07_circulation.csv 

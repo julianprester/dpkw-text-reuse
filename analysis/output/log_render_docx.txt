@@ -1,0 +1,46 @@
+[1mpandoc [22m
+  to: docx
+  output-file: PAPER.docx
+  default-image-extension: png
+  toc: false
+  number-sections: false
+  variables: {}
+  
+[1mmetadata[22m
+  bibliography:
+    - references.bib
+  csl: apa.csl
+  link-citations: true
+  engines:
+    - path: /home/julian/.local/quarto-1.9.37/share/extension-subtrees/julia-engine/_extensions/julia-engine/julia-engine.js
+  fig-cap-location: bottom
+  tbl-cap-location: top
+  title: What Does Copyable Text Signal?
+  subtitle: Text Reuse and Self-Presentation in Online Labor Markets
+  author:
+    - name: Julian Prester
+      corresponding: true
+      email: julian.prester@sydney.edu.au
+      affiliations:
+        - name: The University of Sydney
+    - name: Gerit Wagner
+      email: g.wagner@fs.de
+      affiliations:
+        - name: Frankfurt School of Finance & Management
+    - name: Mohammad Hossein Jarrahi
+      email: jarrahi@unc.edu
+      affiliations:
+        - name: The University of North Carolina at Chapel Hill
+  keywords:
+    - online labor markets
+    - self-presentation
+    - text reuse
+    - signaling
+    - copyability
+    - computationally intensive theory construction
+  abstract: |
+    Digital labor platforms make workers' self-presentation visible and readily reproducible. What can profile text signal when another worker can copy it? We address this question through computationally intensive theory construction using 353,099 Upwork profiles and 2.34 million qualifying sentences. Exact sharing, defined by equality of word-five-gram sets, occurs in 25.9% of profiles. Two models organize the analysis. A sentence-level model with worker fixed effects identifies selective authorship allocation: occupation-specific wording and numerical content are less likely to be shared, whereas assurances, encounter formulae, and sentences later in the profile are more likely to be shared. A worker-level model connects textual composition and circulation families to posted asking rates. Authored-specific composition has a positive association and shared-generic composition a negative association; family-linked differences remain after accounting for city and worker covariates. The shared-generic association persists across completed-job groups rather than disappearing with verified reputation. Robustness checks and a supplementary qualitative analysis qualify these patterns without replacing them. We develop a signaling account distinguishing content, authorship allocation, and provenance: copyability need not eliminate information but can redistribute it across a profile's composition and circulation relationships. Asking-rate associations do not establish client valuation, causal effects, independent composition, or verified template origins.
+  date: last-modified
+  
+Output created: analysis/output/manuscript/PAPER.docx
+

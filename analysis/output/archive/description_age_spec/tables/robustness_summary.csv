@@ -1,0 +1,12 @@
+check,dv,P1_authorship_allocation,P2a_authorship_premium,P2b_commons_discount_generic,P2b_shared_specific_discount,P2c_provenance,P2c_lr_chisq,P3_non_substitution,sender_relaxation
+Main specification,lrate,TRUE,TRUE,TRUE,TRUE,0.0643269,,TRUE,TRUE
+Shared = near-copy (J >= 0.7),lrate,TRUE,TRUE,TRUE,TRUE,0.0642220882967841,,TRUE,TRUE
+Long sentences only (>= 15 words),lrate,TRUE,TRUE,TRUE,TRUE,,,TRUE,TRUE
+Excluding agency members,lrate,TRUE,TRUE,TRUE,TRUE,0.0570910957663128,,TRUE,TRUE
+Stricter specificity (max word KL >= 1),lrate,TRUE,TRUE,TRUE,FALSE,,,TRUE,TRUE
+Never-edited profiles (text written at creation),lrate,TRUE,TRUE,TRUE,TRUE,0.0177123494201608,61.4952963632386,TRUE,TRUE
+Ten largest countries,lrate,TRUE,TRUE,TRUE,TRUE,,,TRUE,TRUE
+Excluding fully templated profiles (>= 90% shared),lrate,TRUE,TRUE,TRUE,TRUE,,,TRUE,TRUE
+Linear probability model for Model 1,lrate,TRUE,TRUE,TRUE,TRUE,,,TRUE,FALSE
+Alternative outcome: rating < 4.8 (>= 5 jobs),lowrating,,FALSE,TRUE,TRUE,,,,
+Alternative outcome: log hours at a given rate,lhours,,,TRUE,,,,,

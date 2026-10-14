@@ -1,0 +1,50 @@
+name,value,note
+type_share_1,0.741081,authored (0%)
+type_share_2,0.137021,lightly templated (<1/3)
+type_share_3,0.106766,heavily templated (1/3-0.9)
+type_share_4,0.0151317,fully templated (>=0.9)
+prev_shared_nonformula_12w,0.168137,share of reuse-frame workers with >=1 exact-shared sentence of >=12 words that is not an encounter formula
+prev_shared_nonformula_15w,0.13797,... >=15 words
+copier_median_copied_sentences,2,median number of exact-shared sentences per copier
+copier_median_share,0.285714,median share of a copier's codable sentences that are exact-shared
+copier_median_word_share,0.224138,median share of a copier's codable words in exact-shared sentences
+pos_exact_first,0.051748,exact-copy rate of sentences in this slot (profiles with >=3 codable sentences)
+pos_exact_second,0.0869213,exact-copy rate of sentences in this slot (profiles with >=3 codable sentences)
+pos_exact_middle,0.114781,exact-copy rate of sentences in this slot (profiles with >=3 codable sentences)
+pos_exact_second-to-last,0.141294,exact-copy rate of sentences in this slot (profiles with >=3 codable sentences)
+pos_exact_last,0.160367,exact-copy rate of sentences in this slot (profiles with >=3 codable sentences)
+within_profile_relpos_copied,0.651518,"mean relative position (0=first,1=last) of shared sentences, mixed profiles"
+within_profile_relpos_original,0.427354,"mean relative position of authored sentences, same profiles"
+within_profile_relpos_diff_share_later,0.694581,share of mixed profiles whose shared text sits later than their authored text
+within_profile_relpos_generic_diff,0.17219,mean(relpos shared - relpos authored) among generic sentences only
+first_sentence_specific_share,0.764999,share of opening sentences with occupation-informative words
+last_sentence_encounter_share,0.269261,share of closing sentences coded as encounter formulae
+logit_offset_per1000chars,-0.155336,"log-odds change in P(shared) per 1,000 characters of offset (holding relative position, content, length)"
+logit_relpos,0.701416,"log-odds change from first to last relative position (holding offset, content, length)"
+logit_specific,-0.812552,log-odds difference for sentences with occupation-informative words
+long_exact_most_generic,0.170646,"exact-copy rate, sentences >= 15 words, max token KL <= 0.25"
+long_exact_most_specific,0.0335161,"exact-copy rate, sentences >= 15 words, max token KL > 2"
+exact_most_generic,0.223357,"exact-copy rate, all sentences, max token KL <= 0.25"
+exact_kl_bin_2,0.128238,"exact-copy rate, all sentences, max token KL in (0.25,0.5]"
+exact_kl_bin_3,0.0822509,"exact-copy rate, all sentences, max token KL in (0.5,1]"
+exact_kl_bin_4,0.0614978,"exact-copy rate, all sentences, max token KL in (1,1.5]"
+exact_kl_bin_5,0.0340078,"exact-copy rate, all sentences, max token KL in (1.5,2]"
+exact_kl_bin_6,0.0370269,"exact-copy rate, all sentences, max token KL in (2,10]"
+long_exact_move_encounter,0.148836,"exact-copy rate by move, sentences >= 15 words"
+long_exact_move_process,0.101735,"exact-copy rate by move, sentences >= 15 words"
+long_exact_move_character,0.101051,"exact-copy rate by move, sentences >= 15 words"
+long_exact_move_agency,0.0962256,"exact-copy rate by move, sentences >= 15 words"
+long_exact_move_other,0.0868577,"exact-copy rate by move, sentences >= 15 words"
+long_exact_move_capability,0.0739563,"exact-copy rate by move, sentences >= 15 words"
+long_exact_move_credential,0.0439344,"exact-copy rate by move, sentences >= 15 words"
+long_exact_move_identity,0.0304745,"exact-copy rate by move, sentences >= 15 words"
+long_exact_first,0.0365708,"exact-copy rate by slot, sentences >= 15 words"
+long_exact_last,0.105031,"exact-copy rate by slot, sentences >= 15 words"
+long_exact_middle,0.0901146,"exact-copy rate by slot, sentences >= 15 words"
+runs_profiles,86956,mixed profiles (>=1 shared and >=1 authored codable sentence)
+runs_obs_over_exp,0.838789,observed/expected number of runs of shared sentences (random placement = 1)
+single_block_obs,0.425748,share of profiles (k>=2 shared) whose shared sentences form one contiguous block
+single_block_exp,0.196219,... expected under random placement
+assembly_copiers_k2,48741,copiers with >=2 exact-shared sentences
+assembly_single_source_share,0.528549,... whose shared sentences are all shared with one single other profile
+assembly_multi_source_share,0.232494,... for whom no single other profile covers more than half of their shared sentences

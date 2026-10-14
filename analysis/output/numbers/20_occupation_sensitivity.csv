@@ -1,0 +1,16 @@
+name,value,note
+categories,13,distinct listed categories
+workers_no_category,7382,workers with no listed category (excluded from set measures)
+share_multi_category,0.580769,share of workers with listed categories who list more than one
+occsens_exact_obs_first,0.290218,"exact-sharing pairs, observed: first"
+occsens_exact_exp_first,0.19789,"exact-sharing pairs, expected under random mixing: first"
+occsens_exact_lift_first,1.46656,"exact-sharing pairs, lift over random mixing: first"
+occsens_J03_05_lift_first,1.19979,"lift in the [0.3,0.5) band: first"
+occsens_exact_obs_any,0.62059,"exact-sharing pairs, observed: any"
+occsens_exact_exp_any,0.497068,"exact-sharing pairs, expected under random mixing: any"
+occsens_exact_lift_any,1.2485,"exact-sharing pairs, lift over random mixing: any"
+occsens_J03_05_lift_any,1.10528,"lift in the [0.3,0.5) band: any"
+occsens_exact_obs_jaccard,0.27934,"exact-sharing pairs, observed: jaccard"
+occsens_exact_exp_jaccard,0.19348,"exact-sharing pairs, expected under random mixing: jaccard"
+occsens_exact_lift_jaccard,1.44377,"exact-sharing pairs, lift over random mixing: jaccard"
+occsens_J03_05_lift_jaccard,1.18282,"lift in the [0.3,0.5) band: jaccard"

@@ -1,13 +1,26 @@
 project:
   type: default
+  output-dir: analysis/output/manuscript
   render:
     - PAPER.qmd
 
+bibliography: references.bib
+csl: apa.csl
+link-citations: true
+
 format:
   html:
+    embed-resources: true
     toc: true
-    number-sections: true
-    toc-location: left
-    mermaid:
-      theme: default
-  docx: default
+    toc-depth: 2
+    number-sections: false
+    fig-cap-location: bottom
+    tbl-cap-location: top
+  docx:
+    toc: false
+    number-sections: false
+    fig-cap-location: bottom
+    tbl-cap-location: top
+
+execute:
+  enabled: false

@@ -1,23 +1,9 @@
-# output
-*.docx
-*.docx#
-*.pdf
-*.tex
-*.aux
-*.log
-*.synctex.gz
-*.html
-*.jats
-*-meca.zip
-PAPER_files/
-.Rhistory
-.RData
-.Rproj.user/
-.quarto/
-_freeze/
-_manuscript/
-
 /.quarto/
 **/*.quarto_ipynb
+*.html
+*.docx
+*.parquet
 
 .pi/
+data/profiles.csv
+data/similar_pairs.csv

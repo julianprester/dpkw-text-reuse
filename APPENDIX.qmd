@@ -108,7 +108,7 @@ The high-similarity region is substantially better covered than the lower region
 The probability concerns candidate generation under the hashing design, not the probability that a text was copied.
 
 | Threshold or band | Use | What it does not establish |
-|---|---|---|
+|:---|:---|:---|
 | $J=1$ | Main sharing measure and script construction | Character identity, intent, original authorship, or direct transmission |
 | $J\geq .7$ | Broader-sharing model sensitivity | An observed editing sequence |
 | $.5\leq J<1$ | Computational variant alignment and profile-nearest comparisons | Exhaustive detection of all adaptations |
@@ -225,7 +225,7 @@ The qualitative material was selected from the completed computational analysis 
 It is not a probability sample, an independent model-validation sample, or a source of population prevalence estimates.
 
 | Theoretical cell | Profiles |
-|---|---:|
+|:---|---:|
 | Typical allocation: non-exact-shared opening, shared closing | 20 |
 | Shared, occupation-specific opening | 15 |
 | At least 90% exact-shared qualifying sentences | 15 |
@@ -424,7 +424,7 @@ The original similarity-pair file is preserved; corpus reconstruction and score 
 The manuscript draws on these stages:
 
 | Stage | Scripts | Reproducible object |
-|---|---|---|
+|:---|:---|:---|
 | Corpus and score linkage | 01–02 | Eligible sentences, exact components, worker reuse |
 | Content and anatomy | 03–04 | Specificity lexicon, dictionary codes, positions and coverage |
 | Families, alignments, circulation | 05–07 | Co-adoption families, token differences, matched mixing comparisons |

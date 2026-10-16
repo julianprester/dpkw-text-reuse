@@ -1,5 +1,5 @@
 | Check | M1 sentences | Worker outcome N | Specificity estimate (SE) | Number estimate (SE) |
-| --- | ---: | ---: | ---: | ---: |
+| :--- | ---: | ---: | ---: | ---: |
 | Main specification | 773,424 | 352,986 | -0.891 (0.008) | -1.097 (0.016) |
 | Sharing at J ≥ .7 | 862,383 | 352,986 | -0.875 (0.008) | -0.902 (0.015) |
 | Sentences ≥ 15 words | 281,654 | 336,344 | -0.937 (0.012) | -1.478 (0.024) |

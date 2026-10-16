@@ -20,7 +20,7 @@ bs <- function(b, se) ifelse(is.na(b), "—", paste0(fx(b), " (", fx(se), ")"))
 md <- function(x, file, caption, id, note = "") {
   x <- as.data.frame(x, stringsAsFactors = FALSE)
   lines <- c(paste0("| ", paste(names(x), collapse = " | "), " |"),
-             paste0("| ", paste(c("---", rep("---:", ncol(x) - 1)), collapse = " | "), " |"),
+              paste0("| ", paste(c(":---", rep("---:", ncol(x) - 1)), collapse = " | "), " |"),
              vapply(seq_len(nrow(x)), function(i) paste0("| ", paste(x[i, ], collapse = " | "), " |"), ""), "",
              paste0(": ", caption, " {#", id, "}"), "", if (nzchar(note)) paste0("*Note.* ", note) else character())
   writeLines(lines, file.path(OUT, "tables", paste0(file, ".qmd")), useBytes = TRUE)

@@ -1,5 +1,5 @@
 | Check | Authored-specific (SE) | Shared-generic (SE) | Shared-specific (SE) |
-| --- | ---: | ---: | ---: |
+| :--- | ---: | ---: | ---: |
 | Main specification | 0.058 (0.017) | -0.327 (0.034) | -0.147 (0.029) |
 | Sharing at J ≥ .7 | 0.055 (0.017) | -0.317 (0.032) | -0.149 (0.027) |
 | Sentences ≥ 15 words | 0.034 (0.011) | -0.262 (0.029) | -0.176 (0.030) |

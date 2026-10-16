@@ -326,7 +326,7 @@ Copyability is a scope condition of the setting, not a measured variable, and co
 The content and reuse measures are constructed before the rate models; qualitative judgments are not substituted for them.
 
 | Construct | Role | Operationalization | Interpretation and boundary |
-|---|---|---|---|
+|:---|:---|:---|:---|
 | Exact-shared and authored sentences | Model 1 outcome; Model 2 component | Exact-shared: cross-worker word-five-gram match at $J=1$. Authored: no detected exact match | Shared measured form, not verified copying intent or direction; authored includes non-exact near-copies |
 | Occupational specificity | Model 1 predictor; content split in Model 2 | Distinct informative word types; informative if used by at least 100 workers and occupational KL divergence is at least .5 bits | Occupational concentration, not uniquely personal truth |
 | Numerical content | Model 1 predictor | At least one numeric token under the content tokenizer | Can concern history, quantities, or service promises |

@@ -1,5 +1,5 @@
 | Check | M1 allocation | Authored-specific | Shared-generic | Shared-specific | Family share | Shared-generic: 0 → 50+ jobs |
-| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| :--- | ---: | ---: | ---: | ---: | ---: | ---: |
 | Main specification | Retained | +6.0% | -27.9% | -13.7% | 6.4% | -23.0% → -30.0% |
 | Sharing at J ≥ .7 | Retained | +5.6% | -27.1% | -13.9% | 6.4% | -22.8% → -28.8% |
 | Sentences ≥ 15 words | Retained | +3.4% | -23.0% | -16.1% | — | -16.4% → -26.1% |

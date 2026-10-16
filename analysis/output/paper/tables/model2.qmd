@@ -1,5 +1,5 @@
 | Predictor | 2a: Composition (SE) | 2b: Record interactions (SE) | 2c: Multilevel (SE) |
-| --- | ---: | ---: | ---: |
+| :--- | ---: | ---: | ---: |
 | Authored-specific share | 0.058 (0.017) | 0.031 (0.020) | 0.031 (0.010) |
 | Shared-generic share | -0.327 (0.034) | -0.262 (0.021) | -0.206 (0.017) |
 | Shared-specific share | -0.147 (0.029) | -0.081 (0.027) | -0.065 (0.018) |

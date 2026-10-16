@@ -1,5 +1,5 @@
 | Stage | Count |
-| --- | ---: |
+| :--- | ---: |
 | Profile input rows | 360,599 |
 | After common-vocabulary filter | 360,271 |
 | At least one qualifying sentence | 353,099 |

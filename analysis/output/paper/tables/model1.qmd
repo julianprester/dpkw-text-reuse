@@ -1,5 +1,5 @@
 | Predictor | Logit coefficient (SE) | Odds ratio | 95% interval for OR | Linear probability (SE) |
-| --- | ---: | ---: | ---: | ---: |
+| :--- | ---: | ---: | ---: | ---: |
 | Occupational specificity: log(1 + distinct informative types) | -0.891 (0.008) | 0.410 | [0.404, 0.417] | -0.037 (0.000) |
 | Contains a numeric token | -1.097 (0.016) | 0.334 | [0.323, 0.345] | -0.040 (0.001) |
 | Assurance | 0.679 (0.012) | 1.973 | [1.926, 2.020] | 0.025 (0.000) |

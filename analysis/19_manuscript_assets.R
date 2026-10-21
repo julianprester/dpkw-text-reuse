@@ -214,18 +214,44 @@ savep(ggplot(SH, aes(share1)) +
   theme(panel.grid.major.x = element_blank()), "sharing_share", h = 4)
 
 # Method diagram, using only static graphics so Quarto needs no host R or browser execution.
-boxes <- function(b, edges, note = NULL, ylim = c(0, 7)) {
-  p <- ggplot() + geom_rect(data = b, aes(xmin = x - w / 2, xmax = x + w / 2, ymin = y - h / 2, ymax = y + h / 2), fill = "#eef3f5", color = "#205a78", linewidth = .5) +
-    geom_text(data = b, aes(x, y, label = text), size = 3.5, lineheight = 1.05) +
-    geom_segment(data = edges, aes(x, y, xend = xend, yend = yend), arrow = arrow(length = grid::unit(.12, "inches")), linewidth = .5, color = "#205a78") +
-    coord_cartesian(xlim = c(0, 10), ylim = ylim, clip = "off") + theme_void()
-  if (!is.null(note)) p <- p + annotate("text", x = 5, y = .25, label = note, size = 3.2)
-  p
-}
-b <- data.table(x = c(2, 5, 8, 3, 7, 3, 7, 5, 5), y = c(7.4, 7.4, 7.4, 5.8, 5.8, 4.3, 4.3, 2.8, 1.2), w = c(2.7, 2.7, 2.7, 3.5, 3.5, 3.5, 3.5, 8, 6), h = c(.85, .85, .85, 1.1, 1.1, 1.1, 1.1, 1.0, .75),
-                text = c("Public profile records", "Sentence corpus", "Cross-worker reuse", "Model 1\nWithin-profile allocation", "Model 2\nComposition and asking rates", "Content, function, position\nand variant alignments", "Verified records, city effects,\nand circulation families", "Qualitative analysis\nClose readings of theoretically sampled profiles and near-copy pairs", "Abductive interpretation and bounded propositions"))
-e <- data.table(x = c(3.35, 6.35, 7.9, 8.1, 3, 7, 3, 7, 5), y = c(7.4, 7.4, 6.975, 6.975, 5.25, 5.25, 3.75, 3.75, 2.3), xend = c(3.65, 6.65, 3, 7, 3, 7, 3, 7, 5), yend = c(7.4, 7.4, 6.35, 6.35, 4.85, 4.85, 3.3, 3.3, 1.575))
-savep(boxes(b, e, ylim = c(.5, 8)), "method", w = 8, h = 5.6)
+method_boxes <- data.table(
+  x = c(7.2, 4.7, 9.7, 4.7, 9.7, 7.2, 7.2),
+  y = c(8.35, 6.15, 6.15, 4.25, 4.25, 2.1, .15),
+  w = c(6.8, 3.8, 3.8, 3.8, 3.8, 8.8, 7.2),
+  h = c(1.6, 1.2, 1.2, 1.2, 1.2, 1.45, 1.0),
+  text = c("• Public profile records\n• Sentence corpus\n• Cross-worker reuse",
+           "Model 1\nWithin-profile allocation", "Model 2\nComposition and asking rates",
+           "Content, function, position\nand variant alignments",
+           "Verified records, city effects,\nand circulation families",
+           "Qualitative analysis\nClose readings of theoretically sampled profiles and near-copy pairs",
+           "Abductive interpretation and bounded propositions")
+)
+method_edges <- data.table(
+  x = c(6.2, 8.2, 4.7, 9.7, 4.7, 9.7, 7.2),
+  y = c(7.55, 7.55, 5.55, 5.55, 3.65, 3.65, 1.375),
+  xend = c(4.7, 9.7, 4.7, 9.7, 5.2, 9.2, 7.2),
+  yend = c(6.75, 6.75, 4.85, 4.85, 2.825, 2.825, .65)
+)
+method_phases <- data.table(
+  x = c(1.5, 1.5, 1.5, 1.5),
+  y = c(8.35, 5.2, 2.1, .15),
+  label = c("CORPUS CONSTRUCTION", "PRIMARY ANALYSIS", "SECONDARY\nANALYSIS", "THEORY\nDEVELOPMENT")
+)
+method_plot <- ggplot() +
+  geom_rect(data = method_boxes,
+            aes(xmin = x - w / 2, xmax = x + w / 2,
+                ymin = y - h / 2, ymax = y + h / 2),
+            fill = "white", color = "black", linewidth = .55) +
+  geom_text(data = method_boxes, aes(x, y, label = text),
+            color = "black", size = 3.3, lineheight = 1.05) +
+  geom_segment(data = method_edges, aes(x, y, xend = xend, yend = yend),
+               arrow = arrow(length = grid::unit(.12, "inches")),
+               linewidth = .5, color = "black") +
+  geom_text(data = method_phases, aes(x, y, label = label),
+            color = "black", fontface = "bold", size = 3.1) +
+  coord_cartesian(xlim = c(0, 12), ylim = c(-.5, 10), clip = "off") +
+  theme_void()
+savep(method_plot, "method", w = 8, h = 7.8)
 b <- data.table(x = c(5, 5, 2.6, 7.4, 5, 5), y = c(6.35, 4.95, 3.45, 3.45, 1.85, .65), w = c(8, 8, 4, 4, 8, 8), h = c(.8, .85, 1, 1, .85, .75),
                 text = c("COPYABILITY: visible, reproducible profile text (scope condition)", "P1: SELECTIVE ALLOCATION\nSpecific / quantified claims versus reusable assurances and formulae", "CONTENT AND AUTHORSHIP\nP2a: authored-specific premium\nP2b: shared-generic discount", "CIRCULATION / PROVENANCE\nP2c: family-linked asking-rate\ndifferences, net of city", "ASKING-RATE POSITION\nText composition and family associations", "P3: NON-SUBSTITUTION\nShared-generic association persists across verified-record groups"))
 e <- data.table(x = c(5, 3, 7, 2.6, 7.4), y = c(5.95, 4.525, 4.525, 2.95, 2.95), xend = c(5, 2.6, 7.4, 3.5, 6.5), yend = c(5.375, 3.95, 3.95, 2.275, 2.275))

@@ -300,8 +300,10 @@ Nor do unobserved matches outside this corpus establish originality.
 Three components structure the measurements and models below.
 *Content* refers to the substance of a sentence: its occupational detail, numerical claims, rhetorical function, and other meanings.
 We measure it through occupational specificity, numerical content, and rhetorical function.
-*Profile composition* refers to the distribution of shared and non-exact-shared wording across that content and across the profile.
-We measure it at the sentence level as exact-shared or authored status together with relative position in the profile, and at the worker level as profile composition shares.
+*Profile composition* refers to the combination of two practices, authoring and copying, across that content and across the profile.
+We observe authoring as sentences with no detected exact cross-worker match (authored) and copying as sentences with an exact cross-worker match (exact-shared).
+Neither label implies intent or direction: authored wording can be an adapted template, and shared wording can have been written by the worker who holds it.
+We measure profile composition at the sentence level as exact-shared or authored status together with relative position in the profile, and at the worker level as profile composition shares.
 *Provenance* refers to the circulation relationships through which shared forms are available and recur.
 We measure it through circulation families.
 These components can carry different information.
@@ -322,12 +324,14 @@ Occupational specificity, personal individuation, original wording, and truth-co
 We use occupational wording and numerical content as tractable indicators of selective composition, not as direct measures of whether a sentence is true for one worker alone.
 
 @tbl-measures summarizes the constructs, their operationalizations, and the role each plays in the two models.
-Copyability is a scope condition of the setting, not a measured variable, and control variables are listed with Model 2 below.
+Copyability and differentiation pressure are scope conditions of the setting, not measured variables, and control variables are listed with Model 2 below.
+*Differentiation pressure* is the need to stand out to a hurried audience that can read copy-paste as laziness [@BlythJarrahiLutzEtAl2022]; like copyability, it is drawn from the literature and not measured.
+We operationalize *market position* as the posted asking rate in Model 2 and examine ratings and recorded hours as alternative outcomes in the robustness checks.
 The content and reuse measures are constructed before the rate models; qualitative judgments are not substituted for them.
 
 | Construct | Role | Operationalization | Interpretation and boundary |
 |:---|:---|:---|:---|
-| Exact-shared and authored sentences | Model 1 outcome; Model 2 component | Exact-shared: cross-worker word-five-gram match at $J=1$. Authored: no detected exact match | Shared measured form, not verified copying intent or direction; authored includes non-exact near-copies |
+| Authoring and copying (authored and exact-shared sentences) | Model 1 outcome; Model 2 component | Exact-shared: cross-worker word-five-gram match at $J=1$. Authored: no detected exact match | Shared measured form, not verified copying intent or direction; authored includes non-exact near-copies |
 | Occupational specificity | Model 1 predictor; content split in Model 2 | Distinct informative word types; informative if used by at least 100 workers and occupational KL divergence is at least .5 bits | Occupational concentration, not uniquely personal truth |
 | Numerical content | Model 1 predictor | At least one numeric token under the content tokenizer | Can concern history, quantities, or service promises |
 | Rhetorical function | Model 1 predictor | Dictionary moves collapsed to claim-bearing, assurance, encounter formula, or other | Claim-bearing combines identity, credential, capability; estimation label: “individuating claim” |
@@ -335,7 +339,7 @@ The content and reuse measures are constructed before the rate models; qualitati
 | Profile composition | Model 2 predictor | Authored-specific, shared-generic, shared-specific sentence shares; authored-generic omitted | Shares sum to one across the four categories |
 | Circulation family | Model 2 predictor | Co-adoption components of scripts; dominant family for each sharer | Circulation-based provenance proxy, not an externally verified origin |
 | Verified record | Model 2 moderator | Completed-job groups: 0, 1–9, 10–49, 50+ | Platform-recorded work, distinct from textual claims about experience |
-| Market position | Model 2 outcome | Log posted hourly rate, USD 3–500 | Asking price, not realized wage or observed client valuation |
+| Market position | Model 2 outcome | Posted asking rate: log posted hourly rate, USD 3–500 | Asking price, not realized wage or observed client valuation |
 
 : Constructs and measurements {#tbl-measures}
 

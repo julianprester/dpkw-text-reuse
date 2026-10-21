@@ -14,4 +14,4 @@
 
 : Robustness samples and selected Model 1 coefficients {#tbl-robustness-samples}
 
-*Note.* Model 1 entries are logit coefficients except the LPM row. Alternative-outcome entries repeat main Model 1 rather than estimating new allocation relationships. The stricter rule uses maximum word KL, not log(1 + informative types). The ≥ 15-word check retains original qualifying-sentence position indicators.
+*Note.* Model 1 entries are logit coefficients except the LPM row. Alternative-outcome entries repeat main Model 1 rather than estimating new composition relationships. The stricter rule uses maximum word KL, not log(1 + informative types). The ≥ 15-word check retains original qualifying-sentence position indicators.

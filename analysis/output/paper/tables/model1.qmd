@@ -8,6 +8,6 @@
 | Relative position (0 = first, 1 = last qualifying sentence) | 1.248 (0.016) | 3.484 | [3.378, 3.593] | 0.050 (0.001) |
 | Log sentence words | -1.307 (0.012) | 0.271 | [0.264, 0.277] | -0.062 (0.001) |
 
-: Model 1: within-profile authorship allocation {#tbl-model1}
+: Model 1: within-profile composition {#tbl-model1}
 
 *Note.* 773,424 sentences in 86,956 mixed profiles for the logit; worker fixed effects and worker-clustered standard errors. Function reference: dictionary-coded identity, credential, or capability (the estimation label is ‘individuating claim’); relative position runs from 0 (first qualifying sentence) to 1 (last). Intervals are normal-approximation Wald intervals. The specificity OR is per one-unit increase in log(1 + distinct informative types), not per additional word. The linear-probability column is a link-function check on direction; it uses all 2,309,694 eligible sentences, including profiles whose sharing outcome does not vary, and no odds-ratio transformation applies.

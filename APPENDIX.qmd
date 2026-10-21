@@ -226,7 +226,7 @@ It is not a probability sample, an independent model-validation sample, or a sou
 
 | Theoretical cell | Profiles |
 |:---|---:|
-| Typical allocation: non-exact-shared opening, shared closing | 20 |
+| Typical composition: non-exact-shared opening, shared closing | 20 |
 | Shared, occupation-specific opening | 15 |
 | At least 90% exact-shared qualifying sentences | 15 |
 | Experienced sharers: 50+ jobs and substantial sharing | 15 |
@@ -315,7 +315,7 @@ It enters linearly on the log-odds scale and therefore does not estimate a separ
 Log word count adjusts for sentence length.
 
 The linear-probability main check uses all eligible sentences, including profiles whose sharing outcome does not vary.
-The principal allocation signs are retained.
+The principal composition signs are retained.
 Neither the LPM nor the logit identifies a causal effect of sentence content or directly measures writing effort.
 
 The fixed-effects logit uses estimated worker intercepts rather than an independently randomized or longitudinal design.
@@ -377,7 +377,7 @@ The modified specifications are:
    Relative position retains its original qualifying-corpus definition rather than being recomputed after this stricter filter.
    The check concerns longer-text evidence, not a new positional measurement.
 3. **Exclude agency members.**
-   Both worker outcomes and allocation use non-agency workers.
+   Both worker outcomes and composition use non-agency workers.
    A constant agency indicator can be dropped for collinearity; the family component is also refitted.
 4. **Stricter specificity.**
    Model 2 uses maximum token KL of at least one bit; Model 1 uses the maximum KL predictor.
@@ -393,7 +393,7 @@ The modified specifications are:
    Removes workers with at least 90% exact-shared qualifying sentences.
    This threshold does not classify every word of their descriptions.
 8. **Model 1 linear probability.**
-   Examines allocation under a linear link, with worker fixed effects and worker-clustered SEs.
+   Examines composition under a linear link, with worker fixed effects and worker-clustered SEs.
 9. **Rating outcome.**
    A binary indicator of rating below 4.8 among rated workers with at least five completed jobs.
    The rating-band predictor is removed because it contains the outcome; the remaining applicable controls and country-clustered inference are retained.
@@ -403,7 +403,7 @@ The modified specifications are:
     A transformed unit contrast is therefore a percent difference in $1+\text{hours}$, approximately interpretable as hours only away from zero.
 
 These ten checks follow the baseline to form eleven rows.
-Allocation is summarized as retained when specificity and numerical-content coefficients have intervals below zero, assurances are positive, encounter exceeds assurance, and the relative-position coefficient is positive.
+Composition is summarized as retained when specificity and numerical-content coefficients have intervals below zero, assurances are positive, encounter exceeds assurance, and the relative-position coefficient is positive.
 This is a combined numerical signature, not independent validation of every dictionary classification.
 The non-substitution summary requires a negative 50+ shared-generic slope and no smaller absolute point estimate than at zero jobs; that point-estimate comparison is not a formal simultaneous test of monotonic widening.
 

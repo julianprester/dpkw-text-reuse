@@ -28,12 +28,12 @@ abstract: |
   We address this question through computationally intensive theory construction using 353,099 Upwork profiles and 2.34 million qualifying sentences.
   Exact sharing, defined by equality of word-five-gram sets, occurs in 25.9% of profiles.
   Two models organize the analysis.
-  A sentence-level model with worker fixed effects identifies selective authorship allocation: occupation-specific wording and numerical content are less likely to be shared, whereas assurances, encounter formulae, and sentences later in the profile are more likely to be shared.
+  A sentence-level model with worker fixed effects identifies selective profile composition: occupation-specific wording and numerical content are less likely to be shared, whereas assurances, encounter formulae, and sentences later in the profile are more likely to be shared.
   A worker-level model connects textual composition and circulation families to posted asking rates.
   Authored-specific composition has a positive association and shared-generic composition a negative association; family-linked differences remain after accounting for city and worker covariates.
   The shared-generic association persists across completed-job groups rather than disappearing with verified reputation.
   Robustness checks and a supplementary qualitative analysis qualify these patterns without replacing them.
-  We develop a signaling account distinguishing content, authorship allocation, and provenance: copyability need not eliminate information but can redistribute it across a profile's composition and circulation relationships.
+  We develop a signaling account distinguishing content, profile composition, and provenance: copyability need not eliminate information but can redistribute it across a profile's composition and circulation relationships.
   Asking-rate associations do not establish client valuation, causal effects, independent composition, or verified template origins.
 date: last-modified
 bibliography: references.bib
@@ -77,7 +77,7 @@ We investigate this question through computationally intensive theory constructi
 Using public Upwork profile records, we construct a corpus of {{< var sentences >}} qualifying sentences from {{< var workers >}} workers.
 Sequence-preserving text-reuse detection identifies shared wording rather than merely common topics.
 We then organize the analysis around two models.
-*Model 1* examines authorship allocation within profiles: which sentences are shared and which have no detected exact match?
+*Model 1* examines composition within profiles: which sentences are shared and which have no detected exact match?
 *Model 2* examines asking-rate position across workers: how are a profile's composition and membership in shared-text circulation families associated with its posted rate, including where verified records are available?
 Descriptive circulation and alignment analyses support interpretation of the two models.
 A supplementary qualitative analysis of theoretically sampled profiles illustrates what the estimated patterns look like in actual descriptions.
@@ -91,14 +91,14 @@ Circulation-family differences remain after accounting for city and worker covar
 Most importantly, the shared-generic association does not disappear among workers with substantial completed-job records.
 These are cross-sectional associations with workers' asking prices, not demonstrated effects on client choices or realized wages.
 
-We develop these patterns into an account that distinguishes three components of textual signals: *content*, or what a claim says; *authorship allocation*, or the profile's combination of shared and non-exact-shared wording; and *provenance*, or the circulation relationships indexed by its shared text.
+We develop these patterns into an account that distinguishes three components of textual signals: *content*, or what a claim says; *profile composition*, or the profile's combination of shared and non-exact-shared wording; and *provenance*, or the circulation relationships indexed by its shared text.
 The distinction does not imply that we can recover a sentence's original author or externally verified source.
 It explains why reproducible content can coexist with informative composition and circulation.
 Our operational use of “authored” means no detected exact sharing, not demonstrated independent composition.
 
 This account offers three contributions.
 First, it identifies copyability as an information-system property that helps organize signaling, rather than treating reproducibility only as a threat to signal credibility.
-Second, it shows that textual self-presentation is both individually allocated and relationally structured: a profile draws on circulating resources, and those relationships remain associated with asking-rate position beyond broad geography, occupation, and recorded work.
+Second, it shows that textual self-presentation is both individually composed and relationally structured: a profile draws on circulating resources, and those relationships remain associated with asking-rate position beyond broad geography, occupation, and recorded work.
 Third, it establishes non-substitution as an important boundary to a reputation-centered account.
 Verified records do not make the measured textual associations disappear.
 The resulting theory is not that clients reward originality or punish copying.
@@ -212,13 +212,13 @@ It resembles the model-to-interpretation progression used in computationally int
 ![Analytic organization. Models 1 and 2 supply the principal evidence; circulation descriptions and variant alignments inform their interpretation. The qualitative analysis follows both models and samples cases in response to their results. Arrows indicate analytic organization, not identified causal effects.](analysis/output/paper/figures/method.png){#fig-method}
 
 The two models answer different questions at different units of analysis.
-A worker-level comparison alone cannot distinguish selective allocation inside a profile from differences in who participates in reuse, and a sentence-level comparison alone cannot establish whether the resulting composition is associated with asking-rate position.
+A worker-level comparison alone cannot distinguish selective composition inside a profile from differences in who participates in reuse, and a sentence-level comparison alone cannot establish whether the resulting composition is associated with asking-rate position.
 The two-model design connects these levels without treating them as a single causal sequence.
 
 The process was exploratory and involved revising initial interpretations.
 In particular, a few very widely shared passages dominate pair counts much more than distinct adoptions.
 Keeping those denominators separate changes the apparent concentration of the repertoire.
-Reconstructing sentence identifiers and using endpoint-adjusted mixing baselines also redirected interpretation toward selective allocation and structured circulation.
+Reconstructing sentence identifiers and using endpoint-adjusted mixing baselines also redirected interpretation toward selective composition and structured circulation.
 We retain the exploratory outputs in the research audit trail but base the manuscript on the reconstructed data, the two models, and their robustness checks.
 Appendix E describes the reproducibility record.
 This reflexive account avoids treating the final framing as if it preceded every analytic decision.
@@ -300,7 +300,7 @@ Nor do unobserved matches outside this corpus establish originality.
 Three components structure the measurements and models below.
 *Content* refers to the substance of a sentence: its occupational detail, numerical claims, rhetorical function, and other meanings.
 We measure it through occupational specificity, numerical content, and rhetorical function.
-*Authorship allocation* refers to the distribution of shared and non-exact-shared wording across that content and across the profile.
+*Profile composition* refers to the distribution of shared and non-exact-shared wording across that content and across the profile.
 We measure it at the sentence level as exact-shared or authored status together with relative position in the profile, and at the worker level as profile composition shares.
 *Provenance* refers to the circulation relationships through which shared forms are available and recur.
 We measure it through circulation families.
@@ -316,10 +316,10 @@ A general communication promise can apply to many workers.
 A statement concerning a narrow capability applies to a smaller set.
 A personally anchored account of a particular history may apply to fewer still.
 Copyability makes reproduction easy in all three cases, but does not make them equally appropriate to adopt.
-The distinction directs attention to allocation rather than to a binary contrast between original and copied profiles.
+The distinction directs attention to composition rather than to a binary contrast between original and copied profiles.
 A worker can draw on broadly reusable assurances while composing a more specific occupational account, adopt an occupational frame and modify a number, service, or tool, or share a detailed claim intact.
 Occupational specificity, personal individuation, original wording, and truth-conditional portability are related but not identical.
-We use occupational wording and numerical content as tractable indicators of selective allocation, not as direct measures of whether a sentence is true for one worker alone.
+We use occupational wording and numerical content as tractable indicators of selective composition, not as direct measures of whether a sentence is true for one worker alone.
 
 @tbl-measures summarizes the constructs, their operationalizations, and the role each plays in the two models.
 Copyability is a scope condition of the setting, not a measured variable, and control variables are listed with Model 2 below.
@@ -363,7 +363,7 @@ A worker's dominant family covers the largest number of that worker's shared sen
 This assignment summarizes circulation but does not represent all memberships of workers who combine several families.
 Locality, cohort proximity, and price-peer comparisons describe the relational structure of reuse separately from the asking-rate model.
 
-## Model 1: Within-Profile Authorship Allocation
+## Model 1: Within-Profile Composition
 
 Model 1 estimates which qualifying sentences are shared within the same description.
 For sentence $i$ in worker profile $j$, the main specification is
@@ -376,13 +376,13 @@ $$
 
 where $S$ denotes exact sharing, $K$ counts distinct occupation-informative types, $N$ indicates a numeric token, $\mathbf F$ represents rhetorical function, $R$ is relative position in the profile (0 for the first qualifying sentence, 1 for the last), and $L$ is word count.
 Worker fixed effects $\alpha_j$ absorb worker-level differences shared by all sentences in a profile.
-The model therefore addresses allocation, not the between-worker question of who shares text.
+The model therefore addresses composition, not the between-worker question of who shares text.
 Length controls distinguish content and position from the mechanical difficulty of reproducing a longer sequence.
 
 We estimate a binomial fixed-effects logit with worker-clustered standard errors.
 Profiles with at least two qualifying sentences contribute {{< var m1-all >}} eligible units; identification in the logit comes from {{< var m1-sentences >}} sentences in {{< var m1-profiles >}} mixed profiles containing both shared and non-exact-shared units.
 Entirely shared and entirely unshared profiles do not identify its slopes.
-A worker-fixed-effects linear-probability specification examines whether the principal allocation pattern depends on the logit link.
+A worker-fixed-effects linear-probability specification examines whether the principal composition pattern depends on the logit link.
 Its eligible sample includes invariant-outcome profiles and is therefore larger than the logit's identifying sample.
 
 ## Model 2: Composition, Circulation Families, and Asking Rates
@@ -426,7 +426,7 @@ They do not observe client recognition of copying, client valuation of prose, or
 
 ## Supplementary Qualitative Analysis
 
-We selected 150 full profiles across ten theoretical cells to inspect typical allocation, shared-specific openings, heavily shared descriptions, experienced sharers, different computational assembly patterns, family-price contrasts, and authored-premium contrasts.
+We selected 150 full profiles across ten theoretical cells to inspect typical composition, shared-specific openings, heavily shared descriptions, experienced sharers, different computational assembly patterns, family-price contrasts, and authored-premium contrasts.
 The material contains 1,401 qualifying sentences, 100 profile-nearest non-exact variants, and 100 separately sampled near-copy pairs.
 The latter are divided equally between same and different first-listed occupations.
 Appendix C details the sampling and procedure.
@@ -495,7 +495,7 @@ They are compatible with local learning environments, common organizational mate
 They do not identify a tutorial, onboarding process, agency, or person as the origin.
 This distinction matters for Model 2: circulation families can be informative about asking-rate differences even when their external sources and transmission channels remain unknown.
 
-## Model 1: Selective Authorship Allocation
+## Model 1: Selective Profile Composition
 
 @tbl-model1 reports the within-profile estimates.
 Occupational specificity has an odds ratio of {{< var m1-or-lspec >}} per one-unit increase in $\log(1+\text{distinct informative types})$.
@@ -704,7 +704,7 @@ Appendix D reports sample sizes and coefficient-level detail.
 
 {{< include analysis/output/paper/tables/robustness.qmd >}}
 
-The principal allocation pattern is retained across the applicable checks.
+The principal composition pattern is retained across the applicable checks.
 Authored-specific composition remains positively associated with asking rate, shared-generic composition remains negatively associated, and the shared-generic contrast remains negative in the highest completed-job group.
 These results do not depend solely on brief formulae, agency membership, or the most heavily shared descriptions.
 Family-to-family-plus-residual variance remains approximately {{< var rob-family-2 >}} with the broader sharing threshold and {{< var rob-family-4 >}} after excluding agency members.
@@ -726,15 +726,15 @@ These checks support a bounded segment interpretation and do not convert asking-
 
 # Theory Development
 
-The two models jointly establish three empirical regularities: within-profile allocation is selective; textual composition and circulation families are associated with asking-rate position; and the shared-generic association does not disappear where verified records are available.
-We interpret these regularities through a distinction among content, authorship allocation, and provenance.
+The two models jointly establish three empirical regularities: within-profile composition is selective; textual composition and circulation families are associated with asking-rate position; and the shared-generic association does not disappear where verified records are available.
+We interpret these regularities through a distinction among content, profile composition, and provenance.
 @fig-theory summarizes the account.
 The proposed mechanisms concern composition effort, claim fit, and circulation environments.
 Those mechanisms are interpretations of the computational evidence, not directly observed costs, sources, or audience inferences.
 
-![A signaling account of copyable self-presentation. Selective allocation organizes content and authorship; circulation relationships contribute a provenance dimension; textual asking-rate associations persist across verified-record groups. The diagram summarizes proposed relationships, not an identified causal path model.](analysis/output/paper/figures/theory.png){#fig-theory}
+![A signaling account of copyable self-presentation. Selective composition organizes content and authorship; circulation relationships contribute a provenance dimension; textual asking-rate associations persist across verified-record groups. The diagram summarizes proposed relationships, not an identified causal path model.](analysis/output/paper/figures/theory.png){#fig-theory}
 
-## Selective Allocation Under Copyability
+## Selective Composition Under Copyability
 
 Copyability makes broadly applicable language available without requiring a worker to compose its wording anew.
 It does not make all claims equally fitting for all workers.
@@ -742,7 +742,7 @@ The within-profile estimates show that occupational detail and numerical content
 Assurances and encounter formulae are associated with more sharing; sharing becomes more likely later in the profile.
 Alignment results also locate variation disproportionately in occupation-informative and numerical tokens.
 
-These patterns suggest an allocation mechanism.
+These patterns suggest a composition mechanism.
 Workers can economize on the reusable portions of presentation while devoting more individual formulation or adaptation to claims that narrow their services and histories.
 The relevant unit is not an original profile opposed to a copied one.
 It is a profile in which different kinds of claims have different relationships to the circulating repertoire.
@@ -751,21 +751,21 @@ Composition can therefore retain differentiation even when some of its content i
 A cost-based signaling interpretation is consequently possible without treating the copied words themselves as a costly investment.
 Composing a fitting account of capabilities and experience may require knowledge, effort, and the ability to substantiate claims.
 The potential cost lies in developing and fitting a presentation to the sender, rather than in acquiring exclusive access to a sentence.
-This is an interpretation to be developed from the allocation pattern, not something text similarity directly observes.
+This is an interpretation to be developed from the composition pattern, not something text similarity directly observes.
 
-**Proposition 1—Selective authorship allocation.**
+**Proposition 1—Selective profile composition.**
 *Under public copyability, workers preferentially use non-exact-shared wording for occupationally specific and quantified claims, and share more of the wording that appears later in a profile, while drawing more heavily on shared wording for assurances and encounter formulae.
 Within recurring forms, occupational and numerical elements are comparatively frequent sites of variation.*
 
 The proposition describes a tendency, not a prohibition.
 It is consistent with detailed shared capabilities and person-specific claims that occur late.
 Occupational specificity narrows applicability without necessarily identifying one person, and a copied history claim can be applicable to more than one worker.
-The theoretical point is differential allocation, not the impossibility of reproducing specific language.
+The theoretical point is differential composition, not the impossibility of reproducing specific language.
 Nor is specificity rewarded uniformly elsewhere in the literature.
 More cohesive skill sets raise hiring but lower hourly wages [@Kokkodis2023], and incongruent skills help in low-skill and hurt in high-skill categories [@FuEtAl2021].
-We therefore read allocation as differentiated fit, not as a quality ranking.
+We therefore read composition as differentiated fit, not as a quality ranking.
 Similarly, the potential effort of composing an appropriate account is not measured by the absence of an exact match.
-The observed allocation supports investigating where signaling costs may reside without claiming that the dataset measures those costs directly.
+The observed composition supports investigating where signaling costs may reside without claiming that the dataset measures those costs directly.
 
 ## Composition and Provenance as Informational Dimensions
 
@@ -782,7 +782,7 @@ A worker's shared wording consequently locates the profile in a repertoire that 
 Family-linked asking-rate differences remain after accounting for city and measured worker characteristics.
 Shared content need not distinguish individual competence to be informative about a presentation environment and its associated market position.
 
-**Proposition 2—Authorship and provenance associations.**
+**Proposition 2—Composition and provenance associations.**
 *In copyable self-presentation, (a) authored-specific composition is associated with an asking-rate premium, (b) shared-generic composition is associated with an asking-rate discount, and (c) circulation-family membership provides additional information about asking-rate position beyond content composition, recorded work, and broad geographic and occupational differences.*
 
 Here “premium” and “discount” name conditional associations against the authored-generic reference, not rewards or penalties imposed by clients.
@@ -818,7 +818,7 @@ The evidence compares workers in a cross-section, and the description-timing sub
 The market-position result is narrower and more robust: records and text coexist, and record availability does not make the shared-generic association disappear.
 
 Taken together, the propositions shift attention from whether copied words are credible in isolation to how a copyable profile is assembled and relationally situated.
-Content is reproducible, but the informational structure of its allocation and circulation is not exhausted by that fact.
+Content is reproducible, but the informational structure of its composition and circulation is not exhausted by that fact.
 The account retains a role for signaling while specifying what the description can convey beyond an exclusive claim to its wording.
 
 # Discussion
@@ -836,7 +836,7 @@ The classical argument holds that a signal that is easy to fake will be used by 
 Work on text in online labor markets has sometimes sidestepped the problem by assuming that detailed writing is costly and therefore credible [@AlshalfanMahdikhani2026], and platform evidence shows cheap, widely available signals being diluted or discounted [@BaiGaoGoesEtAl2026; @GaoLinLiuEtAl2026].
 Our results suggest that for copyable text the sentence is the wrong unit.
 What differs among workers is the composition of a profile: which claims are drawn from a circulating repertoire, which are composed or adapted, and which repertoire a worker draws on.
-Information survives copying in allocation and circulation, not in the exclusivity of wording.
+Information survives copying in composition and circulation, not in the exclusivity of wording.
 We therefore extend the account of rhetorical signals [@SteigenbergerWilhelm2018] by making the relationship among senders empirically visible, and we link the informational properties of digital artifacts [@KallinikosAaltonenMarton2013] to the organization of self-presentation.
 
 This differs from the signals in the platform studies cited above.
@@ -869,7 +869,7 @@ A shared sentence can raise similarity to a job opening in the same way as a com
 Repeated claims can thus carry information about a circulation environment as well as about an individual.
 Sharing measures offer a way of separating these sources, although they do not resolve claim truth or original ownership.
 
-Our allocation results place specificity in composition and not in a worker's overall style.
+Our within-profile results place specificity in composition and not in a worker's overall style.
 Occupation-specific and numerical sentences are less likely to be shared within the same profile, whereas assurances, encounter formulae, and later sentences are more likely to be shared.
 Related work finds that specificity is not rewarded uniformly and that its value depends on occupation, audience, and outcome [@Kokkodis2023; @FuEtAl2021; @YueHong2025].
 Our outcome is asking rate, not hiring or realized earnings, so these results do not conflict, but they should not be merged.
@@ -881,10 +881,10 @@ Our analysis shows that this account is partly assembled from a shared repertoir
 Exact sharing is concentrated within cities, countries, and first-listed occupations by factors of {{< var lift-city-key >}}, {{< var lift-country >}}, and {{< var lift-occ1 >}} relative to random mixing.
 This extends the evidence that place remains salient in online labor markets [@KanatHongRaghu2018; @GefenCarmel2008] from provider outcomes to the resources workers use to present themselves, and it connects to work on gig literacies [@SutherlandJarrahiDunnNelson2020; @LehdonvirtaEtAl2019].
 We do not infer nationality or culture, and we cannot say how workers acquire the wording they share.
-The within-profile design distinguishes allocation from the general characteristics of workers who share, and the family component distinguishes shared-text relationships from broad city differences.
+The within-profile design distinguishes composition from the general characteristics of workers who share, and the family component distinguishes shared-text relationships from broad city differences.
 Global visibility does not imply a globally homogeneous resource for learning how to present oneself.
 
-Methodologically, the contribution is the conjunction of sequence-based reuse detection, within-profile allocation, and worker-level composition and family modeling.
+Methodologically, the contribution is the conjunction of sequence-based reuse detection, within-profile composition analysis, and worker-level composition and family modeling.
 These methods expose relationships that topic similarity or profile-level originality scores would obscure.
 The consolidated robustness analysis identifies which parts of the account are stable and which require qualification.
 The supplementary readings supply concrete context without being elevated into an independent validation study.
@@ -925,7 +925,7 @@ The content measures are proxies: occupational divergence does not measure uniqu
 The sentence codes from the qualitative analysis come from a single coder and are not an accuracy benchmark, so neither their disagreement with the dictionary nor stable coefficients establish measurement validity.
 
 Second, both models are observational.
-Worker fixed effects remove worker-level differences in the allocation analysis but not sentence-level unobserved features, and asking rates can reflect strategy, service mix, ability, and costs.
+Worker fixed effects remove worker-level differences in the composition analysis but not sentence-level unobserved features, and asking rates can reflect strategy, service mix, ability, and costs.
 Our outcome is the posted asking rate, whereas much of the work we draw on studies hiring, contracting, or earnings.
 We do not observe writing effort, claim truth, clients' interpretations, hiring responses, or realized wages.
 Family effects summarize dominant membership, rely on random-effects assumptions, and may reflect service niches or organizational contexts as well as learning environments.
@@ -939,9 +939,9 @@ It could also examine how richer reputation systems or platform policing of copy
 Publicly reproducible profile text is not necessarily uninformative.
 In this Upwork cross-section, workers' descriptions selectively combine shared and non-exact-shared wording, their composition is associated with asking-rate position, and circulation families add information beyond the modeled city and worker covariates.
 The shared-generic association persists alongside substantial verified records.
-These findings motivate a signaling account in which content, authorship allocation, and provenance are distinct dimensions.
+These findings motivate a signaling account in which content, profile composition, and provenance are distinct dimensions.
 Copyability does not simply erase differentiation; it helps organize where differentiation and relational information reside.
-The account is model-led and bounded: it concerns observed allocation and asking-rate associations, not proven writing costs, client penalties, original authors, or externally verified sources.
+The account is model-led and bounded: it concerns observed composition and asking-rate associations, not proven writing costs, client penalties, original authors, or externally verified sources.
 
 {{< include APPENDIX.qmd >}}
 

@@ -1,4 +1,4 @@
-| Check | M1 allocation | Authored-specific | Shared-generic | Shared-specific | Family share | Shared-generic: 0 → 50+ jobs |
+| Check | M1 composition | Authored-specific | Shared-generic | Shared-specific | Family share | Shared-generic: 0 → 50+ jobs |
 | :--- | ---: | ---: | ---: | ---: | ---: | ---: |
 | Main specification | Retained | +6.0% | -27.9% | -13.7% | 6.4% | -23.0% → -30.0% |
 | Sharing at J ≥ .7 | Retained | +5.6% | -27.1% | -13.9% | 6.4% | -22.8% → -28.8% |
@@ -14,4 +14,4 @@
 
 : Robustness and outcome triangulation {#tbl-robustness}
 
-*Note.* Rate rows show full-unit composition contrasts against authored-generic text; family share is family/(family + residual) variance, excluding city variance. ‘Retained’ denotes the saved joint allocation signature, not validation of every dictionary label. The stricter rule uses maximum word KL ≥ 1 bit and changes the Model 1 specificity scale. The LPM row changes only Model 1; Model 2 is not an independent new rate fit. The two outcome rows are not price-discount tests. Blank family entries were not refit.
+*Note.* Rate rows show full-unit composition contrasts against authored-generic text; family share is family/(family + residual) variance, excluding city variance. ‘Retained’ denotes the saved joint composition signature, not validation of every dictionary label. The stricter rule uses maximum word KL ≥ 1 bit and changes the Model 1 specificity scale. The LPM row changes only Model 1; Model 2 is not an independent new rate fit. The two outcome rows are not price-discount tests. Blank family entries were not refit.

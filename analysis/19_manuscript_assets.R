@@ -125,7 +125,7 @@ labels1 <- c("Occupational specificity: log(1 + distinct informative types)", "C
 A <- M1[model == "M1 main (FE logit)"][match(terms1, term)]
 L <- M1[model == "M1 LPM (FE OLS)"][match(terms1, term)]
 md(data.frame(Predictor = labels1, `Logit coefficient (SE)` = bs(A$est, A$se), `Odds ratio` = fx(exp(A$est)), `95% interval for OR` = paste0("[", fx(exp(A$est - 1.96 * A$se)), ", ", fx(exp(A$est + 1.96 * A$se)), "]"), `Linear probability (SE)` = bs(L$est, L$se), check.names = FALSE),
-   "model1", "Model 1: within-profile authorship allocation", "tbl-model1",
+   "model1", "Model 1: within-profile composition", "tbl-model1",
    "773,424 sentences in 86,956 mixed profiles for the logit; worker fixed effects and worker-clustered standard errors. Function reference: dictionary-coded identity, credential, or capability (the estimation label is ‘individuating claim’); relative position runs from 0 (first qualifying sentence) to 1 (last). Intervals are normal-approximation Wald intervals. The specificity OR is per one-unit increase in log(1 + distinct informative types), not per additional word. The linear-probability column is a link-function check on direction; it uses all 2,309,694 eligible sentences, including profiles whose sharing outcome does not vary, and no odds-ratio transformation applies.")
 
 # Model 2 selected coefficients for the two fixed-effects forms and multilevel form.
@@ -159,7 +159,7 @@ put("rob-timing-gen-50", pc(ROB$m2_shared_gen_50plus[6]), paste0(TBL, "/robustne
 put("rob-rating-gen-or", exp(ROB$m2_shared_gen[10]), paste0(TBL, "/robustness_estimates.csv#row10:m2_shared_gen"), fx(exp(ROB$m2_shared_gen[10]), 2))
 put("rob-hours-gen", pc(ROB$m2_shared_gen[11]), paste0(TBL, "/robustness_estimates.csv#row11:m2_shared_gen"), paste0(fx(pc(ROB$m2_shared_gen[11]), 0), "%"))
 short <- c("Main specification", "Sharing at J ≥ .7", "Sentences ≥ 15 words", "Exclude agency members", "Stricter specificity", "Within-one-day edit subset", "Ten largest countries", "Exclude ≥ 90% shared profiles", "Model 1 linear probability", "Rating < 4.8 (≥ 5 jobs)", "Hours conditional on rate")
-rs <- data.frame(Check = short, `M1 allocation` = "—", `Authored-specific` = "—", `Shared-generic` = "—", `Shared-specific` = "—", `Family share` = "—", `Shared-generic: 0 → 50+ jobs` = "—", check.names = FALSE)
+rs <- data.frame(Check = short, `M1 composition` = "—", `Authored-specific` = "—", `Shared-generic` = "—", `Shared-specific` = "—", `Family share` = "—", `Shared-generic: 0 → 50+ jobs` = "—", check.names = FALSE)
 for (i in seq_len(nrow(ROB))) {
   z <- ROB[i]
   if (z$dv == "lrate") {
@@ -177,10 +177,10 @@ for (i in seq_len(nrow(ROB))) {
   }
 }
 md(rs, "robustness", "Robustness and outcome triangulation", "tbl-robustness",
-   "Rate rows show full-unit composition contrasts against authored-generic text; family share is family/(family + residual) variance, excluding city variance. ‘Retained’ denotes the saved joint allocation signature, not validation of every dictionary label. The stricter rule uses maximum word KL ≥ 1 bit and changes the Model 1 specificity scale. The LPM row changes only Model 1; Model 2 is not an independent new rate fit. The two outcome rows are not price-discount tests. Blank family entries were not refit.")
+   "Rate rows show full-unit composition contrasts against authored-generic text; family share is family/(family + residual) variance, excluding city variance. ‘Retained’ denotes the saved joint composition signature, not validation of every dictionary label. The stricter rule uses maximum word KL ≥ 1 bit and changes the Model 1 specificity scale. The LPM row changes only Model 1; Model 2 is not an independent new rate fit. The two outcome rows are not price-discount tests. Blank family entries were not refit.")
 ra <- data.frame(Check = short, `M1 sentences` = ni(ROB$m1_n), `Worker outcome N` = ni(ROB$m2_n), `Specificity estimate (SE)` = bs(ROB$m1_lspec, ROB$m1_lspec_se), `Number estimate (SE)` = bs(ROB$m1_number, ROB$m1_number_se), check.names = FALSE)
 md(ra, "robustness_samples", "Robustness samples and selected Model 1 coefficients", "tbl-robustness-samples",
-   "Model 1 entries are logit coefficients except the LPM row. Alternative-outcome entries repeat main Model 1 rather than estimating new allocation relationships. The stricter rule uses maximum word KL, not log(1 + informative types). The ≥ 15-word check retains original qualifying-sentence position indicators.")
+   "Model 1 entries are logit coefficients except the LPM row. Alternative-outcome entries repeat main Model 1 rather than estimating new composition relationships. The stricter rule uses maximum word KL, not log(1 + informative types). The ≥ 15-word check retains original qualifying-sentence position indicators.")
 rb <- data.frame(Check = short, `Authored-specific (SE)` = bs(ROB$m2_authored_spec, ROB$m2_authored_spec_se), `Shared-generic (SE)` = bs(ROB$m2_shared_gen, ROB$m2_shared_gen_se), `Shared-specific (SE)` = bs(ROB$m2_shared_spec, ROB$m2_shared_spec_se), check.names = FALSE)
 md(rb, "robustness_coefficients", "Robustness worker-level coefficients", "tbl-robustness-coefficients",
    "Country-clustered SEs. Rate rows are log-rate coefficients without record interactions; the rating row is log odds and the hours row uses log(1 + recorded hours). Outcome-specific controls are described in Appendix D. The LPM row repeats the main worker-level estimates.")
@@ -223,11 +223,11 @@ boxes <- function(b, edges, note = NULL, ylim = c(0, 7)) {
   p
 }
 b <- data.table(x = c(2, 5, 8, 3, 7, 3, 7, 5, 5), y = c(7.4, 7.4, 7.4, 5.8, 5.8, 4.3, 4.3, 2.8, 1.2), w = c(2.7, 2.7, 2.7, 3.5, 3.5, 3.5, 3.5, 8, 6), h = c(.85, .85, .85, 1.1, 1.1, 1.1, 1.1, 1.0, .75),
-                text = c("Public profile records", "Sentence corpus", "Cross-worker reuse", "Model 1\nWithin-profile allocation", "Model 2\nComposition and asking rates", "Content, function, position\nand variant alignments", "Verified records, city effects,\nand circulation families", "Qualitative analysis\nClose readings of theoretically sampled profiles and near-copy pairs", "Abductive interpretation and bounded propositions"))
+                text = c("Public profile records", "Sentence corpus", "Cross-worker reuse", "Model 1\nWithin-profile composition", "Model 2\nComposition and asking rates", "Content, function, position\nand variant alignments", "Verified records, city effects,\nand circulation families", "Qualitative analysis\nClose readings of theoretically sampled profiles and near-copy pairs", "Abductive interpretation and bounded propositions"))
 e <- data.table(x = c(3.35, 6.35, 7.9, 8.1, 3, 7, 3, 7, 5), y = c(7.4, 7.4, 6.975, 6.975, 5.25, 5.25, 3.75, 3.75, 2.3), xend = c(3.65, 6.65, 3, 7, 3, 7, 3, 7, 5), yend = c(7.4, 7.4, 6.35, 6.35, 4.85, 4.85, 3.3, 3.3, 1.575))
 savep(boxes(b, e, ylim = c(.5, 8)), "method", w = 8, h = 5.6)
 b <- data.table(x = c(5, 5, 2.6, 7.4, 5, 5), y = c(6.35, 4.95, 3.45, 3.45, 1.85, .65), w = c(8, 8, 4, 4, 8, 8), h = c(.8, .85, 1, 1, .85, .75),
-                text = c("COPYABILITY: visible, reproducible profile text (scope condition)", "P1: SELECTIVE ALLOCATION\nSpecific / quantified claims versus reusable assurances and formulae", "CONTENT AND AUTHORSHIP\nP2a: authored-specific premium\nP2b: shared-generic discount", "CIRCULATION / PROVENANCE\nP2c: family-linked asking-rate\ndifferences, net of city", "ASKING-RATE POSITION\nText composition and family associations", "P3: NON-SUBSTITUTION\nShared-generic association persists across verified-record groups"))
+                text = c("COPYABILITY: visible, reproducible profile text (scope condition)", "P1: SELECTIVE COMPOSITION\nSpecific / quantified claims versus reusable assurances and formulae", "CONTENT AND AUTHORSHIP\nP2a: authored-specific premium\nP2b: shared-generic discount", "CIRCULATION / PROVENANCE\nP2c: family-linked asking-rate\ndifferences, net of city", "ASKING-RATE POSITION\nText composition and family associations", "P3: NON-SUBSTITUTION\nShared-generic association persists across verified-record groups"))
 e <- data.table(x = c(5, 3, 7, 2.6, 7.4), y = c(5.95, 4.525, 4.525, 2.95, 2.95), xend = c(5, 2.6, 7.4, 3.5, 6.5), yend = c(5.375, 3.95, 3.95, 2.275, 2.275))
 savep(boxes(b, e), "theory", w = 8, h = 5.3)
 

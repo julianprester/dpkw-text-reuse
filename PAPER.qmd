@@ -29,11 +29,13 @@ abstract: |
   Exact sharing, defined by equality of word-five-gram sets, occurs in 25.9% of profiles.
   Two models organize the analysis.
   A sentence-level model with worker fixed effects identifies selective profile composition: occupation-specific wording and numerical content are less likely to be shared, whereas assurances, encounter formulae, and sentences later in the profile are more likely to be shared.
-  A worker-level model connects textual composition and circulation families to posted asking rates.
+  A worker-level model connects textual composition and circulation families to market position, measured by posted asking rates.
   Authored-specific composition has a positive association and shared-generic composition a negative association; family-linked differences remain after accounting for city and worker covariates.
   The shared-generic association persists across completed-job groups rather than disappearing with verified reputation.
   Robustness checks and a supplementary qualitative analysis qualify these patterns without replacing them.
-  We develop a signaling account distinguishing content, profile composition, and provenance: copyability need not eliminate information but can redistribute it across a profile's composition and circulation relationships.
+  We theorize copying as a practice of profile composition and develop a process model with three propositions.
+  Under copyability and pressure to differentiate, workers combine authored and copied wording selectively; composition and circulation are associated with market position; and verified records do not displace the textual association.
+  Copyability need not eliminate information but can redistribute it across a profile's composition and circulation relationships.
   Asking-rate associations do not establish client valuation, causal effects, independent composition, or verified template origins.
 date: last-modified
 bibliography: references.bib
@@ -70,7 +72,7 @@ Treating the description as a single individual signal obscures these possibilit
 
 We call the conjunction of public visibility and inexpensive textual reproduction *copyability*.
 Copyability is a property of the platform's information environment, not an allegation about the intentions of a particular worker.
-It makes others' self-presentation available as a resource.
+It makes others' self-presentation available as a resource, so that copying becomes one of the practices through which a profile is composed.
 Our research question is: *When self-presentation on a digital labor platform can be copied by anyone who can see it, what does profile text signal?*
 
 We investigate this question through computationally intensive theory construction [@BerenteSeidelSafadi2019; @MirandaBerenteSeidelEtAl2022].
@@ -78,7 +80,7 @@ Using public Upwork profile records, we construct a corpus of {{< var sentences 
 Sequence-preserving text-reuse detection identifies shared wording rather than merely common topics.
 We then organize the analysis around two models.
 *Model 1* examines composition within profiles: which sentences are shared and which have no detected exact match?
-*Model 2* examines market position across workers: how are a profile's composition and membership in shared-text circulation families associated with its posted rate, including where verified records are available?
+*Model 2* examines market position, measured by the posted asking rate, across workers: how are a profile's composition and membership in shared-text circulation families associated with its posted rate, including where verified records are available?
 Descriptive circulation and alignment analyses support interpretation of the two models.
 A supplementary qualitative analysis of theoretically sampled profiles illustrates what the estimated patterns look like in actual descriptions.
 
@@ -91,15 +93,24 @@ Circulation-family differences remain after accounting for city and worker covar
 Most importantly, the shared-generic association does not disappear among workers with substantial completed-job records.
 These are cross-sectional associations with workers' asking prices, not demonstrated effects on client choices or realized wages.
 
-We develop these patterns into an account that distinguishes three components of textual signals: *content*, or what a claim says; *profile composition*, or the profile's combination of shared and non-exact-shared wording; and *provenance*, or the circulation relationships indexed by its shared text.
+We develop these patterns into a process model.
+Copyability and differentiation pressure are its conditions, profile composition is its practice, and market position is its outcome.
+Profile composition is the combination of two concurrent practices, authoring and copying.
+Three propositions state the mechanisms that link the constructs: selective composition, composition and provenance associations with market position, and non-substitution between records and text.
+The account distinguishes three components of textual signals: *content*, or what a claim says; *profile composition*, or the profile's combination of shared and non-exact-shared wording; and *provenance*, or the circulation relationships indexed by its shared text.
 The distinction does not imply that we can recover a sentence's original author or externally verified source.
 It explains why reproducible content can coexist with informative composition and circulation.
 Our operational use of “authored” means no detected exact sharing, not demonstrated independent composition.
 
-This account offers three contributions.
-First, it identifies copyability as an information-system property that helps organize signaling, rather than treating reproducibility only as a threat to signal credibility.
-Second, it shows that textual self-presentation is both individually composed and relationally structured: a profile draws on circulating resources, and those relationships remain associated with market position beyond broad geography, occupation, and recorded work.
-Third, it establishes non-substitution as an important boundary to a reputation-centered account.
+This account makes three contributions.
+First, it establishes copying as a practice of profile composition.
+That copyability makes copying possible is close to self-evident, but its consequences have not been examined as part of how self-presentation is composed under signaling.
+We show that workers neither compose afresh nor copy wholesale: they combine authoring and copying selectively.
+Copyability thereby organizes self-presentation instead of only threatening the credibility of a signal.
+Second, we derive more detailed propositions from the findings about how composition is associated with market position.
+Authored-specific and shared-generic composition are associated with opposite positions, and circulation families carry information beyond broad geography, occupation, and recorded work.
+Textual self-presentation is therefore both individually composed and relationally structured.
+Third, we establish non-substitution as a boundary to a reputation-centered account.
 Verified records do not make the measured textual associations disappear.
 The resulting theory is not that clients reward originality or punish copying.
 It is that the informational structure of a copyable profile cannot be reduced either to its words in isolation or to the verified record beside them.

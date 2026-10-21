@@ -78,7 +78,7 @@ Using public Upwork profile records, we construct a corpus of {{< var sentences 
 Sequence-preserving text-reuse detection identifies shared wording rather than merely common topics.
 We then organize the analysis around two models.
 *Model 1* examines composition within profiles: which sentences are shared and which have no detected exact match?
-*Model 2* examines asking-rate position across workers: how are a profile's composition and membership in shared-text circulation families associated with its posted rate, including where verified records are available?
+*Model 2* examines market position across workers: how are a profile's composition and membership in shared-text circulation families associated with its posted rate, including where verified records are available?
 Descriptive circulation and alignment analyses support interpretation of the two models.
 A supplementary qualitative analysis of theoretically sampled profiles illustrates what the estimated patterns look like in actual descriptions.
 
@@ -98,7 +98,7 @@ Our operational use of “authored” means no detected exact sharing, not demon
 
 This account offers three contributions.
 First, it identifies copyability as an information-system property that helps organize signaling, rather than treating reproducibility only as a threat to signal credibility.
-Second, it shows that textual self-presentation is both individually composed and relationally structured: a profile draws on circulating resources, and those relationships remain associated with asking-rate position beyond broad geography, occupation, and recorded work.
+Second, it shows that textual self-presentation is both individually composed and relationally structured: a profile draws on circulating resources, and those relationships remain associated with market position beyond broad geography, occupation, and recorded work.
 Third, it establishes non-substitution as an important boundary to a reputation-centered account.
 Verified records do not make the measured textual associations disappear.
 The resulting theory is not that clients reward originality or punish copying.
@@ -212,7 +212,7 @@ It resembles the model-to-interpretation progression used in computationally int
 ![Analytic organization. Models 1 and 2 supply the principal evidence; circulation descriptions and variant alignments inform their interpretation. The qualitative analysis follows both models and samples cases in response to their results. Arrows indicate analytic organization, not identified causal effects.](analysis/output/paper/figures/method.png){#fig-method}
 
 The two models answer different questions at different units of analysis.
-A worker-level comparison alone cannot distinguish selective composition inside a profile from differences in who participates in reuse, and a sentence-level comparison alone cannot establish whether the resulting composition is associated with asking-rate position.
+A worker-level comparison alone cannot distinguish selective composition inside a profile from differences in who participates in reuse, and a sentence-level comparison alone cannot establish whether the resulting composition is associated with market position.
 The two-model design connects these levels without treating them as a single causal sequence.
 
 The process was exploratory and involved revising initial interpretations.
@@ -335,7 +335,7 @@ The content and reuse measures are constructed before the rate models; qualitati
 | Profile composition | Model 2 predictor | Authored-specific, shared-generic, shared-specific sentence shares; authored-generic omitted | Shares sum to one across the four categories |
 | Circulation family | Model 2 predictor | Co-adoption components of scripts; dominant family for each sharer | Circulation-based provenance proxy, not an externally verified origin |
 | Verified record | Model 2 moderator | Completed-job groups: 0, 1–9, 10–49, 50+ | Platform-recorded work, distinct from textual claims about experience |
-| Asking-rate position | Model 2 outcome | Log posted hourly rate, USD 3–500 | Asking price, not realized wage or observed client valuation |
+| Market position | Model 2 outcome | Log posted hourly rate, USD 3–500 | Asking price, not realized wage or observed client valuation |
 
 : Constructs and measurements {#tbl-measures}
 
@@ -597,7 +597,7 @@ First-listed category is only a coarse check on what a worker does, so the codin
 
 ## Model 2: Composition and Circulation-Family Differences
 
-### Composition Is Associated with Asking-Rate Position
+### Composition Is Associated with Market Position
 
 @tbl-model2 presents the three forms of Model 2.
 Without record interactions, a full-unit authored-specific contrast is associated with {{< var m2-authored-spec >}} in asking rate relative to authored-generic composition.
@@ -726,7 +726,7 @@ These checks support a bounded segment interpretation and do not convert asking-
 
 # Theory Development
 
-The two models jointly establish three empirical regularities: within-profile composition is selective; textual composition and circulation families are associated with asking-rate position; and the shared-generic association does not disappear where verified records are available.
+The two models jointly establish three empirical regularities: within-profile composition is selective; textual composition and circulation families are associated with market position; and the shared-generic association does not disappear where verified records are available.
 We interpret these regularities through a distinction among content, profile composition, and provenance.
 @fig-theory summarizes the account.
 The proposed mechanisms concern composition effort, claim fit, and circulation environments.
@@ -783,7 +783,7 @@ Family-linked asking-rate differences remain after accounting for city and measu
 Shared content need not distinguish individual competence to be informative about a presentation environment and its associated market position.
 
 **Proposition 2—Composition and provenance associations.**
-*In copyable self-presentation, (a) authored-specific composition is associated with an asking-rate premium, (b) shared-generic composition is associated with an asking-rate discount, and (c) circulation-family membership provides additional information about asking-rate position beyond content composition, recorded work, and broad geographic and occupational differences.*
+*In copyable self-presentation, (a) authored-specific composition is associated with an asking-rate premium, (b) shared-generic composition is associated with an asking-rate discount, and (c) circulation-family membership provides additional information about market position beyond content composition, recorded work, and broad geographic and occupational differences.*
 
 Here “premium” and “discount” name conditional associations against the authored-generic reference, not rewards or penalties imposed by clients.
 The provenance part is also deliberately circulation-based.
@@ -808,7 +808,7 @@ A description frames the offering and can position it relative to client needs, 
 If text only compensated for the absence of verified evidence, its asking-rate associations should become weak where records are substantial.
 Instead, the shared-generic association persists across all completed-job groups and is not smaller among the most experienced group than among workers with no completed jobs.
 Other work finds that individual records can displace coarser cues as they accumulate [@KanatHongRaghu2018] and that records lose part of their premium when other verification becomes available [@LiangHongGu2025].
-Our result concerns text composition and asking-rate position, and says nothing about hiring.
+Our result concerns text composition and market position, and says nothing about hiring.
 
 **Proposition 3—Non-substitution.**
 *The asking-rate association of shared-generic self-presentation persists across verified-record groups: substantial platform-recorded work does not eliminate the textual association with market position.*
@@ -826,7 +826,7 @@ The account retains a role for signaling while specifying what the description c
 We asked what profile text signals when anyone who can see it can copy it.
 In this Upwork cross-section, information survives where exclusivity does not.
 Exact sharing is common but partial, it is selective in the claims it reaches, and it circulates through bounded environments.
-These differences are associated with asking-rate position, including among workers with substantial verified records.
+These differences are associated with market position, including among workers with substantial verified records.
 The evidence consists of cross-sectional associations with posted asking rates.
 It does not show effects on client choices, the cost of writing, or who copied whom.
 
@@ -937,7 +937,7 @@ It could also examine how richer reputation systems or platform policing of copy
 # Conclusion
 
 Publicly reproducible profile text is not necessarily uninformative.
-In this Upwork cross-section, workers' descriptions selectively combine shared and non-exact-shared wording, their composition is associated with asking-rate position, and circulation families add information beyond the modeled city and worker covariates.
+In this Upwork cross-section, workers' descriptions selectively combine shared and non-exact-shared wording, their composition is associated with market position, and circulation families add information beyond the modeled city and worker covariates.
 The shared-generic association persists alongside substantial verified records.
 These findings motivate a signaling account in which content, profile composition, and provenance are distinct dimensions.
 Copyability does not simply erase differentiation; it helps organize where differentiation and relational information reside.

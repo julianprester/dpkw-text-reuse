@@ -866,7 +866,7 @@ The account retains a role for signaling while specifying what the description c
 
 We asked what profile text signals when anyone who can see it can copy it.
 In this Upwork cross-section, information survives where exclusivity does not.
-Exact sharing is common but partial, it is selective in the claims it reaches, and it circulates through bounded environments.
+Exact sharing is common but partial: workers combine authoring and copying selectively, and the copied wording circulates through bounded environments.
 These differences are associated with market position, including among workers with substantial verified records.
 The evidence consists of cross-sectional associations with posted asking rates.
 It does not show effects on client choices, the cost of writing, or who copied whom.
@@ -876,8 +876,9 @@ It does not show effects on client choices, the cost of writing, or who copied w
 The classical argument holds that a signal that is easy to fake will be used by all senders, which destroys its informational value [@Nieken2023].
 Work on text in online labor markets has sometimes sidestepped the problem by assuming that detailed writing is costly and therefore credible [@AlshalfanMahdikhani2026], and platform evidence shows cheap, widely available signals being diluted or discounted [@BaiGaoGoesEtAl2026; @GaoLinLiuEtAl2026].
 Our results suggest that for copyable text the sentence is the wrong unit.
-What differs among workers is the composition of a profile: which claims are drawn from a circulating repertoire, which are composed or adapted, and which repertoire a worker draws on.
+What differs among workers is the composition of a profile: which claims are copied from wording in circulation, which are authored or adapted, and which circulation family the copied wording belongs to.
 Information survives copying in composition and circulation, not in the exclusivity of wording.
+In the process model, copyability and differentiation pressure make profile composition a practice, and it is the composition, not the individual sentence, that is associated with market position.
 We therefore extend the account of rhetorical signals [@SteigenbergerWilhelm2018] by making the relationship among senders empirically visible, and we link the informational properties of digital artifacts [@KallinikosAaltonenMarton2013] to the organization of self-presentation.
 
 This differs from the signals in the platform studies cited above.
@@ -978,9 +979,10 @@ It could also examine how richer reputation systems or platform policing of copy
 # Conclusion
 
 Publicly reproducible profile text is not necessarily uninformative.
-In this Upwork cross-section, workers' descriptions selectively combine shared and non-exact-shared wording, their composition is associated with market position, and circulation families add information beyond the modeled city and worker covariates.
+We theorize copying as a practice of profile composition that follows from copyability: under copyability and pressure to differentiate, workers combine authored and copied wording selectively.
+In this Upwork cross-section, that composition is associated with market position, measured by the posted asking rate, and circulation families add information beyond the modeled city and worker covariates.
 The shared-generic association persists alongside substantial verified records.
-These findings motivate a signaling account in which content, profile composition, and provenance are distinct dimensions.
+These findings motivate a process model in which content, profile composition, and provenance are distinct dimensions.
 Copyability does not simply erase differentiation; it helps organize where differentiation and relational information reside.
 The account is model-led and bounded: it concerns observed composition and asking-rate associations, not proven writing costs, client penalties, original authors, or externally verified sources.
 

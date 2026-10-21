@@ -731,14 +731,33 @@ These checks support a bounded segment interpretation and do not convert asking-
 # Theory Development
 
 The two models jointly establish three empirical regularities: within-profile composition is selective; textual composition and circulation families are associated with market position; and the shared-generic association does not disappear where verified records are available.
-We interpret these regularities through a distinction among content, profile composition, and provenance.
-@fig-theory summarizes the account.
-The proposed mechanisms concern composition effort, claim fit, and circulation environments.
-Those mechanisms are interpretations of the computational evidence, not directly observed costs, sources, or audience inferences.
+@fig-theory organizes these regularities and their interpretation as a process model.
+Copyability and differentiation pressure are the conditions of the setting.
+Copyability, defined above, makes others' wording available as a resource.
+Differentiation pressure is the need to stand out to a hurried audience that can read copy-paste as laziness [@BlythJarrahiLutzEtAl2022].
+We treat both as conditions of the setting and do not measure either.
+Profile composition, the combination of authoring and copying within a description, is the practice through which workers respond to them.
+Market position, operationalized as the posted asking rate, is the outcome.
+The propositions are drawn as the arrows between constructs because each states the mechanism that links them.
+Verified records form a parallel channel into the same outcome, and Proposition 3 asks whether that channel displaces the textual one.
 
-![A signaling account of copyable self-presentation. Selective composition organizes content and authorship; circulation relationships contribute a provenance dimension; textual asking-rate associations persist across verified-record groups. The diagram summarizes proposed relationships, not an identified causal path model.](analysis/output/paper/figures/theory.png){#fig-theory}
+![A process model of profile composition under copyability. Boxes are constructs; the arrows are the propositions (P1–P3), which state the mechanisms linking them. Copyability and differentiation pressure are conditions, authoring and copying are concurrent practices whose combination is the profile composition, and verified records are a parallel channel into market position. The diagram summarizes proposed relationships, not an identified causal path model or a temporal sequence.](analysis/output/paper/figures/theory.png){#fig-theory}
 
-## Selective Composition Under Copyability
+The model is a process model in a limited sense.
+It specifies conditions, practices, and an outcome, not an ordered sequence of events.
+Authoring and copying are concurrent practices that vary in degree within one profile.
+A cross-section cannot order them in time, and the created and updated timestamps describe whole descriptions, not individual sentences.
+The three components introduced in the Constructs section map onto the model.
+Content is what the practices act on.
+Profile composition is the combination of authoring and copying that results.
+Provenance is the circulation relationships that copied wording indexes.
+The proposed mechanisms concern differentiation, claim fit, and circulation environments.
+They are interpretations of the computational evidence, not directly observed costs, sources, or audience inferences.
+
+## Selective Composition of Profiles
+
+Under these conditions a worker can author wording, copy it, or combine both.
+*Profile composition* is the combination of the two practices, observed as authored and exact-shared sentences (see Constructs and Measurements).
 
 Copyability makes broadly applicable language available without requiring a worker to compose its wording anew.
 It does not make all claims equally fitting for all workers.
@@ -758,9 +777,13 @@ The potential cost lies in developing and fitting a presentation to the sender, 
 This is an interpretation to be developed from the composition pattern, not something text similarity directly observes.
 
 **Proposition 1—Selective profile composition.**
-*Under public copyability, workers preferentially use non-exact-shared wording for occupationally specific and quantified claims, and share more of the wording that appears later in a profile, while drawing more heavily on shared wording for assurances and encounter formulae.
+*Under public copyability and pressure to differentiate, workers preferentially use non-exact-shared wording for occupationally specific and quantified claims, and share more of the wording that appears later in a profile, while drawing more heavily on shared wording for assurances and encounter formulae.
 Within recurring forms, occupational and numerical elements are comparatively frequent sites of variation.*
 
+The proposition also addresses why composition is mixed.
+Copyability alone does not explain why workers author anything, and differentiation pressure alone does not explain why they copy.
+In the data, most profiles contain no detected exact sharing, and among those that do, reuse is usually partial.
+Together they make selective composition the plausible response: copy what is portable, and author what must fit.
 The proposition describes a tendency, not a prohibition.
 It is consistent with detailed shared capabilities and person-specific claims that occur late.
 Occupational specificity narrows applicability without necessarily identifying one person, and a copied history claim can be applicable to more than one worker.
@@ -773,6 +796,7 @@ The observed composition supports investigating where signaling costs may reside
 
 ## Composition and Provenance as Informational Dimensions
 
+In @fig-theory, P2a and P2b link profile composition to market position, and P2c links circulation families, the co-adoption structure of the wording that copying draws on, to the same outcome.
 Model 2 indicates that content and operational authorship should not be collapsed.
 Occupationally specific composition has different asking-rate associations depending on whether its wording is shared, while the shared-generic category carries the most stable discount.
 A single measure of textual specificity would conflate these combinations; a single reuse indicator would conflate a profile with a small shared close and one dominated by shared assurances.
@@ -806,6 +830,8 @@ It also leaves open how much of the association reflects worker positioning, cli
 
 ## Non-Substitution Between Records and Text
 
+Verified records enter the model as a parallel channel into market position.
+They are produced through platform activity and, unlike wording, cannot be copied.
 Verified records and textual composition are different informational objects.
 A completed-job count records past platform work.
 A description frames the offering and can position it relative to client needs, service scope, and price.
@@ -821,7 +847,7 @@ This is not a proposition about inevitable individual career change.
 The evidence compares workers in a cross-section, and the description-timing subset does not recover their earlier work records.
 The market-position result is narrower and more robust: records and text coexist, and record availability does not make the shared-generic association disappear.
 
-Taken together, the propositions shift attention from whether copied words are credible in isolation to how a copyable profile is assembled and relationally situated.
+Taken together, the propositions shift attention from whether copied words are credible in isolation to how copyability, together with pressure to differentiate, shapes profile composition and how that composition and its circulation are read in market position.
 Content is reproducible, but the informational structure of its composition and circulation is not exhausted by that fact.
 The account retains a role for signaling while specifying what the description can convey beyond an exclusive claim to its wording.
 

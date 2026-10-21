@@ -226,10 +226,39 @@ b <- data.table(x = c(2, 5, 8, 3, 7, 3, 7, 5, 5), y = c(7.4, 7.4, 7.4, 5.8, 5.8,
                 text = c("Public profile records", "Sentence corpus", "Cross-worker reuse", "Model 1\nWithin-profile composition", "Model 2\nComposition and asking rates", "Content, function, position\nand variant alignments", "Verified records, city effects,\nand circulation families", "Qualitative analysis\nClose readings of theoretically sampled profiles and near-copy pairs", "Abductive interpretation and bounded propositions"))
 e <- data.table(x = c(3.35, 6.35, 7.9, 8.1, 3, 7, 3, 7, 5), y = c(7.4, 7.4, 6.975, 6.975, 5.25, 5.25, 3.75, 3.75, 2.3), xend = c(3.65, 6.65, 3, 7, 3, 7, 3, 7, 5), yend = c(7.4, 7.4, 6.35, 6.35, 4.85, 4.85, 3.3, 3.3, 1.575))
 savep(boxes(b, e, ylim = c(.5, 8)), "method", w = 8, h = 5.6)
-b <- data.table(x = c(5, 5, 2.6, 7.4, 5, 5), y = c(6.35, 4.95, 3.45, 3.45, 1.85, .65), w = c(8, 8, 4, 4, 8, 8), h = c(.8, .85, 1, 1, .85, .75),
-                text = c("COPYABILITY: visible, reproducible profile text (scope condition)", "P1: SELECTIVE COMPOSITION\nSpecific / quantified claims versus reusable assurances and formulae", "CONTENT AND AUTHORSHIP\nP2a: authored-specific premium\nP2b: shared-generic discount", "CIRCULATION / PROVENANCE\nP2c: family-linked asking-rate\ndifferences, net of city", "ASKING-RATE POSITION\nText composition and family associations", "P3: NON-SUBSTITUTION\nShared-generic association persists across verified-record groups"))
-e <- data.table(x = c(5, 3, 7, 2.6, 7.4), y = c(5.95, 4.525, 4.525, 2.95, 2.95), xend = c(5, 2.6, 7.4, 3.5, 6.5), yend = c(5.375, 3.95, 3.95, 2.275, 2.275))
-savep(boxes(b, e), "theory", w = 8, h = 5.3)
+# Theory figure: constructs are boxes, propositions are block arrows carrying their text (mechanisms linking constructs).
+theory_fig <- local({
+  BLUE <- "#205a78"; RED <- "#b73730"; GREY <- "#e9e9e9"; TEAL <- "#dcebf2"; ORANGE <- "#f8e3c8"; GREEN <- "#cfe0b8"; SAND <- "#f6ecd2"; PROP <- "#fbeceb"
+  rect <- function(x0, x1, y0, y1, fill = NA, lty = 1) annotate("rect", xmin = x0, xmax = x1, ymin = y0, ymax = y1, fill = fill, colour = BLUE, linetype = lty, linewidth = .5)
+  txt <- function(x, y, l, s = 2.9, face = "plain", col = "black", h = .5, v = .5) annotate("text", x = x, y = y, label = l, size = s, fontface = face, colour = col, hjust = h, vjust = v, lineheight = 1)
+  arr <- function(x, y, xe, ye, ends = "last") annotate("segment", x = x, y = y, xend = xe, yend = ye, arrow = arrow(length = grid::unit(.1, "inches"), ends = ends), colour = BLUE, linewidth = .5)
+  box <- function(cx, cy, w, h, fill, label, face = "plain", s = 2.9) list(rect(cx - w / 2, cx + w / 2, cy - h / 2, cy + h / 2, fill), txt(cx, cy, label, s, face))
+  block <- function(x0, x1, yc, hb, hh, hl, tag, body, inline = FALSE) {
+    xb <- x1 - hl
+    shape <- annotate("polygon", x = c(x0, xb, xb, x1, xb, xb, x0), y = c(yc - hb, yc - hb, yc - hh, yc, yc + hh, yc + hb, yc + hb), fill = PROP, colour = RED, linewidth = .55)
+    if (inline) list(shape, txt(x0 + .3, yc, tag, 3.1, "bold", RED, h = 0), txt((x0 + xb) / 2 + .4, yc, body))
+    else list(shape, txt((x0 + xb) / 2, yc + hb * .6, tag, 3.1, "bold", RED), txt((x0 + xb) / 2, yc - hb * .25, body))
+  }
+  ggplot() + coord_cartesian(xlim = c(0, 13), ylim = c(-.6, 7.3), clip = "off") + theme_void() + list(
+    txt(1.2, 6.95, "CONDITIONS", 3, "bold", BLUE), txt(6.25, 6.95, "PRACTICES", 3, "bold", BLUE), txt(11.95, 6.95, "MARKET POSITION", 3, "bold", BLUE),
+    box(1.2, 5.7, 2.1, .9, GREY, "Copyability"), box(1.2, 4.2, 2.1, .9, GREY, "Differentiation\npressure"), box(1.2, .85, 2.1, .9, SAND, "Verified\nrecords"),
+    block(2.35, 4.6, 4.95, .85, 1.15, .45, "P1", "Selective\ncomposition", inline = TRUE),
+    rect(4.7, 7.8, 3.4, 6.4, NA, 2),
+    txt(6.25, 6.3, "PROFILE COMPOSITION", 2.8, "bold", BLUE, v = 1), txt(6.25, 6.02, "concurrent practices", 2.7, "italic", v = 1),
+    box(6.25, 5.2, 2.3, .8, TEAL, "Authoring"), box(6.25, 3.95, 2.3, .8, ORANGE, "Copying"),
+    arr(6.25, 4.42, 6.25, 4.78, "both"),
+    box(6.25, 2.55, 2.3, .9, GREY, "Circulation\nfamilies"), arr(6.25, 3.0, 6.25, 3.55),
+    block(7.9, 11.05, 5.7, .5, .65, .5, "P2a", "Authored-specific\npremium", inline = TRUE),
+    block(7.9, 11.05, 4.3, .5, .65, .5, "P2b", "Shared-generic\ndiscount", inline = TRUE),
+    block(7.9, 11.05, 2.55, .5, .65, .5, "P2c", "Family-linked\ndifferences", inline = TRUE),
+    block(2.35, 11.05, .85, .35, .55, .5, "P3", "Non-substitution", inline = TRUE),
+    txt(2.4, 1.45, "parallel information channel", 2.6, "italic", h = 0),
+    box(11.95, 3.2, 1.7, 5.8, GREEN, "Market\nposition", "bold", 3.1),
+    rect(.2, .6, -.45, -.2, "white"), txt(.7, -.325, "construct", 2.6, h = 0),
+    annotate("polygon", x = c(2.2, 2.7, 2.7, 3.0, 2.7, 2.7, 2.2), y = c(-.42, -.42, -.5, -.325, -.15, -.23, -.23), fill = PROP, colour = RED),
+    txt(3.15, -.325, "proposition (mechanism linking constructs)", 2.6, h = 0))
+})
+savep(theory_fig, "theory", w = 7, h = 4.4)
 
 # Publication excerpts. The paper carries no case labels or platform identifiers; internal case codes stay in this
 # script and in the audit file. Each excerpt must sit inside a saved unit: exact-shared (J = 1) or, for variants, J in [.5, 1).

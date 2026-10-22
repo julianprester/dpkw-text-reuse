@@ -1,6 +1,6 @@
 ---
-title: "What Does Copyable Text Signal?"
-subtitle: "Text Reuse and Self-Presentation in Online Labor Markets"
+title: "Author or Copy?"
+subtitle: "A Computational Study of Profile Composition in Online Labor Markets"
 author:
   - name: Julian Prester
     corresponding: true
@@ -73,7 +73,8 @@ Treating the description as a single individual signal obscures these possibilit
 We call the conjunction of public visibility and inexpensive textual reproduction *copyability*.
 Copyability is a property of the platform's information environment, not an allegation about the intentions of a particular worker.
 It makes others' self-presentation available as a resource, so that copying becomes one of the practices through which a profile is composed.
-Our research question is: *When self-presentation on a digital labor platform can be copied by anyone who can see it, what does profile text signal?*
+Our research question is:
+*How do workers compose their profiles on online labor markets where the need to differentiate one's profile and the copyability of others' profiles coincide?*
 
 We investigate this question through computationally intensive theory construction [@BerenteSeidelSafadi2019; @MirandaBerenteSeidelEtAl2022].
 Using public Upwork profile records, we construct a corpus of {{< var sentences >}} qualifying sentences from {{< var workers >}} workers.

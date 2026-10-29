@@ -379,6 +379,8 @@ A worker's dominant family covers the largest number of that worker's shared sen
 This assignment summarizes circulation but does not represent all memberships of workers who combine several families.
 Locality, cohort proximity, and price-peer comparisons describe the relational structure of reuse separately from the asking-rate model.
 
+![TODO: refine, add caption and cite in text](figure/phenomenon_overview.png)
+
 ## Model 1: Within-Profile Composition
 
 Model 1 estimates which qualifying sentences are shared within the same description.

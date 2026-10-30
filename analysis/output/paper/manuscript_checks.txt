@@ -1,7 +1,7 @@
 Manuscript software QA passed.
 Source files expanded: 11
 Numerical variables resolved: 108
-Citation keys found: 60
+Citation keys found: 62
 Caption identifiers: 19
 Local images: 6
 Saved coefficients, input hashes, retained control specification, and 29 excerpts checked.

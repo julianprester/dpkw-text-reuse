@@ -214,19 +214,49 @@ savep(ggplot(SH, aes(share1)) +
   theme(panel.grid.major.x = element_blank()), "sharing_share", h = 4)
 
 # Method diagram, using only static graphics so Quarto needs no host R or browser execution.
-boxes <- function(b, edges, note = NULL, ylim = c(0, 7)) {
-  p <- ggplot() + geom_rect(data = b, aes(xmin = x - w / 2, xmax = x + w / 2, ymin = y - h / 2, ymax = y + h / 2), fill = "#eef3f5", color = "#205a78", linewidth = .5) +
-    geom_text(data = b, aes(x, y, label = text), size = 3.5, lineheight = 1.05) +
-    geom_segment(data = edges, aes(x, y, xend = xend, yend = yend), arrow = arrow(length = grid::unit(.12, "inches")), linewidth = .5, color = "#205a78") +
-    coord_cartesian(xlim = c(0, 10), ylim = ylim, clip = "off") + theme_void()
-  if (!is.null(note)) p <- p + annotate("text", x = 5, y = .25, label = note, size = 3.2)
-  p
-}
-b <- data.table(x = c(2, 5, 8, 3, 7, 3, 7, 5, 5), y = c(7.4, 7.4, 7.4, 5.8, 5.8, 4.3, 4.3, 2.8, 1.2), w = c(2.7, 2.7, 2.7, 3.5, 3.5, 3.5, 3.5, 8, 6), h = c(.85, .85, .85, 1.1, 1.1, 1.1, 1.1, 1.0, .75),
-                text = c("Public profile records", "Sentence corpus", "Cross-worker reuse", "Model 1\nWithin-profile composition", "Model 2\nComposition and asking rates", "Content, function, position\nand variant alignments", "Verified records, city effects,\nand circulation families", "Qualitative analysis\nClose readings of theoretically sampled profiles and near-copy pairs", "Abductive interpretation and bounded propositions"))
-e <- data.table(x = c(3.35, 6.35, 7.9, 8.1, 3, 7, 3, 7, 5), y = c(7.4, 7.4, 6.975, 6.975, 5.25, 5.25, 3.75, 3.75, 2.3), xend = c(3.65, 6.65, 3, 7, 3, 7, 3, 7, 5), yend = c(7.4, 7.4, 6.35, 6.35, 4.85, 4.85, 3.3, 3.3, 1.575))
-savep(boxes(b, e, ylim = c(.5, 8)), "method", w = 8, h = 5.6)
+method_boxes <- data.table(
+  x = c(7.2, 7.2, 4.7, 9.7, 4.7, 9.7, 4.7, 9.7, 7.2),
+  y = c(10.0, 8.1, 6.1, 6.1, 4.2, 4.2, 2.2, 2.2, .3),
+  w = c(6.8, 8.8, 3.8, 3.8, 3.8, 3.8, 3.8, 3.8, 7.2),
+  h = c(1.3, 1.2, 1.2, 1.2, 1.2, 1.2, 1.4, 1.4, 1.0),
+  text = c("• Public profile records\n• Sentence corpus",
+           "Cross-worker text-reuse detection\nSentence matches, exact sharing, and scripts",
+           "Model 1\nWithin-profile composition", "Model 2\nComposition and asking rates",
+           "Content, function, position\nand variant alignments",
+           "Verified records, city effects,\nand circulation families",
+           "Qualitative analysis\nClose readings of sampled profiles\nand near-copy pairs",
+           "Robustness checks\nAlternative measures, samples,\nand outcomes",
+           "Abductive interpretation and bounded propositions")
+)
+method_edges <- data.table(
+  x = c(7.2, 6.2, 8.2, 4.7, 9.7, 4.7, 9.7, 4.7, 9.7),
+  y = c(9.35, 7.5, 7.5, 5.5, 5.5, 3.6, 3.6, 1.5, 1.5),
+  xend = c(7.2, 4.7, 9.7, 4.7, 9.7, 4.7, 9.7, 5.7, 8.7),
+  yend = c(8.7, 6.7, 6.7, 4.8, 4.8, 2.9, 2.9, .8, .8)
+)
+method_phases <- data.table(
+  x = 1.5,
+  y = c(10.0, 8.1, 5.15, 2.2, .3),
+  label = c("CORPUS\nCONSTRUCTION", "TEXT-REUSE\nDETECTION", "PRIMARY\nANALYSIS", "SECONDARY\nANALYSIS", "THEORY\nDEVELOPMENT")
+)
+method_plot <- ggplot() +
+  geom_rect(data = method_boxes,
+            aes(xmin = x - w / 2, xmax = x + w / 2,
+                ymin = y - h / 2, ymax = y + h / 2),
+            fill = "white", color = "black", linewidth = .55) +
+  geom_text(data = method_boxes, aes(x, y, label = text),
+            color = "black", size = 3.3, lineheight = 1.05) +
+  geom_segment(data = method_edges, aes(x, y, xend = xend, yend = yend),
+               arrow = arrow(length = grid::unit(.12, "inches")),
+               linewidth = .5, color = "black") +
+  geom_text(data = method_phases, aes(x, y, label = label),
+            color = "black", fontface = "bold", size = 3.1) +
+  coord_cartesian(xlim = c(0, 12), ylim = c(-.5, 11), clip = "off") +
+  theme_void()
+savep(method_plot, "method", w = 8, h = 8.4)
 # Theory figure: constructs are boxes, propositions are block arrows carrying their text (mechanisms linking constructs).
+# Reputation building (verified records) is a second practice beside profile composition, linked only to the P2 associations by P3;
+# circulation families are a property of copying.
 theory_fig <- local({
   BLUE <- "#205a78"; RED <- "#b73730"; GREY <- "#e9e9e9"; TEAL <- "#dcebf2"; ORANGE <- "#f8e3c8"; GREEN <- "#cfe0b8"; SAND <- "#f6ecd2"; PROP <- "#fbeceb"
   rect <- function(x0, x1, y0, y1, fill = NA, lty = 1) annotate("rect", xmin = x0, xmax = x1, ymin = y0, ymax = y1, fill = fill, colour = BLUE, linetype = lty, linewidth = .5)
@@ -239,26 +269,29 @@ theory_fig <- local({
     if (inline) list(shape, txt(x0 + .3, yc, tag, 3.1, "bold", RED, h = 0), txt((x0 + xb) / 2 + .4, yc, body))
     else list(shape, txt((x0 + xb) / 2, yc + hb * .6, tag, 3.1, "bold", RED), txt((x0 + xb) / 2, yc - hb * .25, body))
   }
-  ggplot() + coord_cartesian(xlim = c(0, 13), ylim = c(-.6, 7.3), clip = "off") + theme_void() + list(
-    txt(1.2, 6.95, "CONDITIONS", 3, "bold", BLUE), txt(6.25, 6.95, "PRACTICES", 3, "bold", BLUE), txt(11.95, 6.95, "MARKET POSITION", 3, "bold", BLUE),
-    box(1.2, 5.7, 2.1, .9, GREY, "Copyability"), box(1.2, 4.2, 2.1, .9, GREY, "Differentiation\npressure"), box(1.2, .85, 2.1, .9, SAND, "Verified\nrecords"),
+  ggplot() + coord_cartesian(xlim = c(0, 13.1), ylim = c(-.6, 7.3), clip = "off") + theme_void() + list(
+    txt(1.2, 6.95, "CONDITIONS", 3, "bold", BLUE), txt(6.25, 6.95, "PRACTICES", 3, "bold", BLUE), txt(12.225, 6.95, "OUTCOME", 3, "bold", BLUE),
+    box(1.2, 5.7, 2.1, .9, GREY, "Copyability"), box(1.2, 4.2, 2.1, .9, GREY, "Differentiation\npressure"),
     block(2.35, 4.6, 4.95, .85, 1.15, .45, "P1", "Selective\ncomposition", inline = TRUE),
-    rect(4.7, 7.8, 3.4, 6.4, NA, 2),
-    txt(6.25, 6.3, "PROFILE COMPOSITION", 2.8, "bold", BLUE, v = 1), txt(6.25, 6.02, "concurrent practices", 2.7, "italic", v = 1),
-    box(6.25, 5.2, 2.3, .8, TEAL, "Authoring"), box(6.25, 3.95, 2.3, .8, ORANGE, "Copying"),
-    arr(6.25, 4.42, 6.25, 4.78, "both"),
-    box(6.25, 2.55, 2.3, .9, GREY, "Circulation\nfamilies"), arr(6.25, 3.0, 6.25, 3.55),
-    block(7.9, 11.05, 5.7, .5, .65, .5, "P2a", "Authored-specific\npremium", inline = TRUE),
-    block(7.9, 11.05, 4.3, .5, .65, .5, "P2b", "Shared-generic\ndiscount", inline = TRUE),
-    block(7.9, 11.05, 2.55, .5, .65, .5, "P2c", "Family-linked\ndifferences", inline = TRUE),
-    block(2.35, 11.05, .85, .35, .55, .5, "P3", "Non-substitution", inline = TRUE),
-    txt(2.4, 1.45, "parallel information channel", 2.6, "italic", h = 0),
-    box(11.95, 3.2, 1.7, 5.8, GREEN, "Market\nposition", "bold", 3.1),
+    rect(4.7, 7.8, 2.1, 6.4, NA, 2),
+    txt(6.25, 6.3, "PROFILE COMPOSITION", 2.8, "bold", BLUE, v = 1),
+    box(6.25, 5.3, 2.3, .8, TEAL, "Authoring"),
+    rect(5.1, 7.4, 2.5, 4.5, ORANGE), txt(6.25, 4.2, "Copying"),
+    box(6.25, 3.15, 2.0, .9, GREY, "Circulation\nfamilies"),
+    arr(6.25, 4.9, 6.25, 4.5, "both"),
+    rect(7.88, 11.4, 2.0, 6.4, "#fbf6e6", 3),
+    block(7.98, 11.5, 5.75, .5, .6, .5, "P2a", "Authored-specific\npremium", inline = TRUE),
+    block(7.98, 11.5, 4.4, .5, .6, .5, "P2b", "Shared-generic\ndiscount", inline = TRUE),
+    block(7.98, 11.5, 3.0, .5, .6, .5, "P2c", "Family-linked\ndifferences", inline = TRUE),
+    box(6.25, .7, 2.9, .8, SAND, "Reputation building\n(verified records)"),
+    annotate("polygon", x = c(7.7, 10.8, 10.8, 11.1, 10.5, 9.9, 10.2, 10.2, 7.7), y = c(.4, .4, 1.5, 1.5, 2.0, 1.5, 1.5, 1.0, 1.0), fill = PROP, colour = RED, linewidth = .55),
+    txt(7.95, .7, "P3", 3.1, "bold", RED, h = 0), txt(9.3, .7, "Non-substitution"),
+    box(12.225, 4.2, 1.45, 4.4, GREEN, "Market\nposition", "bold", 3.1),
     rect(.2, .6, -.45, -.2, "white"), txt(.7, -.325, "construct", 2.6, h = 0),
     annotate("polygon", x = c(2.2, 2.7, 2.7, 3.0, 2.7, 2.7, 2.2), y = c(-.42, -.42, -.5, -.325, -.15, -.23, -.23), fill = PROP, colour = RED),
     txt(3.15, -.325, "proposition (mechanism linking constructs)", 2.6, h = 0))
 })
-savep(theory_fig, "theory", w = 7, h = 4.4)
+savep(theory_fig, "theory", w = 7.2, h = 4.4)
 
 # Publication excerpts. The paper carries no case labels or platform identifiers; internal case codes stay in this
 # script and in the audit file. Each excerpt must sit inside a saved unit: exact-shared (J = 1) or, for variants, J in [.5, 1).

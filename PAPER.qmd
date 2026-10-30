@@ -208,20 +208,25 @@ This leaves a broad question that existing work cannot answer and that we pursue
 ## Computationally Intensive Theory Construction
 
 We adopted a data-driven approach that iterates between computational patterns and theoretical interpretation [@BerenteSeidelSafadi2019; @MirandaBerenteSeidelEtAl2022; @Lindberg2020].
-Text-reuse detection makes shared wording observable at a scale at which reading profiles alone cannot establish its distribution [@WilkersonEtAl2015; @LinderEtAl2020].
+Text-reuse detection makes shared wording observable at a scale at which reading profiles alone cannot establish its distribution.
+The technique comes from political science, where it traces how bill text moves between legislators and legislatures [@WilkersonEtAl2015; @LinderEtAl2020; @GavaJaquetSciarini2021].
+Unlike topic models and other document-level text-as-data methods [@GrimmerStewart2013], which describe the themes that documents share, it identifies the specific passages that recur across documents, and so shows where in a profile reuse occurs and who shares it.
 Statistical models then characterize relationships within and across profiles.
 Interpretation relates these relationships to signaling, copyability, and circulation.
 Consistent with computationally intensive theory construction, the models support theory development rather than a claim of independent confirmatory testing.
 The Conceptual Background accordingly sensitizes the analysis without deriving hypotheses.
 We develop propositions after presenting the models and robustness checks, keeping the distinction between an estimated relationship and its proposed signaling mechanism explicit.
 
-The analytic sequence in @fig-method begins with reconstruction of the sentence corpus and validation of stored similarity scores.
-We describe reuse at the sentence, worker, script, and family levels; estimate Model 1 and Model 2; and examine alternative measurements, samples, and outcomes.
-A qualitative reading of theoretically sampled profiles and near-copy pairs follows Models 1 and 2, draws its cases from the patterns they identify, and makes their substantive form inspectable.
+The analytic sequence in @fig-method has five phases.
+We first construct the sentence corpus from the public profiles.
+A separate text-reuse phase then detects cross-worker reuse, validates the stored similarity scores, and describes reuse at the sentence, worker, script, and family levels; its output is the input to both models.
+The primary analysis estimates Model 1 and Model 2, together with the content, function, position, and variant-alignment descriptions and the verified-record, city, and circulation-family components that inform their interpretation.
+The secondary analysis has two parts: a qualitative reading of theoretically sampled profiles and near-copy pairs, which draws its cases from the patterns the models identify and makes their substantive form inspectable, and robustness checks on alternative measurements, samples, and outcomes.
+The final phase develops propositions from these results.
 This organization separates the two central models from supporting descriptions and qualitative readings.
 It resembles the model-to-interpretation progression used in computationally intensive IS studies [@LindbergSchecterBerenteEtAl2024], with a consolidated robustness battery [cf. @SafadiLalorBerente2024].
 
-![Analytic organization. Models 1 and 2 supply the principal evidence; circulation descriptions and variant alignments inform their interpretation. The qualitative analysis follows both models and samples cases in response to their results. Arrows indicate analytic organization, not identified causal effects.](analysis/output/paper/figures/method.png){#fig-method}
+![Analytic organization. Text-reuse detection precedes both models, which supply the principal evidence; content and variant descriptions and circulation components inform their interpretation. The qualitative analysis and the robustness checks follow the models and respond to their results. Arrows indicate analytic organization, not identified causal effects.](analysis/output/paper/figures/method.png){#fig-method}
 
 The two models answer different questions at different units of analysis.
 A worker-level comparison alone cannot distinguish selective composition inside a profile from differences in who participates in reuse, and a sentence-level comparison alone cannot establish whether the resulting composition is associated with market position.
@@ -305,6 +310,11 @@ We consequently center inference on exact sharing, use $J\geq .7$ as a model sen
 Low-similarity candidates are not an exhaustive census of weaker reuse.
 Nor do unobserved matches outside this corpus establish originality.
 
+The pipeline is computationally intensive.
+Exhaustive pairwise comparison of {{< var sentences >}} sentences is impractical, which is why candidate generation uses MinHash and locality-sensitive hashing.
+Even from the saved candidate pairs, rebuilding the derived data and fitting both models and the robustness battery takes about 1.5 hours on 16 cores, and the multilevel fits dominate.
+Appendix E gives the computing environment and run order.
+
 {{< include analysis/output/paper/tables/sample_flow.qmd >}}
 
 ## Constructs and Measurements
@@ -322,6 +332,7 @@ These components can carry different information.
 The same assurance can appear in many profiles, but its prevalence within a particular composition and its co-occurrence with other passages can identify a more particular presentation pattern.
 The components are the lexicon through which we frame the patterns surfaced by the analysis.
 They are not hypotheses derived in advance.
+We define content, profile composition, and provenance for this study; treating measured reuse as the observable trace of shared wording follows the text-reuse studies in political science [@WilkersonEtAl2015; @LinderEtAl2020; @GavaJaquetSciarini2021].
 
 They rest on a distinction between *textual reproduction* and *claim portability*.
 Textual reproduction concerns whether a form can be duplicated.
@@ -340,18 +351,20 @@ Copyability and differentiation pressure are scope conditions of the setting, no
 *Differentiation pressure* is the need to stand out to a hurried audience that can read copy-paste as laziness [@BlythJarrahiLutzEtAl2022]; like copyability, it is drawn from the literature and not measured.
 We operationalize *market position* as the posted asking rate in Model 2 and examine ratings and recorded hours as alternative outcomes in the robustness checks.
 The content and reuse measures are constructed before the rate models; qualitative judgments are not substituted for them.
+Where a measure builds on prior work, the table cites it.
+We developed the content measures (occupational specificity, numerical content, rhetorical function) and sentence position for this study, in the manner of text-as-data work [@GrimmerStewart2013], and use the platform fields as recorded.
 
 | Construct | Role | Operationalization | Interpretation and boundary |
 |:---|:---|:---|:---|
-| Authoring and copying (authored and exact-shared sentences) | Model 1 outcome; Model 2 component | Exact-shared: cross-worker word-five-gram match at $J=1$. Authored: no detected exact match | Shared measured form, not verified copying intent or direction; authored includes non-exact near-copies |
+| Authoring and copying (authored and exact-shared sentences) | Model 1 outcome; Model 2 component | Exact-shared: cross-worker word-five-gram match at $J=1$ [@WilkersonEtAl2015; @LinderEtAl2020]. Authored: no detected exact match | Shared measured form, not verified copying intent or direction; authored includes non-exact near-copies |
 | Occupational specificity | Model 1 predictor; content split in Model 2 | Distinct informative word types; informative if used by at least 100 workers and occupational KL divergence is at least .5 bits | Occupational concentration, not uniquely personal truth |
 | Numerical content | Model 1 predictor | At least one numeric token under the content tokenizer | Can concern history, quantities, or service promises |
 | Rhetorical function | Model 1 predictor | Dictionary moves collapsed to claim-bearing, assurance, encounter formula, or other | Claim-bearing combines identity, credential, capability; estimation label: “individuating claim” |
 | Sentence position | Model 1 predictor | Relative position among qualifying sentences: 0 for the first, 1 for the last | Index among qualifying units; does not necessarily equal literal position in the description text |
 | Profile composition | Model 2 predictor | Authored-specific, shared-generic, shared-specific sentence shares; authored-generic omitted | Shares sum to one across the four categories |
 | Circulation family | Model 2 predictor | Co-adoption components of scripts; dominant family for each sharer | Circulation-based provenance proxy, not an externally verified origin |
-| Verified record | Model 2 moderator | Completed-job groups: 0, 1–9, 10–49, 50+ | Platform-recorded work, distinct from textual claims about experience |
-| Market position | Model 2 outcome | Posted asking rate: log posted hourly rate, USD 3–500 | Asking price, not realized wage or observed client valuation |
+| Verified record | Model 2 moderator | Completed-job groups: 0, 1–9, 10–49, 50+ [cf. @Pallais2014; @KanatHongRaghu2018; @KathuriaEtAl2021] | Platform-recorded work, distinct from textual claims about experience |
+| Market position | Model 2 outcome | Posted asking rate: log posted hourly rate, USD 3–500 [cf. @MorenoTerwiesch2014; @Kokkodis2023] | Asking price, not realized wage or observed client valuation |
 
 : Constructs and measurements {#tbl-measures}
 
@@ -532,7 +545,7 @@ Its final two sentences do, and are held by {{< var adopt-risk1 >}} and {{< var 
 > Chances are that you'll be more than happy.
 
 The evidentiary account carries the profile's biographical and occupational content.
-The close is a risk-reversal offer that would fit almost any freelancer, and it does not replace the account that precedes it.
+The close is a risk-reversal offer that would fit almost any worker, and it does not replace the account that precedes it.
 
 Dictionary-coded assurances have {{< var m1-or-assurance >}} times the sharing odds of the reference claim-bearing group, and encounter formulae {{< var m1-or-encounter >}} times the odds.
 Assurances promise a disposition rather than a capability:
@@ -753,9 +766,13 @@ We treat both as conditions of the setting and do not measure either.
 Profile composition, the combination of authoring and copying within a description, is the practice through which workers respond to them.
 Market position, operationalized as the posted asking rate, is the outcome.
 The propositions are drawn as the arrows between constructs because each states the mechanism that links them.
-Verified records form a parallel channel into the same outcome, and Proposition 3 asks whether that channel displaces the textual one.
+Verified records are not a condition of the setting: many workers have none, and for them the description is much of what a client can read.
+We therefore show them as a second practice, reputation building, alongside profile composition.
+Unlike wording, a record cannot be copied.
+Proposition 3 asks whether the textual associations persist across record groups.
+Circulation families describe how copied wording is distributed across profiles, so the model shows them as a property of copying.
 
-![A process model of profile composition under copyability. Boxes are constructs; the arrows are the propositions (P1–P3), which state the mechanisms linking them. Copyability and differentiation pressure are conditions, authoring and copying are concurrent practices whose combination is the profile composition, and verified records are a parallel channel into market position. The diagram summarizes proposed relationships, not an identified causal path model or a temporal sequence.](analysis/output/paper/figures/theory.png){#fig-theory}
+![A process model of profile composition under copyability. Boxes are constructs; the arrows are the propositions, which state the mechanisms linking them. Copyability and differentiation pressure are conditions, authoring and copying are concurrent practices whose combination is the profile composition, and circulation families are a property of copying that spans profiles. Reputation building, observed as verified records, is a second practice that cannot be copied; P3 states that the P2 associations persist across record groups. The diagram summarizes proposed relationships, not an identified causal path model or a temporal sequence.](analysis/output/paper/figures/theory.png){#fig-theory}
 
 The model is a process model in a limited sense.
 It specifies conditions, practices, and an outcome, not an ordered sequence of events.
@@ -764,7 +781,7 @@ A cross-section cannot order them in time, and the created and updated timestamp
 The three components introduced in the Constructs section map onto the model.
 Content is what the practices act on.
 Profile composition is the combination of authoring and copying that results.
-Provenance is the circulation relationships that copied wording indexes.
+Provenance is the circulation relationships that copied wording indexes, shown in the model as a property of copying.
 The proposed mechanisms concern differentiation, claim fit, and circulation environments.
 They are interpretations of the computational evidence, not directly observed costs, sources, or audience inferences.
 
@@ -810,7 +827,7 @@ The observed composition supports investigating where signaling costs may reside
 
 ## Composition and Provenance as Informational Dimensions
 
-In @fig-theory, P2a and P2b link profile composition to market position, and P2c links circulation families, the co-adoption structure of the wording that copying draws on, to the same outcome.
+In @fig-theory, P2a and P2b link profile composition to market position, and P2c links circulation families, a property of copying that spans profiles because it is the co-adoption structure of the wording that copying draws on, to the same outcome.
 Model 2 indicates that content and operational authorship should not be collapsed.
 Occupationally specific composition has different asking-rate associations depending on whether its wording is shared, while the shared-generic category carries the most stable discount.
 A single measure of textual specificity would conflate these combinations; a single reuse indicator would conflate a profile with a small shared close and one dominated by shared assurances.
@@ -844,7 +861,7 @@ It also leaves open how much of the association reflects worker positioning, cli
 
 ## Non-Substitution Between Records and Text
 
-Verified records enter the model as a parallel channel into market position.
+Verified records enter the model as reputation building, a second practice beside profile composition, and Proposition 3 relates them to the market-position associations in Proposition 2.
 They are produced through platform activity and, unlike wording, cannot be copied.
 Verified records and textual composition are different informational objects.
 A completed-job count records past platform work.

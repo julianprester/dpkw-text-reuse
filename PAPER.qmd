@@ -354,17 +354,17 @@ The content and reuse measures are constructed before the rate models; qualitati
 Where a measure builds on prior work, the table cites it.
 We developed the content measures (occupational specificity, numerical content, rhetorical function) and sentence position for this study, in the manner of text-as-data work [@GrimmerStewart2013], and use the platform fields as recorded.
 
-| Construct | Role | Operationalization | Interpretation and boundary |
+| Construct | Operationalization | Interpretation and boundary | Role |
 |:---|:---|:---|:---|
-| Authoring and copying (authored and exact-shared sentences) | Model 1 outcome; Model 2 component | Exact-shared: cross-worker word-five-gram match at $J=1$ [@WilkersonEtAl2015; @LinderEtAl2020]. Authored: no detected exact match | Shared measured form, not verified copying intent or direction; authored includes non-exact near-copies |
-| Occupational specificity | Model 1 predictor; content split in Model 2 | Distinct informative word types; informative if used by at least 100 workers and occupational KL divergence is at least .5 bits | Occupational concentration, not uniquely personal truth |
-| Numerical content | Model 1 predictor | At least one numeric token under the content tokenizer | Can concern history, quantities, or service promises |
-| Rhetorical function | Model 1 predictor | Dictionary moves collapsed to claim-bearing, assurance, encounter formula, or other | Claim-bearing combines identity, credential, capability; estimation label: “individuating claim” |
-| Sentence position | Model 1 predictor | Relative position among qualifying sentences: 0 for the first, 1 for the last | Index among qualifying units; does not necessarily equal literal position in the description text |
-| Profile composition | Model 2 predictor | Authored-specific, shared-generic, shared-specific sentence shares; authored-generic omitted | Shares sum to one across the four categories |
-| Circulation family | Model 2 predictor | Co-adoption components of scripts; dominant family for each sharer | Circulation-based provenance proxy, not an externally verified origin |
-| Verified record | Model 2 moderator | Completed-job groups: 0, 1–9, 10–49, 50+ [cf. @Pallais2014; @KanatHongRaghu2018; @KathuriaEtAl2021] | Platform-recorded work, distinct from textual claims about experience |
-| Market position | Model 2 outcome | Posted asking rate: log posted hourly rate, USD 3–500 [cf. @MorenoTerwiesch2014; @Kokkodis2023] | Asking price, not realized wage or observed client valuation |
+| Authoring and copying (authored and exact-shared sentences) | Exact-shared: cross-worker word-five-gram match at $J=1$ [@WilkersonEtAl2015; @LinderEtAl2020]. Authored: no detected exact match | Shared measured form, not verified copying intent or direction; authored includes non-exact near-copies | Model 1 outcome; Model 2 component |
+| Occupational specificity | Distinct informative word types; informative if used by at least 100 workers and occupational KL divergence is at least .5 bits | Occupational concentration, not uniquely personal truth | Model 1 predictor; content split in Model 2 |
+| Numerical content | At least one numeric token under the content tokenizer | Can concern history, quantities, or service promises | Model 1 predictor |
+| Rhetorical function | Dictionary moves collapsed to claim-bearing, assurance, encounter formula, or other | Claim-bearing combines identity, credential, capability; estimation label: “individuating claim” | Model 1 predictor |
+| Sentence position | Relative position among qualifying sentences: 0 for the first, 1 for the last | Index among qualifying units; does not necessarily equal literal position in the description text | Model 1 predictor |
+| Profile composition | Authored-specific, shared-generic, shared-specific sentence shares; authored-generic omitted | Shares sum to one across the four categories | Model 2 predictor |
+| Circulation family | Co-adoption components of scripts; dominant family for each sharer | Circulation-based provenance proxy, not an externally verified origin | Model 2 predictor |
+| Verified record | Completed-job groups: 0, 1–9, 10–49, 50+ [cf. @Pallais2014; @KanatHongRaghu2018; @KathuriaEtAl2021] | Platform-recorded work, distinct from textual claims about experience | Model 2 moderator |
+| Market position | Posted asking rate: log posted hourly rate, USD 3–500 [cf. @MorenoTerwiesch2014; @Kokkodis2023] | Asking price, not realized wage or observed client valuation | Model 2 outcome |
 
 : Constructs and measurements {#tbl-measures}
 

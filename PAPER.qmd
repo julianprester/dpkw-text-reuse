@@ -370,7 +370,7 @@ We developed the content measures (occupational specificity, numerical content, 
 
 **Specificity.**
 We estimate a lexicon on sentences with no detected sharing at $J\geq .5$, counting each worker once per word type.
-For a word's users, we compare the distribution of first-listed occupations with the corresponding worker baseline using Kullback–Leibler divergence.
+For a word's users, we compare the distribution of first-listed occupations with the corresponding worker baseline using Kullback–Leibler (KL) divergence.
 Types used by at least 100 workers and carrying at least .5 bits of divergence, excluding numeric types, are informative.
 The lexicon contains {{< var lexicon >}} informative types.
 Sentence specificity is the number of distinct informative types, modeled as $\log(1+\text{specific types})$ in Model 1.

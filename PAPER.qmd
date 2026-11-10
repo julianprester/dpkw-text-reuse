@@ -319,6 +319,8 @@ Appendix E gives the computing environment and run order.
 
 ## Constructs and Measurements
 
+![TODO: refine, add caption and cite in text](figure/phenomenon_overview.png)
+
 Three components structure the measurements and models below.
 *Content* refers to the substance of a sentence: its occupational detail, numerical claims, rhetorical function, and other meanings.
 We measure it through occupational specificity, numerical content, and rhetorical function.
@@ -354,20 +356,6 @@ The content and reuse measures are constructed before the rate models; qualitati
 Where a measure builds on prior work, the table cites it.
 We developed the content measures (occupational specificity, numerical content, rhetorical function) and sentence position for this study, in the manner of text-as-data work [@GrimmerStewart2013], and use the platform fields as recorded.
 
-| Construct | Operationalization | Interpretation and boundary | Role |
-|:---|:---|:---|:---|
-| Authoring and copying (authored and exact-shared sentences) | Exact-shared: cross-worker word-five-gram match at $J=1$ [@WilkersonEtAl2015; @LinderEtAl2020]. Authored: no detected exact match | Shared measured form, not verified copying intent or direction; authored includes non-exact near-copies | Model 1 outcome; Model 2 component |
-| Occupational specificity | Distinct informative word types; informative if used by at least 100 workers and occupational KL divergence is at least .5 bits | Occupational concentration, not uniquely personal truth | Model 1 predictor; content split in Model 2 |
-| Numerical content | At least one numeric token under the content tokenizer | Can concern history, quantities, or service promises | Model 1 predictor |
-| Rhetorical function | Dictionary moves collapsed to claim-bearing, assurance, encounter formula, or other | Claim-bearing combines identity, credential, capability; estimation label: “individuating claim” | Model 1 predictor |
-| Sentence position | Relative position among qualifying sentences: 0 for the first, 1 for the last | Index among qualifying units; does not necessarily equal literal position in the description text | Model 1 predictor |
-| Profile composition | Authored-specific, shared-generic, shared-specific sentence shares; authored-generic omitted | Shares sum to one across the four categories | Model 2 predictor |
-| Circulation family | Co-adoption components of scripts; dominant family for each sharer | Circulation-based provenance proxy, not an externally verified origin | Model 2 predictor |
-| Verified record | Completed-job groups: 0, 1–9, 10–49, 50+ [cf. @Pallais2014; @KanatHongRaghu2018; @KathuriaEtAl2021] | Platform-recorded work, distinct from textual claims about experience | Model 2 moderator |
-| Market position | Posted asking rate: log posted hourly rate, USD 3–500 [cf. @MorenoTerwiesch2014; @Kokkodis2023] | Asking price, not realized wage or observed client valuation | Model 2 outcome |
-
-: Constructs and measurements {#tbl-measures}
-
 **Specificity.**
 We estimate a lexicon on sentences with no detected sharing at $J\geq .5$, counting each worker once per word type.
 For a word's users, we compare the distribution of first-listed occupations with the corresponding worker baseline using Kullback–Leibler (KL) divergence.
@@ -392,7 +380,19 @@ A worker's dominant family covers the largest number of that worker's shared sen
 This assignment summarizes circulation but does not represent all memberships of workers who combine several families.
 Locality, cohort proximity, and price-peer comparisons describe the relational structure of reuse separately from the asking-rate model.
 
-![TODO: refine, add caption and cite in text](figure/phenomenon_overview.png)
+| Construct | Operationalization | Interpretation and boundary | Role |
+|:---|:---|:---|:---|
+| Authoring and copying (authored and exact-shared sentences) | Exact-shared: cross-worker word-five-gram match at $J=1$ [@WilkersonEtAl2015; @LinderEtAl2020]. Authored: no detected exact match | Shared measured form, not verified copying intent or direction; authored includes non-exact near-copies | Model 1 outcome; Model 2 component |
+| Occupational specificity | Distinct informative word types; informative if used by at least 100 workers and occupational KL divergence is at least .5 bits | Occupational concentration, not uniquely personal truth | Model 1 predictor; content split in Model 2 |
+| Numerical content | At least one numeric token under the content tokenizer | Can concern history, quantities, or service promises | Model 1 predictor |
+| Rhetorical function | Dictionary moves collapsed to claim-bearing, assurance, encounter formula, or other | Claim-bearing combines identity, credential, capability; estimation label: “individuating claim” | Model 1 predictor |
+| Sentence position | Relative position among qualifying sentences: 0 for the first, 1 for the last | Index among qualifying units; does not necessarily equal literal position in the description text | Model 1 predictor |
+| Profile composition | Authored-specific, shared-generic, shared-specific sentence shares; authored-generic omitted | Shares sum to one across the four categories | Model 2 predictor |
+| Circulation family | Co-adoption components of scripts; dominant family for each sharer | Circulation-based provenance proxy, not an externally verified origin | Model 2 predictor |
+| Verified record | Completed-job groups: 0, 1–9, 10–49, 50+ [cf. @Pallais2014; @KanatHongRaghu2018; @KathuriaEtAl2021] | Platform-recorded work, distinct from textual claims about experience | Model 2 moderator |
+| Market position | Posted asking rate: log posted hourly rate, USD 3–500 [cf. @MorenoTerwiesch2014; @Kokkodis2023] | Asking price, not realized wage or observed client valuation | Model 2 outcome |
+
+: Constructs and measurements {#tbl-measures}
 
 ## Model 1: Within-Profile Composition
 

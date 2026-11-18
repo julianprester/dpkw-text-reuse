@@ -381,20 +381,25 @@ This assignment summarizes circulation but does not represent all memberships of
 Locality, cohort proximity, and price-peer comparisons describe the relational structure of reuse separately from the asking-rate model.
 
 | Construct | Operationalization | Interpretation and boundary |
-|:---|:----|:----|
+|:--|:-----|:---|
 | **Sentence-level measures** | | |
-| Copied | Exact-shared: cross-worker word-five-gram match at $J=1$ [@WilkersonEtAl2015; @LinderEtAl2020]. Authored: no detected exact match | Shared measured form, not verified copying intent or direction; authored includes non-exact near-copies |
-| Occupational specificity | Distinct informative word types; informative if used by at least 100 workers and occupational KL divergence is at least .5 bits | Occupational concentration, not uniquely personal truth |
-| Numerical content | At least one numeric token under the content tokenizer | Can concern history, quantities, or service promises |
-| Rhetorical function | Dictionary moves collapsed to claim-bearing, assurance, encounter formula, or other | Claim-bearing combines identity, credential, capability; estimation label: “individuating claim” |
-| Sentence position | Relative position among qualifying sentences: 0 for the first, 1 for the last | Index among qualifying units; does not necessarily equal literal position in the description text |
+| Copied<sup>N</sup> | Binary variable. Levels:<br>0: No exact copy detected in the corpus, i.e., authored<br>1: A word-five-gram match at $J=1$ was detected with at least one other profile, i.e., copied. | Shared measured form, not verified copying intent or direction; authored includes non-exact near-copies |
+| Occupational specificity | Count variable.<br>Number of distinct nonnumeric informative word types (each type counted once), where a type must be used by at least 100 workers and have occupational KL divergence ≥ 0.5 bits [based on @GrimmerStewart2013].  | Occupational concentration, not uniquely personal truth |
+| Numerical content | Binary variable. Levels:<br>0: No numeric token detected<br>1: At least one numeric token detected by the content tokenizer  | Can concern history, quantities, or service promises |
+| Rhetorical function | Categorical variable. Levels:<br>Claim-bearing: identity, credential, or capability<br>Assurance: character or process<br>Encounter: contact, invitation, and courtesy language<br>Other: agency voice or unmatched sentences<br>The categories are assigned using a precedence-ordered dictionary of keywords [based on @GrimmerStewart2013].   | Claim-bearing combines identity, credential, capability; estimation label: “individuating claim” |
+| Sentence position | Continuous variable (bounded 0,1).<br>Measures the relative sentence position: $$\frac{\text{rank}-1}{\text{number of qualifying sentences}-1}$$ Scale:<br>0 = first qualifying sentence<br>1 = last qualifying sentence<br>Intermediate values locate sentences proportionally between them.| Index among qualifying units; does not necessarily equal literal position in the description text |
 | **Profile-level measures** | | |
-| Profile composition | Authored-specific, shared-generic, shared-specific sentence shares; authored-generic omitted | Shares sum to one across the four categories |
-| Circulation family | Co-adoption components of scripts; dominant family for each sharer | Circulation-based provenance proxy, not an externally verified origin |
-| Verified record | Completed-job groups: 0, 1–9, 10–49, 50+ [cf. @Pallais2014; @KanatHongRaghu2018; @KathuriaEtAl2021] | Platform-recorded work, distinct from textual claims about experience | 
-| Market position | Posted asking rate: log posted hourly rate, USD 3–500 [cf. @MorenoTerwiesch2014; @Kokkodis2023] | Asking price, not realized wage or observed client valuation | 
+| Authored-generic share<sup>N</sup><sup>C</sup> | Continuous variable (bounded 0,1).<br>Measures the proportion of a worker's qualifying sentences that have no detected exact cross-worker match ($J<1$) and contain no occupation-informative word type. | Operationally, no exact match detected; includes near-copies and does not establish independent authorship |
+| Authored-specific share<sup>N</sup><sup>C</sup> | Continuous variable (bounded 0,1).<br>Measures the proportion of a worker's qualifying sentences that have no detected exact cross-worker match ($J<1$) and contain at least one occupation-informative word type. | Operationally, no exact match detected; includes near-copies and does not establish independent authorship |
+| Shared-generic share<sup>N</sup><sup>C</sup> | Continuous variable (bounded 0,1).<br>Measures the proportion of a worker's qualifying sentences with an exact cross-worker match ($J=1$) and no occupation-informative word type. | Exact sharing is a measured textual match; copying intent and direction are not established |
+| Shared-specific share<sup>N</sup><sup>C</sup> | Continuous variable (bounded 0,1).<br>Measures the proportion of a worker's qualifying sentences with an exact cross-worker match ($J=1$) and at least one occupation-informative word type. | Exact sharing is a measured textual match; copying intent and direction are not established |
+| Circulation family<sup>N</sup> | Categorical variable.<br>Each profile with exact-shared sentences is assigned its dominant family ID. Exact-shared sentences with identical word-five-gram sets ($J=1$) are grouped into scripts. Scripts are linked when each has at least five adopters, at least three workers adopted both, and their overlap coefficient—co-adopters divided by the smaller script’s adopter count—is at least 0.5. A profile’s dominant family is the one covering the most of its exact-shared sentences. Profiles without exact-shared sentences have no family assignment. | Circulation-based provenance proxy, not an externally verified origin |
+| Verified work record | Categorical variable. Levels:<br>0, 1–9, 10–49, 50+ completed jobs [cf. @Pallais2014; @KanatHongRaghu2018; @KathuriaEtAl2021] | Platform-recorded work, distinct from textual claims about experience |
+| Market position | Continuous variable.<br>Posted hourly asking rate in USD [cf. @MorenoTerwiesch2014; @Kokkodis2023] | Asking price, not realized wage or observed client valuation |
 
 : Constructs and measurements {#tbl-measures .small-table}
+
+*Note.* <sup>N</sup> New construct, adapted from computational text-reuse methods in political science [@WilkersonEtAl2015; @LinderEtAl2020].<br><sup>C</sup> The composition shares sum to 1 for each profile.
 
 ## Model 1: Within-Profile Composition
 

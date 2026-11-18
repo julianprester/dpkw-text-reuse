@@ -381,7 +381,7 @@ This assignment summarizes circulation but does not represent all memberships of
 Locality, cohort proximity, and price-peer comparisons describe the relational structure of reuse separately from the asking-rate model.
 
 | Construct | Operationalization | Interpretation and boundary |
-|:---|:---|:---|
+|:---|:----|:----|
 | **Sentence-level measures** | | |
 | Copied | Exact-shared: cross-worker word-five-gram match at $J=1$ [@WilkersonEtAl2015; @LinderEtAl2020]. Authored: no detected exact match | Shared measured form, not verified copying intent or direction; authored includes non-exact near-copies |
 | Occupational specificity | Distinct informative word types; informative if used by at least 100 workers and occupational KL divergence is at least .5 bits | Occupational concentration, not uniquely personal truth |
@@ -394,7 +394,7 @@ Locality, cohort proximity, and price-peer comparisons describe the relational s
 | Verified record | Completed-job groups: 0, 1–9, 10–49, 50+ [cf. @Pallais2014; @KanatHongRaghu2018; @KathuriaEtAl2021] | Platform-recorded work, distinct from textual claims about experience | 
 | Market position | Posted asking rate: log posted hourly rate, USD 3–500 [cf. @MorenoTerwiesch2014; @Kokkodis2023] | Asking price, not realized wage or observed client valuation | 
 
-: Constructs and measurements {#tbl-measures}
+: Constructs and measurements {#tbl-measures .small-table}
 
 ## Model 1: Within-Profile Composition
 

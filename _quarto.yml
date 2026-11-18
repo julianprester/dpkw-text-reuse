@@ -11,6 +11,7 @@ link-citations: true
 format:
   html:
     embed-resources: true
+    css: styles.css
     toc: true
     toc-depth: 2
     number-sections: false

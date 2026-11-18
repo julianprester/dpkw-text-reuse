@@ -383,7 +383,7 @@ Locality, cohort proximity, and price-peer comparisons describe the relational s
 | Construct | Operationalization | Interpretation and boundary |
 |:---|:---|:---|
 | **Sentence-level measures** | | |
-| Authoring and copying (authored and exact-shared sentences) | Exact-shared: cross-worker word-five-gram match at $J=1$ [@WilkersonEtAl2015; @LinderEtAl2020]. Authored: no detected exact match | Shared measured form, not verified copying intent or direction; authored includes non-exact near-copies |
+| Copied | Exact-shared: cross-worker word-five-gram match at $J=1$ [@WilkersonEtAl2015; @LinderEtAl2020]. Authored: no detected exact match | Shared measured form, not verified copying intent or direction; authored includes non-exact near-copies |
 | Occupational specificity | Distinct informative word types; informative if used by at least 100 workers and occupational KL divergence is at least .5 bits | Occupational concentration, not uniquely personal truth |
 | Numerical content | At least one numeric token under the content tokenizer | Can concern history, quantities, or service promises |
 | Rhetorical function | Dictionary moves collapsed to claim-bearing, assurance, encounter formula, or other | Claim-bearing combines identity, credential, capability; estimation label: “individuating claim” |

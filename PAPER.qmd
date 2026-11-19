@@ -319,42 +319,45 @@ Appendix E gives the computing environment and run order.
 
 ## Constructs and Measurements
 
-![TODO: refine, add caption and cite in text](figure/phenomenon_overview.png)
-
-Three components structure the measurements and models below.
-*Content* refers to the substance of a sentence: its occupational detail, numerical claims, rhetorical function, and other meanings.
-We measure it through occupational specificity, numerical content, and rhetorical function.
-*Profile composition* refers to the combination of two practices, authoring and copying, across that content and across the profile.
-We observe authoring as sentences with no detected exact cross-worker match (authored) and copying as sentences with an exact cross-worker match (exact-shared).
-Neither label implies intent or direction: authored wording can be an adapted template, and shared wording can have been written by the worker who holds it.
-We measure profile composition at the sentence level as exact-shared or authored status together with relative position in the profile, and at the worker level as profile composition shares.
-*Provenance* refers to the circulation relationships through which shared forms are available and recur.
-We measure it through circulation families.
-These components can carry different information.
-The same assurance can appear in many profiles, but its prevalence within a particular composition and its co-occurrence with other passages can identify a more particular presentation pattern.
-The components are the lexicon through which we frame the patterns surfaced by the analysis.
-They are not hypotheses derived in advance.
-We define content, profile composition, and provenance for this study; treating measured reuse as the observable trace of shared wording follows the text-reuse studies in political science [@WilkersonEtAl2015; @LinderEtAl2020; @GavaJaquetSciarini2021].
-
-They rest on a distinction between *textual reproduction* and *claim portability*.
-Textual reproduction concerns whether a form can be duplicated.
-Portability concerns the range of workers for whom its claim could remain applicable.
-A general communication promise can apply to many workers.
-A statement concerning a narrow capability applies to a smaller set.
-A personally anchored account of a particular history may apply to fewer still.
-Copyability makes reproduction easy in all three cases, but does not make them equally appropriate to adopt.
-The distinction directs attention to composition rather than to a binary contrast between original and copied profiles.
-A worker can draw on broadly reusable assurances while composing a more specific occupational account, adopt an occupational frame and modify a number, service, or tool, or share a detailed claim intact.
-Occupational specificity, personal individuation, original wording, and truth-conditional portability are related but not identical.
-We use occupational wording and numerical content as tractable indicators of selective composition, not as direct measures of whether a sentence is true for one worker alone.
+The study builds on constructs at the sentence and profile levels, as illustrated in @fig-phenomenon.
 
 @tbl-measures summarizes the constructs, their operationalizations, and the role each plays in the two models.
-Copyability and differentiation pressure are scope conditions of the setting, not measured variables, and control variables are listed with Model 2 below.
-*Differentiation pressure* is the need to stand out to a hurried audience that can read copy-paste as laziness [@BlythJarrahiLutzEtAl2022]; like copyability, it is drawn from the literature and not measured.
-We operationalize *market position* as the posted asking rate in Model 2 and examine ratings and recorded hours as alternative outcomes in the robustness checks.
-The content and reuse measures are constructed before the rate models; qualitative judgments are not substituted for them.
-Where a measure builds on prior work, the table cites it.
-We developed the content measures (occupational specificity, numerical content, rhetorical function) and sentence position for this study, in the manner of text-as-data work [@GrimmerStewart2013], and use the platform fields as recorded.
+
+> Copyability and differentiation pressure are scope conditions of the setting, not measured variables, and control variables are listed with Model 2 below.
+> *Differentiation pressure* is the need to stand out to a hurried audience that can read copy-paste as laziness [@BlythJarrahiLutzEtAl2022]; like copyability, it is drawn from the literature and not measured.
+> We operationalize *market position* as the posted asking rate in Model 2 and examine ratings and recorded hours as alternative outcomes in the robustness checks.
+> The content and reuse measures are constructed before the rate models; qualitative judgments are not substituted for them.
+> Where a measure builds on prior work, the table cites it.
+> We developed the content measures (occupational specificity, numerical content, rhetorical function) and sentence position for this study, in the manner of text-as-data work [@GrimmerStewart2013], and use the platform fields as recorded.
+
+![Text reuse in worker profiles: Phenomenon and measurement](figure/phenomenon_overview.png){#fig-phenomenon}
+
+> Three components structure the measurements and models below.
+> *Content* refers to the substance of a sentence: its occupational detail, numerical claims, rhetorical function, and other meanings.
+> We measure it through occupational specificity, numerical content, and rhetorical function.
+> *Profile composition* refers to the combination of two practices, authoring and copying, across that content and across the profile.
+> We observe authoring as sentences with no detected exact cross-worker match (authored) and copying as sentences with an exact cross-worker match (exact-shared).
+> Neither label implies intent or direction: authored wording can be an adapted template, and shared wording can have been written by the worker who holds it.
+> We measure profile composition at the sentence level as exact-shared or authored status together with relative position in the profile, and at the worker level as profile composition shares.
+> *Provenance* refers to the circulation relationships through which shared forms are available and recur.
+> We measure it through circulation families.
+> These components can carry different information.
+> The same assurance can appear in many profiles, but its prevalence within a particular composition and its co-occurrence with other passages can identify a more particular presentation pattern.
+> The components are the lexicon through which we frame the patterns surfaced by the analysis.
+> They are not hypotheses derived in advance.
+> We define content, profile composition, and provenance for this study; treating measured reuse as the observable trace of shared wording follows the text-reuse studies in political science [@WilkersonEtAl2015; @LinderEtAl2020; @GavaJaquetSciarini2021].
+
+> They rest on a distinction between *textual reproduction* and *claim portability*.
+> Textual reproduction concerns whether a form can be duplicated.
+> Portability concerns the range of workers for whom its claim could remain applicable.
+> A general communication promise can apply to many workers.
+> A statement concerning a narrow capability applies to a smaller set.
+> A personally anchored account of a particular history may apply to fewer still.
+> Copyability makes reproduction easy in all three cases, but does not make them equally appropriate to adopt.
+> The distinction directs attention to composition rather than to a binary contrast between original and copied profiles.
+> A worker can draw on broadly reusable assurances while composing a more specific occupational account, adopt an occupational frame and modify a number, service, or tool, or share a detailed claim intact.
+> Occupational specificity, personal individuation, original wording, and truth-conditional portability are related but not identical.
+> We use occupational wording and numerical content as tractable indicators of selective composition, not as direct measures of whether a sentence is true for one worker alone.
 
 **Specificity.**
 We estimate a lexicon on sentences with no detected sharing at $J\geq .5$, counting each worker once per word type.

@@ -23,8 +23,8 @@ keywords:
   - copyability
   - computationally intensive theory construction
 abstract: |
-  Digital labor platforms make workers' self-presentation visible and readily reproducible.
-  What can profile text signal when another worker can copy it?
+  Online labor markets make workers' self-presentation visible and easy to copy, a condition we call copyability.
+  We ask: *How do workers compose their profiles under copyability, and how can the resulting composition still distinguish them in the online labor market?*
   We address this question through computationally intensive theory construction using 353,099 Upwork profiles and 2.34 million qualifying sentences.
   Exact sharing, defined by equality of word-five-gram sets, occurs in 25.9% of profiles.
   Two models organize the analysis.
@@ -34,7 +34,7 @@ abstract: |
   The shared-generic association persists across completed-job groups rather than disappearing with verified reputation.
   Robustness checks and a supplementary qualitative analysis qualify these patterns without replacing them.
   We theorize copying as a practice of profile composition and develop a process model with three propositions.
-  Under copyability and pressure to differentiate, workers combine authored and copied wording selectively; composition and circulation are associated with market position; and verified records do not displace the textual association.
+  Under copyability, workers combine authored and copied wording selectively; composition and circulation are associated with market position; and verified records do not displace the textual association.
   Copyability need not eliminate information but can redistribute it across a profile's composition and circulation relationships.
   Asking-rate associations do not establish client valuation, causal effects, independent composition, or verified template origins.
 date: last-modified
@@ -46,54 +46,45 @@ link-citations: true
 # Introduction
 
 A freelancer's public profile brings together two very different kinds of information.
-Completed jobs, recorded hours, and client ratings summarize work carried out through the platform [@HongPavlou2017; @MorenoTerwiesch2014].
+Completed jobs, recorded hours, and client ratings summarize work carried out through the platform [@HongPavlou2017; @MorenoTerwiesch2014; @Yoganarasimhan2013].
 The profile description explains who the worker is, what the worker can do, and why a client should engage them [@BlythJarrahiLutzEtAl2022; @Gandini2016].
 The first kind of information is produced through transactions and recorded by the platform, so the worker has little direct control over it.
 The second is written by the worker and can be revised at any time.
 Both are visible to prospective clients, but the description is also available to other workers.
 A sentence about reliability, expertise, or client satisfaction can become part of someone else's profile without transferring the experience it purports to describe.
 
-This difference creates a puzzle for understanding self-presentation in online labor markets.
-Signaling research explains how observable attributes and actions convey information about otherwise hidden qualities [@Spence1973; @ConnellyCertoIrelandReutzel2011].
-On labor platforms, accumulated records help clients evaluate service providers they have never met [@HongPavlou2017; @MorenoTerwiesch2014; @Yoganarasimhan2013].
-Workers also use profile descriptions to frame their expertise and build a recognizable professional identity [@BlythJarrahiLutzEtAl2022; @Gandini2016].
-Yet the wording of those descriptions does not have the same relationship to its sender as a completed-job record.
-Copying another person's claim is much easier than acquiring that person's work history.
-If textual signals are understood only through the cost of acquiring their content, this reproducibility would seem to undermine their informational value.
-If verified records supply more credible evidence, it would also seem reasonable to expect text to become less consequential where substantial records are available.
-
-Neither implication follows automatically.
-Rhetorical signals can matter without being equivalent to classical costly investments [@SteigenbergerWilhelm2018], and costless communication is not necessarily uninformative [@FarrellGibbons1989].
-The unresolved issue is more specific: how does the ability to copy other workers' wording reorganize the information carried by textual self-presentation?
-A profile can combine independently composed-looking claims with shared assurances.
-A recognizable textual frame can circulate among a particular set of workers rather than throughout the market.
-What is uninformative as an isolated claim might still be informative as a composition choice or a trace of circulation.
-Treating the description as a single individual signal obscures these possibilities.
+Signaling theory makes this difference a puzzle.
+A signal separates senders only if some find it harder to produce than others; when any sender can produce it at no cost, senders pool and receivers learn to discount it [@Spence1973; @ConnellyCertoIrelandReutzel2011; @Nieken2023].
+Profile text is such a signal, because any worker can copy another's description.
+On this logic, copied text should tell clients nothing, and workers should gain nothing from copying it.
+Yet copying happens: freelancers read one another's profiles, clients notice copy-pasted text [@GussekWiesche2024; @BlythJarrahiLutzEtAl2022], and in our data a quarter of profiles share at least one sentence word for word with another worker's.
+And profile text still relates to market outcomes, even alongside verified records [@HolthausStock2018; @YueHong2025].
+Work on rhetorical signals shows that inexpensive text can matter [@SteigenbergerWilhelm2018; @FarrellGibbons1989], but it treats each text as its sender's own.
+Signaling theory lacks an account of how text that circulates among senders can still distinguish them.
 
 We call the conjunction of public visibility and inexpensive textual reproduction *copyability*.
 Copyability is a property of the platform's information environment, not an allegation about the intentions of a particular worker.
 It makes others' self-presentation available as a resource, so that copying becomes one of the practices through which a profile is composed.
 Our research question is:
-*How do workers compose their profiles on online labor markets where the need to differentiate one's profile and the copyability of others' profiles coincide?*
+*How do workers compose their profiles under copyability, and how can the resulting composition still distinguish them in the online labor market?*
 
 We investigate this question through computationally intensive theory construction [@BerenteSeidelSafadi2019; @MirandaBerenteSeidelEtAl2022].
 Using public Upwork profile records, we construct a corpus of {{< var sentences >}} qualifying sentences from {{< var workers >}} workers.
 Sequence-preserving text-reuse detection identifies shared wording rather than merely common topics.
 We then organize the analysis around two models.
 *Model 1* examines composition within profiles: which sentences are shared and which have no detected exact match?
-*Model 2* examines how profile composition relates to market position across workers: how are a profile's composition and its membership in circulation families, groups of shared passages that tend to be adopted together, associated with its posted asking rate, including where verified records are available?
+*Model 2* examines whether composition distinguishes workers in the market: how are a profile's composition and its membership in circulation families, groups of shared passages that tend to be adopted together, associated with its posted asking rate, our measure of market position, including where verified records are available?
 Descriptive analyses of how shared wording spreads across workers, and of where near-identical sentences differ, help interpret both models.
 A supplementary qualitative analysis of theoretically sampled profiles illustrates what the estimated patterns look like in actual descriptions.
 
 The findings do not support a collapse of textual self-presentation into interchangeable cheap talk.
-Exact sharing is widespread: in {{< var exact-prevalence >}} of profiles, at least one sentence appears word for word in another worker's profile.
-Yet most of these workers share only part of their description, typically {{< var shared-sentences-median >}} sentences, and write the rest themselves.
+Exact sharing occurs in {{< var exact-prevalence >}} of profiles, yet most of these workers share only part of their description, typically {{< var shared-sentences-median >}} sentences, and write the rest themselves.
 What they share is selective: occupation-specific and numerical claims are less likely to be shared, whereas assurances, invitations to get in touch, and sentences late in the profile are more likely to be.
 Across workers, authored-specific composition is associated with higher asking rates and shared-generic composition with lower asking rates, and circulation families add information beyond geographic proximity and worker covariates.
 Most importantly, the shared-generic association does not disappear among workers with substantial completed-job records.
 
 We develop these patterns into a process model.
-Copyability and differentiation pressure are its conditions, profile composition is its practice, and market position is its outcome.
+Copyability is its central condition, profile composition is its practice, and market position is its outcome.
 Profile composition is the combination of two concurrent practices, authoring and copying.
 Three propositions state the mechanisms that link the constructs: selective composition, composition and provenance associations with market position, and non-substitution between records and text.
 The account distinguishes three components of textual signals: *content*, or what a claim says; *profile composition*, or the profile's combination of shared and non-exact-shared wording; and *provenance*, or the circulation relationships indexed by its shared text.
@@ -175,19 +166,20 @@ It matters once anyone can copy what others have written.
 
 ## Copyable Text: A Puzzle for Signaling
 
-Copyability follows from two properties of the setting.
+Classical signaling logic makes copyable profile text a puzzle.
+A signal separates senders only if some find it harder to produce than others; if a signal is easy to copy, all senders will use it, which destroys its informational value [@Nieken2023].
+On platforms, cheap and widely available signals have indeed been diluted or discounted [@BaiGaoGoesEtAl2026; @GaoLinLiuEtAl2026].
+Studies of text in these markets sometimes assume instead that detailed writing is costly to produce and therefore credible [@AlshalfanMahdikhani2026], without testing whether it is copied.
+
+Profile text is easy to copy.
 Digital artifacts such as profile descriptions are editable and reproducible, and their informational properties are shaped by the systems through which they are represented and accessed [@KallinikosAaltonenMarton2013].
 Profiles are also public, so freelancers can read one another's descriptions and observe one another's career paths [@GussekWiesche2024].
-Clients, for their part, report noticing copy-pasted proposals and stolen portfolio material and read them as laziness [@BlythJarrahiLutzEtAl2022].
-Copyability is not confined to profiles.
-Platforms treat leaked test questions as compromised and retire them from evaluation [@ChristoforakiIpeirotis2014].
+Copying is also visible to clients, who report noticing copy-pasted proposals and stolen portfolio material and read them as laziness [@BlythJarrahiLutzEtAl2022].
+Unlike a badge or a deposit, however, a copied sentence carries no label that distinguishes it from composed text.
 
-Classical signaling logic turns this into a puzzle for profile text.
-If a signal is easy to copy, all senders will use it, which destroys its informational value [@Nieken2023].
-Studies of text in these markets sometimes assume that detailed writing is costly to produce and therefore credible [@AlshalfanMahdikhani2026], without testing whether it is reproduced.
-Cheap, widely available signals have been diluted or discounted on platforms [@BaiGaoGoesEtAl2026; @GaoLinLiuEtAl2026], and unlike a badge or a deposit, a reused sentence carries no label that distinguishes it from composed text.
-Yet profile text relates to outcomes even alongside verified records.
-Whether text that anyone can copy still tells clients something, and what, cannot be settled by studies that measure each profile in isolation.
+Yet, as the studies reviewed above show, profile text relates to outcomes even alongside verified records.
+Work on rhetorical signals explains why inexpensive text can matter [@SteigenbergerWilhelm2018], but, like the studies of profile text, it treats each text as its sender's own.
+Signaling theory therefore lacks an account of how text that circulates among senders can still distinguish them, and studies that measure each profile in isolation cannot provide one.
 
 If wording circulates, it need not circulate evenly.
 Online work connects distant participants, but place still matters.
@@ -195,7 +187,7 @@ Country image shapes provider outcomes when individual records are thin [@KanatH
 Workers also learn to navigate platforms informally, often outside formal organizations [@SutherlandJarrahiDunnNelson2020].
 Place, occupation, and the period in which a description was created are therefore plausible dimensions along which wording could be shared.
 
-This leaves a broad question that existing work cannot answer: *when self-presentation on a digital labor platform can be copied by anyone who can see it, what does profile text signal?*
+This leaves the question that guides our study: *How do workers compose their profiles under copyability, and how can the resulting composition still distinguish them in the online labor market?*
 
 # Research Method
 
@@ -311,8 +303,7 @@ Occupational specificity, personal individuation, original wording, and truth-co
 We use occupational wording and numerical content as tractable indicators of selective composition, not as direct measures of whether a sentence is true for one worker alone.
 
 @tbl-measures summarizes the constructs, their operationalizations, and the role each plays in the two models.
-Copyability and differentiation pressure are scope conditions of the setting, not measured variables, and control variables are listed with Model 2 below.
-*Differentiation pressure* is the need to stand out to a hurried audience that can read copy-paste as laziness [@BlythJarrahiLutzEtAl2022]; like copyability, it is drawn from the literature and not measured.
+Copyability is a condition of the setting, not a measured variable, and control variables are listed with Model 2 below.
 We operationalize *market position* as the posted asking rate in Model 2 and examine ratings and recorded hours as alternative outcomes in the robustness checks.
 
 | Construct | Role | Operationalization | Interpretation and boundary |
@@ -706,9 +697,9 @@ In the hours model, conditional on asking rate and the remaining controls, a ful
 
 The two models jointly establish three empirical regularities: within-profile composition is selective; textual composition and circulation families are associated with market position; and the shared-generic association does not disappear where verified records are available.
 @fig-theory organizes these regularities and their interpretation as a process model.
-Copyability and differentiation pressure are the conditions of the setting.
+The model has two conditions of the setting.
 Copyability, defined above, makes others' wording available as a resource.
-Differentiation pressure is the need to stand out to a hurried audience that can read copy-paste as laziness [@BlythJarrahiLutzEtAl2022].
+The second condition, which we call *differentiation pressure*, is the need to stand out to an audience that can read copy-paste as laziness [@BlythJarrahiLutzEtAl2022]; it explains why workers author at all when copying is available.
 We treat both as conditions of the setting and do not measure either.
 Profile composition, the combination of authoring and copying within a description, is the practice through which workers respond to them.
 Market position, operationalized as the posted asking rate, is the outcome.
@@ -821,7 +812,7 @@ The account retains a role for signaling while specifying what the description c
 
 # Discussion
 
-We asked what profile text signals when anyone who can see it can copy it.
+We asked: *How do workers compose their profiles under copyability, and how can the resulting composition still distinguish them in the online labor market?*
 In this Upwork dataset, information survives where exclusivity does not.
 Exact sharing is common but partial: workers combine authoring and copying selectively, and the copied wording circulates through bounded environments.
 These differences are associated with market position, including among workers with substantial verified records.

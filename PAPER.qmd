@@ -443,7 +443,8 @@ Countries with fewer than 200 workers in the qualifying frame, together with mis
 Missing occupation has its own category; city groups are nested in country, with country-specific missing-city groups.
 
 Forms 2a and 2b use absorbed country and occupation effects and country-clustered standard errors.
-Form 2c is fitted by maximum likelihood, adding a city random intercept and a family random effect that applies only to sharers.
+Form 2c is fitted by maximum likelihood and adds a family random effect that applies only to sharers.
+Because exact sharing concentrates within cities and countries, 2c also adds a city random intercept, nested in country, so that families are estimated net of geographic proximity at both levels.
 It contains {{< var m2-sharers >}} exact sharers, {{< var m2-families >}} represented families, and {{< var m2-cities >}} city groups.
 Its fixed-part standard errors are model-based, not country-clustered.
 We report the family variance relative to family-plus-residual variance, $\sigma_v^2/(\sigma_v^2+\sigma_\varepsilon^2)$, and compare fits with and without the family component.
@@ -478,6 +479,13 @@ Their role is to show how reusable passages function within descriptions, and to
 The principal evidence remains the corpus analysis, Models 1 and 2, and their robustness checks.
 
 # Findings
+
+The findings move from description to models.
+Two descriptive sections first establish how much reuse there is, how it sits within profiles, and how it circulates across workers.
+Model 1 then asks which sentences within a profile are shared, and Model 2 asks how a profile's composition and its circulation family are associated with the posted asking rate.
+Each model section opens with a short statement of what is analysed and how the model is set up; the full specifications are in the Research Method section, under the corresponding model headings.
+Robustness checks and outcome triangulation close the section.
+Quoted excerpts and profile readings come from the supplementary qualitative analysis and illustrate the estimates; they do not test them.
 
 ## A Substantial, Partially Used Repertoire
 
@@ -528,6 +536,12 @@ This distinction matters for Model 2: circulation families can be informative ab
 
 ## Model 1: Selective Profile Composition
 
+Model 1 analyses sentences within the same description.
+Each qualifying sentence is a unit, and the outcome is whether it is exact-shared.
+The predictors are the sentence's occupational specificity, whether it contains a numeric token, its rhetorical function, its relative position in the profile, and its length.
+Worker fixed effects mean that each sentence is compared only with other sentences in the same profile, so the estimates describe composition and not differences between workers.
+The specification is given under Model 1: Within-Profile Composition in the Research Method section.
+
 @tbl-model1 reports the within-profile estimates.
 Occupational specificity has an odds ratio of {{< var m1-or-lspec >}} per one-unit increase in $\log(1+\text{distinct informative types})$.
 Sentences containing a numeric token have an odds ratio of {{< var m1-or-number >}}.
@@ -536,7 +550,11 @@ These are odds relationships, not percentage-point changes in sharing probabilit
 
 {{< include analysis/output/paper/tables/model1.qmd >}}
 
-The contrast is easiest to see within a single description.
+The excerpts below illustrate the predictors in the order of the table: occupational specificity and numerical content, rhetorical function, and position.
+The function labels are the dictionary categories of the table, elaborated by reading the sampled profiles.
+They are not new categories introduced after the model.
+
+Occupational specificity and numerical content are easiest to see within a single description.
 One customer-service profile opens with more than a decade of healthcare and telecommunications experience and a list of named clients, then presents attributed testimonials from former managers.
 None of these sentences has a detected exact match elsewhere.
 Its final two sentences do, and are held by {{< var adopt-risk1 >}} and {{< var adopt-risk2 >}} workers respectively:
@@ -547,6 +565,7 @@ Its final two sentences do, and are held by {{< var adopt-risk1 >}} and {{< var 
 The evidentiary account carries the profile's biographical and occupational content.
 The close is a risk-reversal offer that would fit almost any worker, and it does not replace the account that precedes it.
 
+Rhetorical function shows the next pattern.
 Dictionary-coded assurances have {{< var m1-or-assurance >}} times the sharing odds of the reference claim-bearing group, and encounter formulae {{< var m1-or-encounter >}} times the odds.
 Assurances promise a disposition rather than a capability:
 
@@ -559,7 +578,8 @@ This one is held by {{< var adopt-contact >}} workers and ends the profile of a 
 
 > Please contact me so we can discuss how we can work together to fully meet your business needs!
 
-Sharing also rises with position in the profile: a profile's last qualifying sentence has {{< var m1-or-rel >}} times the odds of being shared that its first qualifying sentence has (relative position 1 versus 0).
+Relative position gives the third pattern.
+Sharing rises with position in the profile: a profile's last qualifying sentence has {{< var m1-or-rel >}} times the odds of being shared that its first qualifying sentence has (relative position 1 versus 0).
 The estimates preserve the positional pattern after accounting for content and length.
 Because the model compares sentences of the same profile, this is not merely a contrast between different workers' language, countries, or experience levels.
 An architecture profile shows the gradient.
@@ -628,6 +648,13 @@ First-listed category is only a coarse check on what a worker does, so the codin
 
 ## Model 2: Composition and Circulation-Family Differences
 
+Model 2 analyses workers.
+The outcome is the log posted asking rate, and the main predictors are the shares of a worker's qualifying sentences that are authored-specific, shared-generic, and shared-specific, with authored-generic as the omitted reference.
+Controls include completed-job groups, ratings, hours, and description characteristics, plus country and occupation effects.
+It is estimated in three forms: composition alone (2a), composition interacted with completed-job groups (2b), and a multilevel form that adds city and circulation-family random intercepts (2c).
+The three subsections below report composition (2a), circulation families net of geographic proximity (2c), and verified records (2b).
+The specification is given under Model 2: Composition, Circulation Families, and Asking Rates in the Research Method section.
+
 ### Composition Is Associated with Market Position
 
 @tbl-model2 presents the three forms of Model 2.
@@ -670,12 +697,14 @@ Their reuse does not make them meaningless.
 This is consistent with a negative asking-rate association that need not be interpreted as clients detecting and penalizing copying.
 The model identifies composition-linked position, while the cases show some of the practical functions served by that composition.
 
-### Circulation Families Add Information Beyond City
+### Circulation Families Add Information Beyond Geographic Proximity
 
+Because exact sharing concentrates within cities and countries, a family component could simply reflect where its members are located.
+Form 2c therefore estimates families net of geographic proximity: country fixed effects absorb differences between countries, and a city random intercept, nested in country, absorbs differences between cities.
 The multilevel form attributes variance {{< var m2-var-family >}} to circulation families, {{< var m2-var-city >}} to city, and {{< var m2-var-resid >}} to the residual.
 The family-to-family-plus-residual ratio is {{< var family-share >}}.
-Adding the family component yields a likelihood-ratio statistic of approximately {{< var family-lr >}} against the otherwise comparable city model.
-The component is consequently not reducible to the modeled city intercept.
+Adding the family component yields a likelihood-ratio statistic of approximately {{< var family-lr >}} against the otherwise comparable model with country and city effects only.
+The component is consequently not reducible to the modeled geographic structure.
 Its interpretation remains conditional on the specified controls, dominant-family assignment, and random-effects assumptions.
 
 The composition relationships also remain in the multilevel form.
@@ -838,7 +867,7 @@ This is consistent with, though it does not explain, the discount we find for sh
 The family component adds a relational dimension.
 The geographic, occupational, and cohort patterns show that generic forms can circulate through bounded environments even though their meanings are broadly applicable.
 A worker's shared wording consequently locates the profile in a repertoire that is not randomly distributed across workers.
-Family-linked asking-rate differences remain after accounting for city and measured worker characteristics.
+Family-linked asking-rate differences remain after accounting for geographic proximity, measured at the country and city levels, and measured worker characteristics.
 Shared content need not distinguish individual competence to be informative about a presentation environment and its associated market position.
 
 **Proposition 2—Composition and provenance associations.**
@@ -943,7 +972,7 @@ Our analysis shows that this account is partly assembled from a shared repertoir
 Exact sharing is concentrated within cities, countries, and first-listed occupations by factors of {{< var lift-city-key >}}, {{< var lift-country >}}, and {{< var lift-occ1 >}} relative to random mixing.
 This extends the evidence that place remains salient in online labor markets [@KanatHongRaghu2018; @GefenCarmel2008] from provider outcomes to the resources workers use to present themselves, and it connects to work on gig literacies [@SutherlandJarrahiDunnNelson2020; @LehdonvirtaEtAl2019].
 We do not infer nationality or culture, and we cannot say how workers acquire the wording they share.
-The within-profile design distinguishes composition from the general characteristics of workers who share, and the family component distinguishes shared-text relationships from broad city differences.
+The within-profile design distinguishes composition from the general characteristics of workers who share, and the family component distinguishes shared-text relationships from broad geographic differences.
 Global visibility does not imply a globally homogeneous resource for learning how to present oneself.
 
 Methodologically, the contribution is the conjunction of sequence-based reuse detection, within-profile composition analysis, and worker-level composition and family modeling.
@@ -1000,7 +1029,7 @@ It could also examine how richer reputation systems or platform policing of copy
 
 Publicly reproducible profile text is not necessarily uninformative.
 We theorize copying as a practice of profile composition that follows from copyability: under copyability and pressure to differentiate, workers combine authored and copied wording selectively.
-In this Upwork cross-section, that composition is associated with market position, measured by the posted asking rate, and circulation families add information beyond the modeled city and worker covariates.
+In this Upwork cross-section, that composition is associated with market position, measured by the posted asking rate, and circulation families add information beyond geographic proximity, modeled at the country and city levels, and worker covariates.
 The shared-generic association persists alongside substantial verified records.
 These findings motivate a process model in which content, profile composition, and provenance are distinct dimensions.
 Copyability does not simply erase differentiation; it helps organize where differentiation and relational information reside.

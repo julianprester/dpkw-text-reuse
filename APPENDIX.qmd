@@ -361,7 +361,7 @@ Family effects may capture unobserved service niches and organizational contexts
 
 ## D3. Robustness Definitions and Samples
 
-The eleven-entry battery includes the baseline, seven modified rate specifications, one Model 1 link-function check, and two alternative worker outcomes.
+The robustness table includes the baseline and ten checks: seven modified rate specifications, one Model 1 link-function check, and two alternative worker outcomes.
 The LPM row repeats the main worker-level specification; it is not an additional independent Model 2 rate design.
 
 {{< include analysis/output/paper/tables/robustness_samples.qmd >}}
@@ -428,7 +428,7 @@ The manuscript draws on these stages:
 | Corpus and score linkage | 01–02 | Eligible sentences, exact components, worker reuse |
 | Content and anatomy | 03–04 | Specificity lexicon, dictionary codes, positions and coverage |
 | Families, alignments, circulation | 05–07 | Co-adoption families, token differences, matched mixing comparisons |
-| Main models and robustness | 12–14 | Model 1, Model 2, and eleven-entry battery |
+| Main models and robustness | 12–14 | Model 1, Model 2, and robustness checks |
 | Supplementary material | 15–18 | Selected stimuli, persisted codes, descriptive review and software checks |
 | Publication assets | 19 | Tables, conservative-label figures, number-source audit, quotation checks |
 

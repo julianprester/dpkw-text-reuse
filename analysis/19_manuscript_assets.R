@@ -215,29 +215,28 @@ savep(ggplot(SH, aes(share1)) +
 
 # Method diagram, using only static graphics so Quarto needs no host R or browser execution.
 method_boxes <- data.table(
-  x = c(7.2, 7.2, 4.7, 9.7, 4.7, 9.7, 4.7, 9.7, 7.2),
-  y = c(10.0, 8.1, 6.1, 6.1, 4.2, 4.2, 2.2, 2.2, .3),
-  w = c(6.8, 8.8, 3.8, 3.8, 3.8, 3.8, 3.8, 3.8, 7.2),
-  h = c(1.3, 1.2, 1.2, 1.2, 1.2, 1.2, 1.4, 1.4, 1.0),
+  x = c(7.2, 7.2, 4.7, 9.7, 4.7, 9.7, 7.2, 7.2),
+  y = c(10.0, 8.1, 6.1, 6.1, 4.2, 4.2, 2.2, .3),
+  w = c(6.8, 8.8, 3.8, 3.8, 3.8, 3.8, 8.8, 7.2),
+  h = c(1.3, 1.2, 1.2, 1.2, 1.2, 1.2, 1.4, 1.0),
   text = c("• Public profile records\n• Sentence corpus",
            "Cross-worker text-reuse detection\nSentence matches, exact sharing, and scripts",
            "Model 1\nWithin-profile composition", "Model 2\nComposition and asking rates",
            "Content, function, position\nand variant alignments",
-           "Verified records, city effects,\nand circulation families",
-           "Qualitative analysis\nClose readings of sampled profiles\nand near-copy pairs",
-           "Robustness checks\nAlternative measures, samples,\nand outcomes",
-           "Abductive interpretation and bounded propositions")
+           "Verified records, geographic proximity,\nand circulation families",
+           "Qualitative analysis: close readings of sampled profiles and near-copy pairs\nRobustness checks: alternative measures, samples, and outcomes\n(for both models)",
+           "Theoretical model and propositions")
 )
 method_edges <- data.table(
-  x = c(7.2, 6.2, 8.2, 4.7, 9.7, 4.7, 9.7, 4.7, 9.7),
-  y = c(9.35, 7.5, 7.5, 5.5, 5.5, 3.6, 3.6, 1.5, 1.5),
-  xend = c(7.2, 4.7, 9.7, 4.7, 9.7, 4.7, 9.7, 5.7, 8.7),
-  yend = c(8.7, 6.7, 6.7, 4.8, 4.8, 2.9, 2.9, .8, .8)
+  x = c(7.2, 6.2, 8.2, 4.7, 9.7, 4.7, 9.7, 7.2),
+  y = c(9.35, 7.5, 7.5, 5.5, 5.5, 3.6, 3.6, 1.5),
+  xend = c(7.2, 4.7, 9.7, 4.7, 9.7, 4.7, 9.7, 7.2),
+  yend = c(8.7, 6.7, 6.7, 4.8, 4.8, 2.9, 2.9, .8)
 )
 method_phases <- data.table(
   x = 1.5,
   y = c(10.0, 8.1, 5.15, 2.2, .3),
-  label = c("CORPUS\nCONSTRUCTION", "TEXT-REUSE\nDETECTION", "PRIMARY\nANALYSIS", "SECONDARY\nANALYSIS", "THEORY\nDEVELOPMENT")
+  label = c("CORPUS\nCONSTRUCTION", "TEXT-REUSE\nDETECTION", "MAIN\nANALYSIS", "SECONDARY\nANALYSIS", "THEORY\nDEVELOPMENT")
 )
 method_plot <- ggplot() +
   geom_rect(data = method_boxes,

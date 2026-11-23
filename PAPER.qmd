@@ -47,7 +47,7 @@ link-citations: true
 
 A freelancer's public profile brings together two very different kinds of information.
 Completed jobs, recorded hours, and client ratings summarize work carried out through the platform.
-The description explains who the worker is, what the worker can do, and why a client should engage them.
+The profile description explains who the worker is, what the worker can do, and why a client should engage them.
 The first kind of information is produced through transactions and recorded by the platform.
 The second is composed in an editable text field.
 Both are visible to prospective clients, but the description is also available to other workers.
@@ -92,7 +92,6 @@ Near-copy comparisons concentrate variation in numerical and occupation-informat
 Across workers, authored-specific composition is associated with higher asking rates and shared-generic composition with lower asking rates.
 Circulation-family differences remain after accounting for city and worker covariates.
 Most importantly, the shared-generic association does not disappear among workers with substantial completed-job records.
-These are cross-sectional associations with workers' asking prices, not demonstrated effects on client choices or realized wages.
 
 We develop these patterns into a process model.
 Copyability and differentiation pressure are its conditions, profile composition is its practice, and market position is its outcome.
@@ -101,7 +100,6 @@ Three propositions state the mechanisms that link the constructs: selective comp
 The account distinguishes three components of textual signals: *content*, or what a claim says; *profile composition*, or the profile's combination of shared and non-exact-shared wording; and *provenance*, or the circulation relationships indexed by its shared text.
 The distinction does not imply that we can recover a sentence's original author or externally verified source.
 It explains why reproducible content can coexist with informative composition and circulation.
-Our operational use of “authored” means no detected exact sharing, not demonstrated independent composition.
 
 This account makes three contributions.
 First, it establishes copying as a practice of profile composition.
@@ -174,21 +172,21 @@ Yet more cohesive skill sets are hired more often but earn lower hourly wages [@
 Specificity is therefore not rewarded uniformly; its value depends on occupation, outcome, and audience.
 
 These studies treat text as the property of a single worker.
-Each measures what one profile says or how it reads, and none asks whether the same wording appears in other workers' profiles.
+Each measures what one profile says, how it reads, or how it relates to a job, and none asks whether the same wording appears in other workers' profiles.
 That omission is harmless as long as text can be assumed to be composed afresh.
 It matters once anyone can copy what others have written.
 
 ## Copyable Text: A Puzzle for Signaling
 
 Copyability follows from two properties of the setting.
-Digital artifacts are editable and reproducible, and their informational properties are shaped by the systems through which they are represented and accessed [@KallinikosAaltonenMarton2013].
+Digital artifacts such as profile descriptions are editable and reproducible, and their informational properties are shaped by the systems through which they are represented and accessed [@KallinikosAaltonenMarton2013].
 Profiles are also public, so freelancers can read one another's descriptions and observe one another's career paths [@GussekWiesche2024].
 Clients, for their part, report noticing copy-pasted proposals and stolen portfolio material and read them as laziness [@BlythJarrahiLutzEtAl2022].
 Copyability is not confined to profiles.
 Platforms treat leaked test questions as compromised and retire them from evaluation [@ChristoforakiIpeirotis2014].
 
 Classical signaling logic turns this into a puzzle for profile text.
-If a signal is easy to fake, all senders will use it, which destroys its informational value [@Nieken2023].
+If a signal is easy to copy, all senders will use it, which destroys its informational value [@Nieken2023].
 Studies of text in these markets sometimes assume that detailed writing is costly to produce and therefore credible [@AlshalfanMahdikhani2026], without testing whether it is reproduced.
 Cheap, widely available signals have been diluted or discounted on platforms [@BaiGaoGoesEtAl2026; @GaoLinLiuEtAl2026], and unlike a badge or a deposit, a reused sentence carries no label that distinguishes it from composed text.
 Yet profile text relates to outcomes even alongside verified records.
@@ -199,9 +197,8 @@ Online work connects distant participants, but place still matters.
 Country image shapes provider outcomes when individual records are thin [@KanatHongRaghu2018], and geographic and social distance remain relevant to exchange [@GefenCarmel2008; @HongPavlou2017; @LehdonvirtaEtAl2019].
 Workers also learn to navigate platforms informally, often outside formal organizations [@SutherlandJarrahiDunnNelson2020].
 Place, occupation, and the period in which a description was created are therefore plausible dimensions along which wording could be shared.
-We treat them as dimensions to examine rather than as expectations, and we do not use them to infer nationality, cultural origins, or who copied whom.
 
-This leaves a broad question that existing work cannot answer and that we pursue with the data rather than with hypotheses: *when self-presentation on a digital labor platform can be copied by anyone who can see it, what does profile text signal?*
+This leaves a broad question that existing work cannot answer: *when self-presentation on a digital labor platform can be copied by anyone who can see it, what does profile text signal?*
 
 # Research Method
 
@@ -210,21 +207,18 @@ This leaves a broad question that existing work cannot answer and that we pursue
 We adopted a data-driven approach that iterates between computational patterns and theoretical interpretation [@BerenteSeidelSafadi2019; @MirandaBerenteSeidelEtAl2022; @Lindberg2020].
 Text-reuse detection makes shared wording observable at a scale at which reading profiles alone cannot establish its distribution.
 The technique comes from political science, where it traces how bill text moves between legislators and legislatures [@WilkersonEtAl2015; @LinderEtAl2020; @GavaJaquetSciarini2021].
-Unlike topic models and other document-level text-as-data methods [@GrimmerStewart2013], which describe the themes that documents share, it identifies the specific passages that recur across documents, and so shows where in a profile reuse occurs and who shares it.
+Unlike topic models and other document-level text-as-data methods [@GrimmerStewart2013], which describe the themes that documents share, it identifies the specific passages that recur across documents.
+We use it to show where in a profile reuse occurs and who shares it.
 Statistical models then characterize relationships within and across profiles.
 Interpretation relates these relationships to signaling, copyability, and circulation.
 Consistent with computationally intensive theory construction, the models support theory development rather than a claim of independent confirmatory testing.
-The Conceptual Background accordingly sensitizes the analysis without deriving hypotheses.
-We develop propositions after presenting the models and robustness checks, keeping the distinction between an estimated relationship and its proposed signaling mechanism explicit.
 
 The analytic sequence in @fig-method has five phases.
 We first construct the sentence corpus from the public profiles.
-A separate text-reuse phase then detects cross-worker reuse, validates the stored similarity scores, and describes reuse at the sentence, worker, script, and family levels; its output is the input to both models.
+A separate text-reuse phase then detects cross-worker reuse, validates the similarity scores, and describes reuse at the sentence, worker, script, and family levels; its output is the input to both models.
 The primary analysis estimates Model 1 and Model 2, together with the content, function, position, and variant-alignment descriptions and the verified-record, city, and circulation-family components that inform their interpretation.
 The secondary analysis has two parts: a qualitative reading of theoretically sampled profiles and near-copy pairs, which draws its cases from the patterns the models identify and makes their substantive form inspectable, and robustness checks on alternative measurements, samples, and outcomes.
-The final phase develops propositions from these results.
-This organization separates the two central models from supporting descriptions and qualitative readings.
-It resembles the model-to-interpretation progression used in computationally intensive IS studies [@LindbergSchecterBerenteEtAl2024], with a consolidated robustness battery [cf. @SafadiLalorBerente2024].
+The final phase develops a theoretical model and propositions from these results.
 
 ![Analytic organization. Text-reuse detection precedes both models, which supply the principal evidence; content and variant descriptions and circulation components inform their interpretation. The qualitative analysis and the robustness checks follow the models and respond to their results. Arrows indicate analytic organization, not identified causal effects.](analysis/output/paper/figures/method.png){#fig-method}
 
@@ -232,27 +226,13 @@ The two models answer different questions at different units of analysis.
 A worker-level comparison alone cannot distinguish selective composition inside a profile from differences in who participates in reuse, and a sentence-level comparison alone cannot establish whether the resulting composition is associated with market position.
 The two-model design connects these levels without treating them as a single causal sequence.
 
-The process was exploratory and involved revising initial interpretations.
-In particular, a few very widely shared passages dominate pair counts much more than distinct adoptions.
-Keeping those denominators separate changes the apparent concentration of the repertoire.
-Reconstructing sentence identifiers and using endpoint-adjusted mixing baselines also redirected interpretation toward selective composition and structured circulation.
-We retain the exploratory outputs in the research audit trail but base the manuscript on the reconstructed data, the two models, and their robustness checks.
-Appendix E describes the reproducibility record.
-This reflexive account avoids treating the final framing as if it preceded every analytic decision.
-
-## Setting, Collection, and Safeguards
+## Setting and Data Collection
 
 Upwork provides a useful setting because workers present diverse knowledge services through public profiles that combine editable descriptions, asking rates, and platform-recorded work.
 The input file contains {{< var raw-profiles >}} worker-profile records.
 Data were collected on September 21, 2023, in a single run through public Upwork API endpoints.
 A scraper assembled unique worker identifiers from Upwork's public category pages, which are organized by occupational category, subcategory, and occupation.
-Because a single listing returns a capped number of results, we partitioned the listings by further filters, such as country and rate group, with the aim of retrieving every public profile.
 A profile-detail script then retrieved the public record for each listed identifier.
-Work-history retrieval is not part of this project: completed jobs, recorded hours, and ratings are fields of the profile record.
-
-The identifier list contained {{< var ids-unique >}} unique identifiers after removing {{< var ids-duplicate >}} duplicate rows.
-For {{< var ids-inaccessible >}} of them ({{< var ids-inaccessible-share >}}), the profile endpoint returned an error instead of a profile, most often because the profile was no longer available ({{< var ids-error-removed >}}) and otherwise because it could not be found ({{< var ids-error-notfound >}}).
-The remaining {{< var raw-profiles >}} profile records form the input file.
 
 The collection aimed to retrieve every public profile rather than to sample, but we cannot verify its completeness against the platform's own records, so it is not an established census or probability sample of all public workers.
 We therefore treat the data as a large retrieved-profile cross-section.
@@ -293,16 +273,13 @@ $$
 This measure preserves local word sequence rather than only thematic vocabulary [@Broder1997; @WilkersonEtAl2015].
 We use 240-permutation MinHash signatures and locality-sensitive hashing with 60 bands of four rows to generate candidate pairs, then compute their exact Jaccard scores.
 Candidate generation produces {{< var scored-pairs >}} scored pairs; {{< var same-worker-pairs >}} same-worker pairs are excluded.
-We reconstructed the sentence identifiers and re-scored 3,000 randomly sampled candidate pairs.
-All matched their saved scores within numerical tolerance.
-This verifies the corpus-to-score mapping, not the substantive accuracy of every interpretation of sharing.
 
 The main definition of *exact sharing* is $J=1$: equality of word-five-gram sets across workers.
 It is not character-by-character identity.
 Punctuation and case normalization, tokenization, and the use of sets can make surface forms differ while their measured sets are equal.
 A *script* is a connected component of exact-sharing sentences held by at least two workers.
 A sentence is operationally *authored* when it has no detected exact cross-worker match.
-This category includes non-exact near-copies and cannot establish independent composition.
+This category includes non-exact near-copies but cannot establish independent composition.
 
 Candidate detection is similarity-dependent.
 Under the LSH configuration, the probability of becoming a candidate is $1-(1-J^4)^{60}$: approximately {{< var lsh-low >}} at $J=.3$ and {{< var lsh-half >}} at $J=.5$, approaching one at higher similarities.
@@ -324,15 +301,11 @@ Three components structure the measurements and models below.
 We measure it through occupational specificity, numerical content, and rhetorical function.
 *Profile composition* refers to the combination of two practices, authoring and copying, across that content and across the profile.
 We observe authoring as sentences with no detected exact cross-worker match (authored) and copying as sentences with an exact cross-worker match (exact-shared).
-Neither label implies intent or direction: authored wording can be an adapted template, and shared wording can have been written by the worker who holds it.
 We measure profile composition at the sentence level as exact-shared or authored status together with relative position in the profile, and at the worker level as profile composition shares.
 *Provenance* refers to the circulation relationships through which shared forms are available and recur.
 We measure it through circulation families.
 These components can carry different information.
 The same assurance can appear in many profiles, but its prevalence within a particular composition and its co-occurrence with other passages can identify a more particular presentation pattern.
-The components are the lexicon through which we frame the patterns surfaced by the analysis.
-They are not hypotheses derived in advance.
-We define content, profile composition, and provenance for this study; treating measured reuse as the observable trace of shared wording follows the text-reuse studies in political science [@WilkersonEtAl2015; @LinderEtAl2020; @GavaJaquetSciarini2021].
 
 They rest on a distinction between *textual reproduction* and *claim portability*.
 Textual reproduction concerns whether a form can be duplicated.
@@ -350,9 +323,6 @@ We use occupational wording and numerical content as tractable indicators of sel
 Copyability and differentiation pressure are scope conditions of the setting, not measured variables, and control variables are listed with Model 2 below.
 *Differentiation pressure* is the need to stand out to a hurried audience that can read copy-paste as laziness [@BlythJarrahiLutzEtAl2022]; like copyability, it is drawn from the literature and not measured.
 We operationalize *market position* as the posted asking rate in Model 2 and examine ratings and recorded hours as alternative outcomes in the robustness checks.
-The content and reuse measures are constructed before the rate models; qualitative judgments are not substituted for them.
-Where a measure builds on prior work, the table cites it.
-We developed the content measures (occupational specificity, numerical content, rhetorical function) and sentence position for this study, in the manner of text-as-data work [@GrimmerStewart2013], and use the platform fields as recorded.
 
 | Construct | Role | Operationalization | Interpretation and boundary |
 |:---|:---|:---|:---|
@@ -468,15 +438,6 @@ Coding proceeded in three passes (Appendix C).
 In the first, sentence moves, portability judgments, and profile-level language and positioning codes were assigned while computed sharing flags, sampling cell, asking rate, experience, rating, and country were hidden.
 In the second, with reuse information shown, near-copy variants, profile assembly, the location of claim-bearing material, and coherence were coded.
 In the third, the 100 separately sampled near-copy pairs were coded for edit type and fit.
-A full-context review then produced 43 documented amendments to individual codes, with the initial judgments retained.
-One person who knew the research question and theoretical expectations did all of the coding, and the final judgments are not fully blinded.
-The coding is therefore neither independent nor tested for reliability, and it is not a gold standard against which the computational measures can be validated.
-It did not change the computational measurements or re-estimate either model.
-
-We use checked excerpts and paraphrased contextual readings to illustrate the models.
-Because profiles were selected in response to computational results—and some using asking-rate contrasts—the readings cannot independently confirm those same associations or estimate population prevalence.
-Their role is to show how reusable passages function within descriptions, and to qualify categorical interpretations where appropriate.
-The principal evidence remains the corpus analysis, Models 1 and 2, and their robustness checks.
 
 # Findings
 
@@ -492,7 +453,7 @@ Quoted excerpts and profile readings come from the supplementary qualitative ana
 Exact sharing involves {{< var exact-workers >}} workers, or {{< var exact-prevalence >}} of the {{< var workers >}}-worker reuse frame.
 There are {{< var scripts >}} scripts.
 This is substantial circulation without a universally adopted platform text: the largest script has {{< var max-adopters >}} distinct adopters.
-The second most widely shared sentence is a full pitch, not a stock phrase, and appears in the descriptions of {{< var adopt-winwork >}} workers:
+For example, the second most widely shared sentence is a full pitch, not a stock phrase, and appears in the descriptions of {{< var adopt-winwork >}} workers:
 
 > Whether you're trying to win work, list your services or even create a whole online store — I can help!
 
@@ -540,7 +501,6 @@ Model 1 analyses sentences within the same description.
 Each qualifying sentence is a unit, and the outcome is whether it is exact-shared.
 The predictors are the sentence's occupational specificity, whether it contains a numeric token, its rhetorical function, its relative position in the profile, and its length.
 Worker fixed effects mean that each sentence is compared only with other sentences in the same profile, so the estimates describe composition and not differences between workers.
-The specification is given under Model 1: Within-Profile Composition in the Research Method section.
 
 @tbl-model1 reports the within-profile estimates.
 Occupational specificity has an odds ratio of {{< var m1-or-lspec >}} per one-unit increase in $\log(1+\text{distinct informative types})$.
@@ -549,10 +509,6 @@ Both are much less likely to be exact-shared, relative to other sentences in the
 These are odds relationships, not percentage-point changes in sharing probability.
 
 {{< include analysis/output/paper/tables/model1.qmd >}}
-
-The excerpts below illustrate the predictors in the order of the table: occupational specificity and numerical content, rhetorical function, and position.
-The function labels are the dictionary categories of the table, elaborated by reading the sampled profiles.
-They are not new categories introduced after the model.
 
 Occupational specificity and numerical content are easiest to see within a single description.
 One customer-service profile opens with more than a decade of healthcare and telecommunications experience and a list of named clients, then presents attributed testimonials from former managers.
@@ -606,9 +562,6 @@ One Shopify developer's description consists entirely of exact-shared sentences,
 > Over the last 5 years I have been working as a Shopify developer.
 > I am specialized in Shopify front-end, back-end and Shopify speed optimization.
 
-Because entirely shared profiles carry no within-profile variation, they do not contribute to the logit's slopes.
-They show what the shared-specific category contains, not that the estimated odds ratios fail.
-
 Variant alignments provide a complementary view.
 In {{< var aligned-pairs >}} sampled pairs with $.5\leq J<1$, numerical tokens and occupation-informative tokens are substituted or deleted at rates of {{< var edit-number >}} and {{< var edit-occupation-informative >}}, respectively.
 The corresponding rates are {{< var edit-other-content-word >}} for other content words, {{< var edit-pronoun-voice >}} for pronoun/voice tokens, and {{< var edit-function-word >}} for function words.
@@ -652,8 +605,6 @@ Model 2 analyses workers.
 The outcome is the log posted asking rate, and the main predictors are the shares of a worker's qualifying sentences that are authored-specific, shared-generic, and shared-specific, with authored-generic as the omitted reference.
 Controls include completed-job groups, ratings, hours, and description characteristics, plus country and occupation effects.
 It is estimated in three forms: composition alone (2a), composition interacted with completed-job groups (2b), and a multilevel form that adds city and circulation-family random intercepts (2c).
-The three subsections below report composition (2a), circulation families net of geographic proximity (2c), and verified records (2b).
-The specification is given under Model 2: Composition, Circulation Families, and Asking Rates in the Research Method section.
 
 ### Composition Is Associated with Market Position
 
@@ -683,7 +634,6 @@ These sentences are held by {{< var adopt-virtue1 >}}, {{< var adopt-virtue2 >}}
 One profile, with a posted rate of USD {{< var rate-virtue-low >}} per hour, surrounds the block with an extensive service offering and affordability language.
 The other, at USD {{< var rate-virtue-high >}}, places it among specialist outcome positioning, named-client references, and testimonial material.
 Common wording thus coexists with different overall positioning.
-Because the cases were selected using price information, this comparison cannot independently explain their rate difference or establish a causal effect of surrounding prose.
 
 Shared assurances can also contain substantively useful coordination information.
 A graphic design profile combines occupational material with a shared working-style policy:
@@ -718,8 +668,6 @@ It appears in sampled website-development and logo-design descriptions.
 In the near-copy pairs it recurs, sometimes truncated or extended, under first-listed categories as different as Writing and Data Science.
 The selected profiles also include repeated virtue blocks, designer introductions, communication policies, and organizational service accounts.
 Such forms could circulate through common examples, agencies, or learning resources.
-We have not verified those origins.
-A family component is evidence of asking-rate similarity among computationally related holders, not evidence that clients recognize a template source or that an identified source causes a price position.
 
 ### Verified Records Do Not Eliminate the Shared-Generic Association
 
@@ -751,13 +699,9 @@ A UX designer with {{< var jobs-ux >}} completed jobs, the higher-priced profile
 
 > The client reviews and feedback on my profile are immensely important to me and the value that I provide.
 
-We do not assume that every textual record claim has been independently verified.
-The platform metadata establish that reusable self-presentation is not confined to workers without a completed-job record.
-The cases illustrate coexistence on the page; the record-group model supplies the association.
-
 ## Robustness and Outcome Triangulation
 
-@tbl-robustness consolidates an eleven-entry battery: the main baseline, seven changed rate specifications, the Model 1 linear-probability check, and two alternative worker outcomes.
+@tbl-robustness reports the baseline and ten robustness checks: seven changed rate specifications, the Model 1 linear-probability check, and two alternative worker outcomes.
 The changed specifications broaden sharing to $J\geq .7$, retain sentences of at least 15 words, exclude agency members, tighten specificity, restrict description-edit timing, restrict geography, or exclude descriptions with at least 90% shared qualifying sentences.
 Three checks also refit the family component.
 Appendix D reports sample sizes and coefficient-level detail.
@@ -775,14 +719,10 @@ The distinction between authored-specific and shared-generic composition is robu
 Second, in the within-one-day edit subset, the family ratio is smaller, approximately {{< var rob-family-6 >}}, although the comparison with the no-family model still yields a likelihood-ratio statistic of approximately {{< var rob-timing-lr >}}.
 This subset contains {{< var rob-timing-workers >}} Model 2 workers.
 The shared-generic contrast remains negative, including {{< var rob-timing-gen-50 >}} in the 50+ job group.
-The subset limits the role of later recorded description edits, but cannot establish that the text was written before any work record existed.
-Neither an entry-stage chronology nor a within-worker widening claim follows from it.
 
 The alternative outcomes give a different perspective on market position.
 Among rated workers with at least five completed jobs, shared-generic composition is positively associated with ratings below 4.8 (OR approximately {{< var rob-rating-gen-or >}}); authored-specific composition has no discernible association with this outcome.
 In the hours model, conditional on asking rate and the remaining controls, a full-unit shared-generic contrast corresponds to approximately {{< var rob-hours-gen >}} more in $1+\text{recorded hours}$.
-This is compatible with lower-price, higher-volume positioning rather than simple exclusion from work, but cumulative hours cannot identify demand, productivity, or service quality.
-These checks support a bounded segment interpretation and do not convert asking-rate associations into causal client responses.
 
 # Theory Development
 
@@ -851,8 +791,6 @@ The theoretical point is differential composition, not the impossibility of repr
 Nor is specificity rewarded uniformly elsewhere in the literature.
 More cohesive skill sets raise hiring but lower hourly wages [@Kokkodis2023], and incongruent skills help in low-skill and hurt in high-skill categories [@FuEtAl2021].
 We therefore read composition as differentiated fit, not as a quality ranking.
-Similarly, the potential effort of composing an appropriate account is not measured by the absence of an exact match.
-The observed composition supports investigating where signaling costs may reside without claiming that the dataset measures those costs directly.
 
 ## Composition and Provenance as Informational Dimensions
 
@@ -878,8 +816,6 @@ The provenance part is also deliberately circulation-based.
 Families may reflect imitation of salient models under uncertainty [@DiMaggioPowell1983; @HaunschildMiner1997], recurrent genres of self-presentation [@YatesOrlikowski1992; @OrlikowskiYates1994], peer learning [@SutherlandJarrahiDunnNelson2020; @GussekWiesche2024], organizational texts, common exposure, or other unobserved environments.
 That literature concerns organizations and communities.
 Adopting wording in a profile requires no investment, so imitation may operate with fewer barriers among individual workers.
-We cannot separate these readings with the present data.
-External-source tracing would distinguish these possibilities, but the observed family association does not require us to declare one verified origin now.
 
 The signaling interpretation is that information can survive copying in two ways.
 First, what is selected, fitted, and placed around shared wording can distinguish a composition.
@@ -898,7 +834,6 @@ A description frames the offering and can position it relative to client needs, 
 If text only compensated for the absence of verified evidence, its asking-rate associations should become weak where records are substantial.
 Instead, the shared-generic association persists across all completed-job groups and is not smaller among the most experienced group than among workers with no completed jobs.
 Other work finds that individual records can displace coarser cues as they accumulate [@KanatHongRaghu2018] and that records lose part of their premium when other verification becomes available [@LiangHongGu2025].
-Our result concerns text composition and market position, and says nothing about hiring.
 
 **Proposition 3—Non-substitution.**
 *The asking-rate association of shared-generic self-presentation persists across verified-record groups: substantial platform-recorded work does not eliminate the textual association with market position.*
@@ -914,11 +849,9 @@ The account retains a role for signaling while specifying what the description c
 # Discussion
 
 We asked what profile text signals when anyone who can see it can copy it.
-In this Upwork cross-section, information survives where exclusivity does not.
+In this Upwork dataset, information survives where exclusivity does not.
 Exact sharing is common but partial: workers combine authoring and copying selectively, and the copied wording circulates through bounded environments.
 These differences are associated with market position, including among workers with substantial verified records.
-The evidence consists of cross-sectional associations with posted asking rates.
-It does not show effects on client choices, the cost of writing, or who copied whom.
 
 ## Implications for Signaling Theory
 
@@ -934,15 +867,12 @@ This differs from the signals in the platform studies cited above.
 A certification badge or a guarantee deposit is a discrete token whose value depended on who held it [@BaiGaoGoesEtAl2026; @GaoLinLiuEtAl2026].
 A shared sentence instead carries content that can fit or misfit a profile, bears no label distinguishing it from composed text, and is distributed unevenly across workers and places.
 Assessment items can be retired once they are compromised [@ChristoforakiIpeirotis2014], whereas our data contain no information on whether platforms police profile text.
-If a cost interpretation is warranted, the cost lies in developing and fitting a presentation to the sender, not in obtaining exclusive access to a sentence, and our data do not measure it.
-The account does not require clients to detect sharing.
-It requires only that composition and circulation are associated with market position, and it leaves open how much of that association reflects worker positioning, client sorting, or common underlying characteristics.
+If a cost interpretation is warranted, the cost lies in developing and fitting a presentation to the sender, not in obtaining exclusive access to a sentence.
 
 The results also bear on whether verified records displace other cues.
 Group-level cues such as country image fade as individual reputation accumulates [@KanatHongRaghu2018], and employers' preference for experienced workers declined when a monitoring tool verified current work [@LiangHongGu2025].
 Extending that logic to text would predict that its association with market position weakens as records accumulate.
 We find instead that the shared-generic association persists across all completed-job groups (@fig-records).
-The comparison is not like for like: the cue is text composition and not country image, the outcome is asking rate and not hiring or survival, and the design is cross-sectional.
 We read the result as records and text informing different dimensions of position.
 A record documents past platform activity without specifying the clients, service configurations, or price positions to which a profile is addressed.
 This does not make records unimportant.
@@ -979,7 +909,6 @@ Methodologically, the contribution is the conjunction of sequence-based reuse de
 These methods expose relationships that topic similarity or profile-level originality scores would obscure.
 The consolidated robustness analysis identifies which parts of the account are stable and which require qualification.
 The supplementary readings supply concrete context without being elevated into an independent validation study.
-This division of evidential labor is consistent with computationally intensive theory construction's emphasis on traceability, reflexivity, and bounded explanation [@MirandaBerenteSeidelEtAl2022].
 
 ## Implications for Platforms, Clients, and Workers
 
@@ -1009,11 +938,9 @@ Accordingly, our recommendations concern information quality and interpretive ca
 
 Several limitations bound the account.
 First, the collection is a retrieved-profile cross-section, not an established census or random sample, so prevalence estimates apply to the stated qualifying frame and generalization to other platforms requires further study.
-English-oriented tokenization and dictionaries do not verify that all descriptions are English.
 Sharing is measured on 8–50-word sentences, so lists, fragments, and long passages can be excluded.
 Equality of shingle sets is not literal string equality, detection is less sensitive at low similarity, and the authored category includes adapted wording, undetected relations, and common sources outside the corpus.
 The content measures are proxies: occupational divergence does not measure uniquely personal applicability, numeric tokens can concern general promises, and dictionary functions can misclassify mixed sentences.
-The sentence codes from the qualitative analysis come from a single coder and are not an accuracy benchmark, so neither their disagreement with the dictionary nor stable coefficients establish measurement validity.
 
 Second, both models are observational.
 Worker fixed effects remove worker-level differences in the composition analysis but not sentence-level unobserved features, and asking rates can reflect strategy, service mix, ability, and costs.
@@ -1033,7 +960,6 @@ In this Upwork cross-section, that composition is associated with market positio
 The shared-generic association persists alongside substantial verified records.
 These findings motivate a process model in which content, profile composition, and provenance are distinct dimensions.
 Copyability does not simply erase differentiation; it helps organize where differentiation and relational information reside.
-The account is model-led and bounded: it concerns observed composition and asking-rate associations, not proven writing costs, client penalties, original authors, or externally verified sources.
 
 {{< include APPENDIX.qmd >}}
 

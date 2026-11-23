@@ -126,6 +126,7 @@ All entries here depend on the pending decision about the conditions box (see se
 |:---|:---|:---|:---|:---|
 | Signaling-theory object | **signal** | An observable feature that conveys information about hidden attributes | signal (P34); cue (P8, A2); credential (P5, A5); cheap talk (P1) | Use "signal" for signaling-theory objects. Restrict "cue" to cited work. Restrict "credential" to certifications |
 | Signal kinds | **assessment signal**, **conventional signal** | Cited distinction | each (P1–2) | Keep; always cited |
+| Combination of signals | **signal portfolio**, **signal portfolio building** | The set of signals a client reads together (Steigenberger & Wilhelm 2018). Signal portfolio building is the joint practice of profile composition and reputation building (theory figure) | new | Use "signal portfolio" for the combination and "signal portfolio building" for the joint practice. Keep "profile composition" for the textual practice |
 | "Informative" | **informative** | In the signaling sense, a signal carries information about the sender | informative (P15, A4); informational (P9); uninformative (P4) | Gerit asked us to scale back the "adds information" framing. Avoid it where a neutral word works: use "associated with", "differs by". Do not use "informative" for token types except in "occupation-informative" |
 
 ## 11. Geography

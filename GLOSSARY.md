@@ -95,7 +95,7 @@ Those entries say so.
 | The collective stock | **repertoire** | The set of scripts workers can draw on | repertoire (P7) | Keep, defined as the set of scripts |
 | Groups of scripts | **circulation family** | A co-adoption component of scripts | family (P44, A22); circulation family (P2); template family (A1, code); family-linked (P2c label) | Say "circulation family" at first use, then "family". Retire "template family". **DECIDE (parked):** P2c wording and the family box (see section 15) |
 | A worker's family | **dominant family** | The family covering most of a worker's shared sentence instances | dominant family (P2, A1) | Keep |
-| Circulation relationships of shared text | **provenance** | Circulation relationships that a worker's shared wording indexes | provenance (P11, A1); origin (P21, A11); source (P17, A12) | Restrict "provenance" to the construct. Restrict "origin" and "source" to the unobserved external source |
+| How copied wording is distributed across workers | **circulation** (dimension) | One of the three dimensions of a textual signal: content, profile composition, circulation. Measured through circulation families | provenance (retired); origin (P21, A11); source (P17, A12) | "Provenance" is retired; use "circulation". Restrict "origin" and "source" to the unobserved external source |
 | What we cannot observe | **copying direction**, **external source** | Which profile copied which, and where wording first came from | direction (P4, A3); transmission (P1, A2) | Use only in limitation-style sentences |
 
 ## 8. Outcomes and records
@@ -112,12 +112,12 @@ Those entries say so.
 
 ## 9. Conditions
 
-All entries here depend on the pending decision about the conditions box (see section 15).
+Copyability is the only condition. Differentiation pressure was removed from the paper.
 
 | Concept | Use | Definition | Also in the text | Action |
 |:---|:---|:---|:---|:---|
 | Copyability | **copyability** | Public visibility combined with inexpensive textual reproduction. A property of the platform's information environment | copyability (P24) | Keep |
-| The pressure to stand out | **DECIDE** | The external need to stand out to a hurried audience | differentiation pressure (P8); pressure to differentiate (P3); need to differentiate (P1, in the RQ); differentiation (P12) | One term across the paper, once the conditions box is settled |
+| The pressure to stand out | (retired) | Removed from the paper | differentiation pressure; pressure to differentiate | Do not use. Copyability is the only condition; portability explains why workers author (P1) |
 | Status of the conditions | **conditions of the setting** | Drawn from the literature, not measured | condition (P17, A3); scope condition (P1); boundary condition (none) | Use "conditions of the setting"; retire "scope condition" |
 
 ## 10. Signaling vocabulary
@@ -155,7 +155,7 @@ All entries here depend on the pending decision about the conditions box (see se
 | What the estimates show | **association** | Conditional, not causal | association (P43); effect (P28, A15); relationship (P17); contrast (P20, A7) | Use "association" for estimates. Keep "effect" in "fixed effect" and "random effect" only |
 | Theory output | **proposition** | P1–P3 | proposition (P16); mechanism (P6, A1) | Keep |
 | The figure | **process model** | Conditions, practices, outcome, in a limited sense | process model (P6); account (P28, A3) | Keep "process model". Restrict "account" to "evidentiary account" or the theoretical argument. Do not use it for both |
-| Parts of the argument | **component** | Content, profile composition, provenance | components (P4); dimensions (P6) | Say "components" for the three-way distinction and "dimensions" only in headings |
+| Parts of the argument | **dimension** | Content, profile composition, circulation, with measures nested under each (Table 2) | components (retired) | Say "dimensions" for the three-way distinction |
 | Second practice | **reputation building** | Observed only as completed jobs | new in the figure | Keep as figure label; always qualify as "observed as verified records" |
 | Qualitative strand | **supplementary qualitative analysis**, **sampled profiles**, **excerpts** | Close readings of theoretically sampled profiles | qualitative analysis (P7, A2); sentence codes (P2, A3); close reading (README); contextual material (P1); cases | Use the formal name for the analysis, "sampled profiles" for the profiles, "excerpts" for quotes. Retire "cases" and "contextual material" |
 
@@ -175,12 +175,12 @@ All entries here depend on the pending decision about the conditions box (see se
 | **original** | (a) original author, (b) original detection pipeline, (c) original vs copied profile | Keep (a) and (b) only as stated; (c) is the dichotomy we reject |
 | **informative** | (a) occupation-informative (tokens), (b) signaling sense, (c) "informative" in ordinary prose | (a) keep; (b)/(c) see section 10 |
 | **practice** | (a) authoring and copying, (b) reputation building (figure) | Define both as practices in the theory section |
-| **provenance** | (a) circulation relationships (construct), (b) source/origin | Restrict to (a) |
+| **provenance** | Retired; replaced by "circulation" | Do not use |
 | **template** | (a) vernacular for reusable text, (b) "template family" (code), (c) quotations | Restrict to (a) and (c) |
 
 ## 15. Open decisions
 
-1. **Conditions box** (pending, Gerit's alternatives): which conditions appear, if any, and how they are named. It decides section 9.
+1. **Conditions box**: settled on the `constructs` branch; copyability is the only condition and differentiation pressure is removed. Check with Gerit.
 2. **P1 and the authoring↔copying relation** (parked).
 3. **Circulation-families box and the P2c label** (parked). Gerit suggests "differences between circulation families".
 4. **Claim-bearing vs individuating claim:** one label in the paper and tables.

@@ -177,7 +177,7 @@ Profiles are also public, so freelancers can read one another's descriptions and
 Copying is also visible to clients, who report noticing copy-pasted proposals and stolen portfolio material and read them as laziness [@BlythJarrahiLutzEtAl2022].
 Unlike a badge or a deposit, however, a copied sentence carries no label that distinguishes it from composed text.
 Reused text is not peculiar to freelancing.
-Copied passages appear in residency application essays [@SegalGelfandHurwitzEtAl2010], app stores contain copycat apps that imitate original ones [@WangLiSingh2018], crowdfunding updates repeat clichés [@BaoLeeZhang2025], and IPO prospectuses share standard content with earlier filings [@HanleyHoberg2010].
+Copied passages appear in residency application essays [@SegalGelfandHurwitzEtAl2010], app stores contain copycat apps that imitate original ones [@WangLiSingh2018], crowdfunding updates repeat clichés [@BaoLeeZhang2025], and IPO prospectuses repeat standard content from earlier prospectuses in the same industry [@HanleyHoberg2010].
 In these settings, too, reused text tends to carry standard rather than specific content.
 
 Yet, as the studies reviewed above show, profile text relates to outcomes even alongside verified records.
@@ -710,7 +710,7 @@ Market position, operationalized as the posted asking rate, is the outcome.
 The propositions are drawn as the arrows between constructs because each states the mechanism that links them.
 Verified records are not a condition of the setting: many workers have none, and for them the description is much of what a client can read.
 We therefore show them as a second practice, reputation building, alongside profile composition.
-Together, the two practices build the worker's *signal portfolio*, the set of signals a client reads together [@SteigenbergerWilhelm2018]; we call this joint practice signal portfolio building.
+Together, the two practices build the worker's *signal portfolio*, the set of signals a client reads together [@SteigenbergerWilhelm2018; @MohammedDissanayakeParkEtAl2026]; we call this joint practice signal portfolio building.
 Unlike wording, a record cannot be copied.
 Proposition 3 asks whether the textual associations persist across record groups.
 Circulation families describe how copied wording is distributed across profiles, so the model shows them as a property of copying.
@@ -824,7 +824,7 @@ These differences are associated with market position, including among workers w
 
 ## Implications for Signaling Theory
 
-The classical argument holds that a signal that is easy to imitate will be used by all senders, which destroys its informational value [@BerghConnellyKetchenEtAl2014].
+The classical argument holds that a signal that is easy to imitate will be used by all senders, which destroys its informational value [@BerghConnellyKetchenEtAl2014; @Nieken2023].
 Work on text in online labor markets has sometimes sidestepped the problem by assuming that detailed writing is costly and therefore credible [@AlshalfanMahdikhani2026], and platform evidence shows cheap, widely available signals being diluted or discounted [@BaiGaoGoesEtAl2026; @GaoLinLiuEtAl2026].
 Our results suggest that for copyable text the sentence is the wrong unit.
 What differs among workers is the composition of a profile: which claims are copied from wording in circulation, which are authored or adapted, and which circulation family the copied wording belongs to.
@@ -838,13 +838,13 @@ A certification badge or a guarantee deposit is a discrete token whose value dep
 A shared sentence instead carries content that can fit or misfit a profile, bears no label distinguishing it from composed text, and is distributed unevenly across workers and places.
 Assessment items can be retired once they are compromised [@ChristoforakiIpeirotis2014], whereas our data contain no information on whether platforms police profile text.
 If a cost interpretation is warranted, the cost lies in developing and fitting a presentation to the sender, not in obtaining exclusive access to a sentence.
-Generative AI lowers the cost of producing persuasive text further and can make it harder for clients and investors to screen senders [@CowgillHernandezLagosWright2026].
+Generative AI lowers the cost of producing persuasive text further: it can make it harder for employers and investors to screen applicants [@CowgillHernandezLagosWright2026], and on one freelancing platform, employers stopped paying more for proposals tailored to the job once AI writing tools spread [@GaldinSilbert2025].
 Copying is a visible form of the same problem: because exact reuse can be observed, it shows how workers combine inexpensive and own wording, which AI-written text makes harder to trace.
 
 The results also bear on whether verified records substitute for other signals.
 Group-level cues such as country image fade as individual reputation accumulates [@KanatHongRaghu2018], and employers' preference for experienced workers declined when a monitoring tool verified current work [@LiangHongGu2025].
 Extending that logic to text would predict that its association with market position weakens as records accumulate.
-In an online market for mental health care, demonstration signals can likewise substitute for self-descriptions [@ZhouKishoreAmoEtAl2022].
+Demonstration signals can likewise substitute for self-descriptions, both in an online market for mental health care [@ZhouKishoreAmoEtAl2022] and on a freelancing platform, where badges and work portfolios weaken the association between a worker's profile text and completed orders [@MohammedDissanayakeParkEtAl2026].
 We find instead that the shared-generic association persists across all completed-job groups (@fig-records).
 We read the result as records and text informing different dimensions of position.
 A record documents past platform activity without specifying the clients, service configurations, or price positions to which a profile is addressed.
@@ -859,7 +859,9 @@ A broader theory of platform signaling should ask which textual dimensions remai
 Research that uses profile text as a measure of worker attributes typically treats each text as composed afresh.
 Examples include similarity to a job opening [@KokkodisPapadimitriouIpeirotis2015], stylistic formality [@YueHong2025], the prototypicality of applications within a category [@TroncosoLuo2023], and the content of self-descriptions [@HolthausStock2018].
 Exact sharing occurs in {{< var exact-prevalence >}} of the measured profiles, so such measures can combine individual expression with circulation environment.
-Corporate-disclosure research already separates standard content shared with other filings from informative, firm-specific content, and finds that standard content goes with less accurate pricing [@HanleyHoberg2010].
+Corporate-disclosure research already separates standard content, which repeats earlier prospectuses in the same industry, from informative, firm-specific content, and finds that standard content goes with less accurate offer prices [@HanleyHoberg2010].
+On a medical crowdfunding platform, campaign narratives whose wording overlaps with other campaigns raise less money, whereas narratives with similar meaning raise more [@WangGuoChoiEtAl2021].
+Studies of profile distinctiveness measure how far a profile's topics depart from the average profile [@MohammedDissanayakeParkEtAl2026], not whether its wording is shared.
 We find a similar division in individual self-presentation, where no disclosure rules or liability apply and the shared wording circulates among identifiable groups of workers.
 A shared sentence can raise similarity to a job opening in the same way as a composed one, and a stylistic index cannot distinguish a worker's own voice from a template's.
 Repeated claims can thus carry information about a circulation environment as well as about an individual.

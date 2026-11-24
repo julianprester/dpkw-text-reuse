@@ -140,7 +140,7 @@ show2 <- data.frame(Predictor = labels2, `2a: Composition (SE)` = bs(A$est, A$se
 vc <- read_tab("model2_variance_components")
 show2 <- rbind(show2, data.frame(Predictor = c("City variance", "Circulation-family variance", "Residual variance"), `2a: Composition (SE)` = "—", `2b: Record interactions (SE)` = "—", `2c: Multilevel (SE)` = fx(vc$var[match(c("city_f", "family", "Residual"), vc$grp)], 5), check.names = FALSE))
 md(show2, "model2", "Model 2: profile composition, verified records, and circulation families", "tbl-model2",
-   "Selected coefficients; dependent variable: log posted USD hourly rate; N = 352,986 throughout. Omitted composition: authored-generic share. All forms include country and first-listed-occupation effects, completed-job groups, log(1 + jobs), log(1 + hours), rating bands, a five-degree-of-freedom description-age spline, agency membership, occupation count, log description characters, and log qualifying-sentence count. Forms 2a/2b have country-clustered SEs. Form 2c has model-based SEs and ML city and sharer-only family random effects. In 2b/2c, composition main effects refer to zero jobs; shared-share interactions shift both shared categories equally. ML SEs are not country-clustered.")
+   "Selected coefficients; dependent variable: log posted USD hourly rate; N = 352,986 throughout. Omitted composition: authored-generic share. All forms include country and first-listed-occupation effects, completed-job groups, rating bands, description age (linear), agency membership, occupation count, and log description characters. Forms 2a/2b have country-clustered SEs. Form 2c has model-based SEs and ML city and sharer-only family random effects. In 2b/2c, composition main effects refer to zero jobs; shared-share interactions shift both shared categories equally. ML SEs are not country-clustered.")
 SL <- read_tab("model2_slopes_by_record")
 contrast <- function(b, se) paste0(sprintf("%+.1f", pc(b)), "% [", fx(pc(b - 1.96 * se), 1), ", ", fx(pc(b + 1.96 * se), 1), "]")
 md(data.frame(Record = gsub("-", "–", SL$record), `Authored-specific` = contrast(SL$authored_spec_est, SL$authored_spec_se), `Shared-generic` = contrast(SL$shared_gen_est, SL$shared_gen_se), `Shared-specific` = contrast(SL$shared_spec_est, SL$shared_spec_se), check.names = FALSE),
@@ -371,7 +371,7 @@ fwrite(data.table(path = inputs, md5 = unname(tools::md5sum(inputs))), file.path
 writeLines(c("Publication assets assembled from saved estimates, without re-estimation.",
              "Tables: model coefficients, explicitly labeled SEs, and normal-approximation intervals.",
              "Figures: publication labels replace earlier causal or actor-direction wording.",
-             "Original age spline retained; tenure_yrs is DESCRIPTION/PROFILE AGE, distinct from job/hour experience controls.",
+             "Description age enters linearly; tenure_yrs is DESCRIPTION/PROFILE AGE, distinct from the completed-job controls.",
              "Within-one-day edit status does not establish that text preceded any completed work.",
              paste0("Quotation checks: all ", nrow(Q), " excerpts found in saved exact-shared, variant, or near-copy-pair units."),
              paste0("Model 2 frame check: ", nrow(R), " workers.")), file.path(OUT, "asset_checks.txt"))

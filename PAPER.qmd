@@ -383,7 +383,7 @@ The common $\eta_k$ interaction shifts the shared-generic and shared-specific sl
 It is a specification restriction, not an estimate of separate record interactions for each shared type.
 Form 2a excludes the interaction terms; forms 2a and 2b exclude random effects.
 
-Controls include completed-job groups, $\log(1+\text{jobs})$, $\log(1+\text{hours})$, rating bands, description age (entered as a natural spline with five degrees of freedom, which allows a nonlinear relationship), agency affiliation, number of listed occupations, log description characters, and log qualifying-sentence count.
+Controls include completed-job groups, rating bands, description age, agency affiliation, number of listed occupations, and log description characters.
 Country and first-listed-occupation effects account for broad market differences.
 Countries with fewer than 200 workers in the qualifying frame, together with missing country, are pooled as “Other.”
 Missing occupation has its own category; city groups are nested in country, with country-specific missing-city groups.

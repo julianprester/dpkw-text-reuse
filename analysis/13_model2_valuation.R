@@ -44,7 +44,7 @@ rec("m2_families", R[sharer == 1, uniqueN(family)], "template families represent
 rec("m2_cities", uniqueN(R$city_f), "city groups")
 save_table(R[, .(mean_authored_spec = mean(authored_spec), mean_shared_gen = mean(shared_gen), mean_shared_spec = mean(shared_spec), sd_lrate = sd(lrate))], "model2_descriptives")
 
-ctrl <- "record + ljobs + lhours + rating_f + splines::ns(tenure_yrs, 5) + agency + n_occ + lchars + log(n_c)"
+ctrl <- "record + rating_f + tenure_yrs + agency + n_occ + lchars"   # completed-job groups, rating bands, linear description age, agency, occupation count, log description characters
 # ---- Model 2 in its fixed-effects form (country-clustered SEs) ---------------------------
 m2a <- feols(as.formula(paste("lrate ~ authored_spec + shared_gen + shared_spec +", ctrl, "| country_f + occ_f")), data = R, cluster = ~country_f)
 R[, `:=`(d1 = as.integer(record == "1-9 jobs"), d2 = as.integer(record == "10-49 jobs"), d3 = as.integer(record == "50+ jobs"))]

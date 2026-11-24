@@ -22,7 +22,7 @@ W[, `:=`(country_f = factor(fifelse(country %in% big_c, country, "Other")), occ_
 W[, record := factor(fcase(totalJobsWorked == 0, "0 jobs", totalJobsWorked < 10, "1-9 jobs", totalJobsWorked < 50, "10-49 jobs", default = "50+ jobs"), levels = c("0 jobs", "1-9 jobs", "10-49 jobs", "50+ jobs"))]
 W[, rating_f := factor(fcase(!rated, "unrated", rating >= 4.95, ">=4.95", rating >= 4.8, "4.8-4.95", default = "<4.8"), levels = c("unrated", ">=4.95", "4.8-4.95", "<4.8"))]
 W[, `:=`(d1 = as.integer(record == "1-9 jobs"), d2 = as.integer(record == "10-49 jobs"), d3 = as.integer(record == "50+ jobs"))]
-ctrl <- "record + ljobs + lhours + rating_f + splines::ns(tenure_yrs, 5) + agency + n_occ + lchars + log(n_c)"
+ctrl <- "record + rating_f + tenure_yrs + agency + n_occ + lchars"
 int_terms <- "authored_spec:d1 + authored_spec:d2 + authored_spec:d3 + shared_any:d1 + shared_any:d2 + shared_any:d3"
 
 run_check <- function(label, thr = 1, spec_rule = "kl05", sent_filter = NULL, worker_filter = NULL, ml = FALSE, m1_lpm = FALSE, dv = "lrate") {

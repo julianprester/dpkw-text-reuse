@@ -66,9 +66,7 @@ stopifnot(all(vapply(seq_len(nrow(ml)), function(i) grepl(beta(ml$est[i], ml$se[
 
 # Retained age control and separate experience measures must be explicit.
 spec <- text("analysis/13_model2_valuation.R")
-stopifnot(grepl("splines::ns(tenure_yrs, 5)", spec, fixed = TRUE),
-          grepl("record + ljobs + lhours", spec, fixed = TRUE),
-          grepl("five-degree-of-freedom", body, fixed = TRUE),
+stopifnot(grepl("record + rating_f + tenure_yrs + agency + n_occ + lchars", spec, fixed = TRUE),
           grepl("not worker tenure", body, fixed = TRUE))
 
 # Publication excerpts exist (apart from case and punctuation) in their saved source units and verbatim in the text.

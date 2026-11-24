@@ -316,8 +316,7 @@ We estimate a specificity lexicon on sentences with no detected sharing at $J\ge
 For a word's users, we compare the distribution of first-listed occupations with the corresponding worker baseline using Kullback–Leibler divergence.
 Types used by at least 100 workers and carrying at least .5 bits of divergence, excluding numeric types, are informative.
 The lexicon contains {{< var lexicon >}} informative types.
-Sentence specificity is the number of distinct informative types, modeled as $\log(1+\text{specific types})$ in Model 1.
-A sentence is specific in Model 2 if it contains at least one informative type.
+A sentence is specific if it contains at least one informative type; the same indicator enters Model 1 and divides the Model 2 composition shares.
 Estimating the lexicon on less-shared text reduces the possibility that a circulating template manufactures its own occupational specificity, but does not independently validate the construct.
 A sentence has numerical content if it contains at least one numeric token (Appendix B).
 We use occupational wording and numerical content as indicators of how narrowly a claim applies, not as measures of whether a sentence is true for one worker alone.
@@ -348,11 +347,11 @@ For sentence $i$ in worker profile $j$, the main specification is
 
 $$
 \operatorname{logit}[Pr(S_{ij}=1)]=\alpha_j+
-\beta_1\log(1+K_{ij})+\beta_2N_{ij}+
+\beta_1K_{ij}+\beta_2N_{ij}+
 \boldsymbol\beta_3'\mathbf F_{ij}+\beta_4R_{ij}+\beta_5\log (L_{ij}),
 $$
 
-where $S$ denotes exact sharing, $K$ counts distinct occupation-informative types, $N$ indicates a numeric token, $\mathbf F$ represents rhetorical function, $R$ is relative position in the profile (0 for the first qualifying sentence, 1 for the last), and $L$ is word count.
+where $S$ denotes exact sharing, $K$ indicates at least one occupation-informative type, $N$ indicates a numeric token, $\mathbf F$ represents rhetorical function, $R$ is relative position in the profile (0 for the first qualifying sentence, 1 for the last), and $L$ is word count.
 Worker fixed effects $\alpha_j$ absorb worker-level differences shared by all sentences in a profile.
 The model therefore addresses composition, not the between-worker question of who shares text.
 Length controls distinguish content and position from the mechanical difficulty of reproducing a longer sequence.
@@ -477,7 +476,7 @@ The predictors are the sentence's occupational specificity, whether it contains 
 Worker fixed effects mean that each sentence is compared only with other sentences in the same profile, so the estimates describe composition and not differences between workers.
 
 @tbl-model1 reports the within-profile estimates for all predictors.
-Occupation-specific and numerical sentences are much less likely to be exact-shared than other sentences in the same profile: occupational specificity has an odds ratio of {{< var m1-or-lspec >}} per one-unit increase in $\log(1+\text{distinct informative types})$, and a numeric token an odds ratio of {{< var m1-or-number >}}.
+Occupation-specific and numerical sentences are much less likely to be exact-shared than other sentences in the same profile: a sentence with at least one occupation-informative word has an odds ratio of {{< var m1-or-specific >}}, and a numeric token an odds ratio of {{< var m1-or-number >}}.
 Assurances ({{< var m1-or-assurance >}}) and encounter formulae ({{< var m1-or-encounter >}}) have higher sharing odds than the reference group of identity, credential, and capability claims, and a profile's last qualifying sentence has {{< var m1-or-rel >}} times the sharing odds of its first.
 Longer sentences are less likely to be exact-shared, as expected for an exact match.
 The excerpts below show what each pattern looks like within a description.

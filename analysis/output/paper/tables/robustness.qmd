@@ -14,4 +14,4 @@
 
 : Robustness and outcome triangulation {#tbl-robustness}
 
-*Note.* Rate rows show full-unit composition contrasts against authored-generic text; family share is family/(family + residual) variance, excluding city variance. ‘Retained’ denotes the saved joint composition signature, not validation of every dictionary label. The stricter rule uses maximum word KL ≥ 1 bit and changes the Model 1 specificity scale. The LPM row changes only Model 1; Model 2 is not an independent new rate fit. The two outcome rows are not price-discount tests. Blank family entries were not refit.
+*Note.* Rate rows show full-unit composition contrasts against authored-generic text; family share is family/(family + residual) variance, excluding city variance. ‘Retained’ denotes the saved joint composition signature, not validation of every dictionary label. The stricter rule counts a sentence as specific only if its most informative word has KL ≥ 1 bit. The LPM row changes only Model 1; Model 2 is not an independent new rate fit. The two outcome rows are not price-discount tests. Blank family entries were not refit.

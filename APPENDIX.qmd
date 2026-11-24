@@ -145,10 +145,10 @@ There are {{< var lexicon >}} informative word types.
 The baseline is estimated from the workers contributing to this lexicon, rather than a hypothetical global occupation distribution.
 
 For each sentence, `spec_n` counts *distinct informative types*, not repeated occurrences of the same informative word.
-Model 1 uses $\log(1+\text{spec\_n})$.
-Model 2's specific/generic division is whether `spec_n` is greater than zero.
-The stricter robustness rule uses maximum token KL of at least one bit; its Model 1 predictor is that maximum, not the logarithmic type count.
-These different predictor scales make their odds ratios inappropriate for direct magnitude comparison.
+A sentence is specific if `spec_n` is greater than zero; Model 1 uses this indicator as its specificity predictor.
+Model 2's specific/generic division uses the same indicator.
+The stricter robustness rule counts a sentence as specific only if its maximum token KL is at least one bit, in both models.
+Its odds ratio is therefore not directly comparable in magnitude with the main one.
 
 The lexicon supplies an occupational concentration measure.
 It does not establish that a sentence describes one worker uniquely, that its claim is true, or that it cannot circulate unchanged within an occupation.
@@ -380,7 +380,7 @@ The modified specifications are:
    Both worker outcomes and composition use non-agency workers.
    A constant agency indicator can be dropped for collinearity; the family component is also refitted.
 4. **Stricter specificity.**
-   Model 2 uses maximum token KL of at least one bit; Model 1 uses the maximum KL predictor.
+   Both models count a sentence as specific only if its maximum token KL is at least one bit.
    Shared-specific composition changes sign, limiting a universal shared-expertise discount.
 5. **Within-one-day edit subset.**
    Uses `text_dated` as defined in Appendix A.

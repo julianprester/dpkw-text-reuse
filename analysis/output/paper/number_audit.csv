@@ -31,11 +31,11 @@ lexicon,3010,"3,010",analysis/output/numbers/03_content.csv#lexicon_informative
 m1-all,2309694,"2,309,694",analysis/output/numbers/12_model1.csv#m1_sentences_all
 m1-sentences,773424,"773,424",analysis/output/numbers/12_model1.csv#m1_sentences_used
 m1-profiles,86956,"86,956",analysis/output/numbers/12_model1.csv#m1_profiles_used
-m1-or-lspec,0.410183,0.410,analysis/output/numbers/12_model1.csv#m1_or_lspec
-m1-or-number,0.333913,0.334,analysis/output/numbers/12_model1.csv#m1_or_number
-m1-or-assurance,1.97252,1.97,analysis/output/numbers/12_model1.csv#m1_or_assurance
-m1-or-encounter,4.11474,4.11,analysis/output/numbers/12_model1.csv#m1_or_encounter
-m1-or-rel,3.48422,3.48,analysis/output/numbers/12_model1.csv#m1_or_rel
+m1-or-specific,0.359536,0.360,analysis/output/numbers/12_model1.csv#m1_or_specific
+m1-or-number,0.343078,0.343,analysis/output/numbers/12_model1.csv#m1_or_number
+m1-or-assurance,2.14559,2.15,analysis/output/numbers/12_model1.csv#m1_or_assurance
+m1-or-encounter,4.27155,4.27,analysis/output/numbers/12_model1.csv#m1_or_encounter
+m1-or-rel,3.3769,3.38,analysis/output/numbers/12_model1.csv#m1_or_rel
 m2-workers,352986,"352,986",analysis/output/numbers/13_model2.csv#m2_workers
 m2-sharers,91410,"91,410",analysis/output/numbers/13_model2.csv#m2_sharers
 m2-families,29603,"29,603",analysis/output/numbers/13_model2.csv#m2_families

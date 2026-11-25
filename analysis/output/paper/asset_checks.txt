@@ -3,5 +3,5 @@ Tables: model coefficients, explicitly labeled SEs, and normal-approximation int
 Figures: publication labels replace earlier causal or actor-direction wording.
 Description age enters linearly; tenure_yrs is DESCRIPTION/PROFILE AGE, distinct from the completed-job controls.
 Within-one-day edit status does not establish that text preceded any completed work.
-Quotation checks: all 29 excerpts found in saved exact-shared, variant, or near-copy-pair units.
+Quotation checks: all 30 excerpts found in saved exact-shared, variant, or near-copy-pair units.
 Model 2 frame check: 352986 workers.

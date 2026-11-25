@@ -331,7 +331,8 @@ Q <- rbindlist(list(
   qrow("seo1", "sentence", "P081", 2, "exact", "I am a high-end SEO expert and specialized in increasing the amount of traffic to websites."),
   qrow("seo2", "sentence", "P081", 5, "exact", "My expertise lies in ecommerce, WordPress, Joomla, Shopify, Wix and local SEO."),
   qrow("migration", "sentence", "P112", 9, "exact", "I have also a lot of experience with migration from SharePoint on-premise to SharePoint online (Office 365)."),
-  qrow("reviews", "sentence", "P137", 7, "exact", "The client reviews and feedback on my profile are immensely important to me and the value that I provide.")
+  qrow("reviews", "sentence", "P137", 7, "exact", "The client reviews and feedback on my profile are immensely important to me and the value that I provide."),
+  qrow("avail", "sentence", "P018", 6, "exact", "I am available around the clock and willing meet the deadlines.")
 ))
 norm <- function(x) trimws(gsub("[^a-z0-9]+", " ", tolower(x)))
 Q[, adopters := NA_real_]
@@ -359,6 +360,24 @@ put("rate-virtue-high", meta("P137", "hourlyRate"), "qual/profile_sample_overvie
 put("jobs-seo", meta("P081", "totalJobsWorked"), "qual/profile_sample_overview.csv#P081:totalJobsWorked")
 put("jobs-sharepoint", meta("P112", "totalJobsWorked"), "qual/profile_sample_overview.csv#P112:totalJobsWorked")
 put("jobs-ux", meta("P137", "totalJobsWorked"), "qual/profile_sample_overview.csv#P137:totalJobsWorked")
+rate_txt <- function(v) if (abs(v - round(v)) < 1e-9) ni(v) else fx(v, 2)
+put("rate-sharepoint", meta("P112", "hourlyRate"), "qual/profile_sample_overview.csv#P112:hourlyRate", rate_txt(meta("P112", "hourlyRate")))
+for (z in list(c("design15", "P016"), c("design3", "P101"), c("fullstack", "P113"))) {
+  put(paste0("jobs-", z[1]), meta(z[2], "totalJobsWorked"), paste0("qual/profile_sample_overview.csv#", z[2], ":totalJobsWorked"))
+  put(paste0("rate-", z[1]), meta(z[2], "hourlyRate"), paste0("qual/profile_sample_overview.csv#", z[2], ":hourlyRate"), rate_txt(meta(z[2], "hourlyRate")))
+}
+# Low-priced circulation family discussed with P2c: its three sampled members.
+fam_cases <- c("P018", "P058", "P072")
+stopifnot(length(unique(O[profile_code %in% fam_cases]$family)) == 1)
+fr <- vapply(fam_cases, meta, 0, col = "hourlyRate"); fj <- vapply(fam_cases, meta, 0, col = "totalJobsWorked")
+put("rate-fam-min", min(fr), "qual/profile_sample_overview.csv#P018,P058,P072:hourlyRate", rate_txt(min(fr)))
+put("rate-fam-max", max(fr), "qual/profile_sample_overview.csv#P018,P058,P072:hourlyRate", rate_txt(max(fr)))
+put("jobs-fam-min", min(fj), "qual/profile_sample_overview.csv#P018,P058,P072:totalJobsWorked")
+put("jobs-fam-max", max(fj), "qual/profile_sample_overview.csv#P018,P058,P072:totalJobsWorked")
+# Closing formulae of the full-stack developer (P113), described but not quoted.
+sa <- function(case, pos) { u <- S[profile_code == case & pos_c == pos]; stopifnot(nrow(u) == 1, u$maxJ == 1); as.numeric(u$script_adopters) }
+put("adopt-fs-close1", sa("P113", 10), "qual/profile_sample_sentences.csv#P113:10:script_adopters")
+put("adopt-fs-close2", sa("P113", 11), "qual/profile_sample_sentences.csv#P113:11:script_adopters")
 
 stopifnot(!anyDuplicated(vars$variable))
 writeLines(paste0(vars$variable, ': "', vars$rendered, '"'), "_variables.yml", useBytes = TRUE)

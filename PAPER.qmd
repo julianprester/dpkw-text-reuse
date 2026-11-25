@@ -419,6 +419,7 @@ In the third, the 100 separately sampled near-copy pairs were coded for edit typ
 
 The findings first describe how much reuse there is and how it circulates across workers, then report Model 1 and Model 2, and close with robustness checks.
 Quoted excerpts come from the supplementary qualitative analysis and illustrate the estimates.
+The profiles were selected in response to the computational results, some on price, so they show what the categories look like rather than adding evidence for the associations; Appendix C4 collects further examples.
 
 ## A Substantial, Partially Used Repertoire
 
@@ -479,93 +480,26 @@ Worker fixed effects mean that each sentence is compared only with other sentenc
 Occupation-specific and numerical sentences are much less likely to be exact-shared than other sentences in the same profile: a sentence with at least one occupation-informative word has an odds ratio of {{< var m1-or-specific >}}, and a numeric token an odds ratio of {{< var m1-or-number >}}.
 Assurances ({{< var m1-or-assurance >}}) and encounter formulae ({{< var m1-or-encounter >}}) have higher sharing odds than the reference group of identity, credential, and capability claims, and a profile's last qualifying sentence has {{< var m1-or-rel >}} times the sharing odds of its first.
 Longer sentences are less likely to be exact-shared, as expected for an exact match.
-The excerpts below show what each pattern looks like within a description.
+The excerpts below show what selective composition and adaptation look like within descriptions.
 
 {{< include analysis/output/paper/tables/model1.qmd >}}
 
-Occupational specificity and numerical content are easiest to see within a single description.
-One customer-service profile opens with more than a decade of healthcare and telecommunications experience and a list of named clients, then presents attributed testimonials from former managers.
-None of these sentences has a detected exact match elsewhere.
-Its final two sentences do, and are held by {{< var adopt-risk1 >}} and {{< var adopt-risk2 >}} workers respectively:
+An architecture profile shows selective composition within one description.
+Its opening sentences, which describe the architect's design specialisms, clientele, and software, have no exact match elsewhere.
+A shared lead-in held by {{< var adopt-testimonial >}} workers then introduces attributed client quotations, and the profile closes with two further shared sentences, held by {{< var adopt-close1 >}} and {{< var adopt-close2 >}} workers, the last of which is
 
-> We could always start off with a small project with shared risk and then keep going if you're happy with my work.
-> Chances are that you'll be more than happy.
-
-The evidentiary account carries the profile's biographical and occupational content.
-The close is a risk-reversal offer that would fit almost any worker, and it does not replace the account that precedes it.
-
-Rhetorical function shows the next pattern.
-Assurances promise a disposition rather than a capability:
-
-> I guarantee you will be satisfied with my work!
-> I take pride in leaving all of my clients satisfied.
-
-Both sentences come from one graphic and web design profile, where they are held by {{< var adopt-guarantee >}} and {{< var adopt-pride >}} workers.
-Encounter formulae invite contact and could close almost any description.
-This one is held by {{< var adopt-contact >}} workers and ends the profile of a Microsoft-platform consultant whose preceding sentences list certifications, systems, and project history:
-
-> Please contact me so we can discuss how we can work together to fully meet your business needs!
-
-Relative position gives the third pattern.
-The estimates preserve the positional pattern after accounting for content and length.
-Because the model compares sentences of the same profile, this is not merely a contrast between different workers' language, countries, or experience levels.
-An architecture profile shows the gradient.
-Its opening sentences describe services, clientele, and ambitions, and none is shared.
-A shared testimonial lead-in, held by {{< var adopt-testimonial >}} workers, then introduces attributed client quotations:
-
-> But don't just take my word for it!
-
-The profile ends with two further shared sentences, held by {{< var adopt-close1 >}} and {{< var adopt-close2 >}} workers:
-
-> I am excited to collaborate with you and bring your vision to life.
 > Let's work together to create something truly extraordinary!
 
-The lead-in takes its function from the attributed evidence it introduces, not from its wording.
+The claims that must fit this architect are authored; the lead-in and the close would fit almost any worker.
+These are tendencies, not rules: some specific sentences are shared, and some authored evidence appears late in a profile (Appendix C4).
 
-These are tendencies, not rules.
-Some specific sentences are shared, and some authored evidence appears late in a profile.
-Exceptions are easy to find.
-One Shopify developer's description consists entirely of exact-shared sentences, including a duration claim and a narrow specialization, held by {{< var adopt-shopify1 >}} and {{< var adopt-shopify2 >}} workers respectively:
-
-> Over the last 5 years I have been working as a Shopify developer.
-> I am specialized in Shopify front-end, back-end and Shopify speed optimization.
-
-Variant alignments provide a complementary view.
-In {{< var aligned-pairs >}} sampled pairs with $.5\leq J<1$, numerical tokens and occupation-informative tokens are substituted or deleted at rates of {{< var edit-number >}} and {{< var edit-occupation-informative >}}, respectively.
-The corresponding rates are {{< var edit-other-content-word >}} for other content words, {{< var edit-pronoun-voice >}} for pronoun/voice tokens, and {{< var edit-function-word >}} for function words.
-These are token-level rates on one aligned side, not the percentages of pairs containing each kind of variation.
-They show where wording differs within recurring forms without identifying the direction or sequence of an actual edit.
-
-Near-copy pairs show what such variation looks like.
-In one recurring communication sentence, a field naming the worker's service is inserted into otherwise identical wording:
+Variant alignments show how copied wording is adapted.
+In {{< var aligned-pairs >}} sampled pairs with $.5\leq J<1$, numerical and occupation-informative tokens are substituted or deleted at rates of {{< var edit-number >}} and {{< var edit-occupation-informative >}}, against {{< var edit-other-content-word >}} for other content words and {{< var edit-function-word >}} for function words (Appendix B6).
+In one recurring sentence, the worker's own service is inserted into otherwise identical wording:
 
 > We always prefer to keep our work transparent … \
 > We always prefer to keep our *web development & application development* work transparent … \
 > We always prefer to keep our *CRM development & consultation* work transparent …
-
-An assurance label is numeric in one profile and refers to client reviews in another:
-
-> *100% satisfaction*: I focus on providing value to all of my clients and earning their trust. \
-> *Client reviews*: I focus on providing value to all of my clients and earning their trust.
-
-The same personalization appears at the scale of a description within a recognizable designer frame.
-Two sampled profiles share an originality pledge held by {{< var adopt-pledge >}} workers:
-
-> I believe in creating original, engaging design solutions that resonate with your audience and are functional based on your unique needs.
-
-Their openings, which have near but not exact matches elsewhere in the corpus, differ in the experience they claim:
-
-> I am a full time freelance graphic designer with over *15 years* of professional experience … \
-> Hi, I am full time freelance graphic designer and illustrator with over *3 years* of professional experience …
-
-This is a contrast between sampled descriptions, not an observed change from one to the other; the second profile's nearest opening already contains its own shorter duration.
-Such cases illustrate the alignment results without introducing a separate central theory of slots or assuming that the inserted claims are true.
-Nor are slots always refilled to fit.
-The following sentence is held by {{< var adopt-developer >}} workers, and the sampled pairs show it, in exact or near-exact form, under first-listed categories such as Admin Support and Accounting & Consulting:
-
-> I'm a developer with experience in building websites for small and medium sized businesses.
-
-First-listed category is only a coarse check on what a worker does, so the coding flags such pairs as category-discordant, not as misrepresentation.
 
 ## Model 2: Composition and Circulation-Family Differences
 
@@ -590,30 +524,16 @@ The latter remains the strongest and most stable textual discount.
 Shared-specific composition also has a negative coefficient in the main specification, but its sign changes under a stricter specificity rule.
 A universal discount for shared expertise is therefore not warranted.
 
-The contextual material helps interpret what the composition can accompany.
-Two descriptions were selected as an extreme asking-rate contrast within the same computational family.
-Both contain a block of recurring virtue sentences about value, trust, over-delivering, and kindness, including:
+Two sampled designers illustrate the authored-specific side.
+Both draw on the same circulation family and share an originality pledge held by {{< var adopt-pledge >}} workers, and their openings recur in adapted form with different experience claims:
 
-> Over-delivering: this is core to my work as a freelancer.
-> My focus is on giving more than what I expect to receive. …
-> Kindness: one of the biggest aspects of my life that I implement in every facet of my life.
+> I am a full time freelance graphic designer with over *15 years* of professional experience … \
+> Hi, I am full time freelance graphic designer and illustrator with over *3 years* of professional experience …
 
-These sentences are held by {{< var adopt-virtue1 >}}, {{< var adopt-virtue2 >}}, and {{< var adopt-virtue3 >}} workers.
-One profile, with a posted rate of USD {{< var rate-virtue-low >}} per hour, surrounds the block with an extensive service offering and affordability language.
-The other, at USD {{< var rate-virtue-high >}}, places it among specialist outcome positioning, named-client references, and testimonial material.
-Common wording thus coexists with different overall positioning.
+The first designer, with {{< var jobs-design15 >}} completed jobs, posts USD {{< var rate-design15 >}} per hour; the second, with {{< var jobs-design3 >}} completed jobs, posts USD {{< var rate-design3 >}}.
+The shared-generic side is visible in a web design profile at USD {{< var rate-virtue-low >}} per hour, most of whose qualifying sentences are shared, including an assurance held by {{< var adopt-guarantee >}} workers:
 
-Shared assurances can also contain substantively useful coordination information.
-A graphic design profile combines occupational material with a shared working-style policy:
-
-> I always reply within 24 hours if we don't have an on-going project.
-> You will be warned about any delays, vacations and emergency situations beforehand.
-
-These sentences are held by {{< var adopt-reply >}} and {{< var adopt-warned >}} workers, and a second sampled profile reproduces much of the same frame alongside different service material.
-Other passages in the frame concern communication, delays, and support arrangements.
-Their reuse does not make them meaningless.
-This is consistent with a negative asking-rate association that need not be interpreted as clients detecting and penalizing copying.
-The model identifies composition-linked position, while the cases show some of the practical functions served by that composition.
+> I guarantee you will be satisfied with my work!
 
 ### Circulation Families Add Information Beyond Geographic Proximity
 
@@ -630,12 +550,14 @@ For the zero-job reference group, full-unit contrasts are approximately {{< var 
 These should be compared with the zero-job coefficients of the interaction fixed-effects form, not directly with the average slopes of form 2a.
 The attenuation of the shared-generic coefficient after adding families is compatible with part of its association being linked to circulation, but is not a causal decomposition.
 
-Recognizable frames make these families inspectable.
-One of the most widely held is the “win work” sentence quoted above.
-It appears in sampled website-development and logo-design descriptions.
-In the near-copy pairs it recurs, sometimes truncated or extended, under first-listed categories as different as Writing and Data Science.
-The selected profiles also include repeated virtue blocks, designer introductions, communication policies, and organizational service accounts.
-Such forms could circulate through common examples, agencies, or learning resources.
+A low-priced family in the sample shows what this means.
+Its three sampled members work in the Philippines and Pakistan, are listed under Customer Service and IT & Networking, and have between {{< var jobs-fam-min >}} and {{< var jobs-fam-max >}} completed jobs.
+All three post between USD {{< var rate-fam-min >}} and {{< var rate-fam-max >}} per hour.
+Two of them share a block of availability and reliability sentences, including one held by {{< var adopt-avail >}} workers:
+
+> I am available around the clock and willing meet the deadlines.
+
+Such blocks could circulate through common examples, agencies, or learning resources.
 
 ### Verified Records Do Not Eliminate the Shared-Generic Association
 
@@ -648,20 +570,13 @@ The association does not shrink as records accumulate; if anything, it is larger
 
 The authored-specific contrasts are less precisely estimated in some completed-job groups, so the result for verified records rests on the shared-generic association.
 
-Three profiles with substantial completed-job records show how this coexistence looks on the page.
-Their descriptions invoke platform achievements, qualifications, or client evidence while retaining shared occupational, virtue, or contact passages.
-An SEO specialist with {{< var jobs-seo >}} completed jobs opens with a claim of tens of thousands of platform hours and lifetime five-star ratings, then continues with shared sentences held by {{< var adopt-seo1 >}} and {{< var adopt-seo2 >}} workers:
+Two profiles with substantial completed-job records show shared generic wording alongside substantial records.
+A Microsoft-platform consultant with {{< var jobs-sharepoint >}} completed jobs and a posted rate of USD {{< var rate-sharepoint >}} per hour describes certifications and a long specialist history in authored sentences, and closes with an encounter formula held by {{< var adopt-contact >}} workers:
 
-> I am a high-end SEO expert and specialized in increasing the amount of traffic to websites.
-> My expertise lies in ecommerce, WordPress, Joomla, Shopify, Wix and local SEO.
+> Please contact me so we can discuss how we can work together to fully meet your business needs!
 
-A Microsoft-platform consultant with {{< var jobs-sharepoint >}} completed jobs invokes platform status, certifications, and a lengthy specialist history, and also uses shared migration language, here held by {{< var adopt-migration >}} workers:
-
-> I have also a lot of experience with migration from SharePoint on-premise to SharePoint online (Office 365).
-
-A UX designer with {{< var jobs-ux >}} completed jobs, the higher-priced profile of the virtue-block pair above, refers to client evidence in wording held by {{< var adopt-reviews >}} workers:
-
-> The client reviews and feedback on my profile are immensely important to me and the value that I provide.
+A full-stack developer with {{< var jobs-fullstack >}} completed jobs posts USD {{< var rate-fullstack >}} per hour and pairs authored claims about a track record with closing formulae held by {{< var adopt-fs-close1 >}} and {{< var adopt-fs-close2 >}} workers.
+In both profiles the shared wording is widespread rather than particular to the experienced worker.
 
 ## Robustness and Outcome Triangulation
 

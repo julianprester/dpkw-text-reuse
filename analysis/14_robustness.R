@@ -12,8 +12,8 @@ C  <- as.data.table(read_parquet(file.path(DERIVED, "sent_content.parquet")))[, 
 W  <- as.data.table(read_parquet(file.path(DERIVED, "workers.parquet")))[n_c > 0]
 SA <- as.data.table(read_parquet(file.path(DERIVED, "script_attrs.parquet")))[, .(cid, family, adopters)]
 X  <- merge(merge(SR, C, by = "sid"), W[, .(wid, totalJobsWorked, agency, country, text_dated)], by = "wid")
-X[, func := factor(fcase(move %in% c("identity", "credential", "capability"), "individuating claim", move %in% c("character", "process"), "assurance",
-                         move == "encounter", "encounter formula", default = "other"), levels = c("individuating claim", "assurance", "encounter formula", "other"))]
+X[, func := factor(fcase(move %in% c("identity", "credential", "capability"), "capability claim", move %in% c("character", "process"), "assurance",
+                         move == "encounter", "encounter formula", default = "other"), levels = c("capability claim", "assurance", "encounter formula", "other"))]
 X[, `:=`(number = as.integer(has_number), lwords = log(nwords), rel = (pos_c - 1) / pmax(n_c - 1, 1))]   # 0 = first qualifying sentence, 1 = last; used for n_c >= 2
 top10 <- W[!is.na(country), .N, by = country][order(-N)][1:10, country]
 big_c <- W[, .N, by = country][N >= 200 & !is.na(country), country]

@@ -1,8 +1,8 @@
 path,md5
-analysis/19_manuscript_assets.R,630d85a2c631e980954c4b33a6cbd0fe
-analysis/12_model1_authorship.R,a1adbd4d7732f7c057017197cdfe98f1
+analysis/19_manuscript_assets.R,fcbf438322144ffd9955b84ba4ef1bc7
+analysis/12_model1_authorship.R,717c5ac5480d73f6e557cf2661219a93
 analysis/13_model2_valuation.R,9c901bfb2eb0acbeb153733064d52518
-analysis/14_robustness.R,c513a6d1edca7180bbfe4b3688b36360
+analysis/14_robustness.R,e6ae5007bc54b099c3ced63c3eb53963
 analysis/output/numbers/01_corpus.csv,5d71d75f028354a4a94c699f2660d422
 analysis/output/numbers/02_pairs.csv,9ba7a7cf2abb9affb850ce2e7bc707e9
 analysis/output/numbers/03_content.csv,d4b6a4030397f36b6ded40f552b741ce
@@ -13,7 +13,7 @@ analysis/output/numbers/07_circulation.csv,e7371b847d2f7c461df2bb5d8a712038
 analysis/output/numbers/08_signaling.csv,98a457a6829885a8f4dbcc06de7a2e66
 analysis/output/numbers/09_extensions.csv,85f47c3358634c08522d8b2db1abcaa0
 analysis/output/numbers/10_mechanisms.csv,bec206eb1828ff6efec0fe59f571a343
-analysis/output/numbers/12_model1.csv,dfc0b5d76d9ed667afe0a697266b8bc7
+analysis/output/numbers/12_model1.csv,f0896b5563d34c38b2e0cfb6a2000349
 analysis/output/numbers/13_model2.csv,25179d6f8007bf44c48ff2cf276306bc
 analysis/output/numbers/14_robustness.csv,38a57c4833b11bc5c9fe48201db40576
 analysis/output/numbers/15_qual_samples.csv,cb4021dd6c93e9262e0c8c0ea580c7b4

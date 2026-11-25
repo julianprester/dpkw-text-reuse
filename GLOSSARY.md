@@ -81,7 +81,7 @@ Those entries say so.
 |:---|:---|:---|:---|:---|
 | The construct | **occupational specificity** | How concentrated a sentence's wording is on particular occupations | occupation-specific (P2, A1); occupationally specific (P2); occupation-informative (P4, A1); occupational detail (P2, A1); occupational content (P1) | Use "occupational specificity" for the construct. Use "occupation-specific" for the adjective. Use "occupation-informative" only for tokens. Retire "occupationally specific", "occupational detail" and "occupational content" |
 | The two sentence classes | **specific** / **generic** | Specific: at least one occupation-informative type. Generic: none | generic (P8, A1); specific (P37, A14) | Define at first use, with the threshold |
-| The reference rhetorical group | **claim-bearing** | Identity, credential and capability moves | claim-bearing (P5, A2); individuating claim (P1, A1, estimation label); capability-bearing (code) | **DECIDE:** one label for both text and tables. Proposal: "claim-bearing" everywhere in the paper and tables; "individuating claim" only in code |
+| The reference rhetorical group | **capability claim** | Identity, credential and capability moves | claim-bearing (retired); individuating claim (retired, old estimation label); capability-bearing (descriptive code only) | Use "capability claim" in text, tables and the Model 1 code |
 | The other rhetorical groups | **assurance**, **encounter formula**, **other** | Assurance: character and process moves. Encounter formula: contact invitations and courtesies. Other: agency and unmatched | assurance (P18, A5); encounter formula (P8, A1) | Keep. Use only these labels in Findings |
 | Qualitative labels | evidentiary account, testimonial lead-in, risk-reversal offer, virtue block | Descriptive labels from the sampled profiles | each used once or twice | Do not present them as new categories. Gerit's concern: map each to the four function groups or mark it as a purely descriptive label. **DECIDE** the mapping |
 | Applicability of a claim | **claim portability** | The range of workers for whom a claim stays applicable | portability (P4, A2) | Keep; it is defined in Constructs and Measurements |
@@ -183,7 +183,7 @@ Copyability is the only condition. Differentiation pressure was removed from the
 1. **Conditions box**: settled on the `constructs` branch; copyability is the only condition and differentiation pressure is removed. Check with Gerit.
 2. **P1 and the authoring↔copying relation** (parked).
 3. **Circulation-families box and the P2c label** (parked). Gerit suggests "differences between circulation families".
-4. **Claim-bearing vs individuating claim:** one label in the paper and tables.
+4. **Claim-bearing vs individuating claim:** settled on the `terminology` branch: "capability claim" everywhere.
 5. **Qualitative labels** (evidentiary account, lead-in, and so on): map to the four function groups or mark as descriptive.
 6. **Heading parity.** Method says "Model 1: Within-Profile Composition" and Findings says "Model 1: Selective Profile Composition". Model 2 headings are also different in the two places. Pick one title per model and use it in both.
 7. **Free-standing "profile description" and "profile text":** whether to keep both or only "description" plus "profile text".

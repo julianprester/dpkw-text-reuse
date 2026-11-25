@@ -167,12 +167,11 @@ These are reproducible matching rules, not contextual reading of a sentence's ma
 
 The Model 1 collapse is:
 
-- Identity, credential, capability → reference group, labeled “individuating claim” in the estimation.
+- Identity, credential, capability → capability claim (the reference group).
 - Character, process → assurance.
 - Encounter → encounter formula.
 - Agency and unmatched text → other.
 
-The manuscript's “claim-bearing” shorthand does not alter these categories.
 In particular, Model 1's “other” differs from the descriptive content pipeline's separately reported agency macro-category.
 Dictionary precedence can label a testimonial by its virtue words or a mixed capability/process sentence by its assurance cues.
 Appendix C describes diagnostic disagreement with the sentence codes from the qualitative analysis, without calling that comparison an accuracy estimate.
@@ -284,7 +283,7 @@ Portability codes distinguish broadly applicable claims, subgroup-bound claims, 
 They concern possible applicability under the codebook, not observed truth.
 A quantified promise is not automatically a biographical count, and occupational detail is not necessarily personal individuation.
 Assembly codes describe the selected full-context materials; computational sharing shares concern qualifying sentences.
-Presence of undetected claim-bearing material across sentence thirds also differs from Model 1's first-sentence sharing outcome.
+Presence of undetected capability claims across sentence thirds also differs from Model 1's first-sentence sharing outcome.
 
 Dictionary–codebook concordance is 492/1,401 (35.1%) for the eight move categories and 651/1,401 (46.5%) for the Model 1 grouping.
 The dictionary and codebook implement different precedence decisions, particularly for testimonials and merged claims.
@@ -314,8 +313,8 @@ External-source tracing remains unverified and is not used as evidentiary suppor
 | Encounter formula | No | The client reviews and feedback on my profile are immensely important to me and the value that I provide. | {{< var adopt-reviews >}} |
 | Other | No | But don't just take my word for it! | {{< var adopt-testimonial >}} |
 | Other | No | I am excited to collaborate with you and bring your vision to life. | {{< var adopt-close1 >}} |
-| Claim | Yes | I'm a developer with experience in building websites for small and medium sized businesses. | {{< var adopt-developer >}} |
-| Claim | Yes | Over the last 5 years I have been working as a Shopify developer. | {{< var adopt-shopify1 >}} |
+| Capability claim | Yes | I'm a developer with experience in building websites for small and medium sized businesses. | {{< var adopt-developer >}} |
+| Capability claim | Yes | Over the last 5 years I have been working as a Shopify developer. | {{< var adopt-shopify1 >}} |
 
 : Shared sentences by content category {#tbl-shared-examples}
 

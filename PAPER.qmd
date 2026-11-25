@@ -97,7 +97,7 @@ That copyability makes copying possible is close to self-evident, but its conseq
 We show that workers neither compose afresh nor copy wholesale: they combine authoring and copying selectively.
 Copyability thereby organizes self-presentation instead of only threatening the credibility of a signal.
 Second, we derive more detailed propositions from the findings about how composition is associated with market position.
-Authored-specific and shared-generic composition are associated with opposite positions, and circulation families carry information beyond broad geography, occupation, and recorded work.
+Authored-specific and shared-generic composition are associated with opposite market positions, and circulation families carry information beyond broad geography, occupation, and recorded work.
 Textual self-presentation is therefore both individually composed and relationally structured.
 Third, we establish non-substitution as a boundary to a reputation-centered account.
 Verified records do not make the measured textual associations disappear.
@@ -300,7 +300,7 @@ Copyability is a condition of the setting and is not measured.
 |:---|:---|:---|:---|:---|
 | Content | Occupational specificity | Model 1 predictor; content split in Model 2 | Distinct informative word types; informative if used by at least 100 workers and occupational KL divergence is at least .5 bits | Occupational concentration, not uniquely personal truth |
 | Content | Numerical content | Model 1 predictor | At least one numeric token under the content tokenizer | Can concern history, quantities, or service promises |
-| Content | Rhetorical function | Model 1 predictor | Dictionary moves collapsed to claim-bearing, assurance, encounter formula, or other | Claim-bearing combines identity, credential, capability; estimation label: “individuating claim” |
+| Content | Rhetorical function | Model 1 predictor | Dictionary moves collapsed to capability claim, assurance, encounter formula, or other | Capability claims combine identity, credential, and capability moves |
 | Profile composition | Authoring and copying (authored and exact-shared sentences) | Model 1 outcome; basis of the Model 2 shares | Exact-shared: cross-worker word-five-gram match at $J=1$ [@WilkersonEtAl2015; @LinderEtAl2020]. Authored: no detected exact match | Shared measured form, not verified copying intent or direction; authored includes non-exact near-copies |
 | Profile composition | Sentence position | Model 1 predictor | Relative position among qualifying sentences: 0 for the first, 1 for the last | Index among qualifying units; does not necessarily equal literal position in the description text |
 | Profile composition | Composition shares | Model 2 predictor | Authored-specific, shared-generic, shared-specific sentence shares; authored-generic omitted | Shares sum to one across the four categories |
@@ -323,7 +323,6 @@ We use occupational wording and numerical content as indicators of how narrowly 
 For rhetorical function, a transparent, ordered dictionary assigns moves before they are collapsed for Model 1.
 Identity, credential, and capability moves form the reference group; character and process moves are assurances; encounter moves include invitations and courtesies.
 Agency and unmatched moves fall in “other” in the model.
-We use “claim-bearing” as readable shorthand for the reference grouping, not as a change to the estimation labels.
 The ordered rules can privilege an assurance keyword over an occupational or testimonial function in a mixed sentence.
 We retain this dictionary measurement and document supplementary disagreement diagnostics between the dictionary and the sentence codes from the qualitative analysis, without treating either as a benchmark.
 
@@ -336,7 +335,7 @@ To identify passages that recur together, scripts with at least five adopters ar
 Connected components form multi-script circulation families; unlinked scripts retain their own family identifiers.
 A worker's dominant family covers the largest number of that worker's shared sentence instances, with ties favoring the family represented by a larger script.
 This assignment summarizes circulation but does not represent all memberships of workers who combine several families.
-Locality, cohort proximity, and price-peer comparisons describe the relational structure of reuse separately from the asking-rate model.
+Geographic, cohort, and price-peer comparisons describe the relational structure of reuse separately from the asking-rate model.
 
 ![TODO: refine, add caption and cite in text](figure/phenomenon_overview.png)
 
@@ -465,7 +464,7 @@ These dates concern description creation, not necessarily entry onto the platfor
 Exact-sharing partners' log asking rates correlate {{< var price-correlation >}}, compared with {{< var price-correlation-null >}} when the partner is replaced by a randomly selected worker from the same country–occupation stratum.
 
 Together, these findings support treating shared wording as a relationally organized resource.
-They are compatible with local learning environments, common organizational materials, or shared exposure to examples.
+They are compatible with city-level learning environments, common organizational materials, or shared exposure to examples.
 They do not identify a tutorial, onboarding process, agency, or person as the origin.
 This distinction matters for Model 2: circulation families can be informative about asking-rate differences even when their external sources and transmission channels remain unknown.
 
@@ -478,7 +477,7 @@ Worker fixed effects mean that each sentence is compared only with other sentenc
 
 @tbl-model1 reports the within-profile estimates for all predictors.
 Occupation-specific and numerical sentences are much less likely to be exact-shared than other sentences in the same profile: a sentence with at least one occupation-informative word has an odds ratio of {{< var m1-or-specific >}}, and a numeric token an odds ratio of {{< var m1-or-number >}}.
-Assurances ({{< var m1-or-assurance >}}) and encounter formulae ({{< var m1-or-encounter >}}) have higher sharing odds than the reference group of identity, credential, and capability claims, and a profile's last qualifying sentence has {{< var m1-or-rel >}} times the sharing odds of its first.
+Assurances ({{< var m1-or-assurance >}}) and encounter formulae ({{< var m1-or-encounter >}}) have higher sharing odds than capability claims, the reference group, and a profile's last qualifying sentence has {{< var m1-or-rel >}} times the sharing odds of its first.
 Longer sentences are less likely to be exact-shared, as expected for an exact match.
 The excerpts below show what selective composition and adaptation look like within descriptions.
 
@@ -747,8 +746,7 @@ Group-level cues such as country image fade as individual reputation accumulates
 Extending that logic to text would predict that its association with market position weakens as records accumulate.
 Demonstration signals can likewise substitute for self-descriptions, both in an online market for mental health care [@ZhouKishoreAmoEtAl2022] and on a freelancing platform, where badges and work portfolios weaken the association between a worker's profile text and completed orders [@MohammedDissanayakeParkEtAl2026].
 We find instead that the shared-generic association persists across all completed-job groups (@fig-records).
-We read the result as records and text informing different dimensions of position.
-A record documents past platform activity without specifying the clients, service configurations, or price positions to which a profile is addressed.
+We read the result as records and text informing clients about different things: a record documents past platform activity, whereas a description specifies the services, clients, and price range a profile addresses.
 This does not make records unimportant.
 Ratings are inflated and blend skills into one score [@Kokkodis2021; @Rahman2018], and those limits leave room for other information.
 The association also differs in size across record groups without a monotonic pattern, and related work finds that text effects are conditioned by ratings and badges [@YueHong2025].
@@ -776,7 +774,7 @@ Linking the composition of shared and authored wording to hiring and earnings is
 
 For work on self-presentation, the findings contribute a *relational view of profile text*.
 Research on freelancers' self-branding and professional identity explains the work involved in crafting a visible account [@BlythJarrahiLutzEtAl2022; @Gandini2016; @PetriglieriAshfordWrzesniewski2019].
-Our analysis shows that this account is partly assembled from a shared repertoire whose circulation is structured by place and occupation.
+Our analysis shows that this account is partly assembled from a shared repertoire whose circulation is structured by geographic proximity and occupation.
 Exact sharing is concentrated within cities, countries, and first-listed occupations by factors of {{< var lift-city-key >}}, {{< var lift-country >}}, and {{< var lift-occ1 >}} relative to random mixing.
 This extends the evidence that place remains salient in online labor markets [@KanatHongRaghu2018; @GefenCarmel2008] from provider outcomes to the resources workers use to present themselves, and it connects to work on gig literacies [@SutherlandJarrahiDunnNelson2020; @LehdonvirtaEtAl2019].
 We do not infer nationality or culture, and we cannot say how workers acquire the wording they share.

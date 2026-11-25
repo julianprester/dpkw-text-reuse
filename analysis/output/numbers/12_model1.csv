@@ -4,6 +4,6 @@ m1_sentences_used,773424,sentences in profiles with within-profile variation in 
 m1_profiles_used,86956,profiles in the identifying sample
 m1_or_specific,0.359536,"odds ratio of being shared, sentence contains at least one occupation-informative word type (within profile)"
 m1_or_number,0.343078,"odds ratio, sentence contains a number (quantified claim)"
-m1_or_assurance,2.14559,"odds ratio, assurance vs individuating claim"
-m1_or_encounter,4.27155,"odds ratio, encounter formula vs individuating claim"
+m1_or_assurance,2.14559,"odds ratio, assurance vs capability claim"
+m1_or_encounter,4.27155,"odds ratio, encounter formula vs capability claim"
 m1_or_rel,3.3769,"odds ratio, last vs first qualifying sentence of the same profile (relative position 1 vs 0)"

@@ -21,10 +21,10 @@ X  <- merge(merge(SR, C, by = "sid"), W, by = "wid")
 X[, `:=`(shared = as.integer(maxJ >= 1), shared07 = as.integer(maxJ >= 0.7),
          specific = as.integer(spec_n > 0), number = as.integer(has_number), lwords = log(nwords),
          rel = (pos_c - 1) / (n_c - 1))]   # relative position: 0 = first qualifying sentence, 1 = last (profiles with n_c >= 2)
-X[, func := factor(fcase(move %in% c("identity", "credential", "capability"), "individuating claim",
+X[, func := factor(fcase(move %in% c("identity", "credential", "capability"), "capability claim",
                          move %in% c("character", "process"), "assurance",
                          move == "encounter", "encounter formula", default = "other"),
-                   levels = c("individuating claim", "assurance", "encounter formula", "other"))]
+                   levels = c("capability claim", "assurance", "encounter formula", "other"))]
 X <- X[n_c >= 2]
 rec("m1_sentences_all", nrow(X), "codable sentences in profiles with >= 2 codable sentences")
 
@@ -42,7 +42,7 @@ save_table(T1, "model1_coefficients"); print(T1, digits = 3)
 b <- coef(m1)
 rec("m1_or_specific", exp(b["specific"]), "odds ratio of being shared, sentence contains at least one occupation-informative word type (within profile)")
 rec("m1_or_number", exp(b["number"]), "odds ratio, sentence contains a number (quantified claim)")
-rec("m1_or_assurance", exp(b["funcassurance"]), "odds ratio, assurance vs individuating claim")
-rec("m1_or_encounter", exp(b["funcencounter formula"]), "odds ratio, encounter formula vs individuating claim")
+rec("m1_or_assurance", exp(b["funcassurance"]), "odds ratio, assurance vs capability claim")
+rec("m1_or_encounter", exp(b["funcencounter formula"]), "odds ratio, encounter formula vs capability claim")
 rec("m1_or_rel", exp(b["rel"]), "odds ratio, last vs first qualifying sentence of the same profile (relative position 1 vs 0)")
 save_numbers("12_model1")

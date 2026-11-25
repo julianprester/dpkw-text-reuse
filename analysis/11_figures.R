@@ -89,10 +89,10 @@ save_fig(pm1, "fig_model1_authorship", 7, 3.8)
 
 # Fig M2 -- Model 2 (market side): composition effects by verified record
 sl <- tb("model2_slopes_by_record")
-ml <- rbind(sl[, .(record, what = "shared generic", est = shared_gen_est, se = shared_gen_se)],
-            sl[, .(record, what = "shared specific", est = shared_spec_est, se = shared_spec_se)],
+ml <- rbind(sl[, .(record, what = "copied generic", est = shared_gen_est, se = shared_gen_se)],
+            sl[, .(record, what = "copied specific", est = shared_spec_est, se = shared_spec_se)],
             sl[, .(record, what = "authored specific", est = authored_spec_est, se = authored_spec_se)])
-ml[, `:=`(record = factor(record, levels = sl$record), what = factor(what, levels = c("authored specific", "shared specific", "shared generic")))]
+ml[, `:=`(record = factor(record, levels = sl$record), what = factor(what, levels = c("authored specific", "copied specific", "copied generic")))]
 pm2 <- ggplot(ml, aes(record, 100 * (exp(est) - 1), colour = what, group = what)) + geom_hline(yintercept = 0, colour = "grey50") +
   geom_line(position = position_dodge(.3)) +
   geom_pointrange(aes(ymin = 100 * (exp(est - 1.96 * se) - 1), ymax = 100 * (exp(est + 1.96 * se) - 1)), position = position_dodge(.3)) +

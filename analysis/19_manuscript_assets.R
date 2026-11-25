@@ -72,15 +72,16 @@ fromreg("m2-workers", "13_model2", "m2_workers")
 fromreg("m2-sharers", "13_model2", "m2_sharers")
 fromreg("m2-families", "13_model2", "m2_families")
 fromreg("m2-cities", "13_model2", "m2_cities")
-for (k in c("authored_spec", "shared_gen", "shared_spec"))
-  fromreg(paste0("m2-", gsub("_", "-", k)), "13_model2", paste0("m2_pct_", k), "signedpct")
+m2_terms <- c(authored_spec = "authored_spec", copied_gen = "shared_gen", copied_spec = "shared_spec")
+for (k in names(m2_terms))
+  fromreg(paste0("m2-", gsub("_", "-", k)), "13_model2", paste0("m2_pct_", m2_terms[[k]]), "signedpct")
 fromreg("family-share", "13_model2", "m2_icc_provenance", "pct")
 fromreg("family-lr", "13_model2", "m2_lr_chisq_family", "decimal", 1)
 for (k in c("family", "city", "resid")) fromreg(paste0("m2-var-", k), "13_model2", paste0("m2_var_", k), "decimal", 5)
-for (k in c("authored_spec", "shared_gen", "shared_spec"))
-  fromreg(paste0("m2ml-", gsub("_", "-", k)), "13_model2", paste0("m2ml_pct_", k), "signedpct")
+for (k in names(m2_terms))
+  fromreg(paste0("m2ml-", gsub("_", "-", k)), "13_model2", paste0("m2ml_pct_", m2_terms[[k]]), "signedpct")
 for (k in c("0_jobs", "1_9_jobs", "10_49_jobs", "50__jobs"))
-  fromreg(paste0("record-gen-", gsub("_", "-", k)), "13_model2", paste0("m2_shared_gen_pct_", k), "signedpct")
+  fromreg(paste0("record-copied-gen-", gsub("_", "-", k)), "13_model2", paste0("m2_shared_gen_pct_", k), "signedpct")
 for (a in c("city_key", "country", "occ1"))
   fromreg(paste0("lift-", gsub("_", "-", a)), "07_circulation", paste0("lift_", a, "_exact"), "decimal", 2)
 fromreg("cohort-lift-month", "07_circulation", "cohort_lift30_same_city", "decimal", 2)
@@ -132,7 +133,7 @@ md(data.frame(Predictor = labels1, `Logit coefficient (SE)` = bs(A$est, A$se), `
 M2 <- read_tab("model2_fixed_effects_clustered")
 ML <- read_tab("model2_fixed_effects_multilevel")
 terms2 <- c("authored_spec", "shared_gen", "shared_spec", "authored_spec:d1", "authored_spec:d2", "authored_spec:d3", "d1:shared_any", "d2:shared_any", "d3:shared_any")
-labels2 <- c("Authored-specific share", "Shared-generic share", "Shared-specific share", "Authored-specific × 1–9 jobs", "Authored-specific × 10–49 jobs", "Authored-specific × 50+ jobs", "Shared share × 1–9 jobs", "Shared share × 10–49 jobs", "Shared share × 50+ jobs")
+labels2 <- c("Authored-specific share", "Copied-generic share", "Copied-specific share", "Authored-specific × 1–9 jobs", "Authored-specific × 10–49 jobs", "Authored-specific × 50+ jobs", "Copied share × 1–9 jobs", "Copied share × 10–49 jobs", "Copied share × 50+ jobs")
 A <- M2[model == "M2 composition (FE, country-clustered)"][match(terms2, term)]
 B <- M2[model == "M2 x verified record (FE, country-clustered)"][match(terms2, term)]
 C <- ML[match(terms2, term)]
@@ -140,10 +141,10 @@ show2 <- data.frame(Predictor = labels2, `2a: Composition (SE)` = bs(A$est, A$se
 vc <- read_tab("model2_variance_components")
 show2 <- rbind(show2, data.frame(Predictor = c("City variance", "Circulation-family variance", "Residual variance"), `2a: Composition (SE)` = "—", `2b: Record interactions (SE)` = "—", `2c: Multilevel (SE)` = fx(vc$var[match(c("city_f", "family", "Residual"), vc$grp)], 5), check.names = FALSE))
 md(show2, "model2", "Model 2: profile composition, verified records, and circulation families", "tbl-model2",
-   "Selected coefficients; dependent variable: log posted USD hourly rate; N = 352,986 throughout. Omitted composition: authored-generic share. All forms include country and first-listed-occupation effects, completed-job groups, log(1 + jobs), log(1 + hours), rating bands, a five-degree-of-freedom description-age spline, agency membership, occupation count, log description characters, and log qualifying-sentence count. Forms 2a/2b have country-clustered SEs. Form 2c has model-based SEs and ML city and sharer-only family random effects. In 2b/2c, composition main effects refer to zero jobs; shared-share interactions shift both shared categories equally. ML SEs are not country-clustered.")
+   "Selected coefficients; dependent variable: log posted USD hourly rate; N = 352,986 throughout. Omitted composition: authored-generic share. All forms include country and first-listed-occupation effects, completed-job groups, log(1 + jobs), log(1 + hours), rating bands, a five-degree-of-freedom description-age spline, agency membership, occupation count, log description characters, and log qualifying-sentence count. Forms 2a/2b have country-clustered SEs. Form 2c has model-based SEs and ML city and sharer-only family random effects. In 2b/2c, composition main effects refer to zero jobs; the total shared-share interactions shift both copied categories equally. ML SEs are not country-clustered.")
 SL <- read_tab("model2_slopes_by_record")
 contrast <- function(b, se) paste0(sprintf("%+.1f", pc(b)), "% [", fx(pc(b - 1.96 * se), 1), ", ", fx(pc(b + 1.96 * se), 1), "]")
-md(data.frame(Record = gsub("-", "–", SL$record), `Authored-specific` = contrast(SL$authored_spec_est, SL$authored_spec_se), `Shared-generic` = contrast(SL$shared_gen_est, SL$shared_gen_se), `Shared-specific` = contrast(SL$shared_spec_est, SL$shared_spec_se), check.names = FALSE),
+md(data.frame(Record = gsub("-", "–", SL$record), `Authored-specific` = contrast(SL$authored_spec_est, SL$authored_spec_se), `Copied-generic` = contrast(SL$shared_gen_est, SL$shared_gen_se), `Copied-specific` = contrast(SL$shared_spec_est, SL$shared_spec_se), check.names = FALSE),
    "model2_record_slopes", "Full-unit composition contrasts by completed-job group (Model 2b)", "tbl-model2-record-slopes",
    "Percent asking-rate differences relative to authored-generic composition, with approximate 95% intervals using the saved delta-method SEs. These are hypothetical whole-composition contrasts, not effects of one reused sentence or changes experienced by a typical worker.")
 
@@ -151,15 +152,15 @@ md(data.frame(Record = gsub("-", "–", SL$record), `Authored-specific` = contra
 ROB <- read_tab("robustness_estimates")
 SUMMARY <- read_tab("robustness_summary")
 stopifnot(identical(ROB$check, SUMMARY$check))
-put("rob-strict-shared-spec", pc(ROB$m2_shared_spec[5]), paste0(TBL, "/robustness_estimates.csv#row5:m2_shared_spec"), paste0(sprintf("%+.1f", pc(ROB$m2_shared_spec[5])), "%"))
+put("rob-strict-copied-spec", pc(ROB$m2_shared_spec[5]), paste0(TBL, "/robustness_estimates.csv#row5:m2_shared_spec"), paste0(sprintf("%+.1f", pc(ROB$m2_shared_spec[5])), "%"))
 for (i in c(2, 4, 6)) put(paste0("rob-family-", i), ROB$m2_icc_provenance[i], paste0(TBL, "/robustness_estimates.csv#row", i, ":m2_icc_provenance"), paste0(fx(100 * ROB$m2_icc_provenance[i], 1), "%"))
 put("rob-timing-workers", ROB$m2_n[6], paste0(TBL, "/robustness_estimates.csv#row6:m2_n"))
 put("rob-timing-lr", ROB$m2_lr_chisq[6], paste0(TBL, "/robustness_estimates.csv#row6:m2_lr_chisq"), fx(ROB$m2_lr_chisq[6], 1))
-put("rob-timing-gen-50", pc(ROB$m2_shared_gen_50plus[6]), paste0(TBL, "/robustness_estimates.csv#row6:m2_shared_gen_50plus"), paste0(sprintf("%+.1f", pc(ROB$m2_shared_gen_50plus[6])), "%"))
-put("rob-rating-gen-or", exp(ROB$m2_shared_gen[10]), paste0(TBL, "/robustness_estimates.csv#row10:m2_shared_gen"), fx(exp(ROB$m2_shared_gen[10]), 2))
-put("rob-hours-gen", pc(ROB$m2_shared_gen[11]), paste0(TBL, "/robustness_estimates.csv#row11:m2_shared_gen"), paste0(fx(pc(ROB$m2_shared_gen[11]), 0), "%"))
+put("rob-timing-copied-gen-50", pc(ROB$m2_shared_gen_50plus[6]), paste0(TBL, "/robustness_estimates.csv#row6:m2_shared_gen_50plus"), paste0(sprintf("%+.1f", pc(ROB$m2_shared_gen_50plus[6])), "%"))
+put("rob-rating-copied-gen-or", exp(ROB$m2_shared_gen[10]), paste0(TBL, "/robustness_estimates.csv#row10:m2_shared_gen"), fx(exp(ROB$m2_shared_gen[10]), 2))
+put("rob-hours-copied-gen", pc(ROB$m2_shared_gen[11]), paste0(TBL, "/robustness_estimates.csv#row11:m2_shared_gen"), paste0(fx(pc(ROB$m2_shared_gen[11]), 0), "%"))
 short <- c("Main specification", "Sharing at J ≥ .7", "Sentences ≥ 15 words", "Exclude agency members", "Stricter specificity", "Within-one-day edit subset", "Ten largest countries", "Exclude ≥ 90% shared profiles", "Model 1 linear probability", "Rating < 4.8 (≥ 5 jobs)", "Hours conditional on rate")
-rs <- data.frame(Check = short, `M1 composition` = "—", `Authored-specific` = "—", `Shared-generic` = "—", `Shared-specific` = "—", `Family share` = "—", `Shared-generic: 0 → 50+ jobs` = "—", check.names = FALSE)
+rs <- data.frame(Check = short, `M1 composition` = "—", `Authored-specific` = "—", `Copied-generic` = "—", `Copied-specific` = "—", `Family share` = "—", `Copied-generic: 0 → 50+ jobs` = "—", check.names = FALSE)
 for (i in seq_len(nrow(ROB))) {
   z <- ROB[i]
   if (z$dv == "lrate") {
@@ -181,7 +182,7 @@ md(rs, "robustness", "Robustness and outcome triangulation", "tbl-robustness",
 ra <- data.frame(Check = short, `M1 sentences` = ni(ROB$m1_n), `Worker outcome N` = ni(ROB$m2_n), `Specificity estimate (SE)` = bs(ROB$m1_lspec, ROB$m1_lspec_se), `Number estimate (SE)` = bs(ROB$m1_number, ROB$m1_number_se), check.names = FALSE)
 md(ra, "robustness_samples", "Robustness samples and selected Model 1 coefficients", "tbl-robustness-samples",
    "Model 1 entries are logit coefficients except the LPM row. Alternative-outcome entries repeat main Model 1 rather than estimating new composition relationships. The stricter rule uses maximum word KL, not log(1 + informative types). The ≥ 15-word check retains original qualifying-sentence position indicators.")
-rb <- data.frame(Check = short, `Authored-specific (SE)` = bs(ROB$m2_authored_spec, ROB$m2_authored_spec_se), `Shared-generic (SE)` = bs(ROB$m2_shared_gen, ROB$m2_shared_gen_se), `Shared-specific (SE)` = bs(ROB$m2_shared_spec, ROB$m2_shared_spec_se), check.names = FALSE)
+rb <- data.frame(Check = short, `Authored-specific (SE)` = bs(ROB$m2_authored_spec, ROB$m2_authored_spec_se), `Copied-generic (SE)` = bs(ROB$m2_shared_gen, ROB$m2_shared_gen_se), `Copied-specific (SE)` = bs(ROB$m2_shared_spec, ROB$m2_shared_spec_se), check.names = FALSE)
 md(rb, "robustness_coefficients", "Robustness worker-level coefficients", "tbl-robustness-coefficients",
    "Country-clustered SEs. Rate rows are log-rate coefficients without record interactions; the rating row is log odds and the hours row uses log(1 + recorded hours). Outcome-specific controls are described in Appendix D. The LPM row repeats the main worker-level estimates.")
 
@@ -194,7 +195,7 @@ H[, band := factor(band, levels = c("[0.3,0.5)", "[0.5,0.7)", "[0.7,0.9)", "[0.9
 savep(ggplot(H, aes(band, lift, color = label, group = label)) + geom_hline(yintercept = 1, linetype = 2, color = "grey50") + geom_line(linewidth = .8) + geom_point(size = 2.5) + scale_color_manual(values = c("#b73730", "#205a78", "#a66c00")) + labs(x = "Maximum sentence similarity within a worker pair (Jaccard)", y = "Lift relative to endpoint random mixing", color = NULL), "circulation")
 P <- rbindlist(lapply(c("authored_spec", "shared_gen", "shared_spec"), function(k) data.table(record = SL$record, type = k, est = SL[[paste0(k, "_est")]], se = SL[[paste0(k, "_se")]])))
 P[, record := factor(record, levels = SL$record, labels = gsub("-", "–", SL$record))]
-P[, type := factor(type, levels = c("authored_spec", "shared_spec", "shared_gen"), labels = c("Authored-specific", "Shared-specific", "Shared-generic"))]
+P[, type := factor(type, levels = c("authored_spec", "shared_spec", "shared_gen"), labels = c("Authored-specific", "Copied-specific", "Copied-generic"))]
 savep(ggplot(P, aes(record, pc(est), color = type, group = type)) + geom_hline(yintercept = 0, color = "grey50") + geom_errorbar(aes(ymin = pc(est - 1.96 * se), ymax = pc(est + 1.96 * se)), width = .1, position = position_dodge(.25)) + geom_line(linewidth = .7, position = position_dodge(.25)) + geom_point(size = 2.5, position = position_dodge(.25)) + scale_color_manual(values = c("#00796b", "#a66c00", "#b73730")) + labs(x = "Completed-job group", y = "Full-unit asking-rate contrast (%)", color = NULL), "model2_records", h = 4.7)
 E <- read_tab("edits_rate_by_token_class")
 E[, cls := factor(cls, levels = rev(c("number", "occupation-informative", "other content word", "pronoun/voice", "function word")))]
@@ -281,7 +282,7 @@ theory_fig <- local({
     arr(6.25, 4.9, 6.25, 4.5, "both"),
     rect(7.88, 11.4, 2.0, 6.4, "#fbf6e6", 3),
     block(7.98, 11.5, 5.75, .5, .6, .5, "P2a", "Authored-specific\npremium", inline = TRUE),
-    block(7.98, 11.5, 4.4, .5, .6, .5, "P2b", "Shared-generic\ndiscount", inline = TRUE),
+    block(7.98, 11.5, 4.4, .5, .6, .5, "P2b", "Copied-generic\ndiscount", inline = TRUE),
     block(7.98, 11.5, 3.0, .5, .6, .5, "P2c", "Family-linked\ndifferences", inline = TRUE),
     box(6.25, .7, 2.9, .8, SAND, "Reputation building\n(verified records)"),
     annotate("polygon", x = c(7.7, 10.8, 10.8, 11.1, 10.5, 9.9, 10.2, 10.2, 7.7), y = c(.4, .4, 1.5, 1.5, 2.0, 1.5, 1.5, 1.0, 1.0), fill = PROP, colour = RED, linewidth = .55),

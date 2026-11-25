@@ -7,10 +7,11 @@
   html-math-method: mathjax
   wrap: none
   default-image-extension: png
+  css:
+    - styles.css
   toc: true
   toc-depth: 2
   number-sections: false
-  variables: {}
   
 [1mmetadata[22m
   document-css: false
@@ -20,11 +21,9 @@
   bibliography:
     - references.bib
   csl: apa.csl
-  engines:
-    - path: /home/julian/.local/quarto-1.9.37/share/extension-subtrees/julia-engine/_extensions/julia-engine/julia-engine.js
   fig-cap-location: bottom
   tbl-cap-location: top
-  title: Author or Copy?
+  title: Authored or Copied?
   subtitle: A Computational Study of Profile Composition in Online Labor Markets
   author:
     - name: Julian Prester
@@ -55,8 +54,8 @@
     Two models organize the analysis.
     A sentence-level model with worker fixed effects identifies selective profile composition: occupation-specific wording and numerical content are less likely to be shared, whereas assurances, encounter formulae, and sentences later in the profile are more likely to be shared.
     A worker-level model connects textual composition and circulation families to market position, measured by posted asking rates.
-    Authored-specific composition has a positive association and shared-generic composition a negative association; family-linked differences remain after accounting for city and worker covariates.
-    The shared-generic association persists across completed-job groups rather than disappearing with verified reputation.
+    Authored-specific composition has a positive association and copied-generic composition a negative association; family-linked differences remain after accounting for city and worker covariates.
+    The copied-generic association persists across completed-job groups rather than disappearing with verified reputation.
     Robustness checks and a supplementary qualitative analysis qualify these patterns without replacing them.
     We theorize copying as a practice of profile composition and develop a process model with three propositions.
     Under copyability and pressure to differentiate, workers combine authored and copied wording selectively; composition and circulation are associated with market position; and verified records do not displace the textual association.

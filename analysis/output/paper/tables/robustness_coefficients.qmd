@@ -1,4 +1,4 @@
-| Check | Authored-specific (SE) | Shared-generic (SE) | Shared-specific (SE) |
+| Check | Authored-specific (SE) | Copied-generic (SE) | Copied-specific (SE) |
 | :--- | ---: | ---: | ---: |
 | Main specification | 0.058 (0.017) | -0.327 (0.034) | -0.147 (0.029) |
 | Sharing at J ≥ .7 | 0.055 (0.017) | -0.317 (0.032) | -0.149 (0.027) |

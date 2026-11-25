@@ -62,7 +62,7 @@ And profile text still relates to market outcomes, even alongside verified recor
 Work on rhetorical signals shows that inexpensive text can matter when it accompanies costly signals whose credibility clients attribute to the whole signal portfolio [@SteigenbergerWilhelm2018; @PlummerAllisonConnelly2016], but it treats each text as its sender's own.
 Signaling theory lacks an account of how text that circulates among senders can still distinguish them.
 
-We call the conjunction of public visibility and inexpensive textual reproduction *copyability*.
+We call the conjunction of public visibility and the ease of copying text *copyability*.
 Copyability is a property of the platform's information environment, not an allegation about the intentions of a particular worker.
 It makes others' self-presentation available as a resource, so that copying becomes one of the practices through which a profile is composed.
 Our research question is:
@@ -89,7 +89,7 @@ Profile composition is the combination of two concurrent practices, authoring an
 Three propositions state the mechanisms that link the constructs: selective composition, composition and circulation associations with market position, and non-substitution between records and text.
 The account distinguishes three dimensions of textual signals: *content*, or what a claim says; *profile composition*, or how authored and copied wording combine in a profile; and *circulation*, or how copied wording is distributed across workers.
 The distinction does not imply that we can recover a sentence's original author or externally verified source.
-It explains why reproducible content can coexist with informative composition and circulation.
+It explains why copyable content can coexist with informative composition and circulation.
 
 This account makes three contributions.
 First, it establishes copying as a practice of profile composition.
@@ -172,7 +172,7 @@ On platforms, cheap and widely available signals have indeed been diluted or dis
 Studies of text in these markets sometimes assume instead that detailed writing is costly to produce and therefore credible [@AlshalfanMahdikhani2026], without testing whether it is copied.
 
 Profile text is easy to copy.
-Digital artifacts such as profile descriptions are editable and reproducible, and their informational properties are shaped by the systems through which they are represented and accessed [@KallinikosAaltonenMarton2013].
+Digital artifacts such as profile descriptions are editable and easy to copy, and their informational properties are shaped by the systems through which they are represented and accessed [@KallinikosAaltonenMarton2013].
 Profiles are also public, so freelancers can read one another's descriptions and observe one another's career paths [@GussekWiesche2024].
 Copying is also visible to clients, who report noticing copy-pasted proposals and stolen portfolio material and read them as laziness [@BlythJarrahiLutzEtAl2022].
 Unlike a badge or a deposit, however, a copied sentence carries no label that distinguishes it from composed text.
@@ -217,7 +217,7 @@ The final phase develops a theoretical model and propositions from these results
 ![Analytic organization. Text-reuse detection precedes both models, which supply the principal evidence; content and variant descriptions and circulation components inform their interpretation. The qualitative analysis and the robustness checks follow the models and respond to their results. Arrows indicate analytic organization, not identified causal effects.](analysis/output/paper/figures/method.png){#fig-method}
 
 The two models answer different questions at different units of analysis.
-A worker-level comparison alone cannot distinguish selective composition inside a profile from differences in who participates in reuse, and a sentence-level comparison alone cannot show how the resulting composition relates to market position.
+A worker-level comparison alone cannot distinguish selective composition inside a profile from differences in who shares wording, and a sentence-level comparison alone cannot show how the resulting composition relates to market position.
 The two-model design connects these levels without treating them as a single causal sequence.
 
 ## Setting and Data Collection
@@ -237,7 +237,7 @@ We measure *description age* from the description's creation to the latest updat
 
 We took several safeguards.
 The analysis uses only public profile text and metadata.
-Workers are identified by neither platform identifiers nor names, and the paper reproduces no complete description or client name.
+Workers are identified by neither platform identifiers nor names, and the paper quotes no complete description or client name.
 We quote only short passages that recur across workers, namely exact-shared sentences and, where we show personalization, near-copy variants.
 Because each such passage appears, in identical or near-identical form, in more than one worker's profile, quoting it does not by itself identify any one worker.
 We paraphrase unshared, personal, and client material.
@@ -307,7 +307,7 @@ Copyability is a condition of the setting and is not measured.
 | Circulation | Circulation family | Model 2 predictor (form 2c) | Co-adoption components of scripts; dominant family for each sharer | Circulation-based proxy, not an externally verified origin |
 | Outside the text | Verified record | Model 2 moderator | Completed-job groups: 0, 1–9, 10–49, 50+ [cf. @Pallais2014; @KanatHongRaghu2018; @KathuriaEtAl2021] | Platform-recorded work, distinct from textual claims about experience |
 | Outside the text | Market position | Model 2 outcome | Posted asking rate: log posted hourly rate, USD 3–500 [cf. @MorenoTerwiesch2014; @Kokkodis2023] | Asking price, not realized wage or observed client valuation |
-| Condition | Copyability | Condition of the setting | Not measured: public visibility of profiles combined with inexpensive textual reproduction | Property of the platform's information environment, not of individual workers |
+| Condition | Copyability | Condition of the setting | Not measured: public visibility of profiles combined with the ease of copying text | Property of the platform's information environment, not of individual workers |
 
 : Dimensions, constructs, and measurements {#tbl-measures}
 
@@ -353,7 +353,7 @@ $$
 where $S$ denotes exact sharing, $K$ indicates at least one occupation-informative type, $N$ indicates a numeric token, $\mathbf F$ represents rhetorical function, $R$ is relative position in the profile (0 for the first qualifying sentence, 1 for the last), and $L$ is word count.
 Worker fixed effects $\alpha_j$ absorb worker-level differences shared by all sentences in a profile.
 The model therefore addresses composition, not the between-worker question of who shares text.
-Length controls distinguish content and position from the mechanical difficulty of reproducing a longer sequence.
+Length controls distinguish content and position from the mechanical difficulty of matching a longer sequence exactly.
 
 We estimate a binomial fixed-effects logit with worker-clustered standard errors.
 Profiles with at least two qualifying sentences contribute {{< var m1-all >}} eligible units; identification in the logit comes from {{< var m1-sentences >}} sentences in {{< var m1-profiles >}} mixed profiles containing both shared and non-exact-shared units.
@@ -445,7 +445,7 @@ In {{< var later-shared >}} of mixed profiles, shared sentences occur later on a
 @fig-sharing shows the spread.
 These descriptive gradients motivate a within-profile model; they do not yet distinguish position from content or length.
 
-![Partial reuse among exact sharers. Each bar is the share of workers with any exact sharing whose profiles have the given proportion of qualifying sentences exact-shared; the dashed line marks the median. Profiles at 100% have no qualifying sentence without a detected exact match.](analysis/output/paper/figures/sharing_share.png){#fig-sharing}
+![Partial sharing among exact sharers. Each bar is the share of workers with any exact sharing whose profiles have the given proportion of qualifying sentences exact-shared; the dashed line marks the median. Profiles at 100% have no qualifying sentence without a detected exact match.](analysis/output/paper/figures/sharing_share.png){#fig-sharing}
 
 ## Circulation Is Relationally Structured
 
@@ -631,7 +631,7 @@ Copyability makes broadly applicable language available without requiring a work
 It does not make all claims equally fitting.
 A general communication promise is portable: it can apply to almost any worker.
 A statement about a narrow capability applies to fewer workers, and an account of a particular history must fit the worker who makes it.
-Copying makes all three equally easy to reproduce, but not equally appropriate to adopt.
+All three are equally easy to copy, but not equally appropriate to adopt.
 The within-profile estimates show that occupational detail and numerical content are associated with less exact sharing even when general worker differences are absorbed.
 Assurances and encounter formulae are associated with more sharing; sharing becomes more likely later in the profile.
 Alignment results also locate variation disproportionately in occupation-informative and numerical tokens.
@@ -652,13 +652,13 @@ This is an interpretation to be developed from the composition pattern, not some
 
 The proposition also addresses why composition is mixed.
 Copyability explains why workers can copy, but a claim that applies narrowly must still be written to fit.
-In the data, most profiles contain no detected exact sharing, and among those that do, reuse is usually partial.
+In the data, most profiles contain no detected exact sharing, and among those that do, most share only part of their description.
 Selective composition is then the plausible response: copy what is portable, and author what must fit.
 The adaptation part rests on the near-copy evidence: where wording recurs with variation, the variation falls disproportionately on occupation-informative and numerical words, the elements that make copied wording fit a particular worker.
 The proposition describes a tendency, not a prohibition.
 It is consistent with detailed shared capabilities and person-specific claims that occur late.
 Occupational specificity narrows applicability without necessarily identifying one person, and a copied history claim can be applicable to more than one worker.
-The theoretical point is differential composition, not the impossibility of reproducing specific language.
+The theoretical point is differential composition, not the impossibility of copying specific language.
 Nor is specificity rewarded uniformly elsewhere in the literature.
 More cohesive skill sets raise hiring but lower hourly wages [@Kokkodis2023], and incongruent skills help in low-skill and hurt in high-skill categories [@FuEtAl2021].
 We therefore read composition as differentiated fit, not as a quality ranking.
@@ -668,7 +668,7 @@ We therefore read composition as differentiated fit, not as a quality ranking.
 In @fig-theory, P2a and P2b link profile composition to market position, and P2c links circulation families, a property of copying that spans profiles because it is the co-adoption structure of the wording that copying draws on, to the same outcome.
 Model 2 indicates that content and operational authorship should not be collapsed.
 Occupationally specific composition has different asking-rate associations depending on whether its wording is shared, while the shared-generic category carries the most stable discount.
-A single measure of textual specificity would conflate these combinations; a single reuse indicator would conflate a profile with a small shared close and one dominated by shared assurances.
+A single measure of textual specificity would conflate these combinations; a single exact-sharing indicator would conflate a profile with a small shared close and one dominated by shared assurances.
 
 Earlier work associates conventional signals that any sender can produce with weaker outcomes, for example ingratiation with lower earnings [@HolthausStock2018].
 This is consistent with, though it does not explain, the discount we find for shared generic wording.
@@ -691,7 +691,7 @@ The imitation literature concerns organizations and communities, where imitation
 The signaling interpretation is that information can survive copying in two ways.
 First, what is selected, fitted, and placed around shared wording can distinguish a composition.
 Second, shared wording can carry relational information because not everyone encounters and adopts the same repertoire.
-Reuse may thus pool workers by presentation environment rather than simply render them indistinguishable.
+Copying may thus pool workers by presentation environment rather than simply render them indistinguishable.
 This interpretation does not require every client to detect a copied sentence or know where it came from.
 It also leaves open how much of the association reflects worker positioning, client sorting, or common underlying characteristics.
 
@@ -712,7 +712,7 @@ Other work finds that individual records can displace coarser cues as they accum
 Because the evidence compares workers in a cross-section, the proposition concerns the coexistence of records and text, not individual career change.
 
 Taken together, the propositions shift attention from whether copied words are credible in isolation to how copyability shapes profile composition and how that composition and its circulation are read in market position.
-Content is reproducible, but the informational structure of its composition and circulation is not exhausted by that fact.
+Content can be copied, but the informational structure of its composition and circulation is not exhausted by that fact.
 The account retains a role for signaling while specifying what the description can convey beyond an exclusive claim to its wording.
 
 # Discussion
@@ -739,7 +739,7 @@ A shared sentence instead carries content that can fit or misfit a profile, bear
 Assessment items can be retired once they are compromised [@ChristoforakiIpeirotis2014], whereas our data contain no information on whether platforms police profile text.
 If a cost interpretation is warranted, the cost lies in developing and fitting a presentation to the sender, not in obtaining exclusive access to a sentence.
 Generative AI lowers the cost of producing persuasive text further: it can make it harder for employers and investors to screen applicants [@CowgillHernandezLagosWright2026], and on one freelancing platform, employers stopped paying more for proposals tailored to the job once AI writing tools spread [@GaldinSilbert2025].
-Copying is a visible form of the same problem: because exact reuse can be observed, it shows how workers combine inexpensive and own wording, which AI-written text makes harder to trace.
+Copying is a visible form of the same problem: because exact sharing can be observed, it shows how workers combine inexpensive and own wording, which AI-written text makes harder to trace.
 
 The results also bear on whether verified records substitute for other signals.
 Group-level cues such as country image fade as individual reputation accumulates [@KanatHongRaghu2018], and employers' preference for experienced workers declined when a monitoring tool verified current work [@LiangHongGu2025].
@@ -796,7 +796,7 @@ Automatic originality scores or punitive copying labels could therefore misclass
 
 A more defensible design implication is to distinguish *shared form from substantiated fit*.
 Profile interfaces and guidance can help workers connect general promises to service-specific evidence and platform records.
-Examples can be presented as adaptable structures rather than as universal prose to reproduce unchanged.
+Examples can be presented as adaptable structures rather than as universal prose to copy unchanged.
 Search and matching systems can also account for repeated passages so that hundreds of occurrences do not masquerade as hundreds of independently expressed attributes.
 This matters most for models that score text similarity between profiles and openings [@KokkodisPapadimitriouIpeirotis2015], where a shared sentence contributes in the same way as a composed one.
 These possibilities follow from the measurement problem; their effects on hiring or prices would require evaluation.
@@ -826,13 +826,13 @@ Our outcome is the posted asking rate, whereas much of the work we draw on studi
 We do not observe writing effort, claim truth, clients' interpretations, hiring responses, or realized wages.
 Family effects summarize dominant membership, rely on random-effects assumptions, and may reflect service niches or organizational contexts as well as learning environments.
 Timestamps describe the creation and editing of descriptions, so cohort proximity and matched passages establish neither common onboarding, copying direction, nor source ownership, and we have not verified external template origins.
-These constraints preclude an entry-to-experience narrative or a causal claim that reputation widens an individual's reuse discount.
+These constraints preclude an entry-to-experience narrative or a causal claim that reputation widens an individual's shared-generic discount.
 Future work could link the composition of shared and authored wording to hiring and earnings, combine repeated profile observations with dated work records, vary composition and record displays experimentally, or trace circulation channels with appropriate safeguards.
 It could also examine how richer reputation systems or platform policing of copying change the associations reported here.
 
 # Conclusion
 
-Publicly reproducible profile text is not necessarily uninformative.
+Profile text that anyone can copy is not necessarily uninformative.
 We theorize copying as a practice of profile composition that follows from copyability: under copyability, workers combine authored and copied wording selectively.
 In this Upwork cross-section, that composition is associated with market position, measured by the posted asking rate, and circulation families add information beyond geographic proximity, modeled at the country and city levels, and worker covariates.
 The shared-generic association persists alongside substantial verified records.

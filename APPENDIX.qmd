@@ -325,11 +325,11 @@ The LPM provides a link-function check on direction, not an assurance that these
 ## D2. Model 2 Specifications and Effect Units
 
 Model 2's dependent variable is $\log(\text{posted USD hourly rate})$, restricted to 3–500.
-Its four composition shares divide all qualifying units into authored-generic, authored-specific, shared-generic, and shared-specific.
+Its four composition shares divide all qualifying units into authored-generic, authored-specific, copied-generic, and copied-specific.
 Authored-generic is omitted.
 The non-interaction fixed-effects form describes the average composition slopes conditional on controls; the record-interaction form estimates zero-job slopes plus completed-job-group shifts.
 
-The three shared-share interactions shift shared-generic and shared-specific slopes equally.
+The three copied-share interactions shift copied-generic and copied-specific slopes equally.
 Authored-specific interactions are estimated separately.
 The model does not estimate a completely unrestricted interaction of all four composition categories with record groups.
 The common controls are record group, log jobs, log hours, rating bands, a five-degree-of-freedom natural spline of profile/description age, agency affiliation, occupation count, log description characters, and log qualifying-sentence count.
@@ -381,7 +381,7 @@ The modified specifications are:
    A constant agency indicator can be dropped for collinearity; the family component is also refitted.
 4. **Stricter specificity.**
    Model 2 uses maximum token KL of at least one bit; Model 1 uses the maximum KL predictor.
-   Shared-specific composition changes sign, limiting a universal shared-expertise discount.
+   Copied-specific composition changes sign, limiting a universal shared-expertise discount.
 5. **Within-one-day edit subset.**
    Uses `text_dated` as defined in Appendix A.
    The flag is not a control in any Model 2 form.
@@ -405,7 +405,7 @@ The modified specifications are:
 These ten checks follow the baseline to form eleven rows.
 Composition is summarized as retained when specificity and numerical-content coefficients have intervals below zero, assurances are positive, encounter exceeds assurance, and the relative-position coefficient is positive.
 This is a combined numerical signature, not independent validation of every dictionary classification.
-The non-substitution summary requires a negative 50+ shared-generic slope and no smaller absolute point estimate than at zero jobs; that point-estimate comparison is not a formal simultaneous test of monotonic widening.
+The non-substitution summary requires a negative 50+ copied-generic slope and no smaller absolute point estimate than at zero jobs; that point-estimate comparison is not a formal simultaneous test of monotonic widening.
 
 {{< include analysis/output/paper/tables/robustness_coefficients.qmd >}}
 

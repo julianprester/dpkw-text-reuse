@@ -21,8 +21,16 @@ vars <- yaml::read_yaml("_variables.yml")
 used <- matched("\\{\\{< var [^ >]+ >\\}\\}", body)
 used <- unique(sub("^\\{\\{< var ([^ >]+) >\\}\\}$", "\\1", used))
 stopifnot(all(used %in% names(vars)))
+copied_vars <- c("m2-copied-gen", "m2-copied-spec", "m2ml-copied-gen", "m2ml-copied-spec",
+                 "record-copied-gen-0-jobs", "record-copied-gen-1-9-jobs", "record-copied-gen-10-49-jobs", "record-copied-gen-50--jobs",
+                 "rob-strict-copied-spec", "rob-timing-copied-gen-50", "rob-rating-copied-gen-or", "rob-hours-copied-gen")
+old_composition_vars <- c("m2-shared-gen", "m2-shared-spec", "m2ml-shared-gen", "m2ml-shared-spec",
+                          "record-gen-0-jobs", "record-gen-1-9-jobs", "record-gen-10-49-jobs", "record-gen-50--jobs",
+                          "rob-strict-shared-spec", "rob-timing-gen-50", "rob-rating-gen-or", "rob-hours-gen")
+stopifnot(all(copied_vars %in% names(vars)), all(copied_vars %in% used), !any(old_composition_vars %in% names(vars)), !any(old_composition_vars %in% used))
 for (v in used) body <- gsub(paste0("{{< var ", v, " >}}"), as.character(vars[[v]]), body, fixed = TRUE)
-stopifnot(!grepl("{{<", body, fixed = TRUE))
+remaining_directives <- matched("\\{\\{<[^>]*>\\}\\}", body)
+stopifnot(all(remaining_directives == "{{< pagebreak >}}"))
 
 # Bibliography keys, caption identifiers, and local image dependencies.
 bib <- text("references.bib")
@@ -30,7 +38,7 @@ keys <- matched("(?m)^@[A-Za-z]+\\{[^,]+,", bib)
 keys <- sub("^@[A-Za-z]+\\{([^,]+),$", "\\1", keys)
 stopifnot(!anyDuplicated(keys))
 citations <- unique(sub("^@", "", matched("(?<![[:alnum:]_.])@[[:alnum:]][[:alnum:]_.:-]*", body)))
-refs <- citations[grepl("^(fig|tbl)-", citations)]
+refs <- sub("\\.$", "", citations[grepl("^(fig|tbl)-", citations)])
 citations <- citations[!grepl("^(fig|tbl)-", citations)]
 stopifnot(all(citations %in% keys))
 defs <- sub("^\\{#", "", matched("\\{#(?:fig|tbl)-[A-Za-z0-9-]+", body))
@@ -61,6 +69,24 @@ stopifnot(all(vapply(seq_len(nrow(m1)), function(i) grepl(beta(m1$est[i], m1$se[
 m2 <- fread("analysis/output/tables/model2_fixed_effects_clustered.csv")
 ml <- fread("analysis/output/tables/model2_fixed_effects_multilevel.csv")
 t2 <- text("analysis/output/paper/tables/model2.qmd")
+stopifnot(all(c("shared_gen", "shared_spec") %in% m2$term),
+          all(c("shared_gen", "shared_spec", "authored_spec:d1", "authored_spec:d2", "authored_spec:d3", "d1:shared_any", "d2:shared_any", "d3:shared_any") %in% ml$term),
+          grepl("Copied-generic share", t2, fixed = TRUE), grepl("Copied-specific share", t2, fixed = TRUE))
+slopes <- fread("analysis/output/tables/model2_slopes_by_record.csv")
+stopifnot(all(c("shared_gen_est", "shared_gen_se", "shared_spec_est", "shared_spec_se") %in% names(slopes)),
+          grepl("Copied-generic", text("analysis/output/paper/tables/model2_record_slopes.qmd"), fixed = TRUE),
+          grepl("Copied-specific", text("analysis/output/paper/tables/model2_record_slopes.qmd"), fixed = TRUE))
+rob <- fread("analysis/output/tables/robustness_estimates.csv")
+rob_summary <- fread("analysis/output/tables/robustness_summary.csv")
+stopifnot(all(c("m2_shared_gen", "m2_shared_spec", "m2_shared_gen_0jobs", "m2_shared_gen_50plus") %in% names(rob)),
+          all(c("P2b_commons_discount_generic", "P2b_shared_specific_discount") %in% names(rob_summary)),
+          grepl("Copied-generic", text("analysis/output/paper/tables/robustness.qmd"), fixed = TRUE),
+          grepl("Copied-specific", text("analysis/output/paper/tables/robustness.qmd"), fixed = TRUE))
+m4 <- fread("analysis/output/tables/sig_M4_composition.csv")
+stopifnot(all(c("sh_gen", "sh_spec", "or_spec") %in% m4$term))
+cache_files <- list.files("analysis/output/tables/robustness_parts", pattern = "^check_[0-9]{2}\\.csv$", full.names = TRUE)
+stopifnot(length(cache_files) == 11L,
+          all(vapply(cache_files, function(f) all(c("m2_shared_gen", "m2_shared_spec", "m2_shared_gen_50plus") %in% names(fread(f))), TRUE)))
 stopifnot(all(vapply(seq_len(nrow(m2)), function(i) grepl(beta(m2$est[i], m2$se[i]), t2, fixed = TRUE), TRUE)))
 stopifnot(all(vapply(seq_len(nrow(ml)), function(i) grepl(beta(ml$est[i], ml$se[i]), t2, fixed = TRUE), TRUE)))
 

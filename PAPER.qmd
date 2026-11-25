@@ -30,8 +30,8 @@ abstract: |
   Two models organize the analysis.
   A sentence-level model with worker fixed effects identifies selective profile composition: occupation-specific wording and numerical content are less likely to be shared, whereas assurances, encounter formulae, and sentences later in the profile are more likely to be shared.
   A worker-level model connects textual composition and circulation families to market position, measured by posted asking rates.
-  Authored-specific composition has a positive association and shared-generic composition a negative association; family-linked differences remain after accounting for city and worker covariates.
-  The shared-generic association persists across completed-job groups rather than disappearing with verified reputation.
+  Authored-specific composition has a positive association and copied-generic composition a negative association; family-linked differences remain after accounting for city and worker covariates.
+  The copied-generic association persists across completed-job groups rather than disappearing with verified reputation.
   Robustness checks and a supplementary qualitative analysis qualify these patterns without replacing them.
   We theorize copying as a practice of profile composition and develop a process model with three propositions.
   Under copyability and pressure to differentiate, workers combine authored and copied wording selectively; composition and circulation are associated with market position; and verified records do not displace the textual association.
@@ -81,7 +81,7 @@ Using public Upwork profile records, we construct a corpus of {{< var sentences 
 Sequence-preserving text-reuse detection identifies shared wording rather than merely common topics.
 We then organize the analysis around two models.
 *Model 1* examines composition within profiles: which sentences are shared and which have no detected exact match?
-*Model 2* examines market position, measured by the posted asking rate, across workers: how are a profile's composition and membership in shared-text circulation families associated with its posted rate, including where verified records are available?
+*Model 2* examines market position, measured by the posted asking rate, across workers: how are a profile's composition and membership in copied-text circulation families associated with its posted rate, including where verified records are available?
 Descriptive circulation and alignment analyses support interpretation of the two models.
 A supplementary qualitative analysis of theoretically sampled profiles illustrates what the estimated patterns look like in actual descriptions.
 
@@ -89,9 +89,9 @@ The findings do not support a collapse of textual self-presentation into interch
 Exact sharing occurs in {{< var exact-prevalence >}} of the measured profiles, but reuse is usually partial.
 Within the same profile, occupation-specific wording and numerical content are less likely to be shared; assurances, encounter formulae, and sentences later in the profile are more likely to be shared.
 Near-copy comparisons concentrate variation in numerical and occupation-informative tokens.
-Across workers, authored-specific composition is associated with higher asking rates and shared-generic composition with lower asking rates.
+Across workers, authored-specific composition is associated with higher asking rates and copied-generic composition with lower asking rates.
 Circulation-family differences remain after accounting for city and worker covariates.
-Most importantly, the shared-generic association does not disappear among workers with substantial completed-job records.
+Most importantly, the copied-generic association does not disappear among workers with substantial completed-job records.
 These are cross-sectional associations with workers' asking prices, not demonstrated effects on client choices or realized wages.
 
 We develop these patterns into a process model.
@@ -109,7 +109,7 @@ That copyability makes copying possible is close to self-evident, but its conseq
 We show that workers neither compose afresh nor copy wholesale: they combine authoring and copying selectively.
 Copyability thereby organizes self-presentation instead of only threatening the credibility of a signal.
 Second, we derive more detailed propositions from the findings about how composition is associated with market position.
-Authored-specific and shared-generic composition are associated with opposite positions, and circulation families carry information beyond broad geography, occupation, and recorded work.
+Authored-specific and copied-generic composition are associated with opposite positions, and circulation families carry information beyond broad geography, occupation, and recorded work.
 Textual self-presentation is therefore both individually composed and relationally structured.
 Third, we establish non-substitution as a boundary to a reputation-centered account.
 Verified records do not make the measured textual associations disappear.
@@ -442,8 +442,8 @@ $$
 \end{aligned}
 $$
 
-Here $A^S$ is authored-specific share, $C^G$ shared-generic share, $C^S$ shared-specific share, $C=C^G+C^S$ total shared share, $D_k$ the three nonzero-job indicators, and $Q$ an indicator that the worker has any exact sharing.
-The common $\eta_k$ interaction shifts the shared-generic and shared-specific slopes equally within a record group.
+Here $A^S$ is authored-specific share, $C^G$ copied-generic share, $C^S$ copied-specific share, $C=C^G+C^S$ total shared share, $D_k$ the three nonzero-job indicators, and $Q$ an indicator that the worker has any exact sharing.
+The common $\eta_k$ interaction shifts the copied-generic and copied-specific slopes equally within a record group.
 It is a specification restriction, not an estimate of separate record interactions for each shared type.
 Form 2a excludes the interaction terms; forms 2a and 2b exclude random effects.
 
@@ -467,7 +467,7 @@ They do not observe client recognition of copying, client valuation of prose, or
 
 ## Supplementary Qualitative Analysis
 
-We selected 150 full profiles across ten theoretical cells to inspect typical composition, shared-specific openings, heavily shared descriptions, experienced sharers, different computational assembly patterns, family-price contrasts, and authored-premium contrasts.
+We selected 150 full profiles across ten theoretical cells to inspect typical composition, copied-specific openings, heavily shared descriptions, experienced sharers, different computational assembly patterns, family-price contrasts, and authored-premium contrasts.
 The material contains 1,401 qualifying sentences, 100 profile-nearest non-exact variants, and 100 separately sampled near-copy pairs.
 The latter are divided equally between same and different first-listed occupations.
 Appendix C details the sampling and procedure.
@@ -597,7 +597,7 @@ One Shopify developer's description consists entirely of exact-shared sentences,
 > I am specialized in Shopify front-end, back-end and Shopify speed optimization.
 
 Because entirely shared profiles carry no within-profile variation, they do not contribute to the logit's slopes.
-They show what the shared-specific category contains, not that the estimated odds ratios fail.
+They show what the copied-specific category contains, not that the estimated odds ratios fail.
 
 Variant alignments provide a complementary view.
 In {{< var aligned-pairs >}} sampled pairs with $.5\leq J<1$, numerical tokens and occupation-informative tokens are substituted or deleted at rates of {{< var edit-number >}} and {{< var edit-occupation-informative >}}, respectively.
@@ -642,16 +642,16 @@ First-listed category is only a coarse check on what a worker does, so the codin
 
 @tbl-model2 presents the three forms of Model 2.
 Without record interactions, a full-unit authored-specific contrast is associated with {{< var m2-authored-spec >}} in asking rate relative to authored-generic composition.
-The shared-generic contrast is {{< var m2-shared-gen >}}, and the shared-specific contrast {{< var m2-shared-spec >}}.
+The copied-generic contrast is {{< var m2-copied-gen >}}, and the copied-specific contrast {{< var m2-copied-spec >}}.
 Each coefficient conditions on recorded work, description characteristics, agency affiliation, and country and occupation effects.
 These contrasts summarize the scale of the fitted composition slopes; most sharers do not have descriptions consisting entirely of shared sentences.
 
 {{< include analysis/output/paper/tables/model2.qmd >}}
 
 The key distinction is not simply between specific and generic words.
-Authored-specific composition is positively associated with asking rate, whereas shared-generic composition is negatively associated with it.
+Authored-specific composition is positively associated with asking rate, whereas copied-generic composition is negatively associated with it.
 The latter remains the strongest and most stable textual discount.
-Shared-specific composition also has a negative coefficient in the main specification, but its sign changes under a stricter specificity rule.
+Copied-specific composition also has a negative coefficient in the main specification, but its sign changes under a stricter specificity rule.
 A universal discount for shared expertise is therefore not warranted.
 
 The contextual material helps interpret what the composition can accompany.
@@ -689,9 +689,9 @@ The component is consequently not reducible to the modeled city intercept.
 Its interpretation remains conditional on the specified controls, dominant-family assignment, and random-effects assumptions.
 
 The composition relationships also remain in the multilevel form.
-For the zero-job reference group, full-unit contrasts are approximately {{< var m2ml-authored-spec >}} for authored-specific, {{< var m2ml-shared-gen >}} for shared-generic, and {{< var m2ml-shared-spec >}} for shared-specific composition.
+For the zero-job reference group, full-unit contrasts are approximately {{< var m2ml-authored-spec >}} for authored-specific, {{< var m2ml-copied-gen >}} for copied-generic, and {{< var m2ml-copied-spec >}} for copied-specific composition.
 These should be compared with the zero-job coefficients of the interaction fixed-effects form, not directly with the average slopes of form 2a.
-The attenuation of the shared-generic coefficient after adding families is compatible with part of its association being linked to circulation, but is not a causal decomposition.
+The attenuation of the copied-generic coefficient after adding families is compatible with part of its association being linked to circulation, but is not a causal decomposition.
 
 Recognizable frames make these families inspectable.
 One of the most widely held is the “win work” sentence quoted above.
@@ -702,11 +702,11 @@ Such forms could circulate through common examples, agencies, or learning resour
 We have not verified those origins.
 A family component is evidence of asking-rate similarity among computationally related holders, not evidence that clients recognize a template source or that an identified source causes a price position.
 
-### Verified Records Do Not Eliminate the Shared-Generic Association
+### Verified Records Do Not Eliminate the Copied-Generic Association
 
 The interaction form addresses whether textual associations become negligible when platform records are available.
 @fig-records shows full-unit contrasts within completed-job groups.
-Shared-generic composition is associated with {{< var record-gen-0-jobs >}}, {{< var record-gen-1-9-jobs >}}, {{< var record-gen-10-49-jobs >}}, and {{< var record-gen-50--jobs >}} in asking rate in the zero, 1–9, 10–49, and 50+ groups, respectively.
+Copied-generic composition is associated with {{< var record-copied-gen-0-jobs >}}, {{< var record-copied-gen-1-9-jobs >}}, {{< var record-copied-gen-10-49-jobs >}}, and {{< var record-copied-gen-50--jobs >}} in asking rate in the zero, 1–9, 10–49, and 50+ groups, respectively.
 The association persists rather than converging toward zero.
 Its magnitude is greater in the 50+ group than in the zero-job group, but it does not widen monotonically across every group.
 
@@ -714,7 +714,7 @@ Its magnitude is greater in the 50+ group than in the zero-job group, but it doe
 
 The authored-specific contrasts are less precisely estimated in some record groups.
 Non-substitution should therefore not be read as an assertion that every text coefficient is equally strong at every experience level.
-The narrower result is that the robust shared-generic association survives alongside substantial verified records.
+The narrower result is that the robust copied-generic association survives alongside substantial verified records.
 This rejects a simple disappearance pattern in the observed cross-section, not every possible causal model of reputation and presentation.
 
 Three profiles with substantial completed-job records show how this coexistence looks on the page.
@@ -746,28 +746,28 @@ Appendix D reports sample sizes and coefficient-level detail.
 {{< include analysis/output/paper/tables/robustness.qmd >}}
 
 The principal composition pattern is retained across the applicable checks.
-Authored-specific composition remains positively associated with asking rate, shared-generic composition remains negatively associated, and the shared-generic contrast remains negative in the highest completed-job group.
+Authored-specific composition remains positively associated with asking rate, copied-generic composition remains negatively associated, and the copied-generic contrast remains negative in the highest completed-job group.
 These results do not depend solely on brief formulae, agency membership, or the most heavily shared descriptions.
 Family-to-family-plus-residual variance remains approximately {{< var rob-family-2 >}} with the broader sharing threshold and {{< var rob-family-4 >}} after excluding agency members.
 
 Two qualifications matter.
-First, with the stricter specificity rule, shared-specific composition is associated with approximately {{< var rob-strict-shared-spec >}}, rather than a discount.
-The distinction between authored-specific and shared-generic composition is robust; a general copied-expertise discount is not.
+First, with the stricter specificity rule, copied-specific composition is associated with approximately {{< var rob-strict-copied-spec >}}, rather than a discount.
+The distinction between authored-specific and copied-generic composition is robust; a general copied-expertise discount is not.
 Second, in the within-one-day edit subset, the family ratio is smaller, approximately {{< var rob-family-6 >}}, although the comparison with the no-family model still yields a likelihood-ratio statistic of approximately {{< var rob-timing-lr >}}.
 This subset contains {{< var rob-timing-workers >}} Model 2 workers.
-The shared-generic contrast remains negative, including {{< var rob-timing-gen-50 >}} in the 50+ job group.
+The copied-generic contrast remains negative, including {{< var rob-timing-copied-gen-50 >}} in the 50+ job group.
 The subset limits the role of later recorded description edits, but cannot establish that the text was written before any work record existed.
 Neither an entry-stage chronology nor a within-worker widening claim follows from it.
 
 The alternative outcomes give a different perspective on market position.
-Among rated workers with at least five completed jobs, shared-generic composition is positively associated with ratings below 4.8 (OR approximately {{< var rob-rating-gen-or >}}); authored-specific composition has no discernible association with this outcome.
-In the hours model, conditional on asking rate and the remaining controls, a full-unit shared-generic contrast corresponds to approximately {{< var rob-hours-gen >}} more in $1+\text{recorded hours}$.
+Among rated workers with at least five completed jobs, copied-generic composition is positively associated with ratings below 4.8 (OR approximately {{< var rob-rating-copied-gen-or >}}); authored-specific composition has no discernible association with this outcome.
+In the hours model, conditional on asking rate and the remaining controls, a full-unit copied-generic contrast corresponds to approximately {{< var rob-hours-copied-gen >}} more in $1+\text{recorded hours}$.
 This is compatible with lower-price, higher-volume positioning rather than simple exclusion from work, but cumulative hours cannot identify demand, productivity, or service quality.
 These checks support a bounded segment interpretation and do not convert asking-rate associations into causal client responses.
 
 # Theory Development
 
-The two models jointly establish three empirical regularities: within-profile composition is selective; textual composition and circulation families are associated with market position; and the shared-generic association does not disappear where verified records are available.
+The two models jointly establish three empirical regularities: within-profile composition is selective; textual composition and circulation families are associated with market position; and the copied-generic association does not disappear where verified records are available.
 @fig-theory organizes these regularities and their interpretation as a process model.
 Copyability and differentiation pressure are the conditions of the setting.
 Copyability, defined above, makes others' wording available as a resource.
@@ -839,7 +839,7 @@ The observed composition supports investigating where signaling costs may reside
 
 In @fig-theory, P2a and P2b link profile composition to market position, and P2c links circulation families, a property of copying that spans profiles because it is the co-adoption structure of the wording that copying draws on, to the same outcome.
 Model 2 indicates that content and operational authorship should not be collapsed.
-Occupationally specific composition has different asking-rate associations depending on whether its wording is shared, while the shared-generic category carries the most stable discount.
+Occupationally specific composition has different asking-rate associations depending on whether its wording is shared, while the copied-generic category carries the most stable discount.
 A single measure of textual specificity would conflate these combinations; a single reuse indicator would conflate a profile with a small shared close and one dominated by shared assurances.
 
 Earlier work associates conventional signals that any sender can produce with weaker outcomes, for example ingratiation with lower earnings [@HolthausStock2018].
@@ -852,7 +852,7 @@ Family-linked asking-rate differences remain after accounting for city and measu
 Shared content need not distinguish individual competence to be informative about a presentation environment and its associated market position.
 
 **Proposition 2—Composition and provenance associations.**
-*In copyable self-presentation, (a) authored-specific composition is associated with an asking-rate premium, (b) shared-generic composition is associated with an asking-rate discount, and (c) circulation-family membership provides additional information about market position beyond content composition, recorded work, and broad geographic and occupational differences.*
+*In copyable self-presentation, (a) authored-specific composition is associated with an asking-rate premium, (b) copied-generic composition is associated with an asking-rate discount, and (c) circulation-family membership provides additional information about market position beyond content composition, recorded work, and broad geographic and occupational differences.*
 
 Here “premium” and “discount” name conditional associations against the authored-generic reference, not rewards or penalties imposed by clients.
 The provenance part is also deliberately circulation-based.
@@ -877,16 +877,16 @@ Verified records and textual composition are different informational objects.
 A completed-job count records past platform work.
 A description frames the offering and can position it relative to client needs, service scope, and price.
 If text only compensated for the absence of verified evidence, its asking-rate associations should become weak where records are substantial.
-Instead, the shared-generic association persists across all completed-job groups and is not smaller among the most experienced group than among workers with no completed jobs.
+Instead, the copied-generic association persists across all completed-job groups and is not smaller among the most experienced group than among workers with no completed jobs.
 Other work finds that individual records can displace coarser cues as they accumulate [@KanatHongRaghu2018] and that records lose part of their premium when other verification becomes available [@LiangHongGu2025].
 Our result concerns text composition and market position, and says nothing about hiring.
 
 **Proposition 3—Non-substitution.**
-*The asking-rate association of shared-generic self-presentation persists across verified-record groups: substantial platform-recorded work does not eliminate the textual association with market position.*
+*The asking-rate association of copied-generic self-presentation persists across verified-record groups: substantial platform-recorded work does not eliminate the textual association with market position.*
 
 This is not a proposition about inevitable individual career change.
 The evidence compares workers in a cross-section, and the description-timing subset does not recover their earlier work records.
-The market-position result is narrower and more robust: records and text coexist, and record availability does not make the shared-generic association disappear.
+The market-position result is narrower and more robust: records and text coexist, and record availability does not make the copied-generic association disappear.
 
 Taken together, the propositions shift attention from whether copied words are credible in isolation to how copyability, together with pressure to differentiate, shapes profile composition and how that composition and its circulation are read in market position.
 Content is reproducible, but the informational structure of its composition and circulation is not exhausted by that fact.
@@ -922,7 +922,7 @@ It requires only that composition and circulation are associated with market pos
 The results also bear on whether verified records displace other cues.
 Group-level cues such as country image fade as individual reputation accumulates [@KanatHongRaghu2018], and employers' preference for experienced workers declined when a monitoring tool verified current work [@LiangHongGu2025].
 Extending that logic to text would predict that its association with market position weakens as records accumulate.
-We find instead that the shared-generic association persists across all completed-job groups (@fig-records).
+We find instead that the copied-generic association persists across all completed-job groups (@fig-records).
 The comparison is not like for like: the cue is text composition and not country image, the outcome is asking rate and not hiring or survival, and the design is cross-sectional.
 We read the result as records and text informing different dimensions of position.
 A record documents past platform activity without specifying the clients, service configurations, or price positions to which a profile is addressed.
@@ -953,7 +953,7 @@ Our analysis shows that this account is partly assembled from a shared repertoir
 Exact sharing is concentrated within cities, countries, and first-listed occupations by factors of {{< var lift-city-key >}}, {{< var lift-country >}}, and {{< var lift-occ1 >}} relative to random mixing.
 This extends the evidence that place remains salient in online labor markets [@KanatHongRaghu2018; @GefenCarmel2008] from provider outcomes to the resources workers use to present themselves, and it connects to work on gig literacies [@SutherlandJarrahiDunnNelson2020; @LehdonvirtaEtAl2019].
 We do not infer nationality or culture, and we cannot say how workers acquire the wording they share.
-The within-profile design distinguishes composition from the general characteristics of workers who share, and the family component distinguishes shared-text relationships from broad city differences.
+The within-profile design distinguishes composition from the general characteristics of workers who share, and the family component distinguishes copied-text relationships from broad city differences.
 Global visibility does not imply a globally homogeneous resource for learning how to present oneself.
 
 Methodologically, the contribution is the conjunction of sequence-based reuse detection, within-profile composition analysis, and worker-level composition and family modeling.
@@ -1011,7 +1011,7 @@ It could also examine how richer reputation systems or platform policing of copy
 Publicly reproducible profile text is not necessarily uninformative.
 We theorize copying as a practice of profile composition that follows from copyability: under copyability and pressure to differentiate, workers combine authored and copied wording selectively.
 In this Upwork cross-section, that composition is associated with market position, measured by the posted asking rate, and circulation families add information beyond the modeled city and worker covariates.
-The shared-generic association persists alongside substantial verified records.
+The copied-generic association persists alongside substantial verified records.
 These findings motivate a process model in which content, profile composition, and provenance are distinct dimensions.
 Copyability does not simply erase differentiation; it helps organize where differentiation and relational information reside.
 The account is model-led and bounded: it concerns observed composition and asking-rate associations, not proven writing costs, client penalties, original authors, or externally verified sources.

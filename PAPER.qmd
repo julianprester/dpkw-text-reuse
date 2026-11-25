@@ -319,9 +319,51 @@ Appendix E gives the computing environment and run order.
 
 ## Variables and Measurements
 
-The study builds on variables at the sentence and profile levels, as illustrated in @fig-phenomenon.
+Based on the detected copying relationships between sentences, we constructed variables at the sentence and profile levels.
+These variables are used to estimate the probability that a sentence is copied (Model 1) and to examine how (partly) copied profile composition is associated with asking rates (Model 2).
+@fig-phenomenon situates the variables in the phenomenon and connects them to the analytical models, while @tbl-measures provides the measuement details.
 
-@tbl-measures summarizes the variables, their operationalizations, and the role each plays in the two models.
+![Text reuse in worker profiles: Phenomenon and measurement](figure/phenomenon_overview.png){#fig-phenomenon width=80%}
+
+At the sentence level, *Copied* indicates whether a sentence has an exact cross-worker match in its word-five-gram sets ($J=1$) [@WilkersonEtAl2015; @LinderEtAl2020].
+It denotes a measured textual match, not worker intent or copying direction; the no-exact-match category can include near-copies.
+*Occupational specificity* counts distinct nonnumeric informative word types, each counted once; types must be used by at least 100 workers and have occupational KL divergence of at least 0.5 bits [@GrimmerStewart2013].
+**The count is represented as $\log(1+\text{count})$ in the analysis**, and a sentence is specific if it contains at least one informative type.
+*Numerical content* indicates whether a sentence contains at least one numeric token.
+*Rhetorical function* assigns each sentence to a category using a precedence-ordered keyword dictionary: claim-bearing (identity, credential, or capability), assurance (character or process), encounter (contact, invitation, or courtesy), or other (agency voice or unmatched sentences) [@GrimmerStewart2013].
+*Sentence position* measures relative rank among a profile’s qualifying sentences, scaled from 0 for the first to 1 for the last.
+*Length* is the whitespace-counted word count, represented by its logarithm in the analysis.
+
+At the profile level, the four composition shares jointly partition qualifying sentences by exact-sharing status and occupational specificity, and sum to one [@WilkersonEtAl2015; @LinderEtAl2020].
+*Authored-generic share* is the proportion with no detected exact match and no occupation-informative word type.
+*Authored-specific share* is the proportion with no detected exact match and at least one occupation-informative type.
+*Copied-generic share* is the proportion with an exact match and no occupation-informative type.
+*Copied-specific share* is the proportion with an exact match and at least one occupation-informative type.
+*Circulation family* assigns profiles with exact-shared sentences to the family covering the largest number of their shared sentences; profiles without exact-shared sentences have no family assignment [@WilkersonEtAl2015; @LinderEtAl2020].
+*Verified work record* is a categorical measure of completed jobs recorded by the platform [cf. @Pallais2014; @KanatHongRaghu2018; @KathuriaEtAl2021].
+*Market position* is the worker’s posted hourly asking rate in USD [cf. @MorenoTerwiesch2014; @Kokkodis2023].
+
+| Variable | Measurement | Interpretation and boundary |
+|:--|:-----|:---|
+| **Sentence-level variables** | | |
+| Copied<sup>N</sup> | Binary variable. Levels:<br>0: No exact copy detected in the corpus, i.e., authored<br>1: A word-five-gram match at $J=1$ was detected with at least one other profile, i.e., copied. | Shared measured form, not verified copying intent or direction; authored includes non-exact near-copies |
+| Occupational specificity | Count variable.<br>Number of distinct nonnumeric informative word types (each type counted once), where a type must be used by at least 100 workers and have occupational KL divergence ≥ 0.5 bits [based on @GrimmerStewart2013].  | Occupational concentration, not uniquely personal truth |
+| Rhetorical function | Categorical variable. Levels:<br>Claim-bearing: identity, credential, or capability<br>Assurance: character or process<br>Encounter: contact, invitation, and courtesy language<br>Other: agency voice or unmatched sentences<br>The categories are assigned using a precedence-ordered dictionary of keywords [based on @GrimmerStewart2013].   | Claim-bearing combines identity, credential, capability; estimation label: “individuating claim” |
+| Numerical content | Binary variable. Levels:<br>0: No numeric token detected<br>1: At least one numeric token detected by the content tokenizer  | Can concern history, quantities, or service promises |
+| Sentence position | Continuous variable (bounded 0,1).<br>Measures the relative sentence position: $$\frac{\text{rank}-1}{\text{number of qualifying sentences}-1}$$ Scale:<br>0 = first qualifying sentence<br>1 = last qualifying sentence<br>Intermediate values locate sentences proportionally between them.| Index among qualifying units; does not necessarily equal literal position in the description text |
+| Length | Continuous variable.<br>Whitespace-counted word count per qualifying sentence, represented by its logarithm in the analysis. | - |
+| **Profile-level variables** | | |
+| Authored-generic share<sup>N</sup><sup>C</sup> | Continuous variable (bounded 0,1).<br>Measures the proportion of a worker's qualifying sentences that have no detected exact cross-worker match ($J<1$) and contain no occupation-informative word type. | Operationally, no exact match detected; includes near-copies and does not establish independent authorship |
+| Authored-specific share<sup>N</sup><sup>C</sup> | Continuous variable (bounded 0,1).<br>Measures the proportion of a worker's qualifying sentences that have no detected exact cross-worker match ($J<1$) and contain at least one occupation-informative word type. | Operationally, no exact match detected; includes near-copies and does not establish independent authorship |
+| Copied-generic share<sup>N</sup><sup>C</sup> | Continuous variable (bounded 0,1).<br>Measures the proportion of a worker's qualifying sentences with an exact cross-worker match ($J=1$) and no occupation-informative word type. | Exact sharing is a measured textual match; copying intent and direction are not established |
+| Copied-specific share<sup>N</sup><sup>C</sup> | Continuous variable (bounded 0,1).<br>Measures the proportion of a worker's qualifying sentences with an exact cross-worker match ($J=1$) and at least one occupation-informative word type. | Exact sharing is a measured textual match; copying intent and direction are not established |
+| Circulation family<sup>N</sup> | Categorical variable.<br>Each profile with exact-shared sentences is assigned its dominant family ID. Exact-shared sentences with identical word-five-gram sets ($J=1$) are grouped into scripts. Scripts are linked when each has at least five adopters, at least three workers adopted both, and their overlap coefficient—co-adopters divided by the smaller script’s adopter count—is at least 0.5. A profile’s dominant family is the one covering the most of its exact-shared sentences. Profiles without exact-shared sentences have no family assignment. | Circulation-based provenance proxy, not an externally verified origin |
+| Verified work record | Categorical variable. Levels:<br>0, 1–9, 10–49, 50+ completed jobs [cf. @Pallais2014; @KanatHongRaghu2018; @KathuriaEtAl2021] | Platform-recorded work, distinct from textual claims about experience |
+| Market position | Continuous variable.<br>Posted hourly asking rate in USD [cf. @MorenoTerwiesch2014; @Kokkodis2023] | Asking price, not realized wage or observed client valuation |
+
+: Variables and measurements {#tbl-measures .small-table}
+
+*Note.* <sup>N</sup> New variable, based on computational text-reuse methods in political science [@WilkersonEtAl2015; @LinderEtAl2020].<br><sup>C</sup> The composition shares sum to 1 for each profile.
 
 > Copyability and differentiation pressure are scope conditions of the setting, not measured variables, and control variables are listed with Model 2 below.
 > *Differentiation pressure* is the need to stand out to a hurried audience that can read copy-paste as laziness [@BlythJarrahiLutzEtAl2022]; like copyability, it is drawn from the literature and not measured.
@@ -329,8 +371,6 @@ The study builds on variables at the sentence and profile levels, as illustrated
 > The content and reuse measures are constructed before the rate models; qualitative judgments are not substituted for them.
 > Where a measure builds on prior work, the table cites it.
 > We developed the content measures (occupational specificity, numerical content, rhetorical function) and sentence position for this study, in the manner of text-as-data work [@GrimmerStewart2013], and use the platform fields as recorded.
-
-![Text reuse in worker profiles: Phenomenon and measurement](figure/phenomenon_overview.png){#fig-phenomenon}
 
 > Three components structure the measurements and models below.
 > *Content* refers to the substance of a sentence: its occupational detail, numerical claims, rhetorical function, and other meanings.
@@ -359,50 +399,6 @@ The study builds on variables at the sentence and profile levels, as illustrated
 > Occupational specificity, personal individuation, original wording, and truth-conditional portability are related but not identical.
 > We use occupational wording and numerical content as tractable indicators of selective composition, not as direct measures of whether a sentence is true for one worker alone.
 
-**Specificity.**
-We estimate a lexicon on sentences with no detected sharing at $J\geq .5$, counting each worker once per word type.
-For a word's users, we compare the distribution of first-listed occupations with the corresponding worker baseline using Kullback–Leibler (KL) divergence.
-Types used by at least 100 workers and carrying at least .5 bits of divergence, excluding numeric types, are informative.
-The lexicon contains {{< var lexicon >}} informative types.
-Sentence specificity is the number of distinct informative types, modeled as $\log(1+\text{specific types})$ in Model 1.
-A sentence is specific in Model 2 if it contains at least one informative type.
-Estimating the lexicon on less-shared text reduces the possibility that a circulating template manufactures its own occupational specificity, but does not independently validate the variable.
-
-**Function.**
-A transparent, ordered dictionary assigns moves before they are collapsed for Model 1.
-Identity, credential, and capability moves form the reference group; character and process moves are assurances; encounter moves include invitations and courtesies.
-Agency and unmatched moves fall in “other” in the model.
-We use “claim-bearing” as readable shorthand for the reference grouping, not as a change to the estimation labels.
-The ordered rules can privilege an assurance keyword over an occupational or testimonial function in a mixed sentence.
-We retain this dictionary measurement and document supplementary disagreement diagnostics between the dictionary and the sentence codes from the qualitative analysis, without treating either as a benchmark.
-
-**Families.**
-To identify passages that recur together, scripts with at least five adopters are linked when at least three workers hold both and the overlap coefficient—co-adopters divided by the smaller script's adopter count—is at least .5.
-Connected components form multi-script families; unlinked scripts retain their own family identifiers.
-A worker's dominant family covers the largest number of that worker's shared sentence instances, with ties favoring the family represented by a larger script.
-This assignment summarizes circulation but does not represent all memberships of workers who combine several families.
-Locality, cohort proximity, and price-peer comparisons describe the relational structure of reuse separately from the asking-rate model.
-
-| Variable | Measurement | Interpretation and boundary |
-|:--|:-----|:---|
-| **Sentence-level variables** | | |
-| Copied<sup>N</sup> | Binary variable. Levels:<br>0: No exact copy detected in the corpus, i.e., authored<br>1: A word-five-gram match at $J=1$ was detected with at least one other profile, i.e., copied. | Shared measured form, not verified copying intent or direction; authored includes non-exact near-copies |
-| Occupational specificity | Count variable.<br>Number of distinct nonnumeric informative word types (each type counted once), where a type must be used by at least 100 workers and have occupational KL divergence ≥ 0.5 bits [based on @GrimmerStewart2013].  | Occupational concentration, not uniquely personal truth |
-| Numerical content | Binary variable. Levels:<br>0: No numeric token detected<br>1: At least one numeric token detected by the content tokenizer  | Can concern history, quantities, or service promises |
-| Rhetorical function | Categorical variable. Levels:<br>Claim-bearing: identity, credential, or capability<br>Assurance: character or process<br>Encounter: contact, invitation, and courtesy language<br>Other: agency voice or unmatched sentences<br>The categories are assigned using a precedence-ordered dictionary of keywords [based on @GrimmerStewart2013].   | Claim-bearing combines identity, credential, capability; estimation label: “individuating claim” |
-| Sentence position | Continuous variable (bounded 0,1).<br>Measures the relative sentence position: $$\frac{\text{rank}-1}{\text{number of qualifying sentences}-1}$$ Scale:<br>0 = first qualifying sentence<br>1 = last qualifying sentence<br>Intermediate values locate sentences proportionally between them.| Index among qualifying units; does not necessarily equal literal position in the description text |
-| **Profile-level variables** | | |
-| Authored-generic share<sup>N</sup><sup>C</sup> | Continuous variable (bounded 0,1).<br>Measures the proportion of a worker's qualifying sentences that have no detected exact cross-worker match ($J<1$) and contain no occupation-informative word type. | Operationally, no exact match detected; includes near-copies and does not establish independent authorship |
-| Authored-specific share<sup>N</sup><sup>C</sup> | Continuous variable (bounded 0,1).<br>Measures the proportion of a worker's qualifying sentences that have no detected exact cross-worker match ($J<1$) and contain at least one occupation-informative word type. | Operationally, no exact match detected; includes near-copies and does not establish independent authorship |
-| Copied-generic share<sup>N</sup><sup>C</sup> | Continuous variable (bounded 0,1).<br>Measures the proportion of a worker's qualifying sentences with an exact cross-worker match ($J=1$) and no occupation-informative word type. | Exact sharing is a measured textual match; copying intent and direction are not established |
-| Copied-specific share<sup>N</sup><sup>C</sup> | Continuous variable (bounded 0,1).<br>Measures the proportion of a worker's qualifying sentences with an exact cross-worker match ($J=1$) and at least one occupation-informative word type. | Exact sharing is a measured textual match; copying intent and direction are not established |
-| Circulation family<sup>N</sup> | Categorical variable.<br>Each profile with exact-shared sentences is assigned its dominant family ID. Exact-shared sentences with identical word-five-gram sets ($J=1$) are grouped into scripts. Scripts are linked when each has at least five adopters, at least three workers adopted both, and their overlap coefficient—co-adopters divided by the smaller script’s adopter count—is at least 0.5. A profile’s dominant family is the one covering the most of its exact-shared sentences. Profiles without exact-shared sentences have no family assignment. | Circulation-based provenance proxy, not an externally verified origin |
-| Verified work record | Categorical variable. Levels:<br>0, 1–9, 10–49, 50+ completed jobs [cf. @Pallais2014; @KanatHongRaghu2018; @KathuriaEtAl2021] | Platform-recorded work, distinct from textual claims about experience |
-| Market position | Continuous variable.<br>Posted hourly asking rate in USD [cf. @MorenoTerwiesch2014; @Kokkodis2023] | Asking price, not realized wage or observed client valuation |
-
-: Variables and measurements {#tbl-measures .small-table}
-
-*Note.* <sup>N</sup> New variable, adapted from computational text-reuse methods in political science [@WilkersonEtAl2015; @LinderEtAl2020].<br><sup>C</sup> The composition shares sum to 1 for each profile.
 
 ## Model 1: Within-Profile Composition
 

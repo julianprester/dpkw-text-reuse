@@ -309,6 +309,9 @@ Copyability is a condition of the setting and is not measured.
 We estimate a specificity lexicon on sentences with no detected sharing at $J\geq .5$, counting each worker once per word type.
 For a word's users, we compare the distribution of first-listed occupations with the corresponding worker baseline using Kullback–Leibler divergence.
 Types used by at least 100 workers and carrying at least .5 bits of divergence, excluding numeric types, are informative.
+Scoring words by how unevenly their use is distributed across groups is established in text analysis [@Dunning1993; @MonroeColaresiQuinn2008].
+Like log-odds measures that compare a group's use of a word with its use by all groups [@MonroeColaresiQuinn2008], our score compares the occupations of a word's users with those of all workers; averaged over words and weighted by their use, this Kullback–Leibler divergence is the mutual information between word use and occupation [@ZhaoSoofi2006].
+The frequency floor guards against the overstated associations of rare words [@Dunning1993; @MonroeColaresiQuinn2008], and both thresholds are comparison-specific choices [@Gabrielatos2018]; a stricter one-bit rule is among the robustness checks.
 The lexicon contains {{< var lexicon >}} informative types.
 A sentence is specific if it contains at least one informative type; the same indicator enters Model 1 and divides the Model 2 composition shares.
 Estimating the lexicon on less-shared text reduces the possibility that a circulating template manufactures its own occupational specificity, but does not independently validate the construct.

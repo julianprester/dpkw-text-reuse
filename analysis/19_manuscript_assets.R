@@ -215,29 +215,28 @@ savep(ggplot(SH, aes(share1)) +
 
 # Method diagram, using only static graphics so Quarto needs no host R or browser execution.
 method_boxes <- data.table(
-  x = c(7.2, 7.2, 4.7, 9.7, 4.7, 9.7, 4.7, 9.7, 7.2),
-  y = c(10.0, 8.1, 6.1, 6.1, 4.2, 4.2, 2.2, 2.2, .3),
-  w = c(6.8, 8.8, 3.8, 3.8, 3.8, 3.8, 3.8, 3.8, 7.2),
-  h = c(1.3, 1.2, 1.2, 1.2, 1.2, 1.2, 1.4, 1.4, 1.0),
+  x = c(7.2, 7.2, 4.7, 9.7, 4.7, 9.7, 7.2, 7.2),
+  y = c(10.0, 8.1, 6.1, 6.1, 4.2, 4.2, 2.2, .3),
+  w = c(6.8, 8.8, 3.8, 3.8, 3.8, 3.8, 8.8, 7.2),
+  h = c(1.3, 1.2, 1.2, 1.2, 1.2, 1.2, 1.4, 1.0),
   text = c("• Public profile records\n• Sentence corpus",
            "Cross-worker text-reuse detection\nSentence matches, exact sharing, and scripts",
            "Model 1\nWithin-profile composition", "Model 2\nComposition and asking rates",
            "Content, function, position\nand variant alignments",
-           "Verified records, city effects,\nand circulation families",
-           "Qualitative analysis\nClose readings of sampled profiles\nand near-copy pairs",
-           "Robustness checks\nAlternative measures, samples,\nand outcomes",
-           "Abductive interpretation and bounded propositions")
+           "Verified records, geographic proximity,\nand circulation families",
+           "Qualitative analysis: close readings of sampled profiles and near-copy pairs\nRobustness checks: alternative measures, samples, and outcomes\n(for both models)",
+           "Theoretical model and propositions")
 )
 method_edges <- data.table(
-  x = c(7.2, 6.2, 8.2, 4.7, 9.7, 4.7, 9.7, 4.7, 9.7),
-  y = c(9.35, 7.5, 7.5, 5.5, 5.5, 3.6, 3.6, 1.5, 1.5),
-  xend = c(7.2, 4.7, 9.7, 4.7, 9.7, 4.7, 9.7, 5.7, 8.7),
-  yend = c(8.7, 6.7, 6.7, 4.8, 4.8, 2.9, 2.9, .8, .8)
+  x = c(7.2, 6.2, 8.2, 4.7, 9.7, 4.7, 9.7, 7.2),
+  y = c(9.35, 7.5, 7.5, 5.5, 5.5, 3.6, 3.6, 1.5),
+  xend = c(7.2, 4.7, 9.7, 4.7, 9.7, 4.7, 9.7, 7.2),
+  yend = c(8.7, 6.7, 6.7, 4.8, 4.8, 2.9, 2.9, .8)
 )
 method_phases <- data.table(
   x = 1.5,
   y = c(10.0, 8.1, 5.15, 2.2, .3),
-  label = c("CORPUS\nCONSTRUCTION", "TEXT-REUSE\nDETECTION", "PRIMARY\nANALYSIS", "SECONDARY\nANALYSIS", "THEORY\nDEVELOPMENT")
+  label = c("CORPUS\nCONSTRUCTION", "TEXT-REUSE\nDETECTION", "MAIN\nANALYSIS", "SECONDARY\nANALYSIS", "THEORY\nDEVELOPMENT")
 )
 method_plot <- ggplot() +
   geom_rect(data = method_boxes,
@@ -256,6 +255,7 @@ method_plot <- ggplot() +
 savep(method_plot, "method", w = 8, h = 8.4)
 # Theory figure: constructs are boxes, propositions are block arrows carrying their text (mechanisms linking constructs).
 # Reputation building (verified records) is a second practice beside profile composition, linked only to the P2 associations by P3;
+# together the two practices form signal portfolio building (outer box);
 # circulation families are a property of copying.
 theory_fig <- local({
   BLUE <- "#205a78"; RED <- "#b73730"; GREY <- "#e9e9e9"; TEAL <- "#dcebf2"; ORANGE <- "#f8e3c8"; GREEN <- "#cfe0b8"; SAND <- "#f6ecd2"; PROP <- "#fbeceb"
@@ -270,7 +270,8 @@ theory_fig <- local({
     else list(shape, txt((x0 + xb) / 2, yc + hb * .6, tag, 3.1, "bold", RED), txt((x0 + xb) / 2, yc - hb * .25, body))
   }
   ggplot() + coord_cartesian(xlim = c(0, 13.1), ylim = c(-.6, 7.3), clip = "off") + theme_void() + list(
-    txt(1.2, 6.95, "CONDITIONS", 3, "bold", BLUE), txt(6.25, 6.95, "PRACTICES", 3, "bold", BLUE), txt(12.225, 6.95, "OUTCOME", 3, "bold", BLUE),
+    rect(4.64, 7.84, .1, 6.78, "#f1f6f9"), txt(6.24, 6.62, "SIGNAL PORTFOLIO BUILDING", 2.5, "bold", BLUE),
+    txt(1.2, 6.95, "CONDITIONS", 3, "bold", BLUE), txt(6.25, 7.05, "PRACTICES", 3, "bold", BLUE), txt(12.225, 6.95, "OUTCOME", 3, "bold", BLUE),
     box(1.2, 5.7, 2.1, .9, GREY, "Copyability"), box(1.2, 4.2, 2.1, .9, GREY, "Differentiation\npressure"),
     block(2.35, 4.6, 4.95, .85, 1.15, .45, "P1", "Selective\ncomposition", inline = TRUE),
     rect(4.7, 7.8, 2.1, 6.4, NA, 2),

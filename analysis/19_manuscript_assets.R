@@ -126,7 +126,7 @@ A <- M1[model == "M1 main (FE logit)"][match(terms1, term)]
 L <- M1[model == "M1 LPM (FE OLS)"][match(terms1, term)]
 md(data.frame(Predictor = labels1, `Logit coefficient (SE)` = bs(A$est, A$se), `Odds ratio` = fx(exp(A$est)), `95% interval for OR` = paste0("[", fx(exp(A$est - 1.96 * A$se)), ", ", fx(exp(A$est + 1.96 * A$se)), "]"), `Linear probability (SE)` = bs(L$est, L$se), check.names = FALSE),
    "model1", "Model 1: within-profile composition", "tbl-model1",
-   "773,424 sentences in 86,956 mixed profiles for the logit; worker fixed effects and worker-clustered standard errors. Function reference: dictionary-coded identity, credential, or capability (the estimation label is ‘individuating claim’); relative position runs from 0 (first qualifying sentence) to 1 (last). Intervals are normal-approximation Wald intervals. The linear-probability column is a link-function check on direction; it uses all 2,309,694 eligible sentences, including profiles whose sharing outcome does not vary, and no odds-ratio transformation applies.")
+   "773,424 sentences in 86,956 mixed profiles for the logit; worker fixed effects and worker-clustered standard errors. Function reference: capability claims (dictionary-coded identity, credential, or capability moves); relative position runs from 0 (first qualifying sentence) to 1 (last). Intervals are normal-approximation Wald intervals. The linear-probability column is a link-function check on direction; it uses all 2,309,694 eligible sentences, including profiles whose sharing outcome does not vary, and no odds-ratio transformation applies.")
 
 # Model 2 selected coefficients for the two fixed-effects forms and multilevel form.
 M2 <- read_tab("model2_fixed_effects_clustered")

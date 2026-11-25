@@ -78,8 +78,8 @@ save_fig(p6, "fig_family_waves", 8, 6.5)
 
 # Fig M1 -- Model 1 (authorship allocation): odds ratios, within-profile FE logit
 m1 <- tb("model1_coefficients")[model == "M1 main (FE logit)" & term != "lwords"]
-lab <- c(specific = "Occupation-specific (any informative word)", number = "Quantified claim (number)", funcassurance = "Assurance (vs individuating claim)",
-         `funcencounter formula` = "Encounter formula (vs individuating claim)", funcother = "Other function (vs individuating claim)",
+lab <- c(specific = "Occupation-specific (any informative word)", number = "Quantified claim (number)", funcassurance = "Assurance (vs capability claim)",
+         `funcencounter formula` = "Encounter formula (vs capability claim)", funcother = "Other function (vs capability claim)",
          rel = "Position: last vs first sentence of the profile")
 m1[, label := factor(lab[term], levels = rev(lab))]
 pm1 <- ggplot(m1, aes(odds_ratio, label)) + geom_vline(xintercept = 1, colour = "grey50") +

@@ -34,7 +34,7 @@ abstract: |
   The shared-generic association persists across completed-job groups rather than disappearing with verified reputation.
   Robustness checks and a supplementary qualitative analysis qualify these patterns without replacing them.
   We theorize copying as a practice of profile composition and develop a process model with three propositions.
-  Under copyability, workers combine authored and copied wording selectively; composition and circulation are associated with market position; and verified records do not displace the textual association.
+  Under copyability, workers combine authored and copied wording selectively; composition and circulation are associated with market position; and verified records do not substitute for profile composition.
   Copyability need not eliminate information but can redistribute it across a profile's composition and circulation relationships.
   Asking-rate associations do not establish client valuation, causal effects, independent composition, or verified template origins.
 date: last-modified
@@ -706,7 +706,7 @@ Circulation families describe how copied wording is distributed across profiles,
 
 The model specifies a condition, practices, and an outcome rather than an ordered sequence of events: authoring and copying are concurrent practices that vary in degree within one profile.
 The three dimensions of a textual signal map onto it: content is what the practices act on, profile composition is the practice, and circulation is a property of copying.
-The proposed mechanisms concern claim portability, fit, and circulation environments.
+The proposed mechanisms concern claim fit, adaptation, and circulation environments.
 
 ## Selective Composition of Profiles
 
@@ -714,8 +714,9 @@ Under copyability a worker can author wording, copy it, or combine both.
 *Profile composition* is the combination of the two practices, observed as authored and exact-shared sentences (see Constructs and Measurements).
 
 Copyability makes broadly applicable language available without requiring a worker to compose its wording anew.
-It does not make all claims equally fitting, because claims differ in *portability*: the range of workers for whom a claim remains applicable.
-A general communication promise can apply to almost any worker, a statement about a narrow capability to fewer, and a personally anchored account of a particular history to fewer still.
+It does not make all claims equally fitting.
+A general communication promise is portable: it can apply to almost any worker.
+A statement about a narrow capability applies to fewer workers, and an account of a particular history must fit the worker who makes it.
 Copying makes all three equally easy to reproduce, but not equally appropriate to adopt.
 The within-profile estimates show that occupational detail and numerical content are associated with less exact sharing even when general worker differences are absorbed.
 Assurances and encounter formulae are associated with more sharing; sharing becomes more likely later in the profile.
@@ -733,13 +734,13 @@ The potential cost lies in developing and fitting a presentation to the sender, 
 This is an interpretation to be developed from the composition pattern, not something text similarity directly observes.
 
 **Proposition 1—Selective profile composition.**
-*Under public copyability, workers preferentially use non-exact-shared wording for occupationally specific and quantified claims, and share more of the wording that appears later in a profile, while drawing more heavily on shared wording for assurances and encounter formulae.
-Within recurring forms, occupational and numerical elements are comparatively frequent sites of variation.*
+*Under copyability, workers compose profiles selectively: (a) they copy portable claims and author claims that must fit them, and (b) when they copy wording, they adapt the elements that make it fit.*
 
 The proposition also addresses why composition is mixed.
-Copyability explains why workers can copy, and portability explains why they do not copy everything: a claim that applies narrowly must be written to fit.
+Copyability explains why workers can copy, but a claim that applies narrowly must still be written to fit.
 In the data, most profiles contain no detected exact sharing, and among those that do, reuse is usually partial.
 Selective composition is then the plausible response: copy what is portable, and author what must fit.
+Part (b) rests on the near-copy evidence: where wording recurs with variation, the variation falls disproportionately on occupation-informative and numerical words, the elements that make copied wording fit a particular worker.
 The proposition describes a tendency, not a prohibition.
 It is consistent with detailed shared capabilities and person-specific claims that occur late.
 Occupational specificity narrows applicability without necessarily identifying one person, and a copied history claim can be applicable to more than one worker.
@@ -765,9 +766,10 @@ Family-linked asking-rate differences remain after accounting for geographic pro
 Shared content need not distinguish individual competence to be informative about a presentation environment and its associated market position.
 
 **Proposition 2—Composition and circulation associations.**
-*In copyable self-presentation, (a) authored-specific composition is associated with an asking-rate premium, (b) shared-generic composition is associated with an asking-rate discount, and (c) circulation-family membership provides additional information about market position beyond content composition, recorded work, and broad geographic and occupational differences.*
+*Under copyability, profile composition is associated with market position: (a) authored-specific composition with a premium, (b) shared-generic composition with a discount, and (c) circulation families carry further information about market position.*
 
-Here “premium” and “discount” name conditional associations against the authored-generic reference, not rewards or penalties imposed by clients.
+The premium and discount are relative to authored-generic composition.
+Part (c) means that workers who draw on the same circulation family have more similar market positions than their composition, verified records, and location would predict.
 The circulation part rests on co-adoption, not on identified sources.
 Families may arise in several ways: workers may imitate salient examples under uncertainty [@DiMaggioPowell1983; @HaunschildMiner1997], draw on recurrent genres of self-presentation [@YatesOrlikowski1992; @OrlikowskiYates1994], learn from peers [@SutherlandJarrahiDunnNelson2020; @GussekWiesche2024], or share organizational texts and other common exposure.
 The imitation literature concerns organizations and communities, where imitation requires investment; adopting wording in a profile requires none, so imitation may spread more easily among individual workers.
@@ -791,11 +793,9 @@ Instead, the shared-generic association persists across all completed-job groups
 Other work finds that individual records can displace coarser cues as they accumulate [@KanatHongRaghu2018] and that records lose part of their premium when other verification becomes available [@LiangHongGu2025].
 
 **Proposition 3—Non-substitution.**
-*The asking-rate association of shared-generic self-presentation persists across verified-record groups: substantial platform-recorded work does not eliminate the textual association with market position.*
+*Verified records do not substitute for profile composition, and shared-generic composition remains associated with a market-position discount among workers with substantial records.*
 
-This is not a proposition about inevitable individual career change.
-The evidence compares workers in a cross-section, and the description-timing subset does not recover their earlier work records.
-The market-position result is narrower and more robust: records and text coexist, and record availability does not make the shared-generic association disappear.
+Because the evidence compares workers in a cross-section, the proposition concerns the coexistence of records and text, not individual career change.
 
 Taken together, the propositions shift attention from whether copied words are credible in isolation to how copyability shapes profile composition and how that composition and its circulation are read in market position.
 Content is reproducible, but the informational structure of its composition and circulation is not exhausted by that fact.

@@ -32,11 +32,9 @@ abstract: |
   A worker-level model connects textual composition and circulation families to market position, measured by posted asking rates.
   Authored-specific composition has a positive association and shared-generic composition a negative association; family-linked differences remain after accounting for geographic proximity and worker covariates.
   The shared-generic association persists across completed-job groups rather than disappearing with verified reputation.
-  Robustness checks and a supplementary qualitative analysis qualify these patterns without replacing them.
   We theorize copying as a practice of profile composition and develop a process model with three propositions.
   Under copyability, workers combine authored and copied wording selectively; composition and circulation are associated with market position; and verified records do not substitute for profile composition.
   Copyability need not eliminate information but can redistribute it across a profile's composition and circulation relationships.
-  Asking-rate associations do not establish client valuation, causal effects, independent composition, or verified template origins.
 date: last-modified
 bibliography: references.bib
 csl: apa.csl
@@ -88,7 +86,6 @@ Copyability is its central condition, profile composition is its practice, and m
 Profile composition is the combination of two concurrent practices, authoring and copying.
 Three propositions state the mechanisms that link the constructs: selective composition, composition and circulation associations with market position, and non-substitution between records and text.
 The account distinguishes three dimensions of textual signals: *content*, or what a claim says; *profile composition*, or how authored and copied wording combine in a profile; and *circulation*, or how copied wording is distributed across workers.
-The distinction does not imply that we can recover a sentence's original author or externally verified source.
 It explains why copyable content can coexist with informative composition and circulation.
 
 This account makes three contributions.
@@ -218,7 +215,6 @@ The final phase develops a theoretical model and propositions from these results
 
 The two models answer different questions at different units of analysis.
 A worker-level comparison alone cannot distinguish selective composition inside a profile from differences in who shares wording, and a sentence-level comparison alone cannot show how the resulting composition relates to market position.
-The two-model design connects these levels without treating them as a single causal sequence.
 
 ## Setting and Data Collection
 
@@ -276,8 +272,6 @@ This category includes non-exact near-copies but cannot establish independent co
 Candidate detection is similarity-dependent.
 Under the LSH configuration, the probability of becoming a candidate is $1-(1-J^4)^{60}$: approximately {{< var lsh-low >}} at $J=.3$ and {{< var lsh-half >}} at $J=.5$, approaching one at higher similarities.
 We consequently center inference on exact sharing, use $J\geq .7$ as a model sensitivity check, and use $.5\leq J<1$ for variant alignment.
-Low-similarity candidates are not an exhaustive census of weaker reuse.
-Nor do unobserved matches outside this corpus establish originality.
 
 {{< include analysis/output/paper/tables/sample_flow.qmd >}}
 
@@ -324,7 +318,7 @@ For rhetorical function, a transparent, ordered dictionary assigns moves before 
 Identity, credential, and capability moves form the reference group; character and process moves are assurances; encounter moves include invitations and courtesies.
 Agency and unmatched moves fall in “other” in the model.
 The ordered rules can privilege an assurance keyword over an occupational or testimonial function in a mixed sentence.
-We retain this dictionary measurement and document supplementary disagreement diagnostics between the dictionary and the sentence codes from the qualitative analysis, without treating either as a benchmark.
+Appendix C3 compares the dictionary with the sentence codes from the qualitative analysis.
 
 **Profile composition.**
 At the sentence level, profile composition is a sentence's exact-shared or authored status together with its relative position, which runs from 0 for a profile's first qualifying sentence to 1 for its last.
@@ -398,8 +392,6 @@ This ratio excludes city variance and is not the share of total asking-rate vari
 Composition coefficients describe a unit change in a share relative to the omitted category.
 Reporting $100[\exp(\theta)-1]$ therefore gives a hypothetical contrast between an entirely one-type profile and an entirely authored-generic profile.
 It is not the effect of copying one sentence or the change expected for a typical worker.
-The models describe conditional asking-rate associations.
-They do not observe client recognition of copying, client valuation of prose, or causal consequences of adopting a template.
 
 ## Supplementary Qualitative Analysis
 
@@ -460,7 +452,6 @@ Sharing also clusters, more weakly, by occupation.
 Structure remains even among pairs sharing only lexicon-generic sentences: country lift is {{< var generic-country-lift >}} and occupation lift {{< var generic-occupation-lift >}}.
 Generic content does not imply socially unrestricted circulation.
 Among same-city exact-sharing pairs, description-creation dates are within 30 days of one another {{< var cohort-lift-month >}} times as often as in the matched random comparison, and within seven days {{< var cohort-lift-week >}} times as often.
-These dates concern description creation, not necessarily entry onto the platform.
 Exact-sharing partners' log asking rates correlate {{< var price-correlation >}}, compared with {{< var price-correlation-null >}} when the partner is replaced by a randomly selected worker from the same country–occupation stratum.
 
 Together, these findings support treating shared wording as a relationally organized resource.
@@ -542,12 +533,11 @@ The multilevel form attributes variance {{< var m2-var-family >}} to circulation
 The family-to-family-plus-residual ratio is {{< var family-share >}}.
 Adding the family component yields a likelihood-ratio statistic of approximately {{< var family-lr >}} against the otherwise comparable model with country and city effects only.
 The component is consequently not reducible to the modeled geographic structure.
-Its interpretation remains conditional on the specified controls, dominant-family assignment, and random-effects assumptions.
 
 The composition relationships also remain in the multilevel form.
 For the zero-job reference group, full-unit contrasts are approximately {{< var m2ml-authored-spec >}} for authored-specific, {{< var m2ml-shared-gen >}} for shared-generic, and {{< var m2ml-shared-spec >}} for shared-specific composition.
 These should be compared with the zero-job coefficients of the interaction fixed-effects form, not directly with the average slopes of form 2a.
-The attenuation of the shared-generic coefficient after adding families is compatible with part of its association being linked to circulation, but is not a causal decomposition.
+The attenuation of the shared-generic coefficient after adding families suggests that part of its association runs through circulation.
 
 A low-priced family in the sample shows what this means.
 Its three sampled members work in the Philippines and Pakistan, are listed under Customer Service and IT & Networking, and have between {{< var jobs-fam-min >}} and {{< var jobs-fam-max >}} completed jobs.
@@ -645,7 +635,6 @@ Composition can therefore still distinguish workers even when some of its conten
 A cost-based signaling interpretation is consequently possible without treating the copied words themselves as a costly investment.
 Composing a fitting account of capabilities and experience may require knowledge, effort, and the ability to substantiate claims.
 The potential cost lies in developing and fitting a presentation to the sender, rather than in acquiring exclusive access to a sentence.
-This is an interpretation to be developed from the composition pattern, not something text similarity directly observes.
 
 **Proposition 1—Selective profile composition.**
 *Under copyability, workers compose profiles selectively: they copy portable claims and author claims that must fit them, and when they copy wording, they adapt the elements that make it fit.*
@@ -671,7 +660,7 @@ Occupationally specific composition has different asking-rate associations depen
 A single measure of textual specificity would conflate these combinations; a single exact-sharing indicator would conflate a profile with a small shared close and one dominated by shared assurances.
 
 Earlier work associates conventional signals that any sender can produce with weaker outcomes, for example ingratiation with lower earnings [@HolthausStock2018].
-This is consistent with, though it does not explain, the discount we find for shared generic wording.
+This is consistent with the discount we find for shared generic wording.
 
 The family component adds a relational dimension.
 The geographic, occupational, and cohort patterns show that generic forms can circulate through bounded environments even though their meanings are broadly applicable.
@@ -764,12 +753,12 @@ Studies of profile distinctiveness measure how far a profile's topics depart fro
 We find a similar division in individual self-presentation, where no disclosure rules or liability apply and the shared wording circulates among identifiable groups of workers.
 A shared sentence can raise similarity to a job opening in the same way as a composed one, and a stylistic index cannot distinguish a worker's own voice from a template's.
 Repeated claims can thus carry information about a circulation environment as well as about an individual.
-Sharing measures offer a way of separating these sources, although they do not resolve claim truth or original ownership.
+Sharing measures offer a way of separating these sources.
 
 Our within-profile results place specificity in composition and not in a worker's overall style.
 Occupation-specific and numerical sentences are less likely to be shared within the same profile, whereas assurances, encounter formulae, and later sentences are more likely to be shared.
 Related work finds that specificity is not rewarded uniformly and that its value depends on occupation, audience, and outcome [@Kokkodis2023; @FuEtAl2021; @YueHong2025].
-Our outcome is asking rate, not hiring or realized earnings, so these results do not conflict, but they should not be merged.
+Our outcome is the asking rate, not hiring or earnings, so these results complement rather than contradict that work.
 Linking the composition of shared and authored wording to hiring and earnings is a natural next step.
 
 For work on self-presentation, the findings contribute a *relational view of profile text*.
@@ -784,7 +773,6 @@ Global visibility does not imply a globally homogeneous resource for learning ho
 Methodologically, the contribution is the conjunction of sequence-based reuse detection, within-profile composition analysis, and worker-level composition and family modeling.
 These methods expose relationships that topic similarity or profile-level originality scores would obscure.
 The consolidated robustness analysis identifies which parts of the account are stable and which require qualification.
-The supplementary readings supply concrete context without being elevated into an independent validation study.
 
 ## Implications for Platforms, Clients, and Workers
 
@@ -807,8 +795,7 @@ Whether that continues under richer records is an empirical question.
 
 For clients, a description's evidence should be considered in context, not inferred from the novelty of its wording.
 For workers and training providers, templates can remain useful resources, but broadly applicable assurances do not replace a fitting account of services and experience.
-The study does not establish that changing a profile's wording raises its rate or improves demand.
-Accordingly, our recommendations concern information quality and interpretive care, not a proven intervention for increasing earnings.
+Because the study does not establish that changing a profile's wording raises its rate, our recommendations concern information quality rather than earnings.
 
 ## Limitations and Future Research
 

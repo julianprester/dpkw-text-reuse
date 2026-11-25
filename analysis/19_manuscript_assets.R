@@ -271,8 +271,8 @@ theory_fig <- local({
   }
   ggplot() + coord_cartesian(xlim = c(0, 13.1), ylim = c(-.6, 7.3), clip = "off") + theme_void() + list(
     rect(4.64, 7.84, .1, 6.78, "#f1f6f9"), txt(6.24, 6.62, "SIGNAL PORTFOLIO BUILDING", 2.5, "bold", BLUE),
-    txt(1.2, 6.95, "CONDITIONS", 3, "bold", BLUE), txt(6.25, 7.05, "PRACTICES", 3, "bold", BLUE), txt(12.225, 6.95, "OUTCOME", 3, "bold", BLUE),
-    box(1.2, 5.7, 2.1, .9, GREY, "Copyability"), box(1.2, 4.2, 2.1, .9, GREY, "Differentiation\npressure"),
+    txt(1.2, 6.95, "CONDITION", 3, "bold", BLUE), txt(6.25, 7.05, "PRACTICES", 3, "bold", BLUE), txt(12.225, 6.95, "OUTCOME", 3, "bold", BLUE),
+    box(1.2, 4.95, 2.1, .9, GREY, "Copyability"),
     block(2.35, 4.6, 4.95, .85, 1.15, .45, "P1", "Selective\ncomposition", inline = TRUE),
     rect(4.7, 7.8, 2.1, 6.4, NA, 2),
     txt(6.25, 6.3, "PROFILE COMPOSITION", 2.8, "bold", BLUE, v = 1),

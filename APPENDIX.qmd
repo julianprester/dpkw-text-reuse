@@ -354,7 +354,7 @@ Record-specific standard errors use the covariance of the relevant coefficient s
 Tables and figures show normal-approximation 95% intervals transformed from $b\pm1.96\,\operatorname{SE}(b)$; they are descriptive Wald intervals, not simultaneous post-selection confidence guarantees.
 
 The family ratio $\sigma_v^2/(\sigma_v^2+\sigma_\varepsilon^2)$ applies among sharers and excludes city variance.
-It does not measure the fraction of total rate variation explained by all provenance information.
+It does not measure the fraction of total rate variation explained by all circulation information.
 The likelihood-ratio comparison adds one variance component at a boundary.
 Its usual chi-square calibration requires care; the manuscript reports the statistic and the component rather than a numerical $p=0$.
 Family effects may capture unobserved service niches and organizational contexts as well as circulation environments.

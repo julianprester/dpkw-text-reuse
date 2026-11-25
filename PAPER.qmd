@@ -97,7 +97,7 @@ These are cross-sectional associations with workers' asking prices, not demonstr
 We develop these patterns into a process model.
 Copyability and differentiation pressure are its conditions, profile composition is its practice, and market position is its outcome.
 Profile composition is the combination of two concurrent practices, authoring and copying.
-Three propositions state the mechanisms that link the constructs: selective composition, composition and provenance associations with market position, and non-substitution between records and text.
+Three propositions state the mechanisms that link the variables: selective composition, composition and provenance associations with market position, and non-substitution between records and text.
 The account distinguishes three components of textual signals: *content*, or what a claim says; *profile composition*, or the profile's combination of shared and non-exact-shared wording; and *provenance*, or the circulation relationships indexed by its shared text.
 The distinction does not imply that we can recover a sentence's original author or externally verified source.
 It explains why reproducible content can coexist with informative composition and circulation.
@@ -317,11 +317,11 @@ Appendix E gives the computing environment and run order.
 
 {{< include analysis/output/paper/tables/sample_flow.qmd >}}
 
-## Constructs and Measurements
+## Variables and Measurements
 
-The study builds on constructs at the sentence and profile levels, as illustrated in @fig-phenomenon.
+The study builds on variables at the sentence and profile levels, as illustrated in @fig-phenomenon.
 
-@tbl-measures summarizes the constructs, their operationalizations, and the role each plays in the two models.
+@tbl-measures summarizes the variables, their operationalizations, and the role each plays in the two models.
 
 > Copyability and differentiation pressure are scope conditions of the setting, not measured variables, and control variables are listed with Model 2 below.
 > *Differentiation pressure* is the need to stand out to a hurried audience that can read copy-paste as laziness [@BlythJarrahiLutzEtAl2022]; like copyability, it is drawn from the literature and not measured.
@@ -366,7 +366,7 @@ Types used by at least 100 workers and carrying at least .5 bits of divergence, 
 The lexicon contains {{< var lexicon >}} informative types.
 Sentence specificity is the number of distinct informative types, modeled as $\log(1+\text{specific types})$ in Model 1.
 A sentence is specific in Model 2 if it contains at least one informative type.
-Estimating the lexicon on less-shared text reduces the possibility that a circulating template manufactures its own occupational specificity, but does not independently validate the construct.
+Estimating the lexicon on less-shared text reduces the possibility that a circulating template manufactures its own occupational specificity, but does not independently validate the variable.
 
 **Function.**
 A transparent, ordered dictionary assigns moves before they are collapsed for Model 1.
@@ -383,15 +383,15 @@ A worker's dominant family covers the largest number of that worker's shared sen
 This assignment summarizes circulation but does not represent all memberships of workers who combine several families.
 Locality, cohort proximity, and price-peer comparisons describe the relational structure of reuse separately from the asking-rate model.
 
-| Construct | Operationalization | Interpretation and boundary |
+| Variable | Measurement | Interpretation and boundary |
 |:--|:-----|:---|
-| **Sentence-level measures** | | |
+| **Sentence-level variables** | | |
 | Copied<sup>N</sup> | Binary variable. Levels:<br>0: No exact copy detected in the corpus, i.e., authored<br>1: A word-five-gram match at $J=1$ was detected with at least one other profile, i.e., copied. | Shared measured form, not verified copying intent or direction; authored includes non-exact near-copies |
 | Occupational specificity | Count variable.<br>Number of distinct nonnumeric informative word types (each type counted once), where a type must be used by at least 100 workers and have occupational KL divergence ≥ 0.5 bits [based on @GrimmerStewart2013].  | Occupational concentration, not uniquely personal truth |
 | Numerical content | Binary variable. Levels:<br>0: No numeric token detected<br>1: At least one numeric token detected by the content tokenizer  | Can concern history, quantities, or service promises |
 | Rhetorical function | Categorical variable. Levels:<br>Claim-bearing: identity, credential, or capability<br>Assurance: character or process<br>Encounter: contact, invitation, and courtesy language<br>Other: agency voice or unmatched sentences<br>The categories are assigned using a precedence-ordered dictionary of keywords [based on @GrimmerStewart2013].   | Claim-bearing combines identity, credential, capability; estimation label: “individuating claim” |
 | Sentence position | Continuous variable (bounded 0,1).<br>Measures the relative sentence position: $$\frac{\text{rank}-1}{\text{number of qualifying sentences}-1}$$ Scale:<br>0 = first qualifying sentence<br>1 = last qualifying sentence<br>Intermediate values locate sentences proportionally between them.| Index among qualifying units; does not necessarily equal literal position in the description text |
-| **Profile-level measures** | | |
+| **Profile-level variables** | | |
 | Authored-generic share<sup>N</sup><sup>C</sup> | Continuous variable (bounded 0,1).<br>Measures the proportion of a worker's qualifying sentences that have no detected exact cross-worker match ($J<1$) and contain no occupation-informative word type. | Operationally, no exact match detected; includes near-copies and does not establish independent authorship |
 | Authored-specific share<sup>N</sup><sup>C</sup> | Continuous variable (bounded 0,1).<br>Measures the proportion of a worker's qualifying sentences that have no detected exact cross-worker match ($J<1$) and contain at least one occupation-informative word type. | Operationally, no exact match detected; includes near-copies and does not establish independent authorship |
 | Copied-generic share<sup>N</sup><sup>C</sup> | Continuous variable (bounded 0,1).<br>Measures the proportion of a worker's qualifying sentences with an exact cross-worker match ($J=1$) and no occupation-informative word type. | Exact sharing is a measured textual match; copying intent and direction are not established |
@@ -400,9 +400,9 @@ Locality, cohort proximity, and price-peer comparisons describe the relational s
 | Verified work record | Categorical variable. Levels:<br>0, 1–9, 10–49, 50+ completed jobs [cf. @Pallais2014; @KanatHongRaghu2018; @KathuriaEtAl2021] | Platform-recorded work, distinct from textual claims about experience |
 | Market position | Continuous variable.<br>Posted hourly asking rate in USD [cf. @MorenoTerwiesch2014; @Kokkodis2023] | Asking price, not realized wage or observed client valuation |
 
-: Constructs and measurements {#tbl-measures .small-table}
+: Variables and measurements {#tbl-measures .small-table}
 
-*Note.* <sup>N</sup> New construct, adapted from computational text-reuse methods in political science [@WilkersonEtAl2015; @LinderEtAl2020].<br><sup>C</sup> The composition shares sum to 1 for each profile.
+*Note.* <sup>N</sup> New variable, adapted from computational text-reuse methods in political science [@WilkersonEtAl2015; @LinderEtAl2020].<br><sup>C</sup> The composition shares sum to 1 for each profile.
 
 ## Model 1: Within-Profile Composition
 
@@ -775,20 +775,20 @@ Differentiation pressure is the need to stand out to a hurried audience that can
 We treat both as conditions of the setting and do not measure either.
 Profile composition, the combination of authoring and copying within a description, is the practice through which workers respond to them.
 Market position, operationalized as the posted asking rate, is the outcome.
-The propositions are drawn as the arrows between constructs because each states the mechanism that links them.
+The propositions are drawn as the arrows between variables because each states the mechanism that links them.
 Verified records are not a condition of the setting: many workers have none, and for them the description is much of what a client can read.
 We therefore show them as a second practice, reputation building, alongside profile composition.
 Unlike wording, a record cannot be copied.
 Proposition 3 asks whether the textual associations persist across record groups.
 Circulation families describe how copied wording is distributed across profiles, so the model shows them as a property of copying.
 
-![A process model of profile composition under copyability. Boxes are constructs; the arrows are the propositions, which state the mechanisms linking them. Copyability and differentiation pressure are conditions, authoring and copying are concurrent practices whose combination is the profile composition, and circulation families are a property of copying that spans profiles. Reputation building, observed as verified records, is a second practice that cannot be copied; P3 states that the P2 associations persist across record groups. The diagram summarizes proposed relationships, not an identified causal path model or a temporal sequence.](analysis/output/paper/figures/theory.png){#fig-theory}
+![A process model of profile composition under copyability. Boxes are variables; the arrows are the propositions, which state the mechanisms linking them. Copyability and differentiation pressure are conditions, authoring and copying are concurrent practices whose combination is the profile composition, and circulation families are a property of copying that spans profiles. Reputation building, observed as verified records, is a second practice that cannot be copied; P3 states that the P2 associations persist across record groups. The diagram summarizes proposed relationships, not an identified causal path model or a temporal sequence.](analysis/output/paper/figures/theory.png){#fig-theory}
 
 The model is a process model in a limited sense.
 It specifies conditions, practices, and an outcome, not an ordered sequence of events.
 Authoring and copying are concurrent practices that vary in degree within one profile.
 A cross-section cannot order them in time, and the created and updated timestamps describe whole descriptions, not individual sentences.
-The three components introduced in the Constructs section map onto the model.
+The three components introduced in the variables section map onto the model.
 Content is what the practices act on.
 Profile composition is the combination of authoring and copying that results.
 Provenance is the circulation relationships that copied wording indexes, shown in the model as a property of copying.
@@ -798,7 +798,7 @@ They are interpretations of the computational evidence, not directly observed co
 ## Selective Composition of Profiles
 
 Under these conditions a worker can author wording, copy it, or combine both.
-*Profile composition* is the combination of the two practices, observed as authored and exact-shared sentences (see Constructs and Measurements).
+*Profile composition* is the combination of the two practices, observed as authored and exact-shared sentences (see Variables and Measurements).
 
 Copyability makes broadly applicable language available without requiring a worker to compose its wording anew.
 It does not make all claims equally fitting for all workers.

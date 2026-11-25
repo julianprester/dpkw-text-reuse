@@ -22,20 +22,19 @@ W[, `:=`(country_f = factor(fifelse(country %in% big_c, country, "Other")), occ_
 W[, record := factor(fcase(totalJobsWorked == 0, "0 jobs", totalJobsWorked < 10, "1-9 jobs", totalJobsWorked < 50, "10-49 jobs", default = "50+ jobs"), levels = c("0 jobs", "1-9 jobs", "10-49 jobs", "50+ jobs"))]
 W[, rating_f := factor(fcase(!rated, "unrated", rating >= 4.95, ">=4.95", rating >= 4.8, "4.8-4.95", default = "<4.8"), levels = c("unrated", ">=4.95", "4.8-4.95", "<4.8"))]
 W[, `:=`(d1 = as.integer(record == "1-9 jobs"), d2 = as.integer(record == "10-49 jobs"), d3 = as.integer(record == "50+ jobs"))]
-ctrl <- "record + ljobs + lhours + rating_f + splines::ns(tenure_yrs, 5) + agency + n_occ + lchars + log(n_c)"
+ctrl <- "record + rating_f + tenure_yrs + agency + n_occ + lchars"
 int_terms <- "authored_spec:d1 + authored_spec:d2 + authored_spec:d3 + shared_any:d1 + shared_any:d2 + shared_any:d3"
 
-run_check <- function(label, thr = 1, spec_rule = "kl05", sent_filter = NULL, worker_filter = NULL, m1_spec = "lspec", ml = FALSE, m1_lpm = FALSE, dv = "lrate") {
+run_check <- function(label, thr = 1, spec_rule = "kl05", sent_filter = NULL, worker_filter = NULL, ml = FALSE, m1_lpm = FALSE, dv = "lrate") {
   cat("\n=====", label, "\n")
   Y <- copy(X)
   if (!is.null(sent_filter)) Y <- Y[eval(sent_filter)]
   Y[, shared := as.integer(maxJ >= thr)]
-  Y[, specific := if (spec_rule == "kl05") spec_n > 0 else spec_max >= 1]
-  Y[, lspec := if (m1_spec == "lspec") log1p(spec_n) else spec_max]
+  Y[, specific := as.integer(if (spec_rule == "kl05") spec_n > 0 else spec_max >= 1)]
   wf <- W; if (!is.null(worker_filter)) wf <- wf[eval(worker_filter)]
   Y <- Y[wid %in% wf$wid]
   # ---- Model 1
-  f1 <- shared ~ lspec + number + func + rel + lwords | wid
+  f1 <- shared ~ specific + number + func + rel + lwords | wid
   m1 <- if (m1_lpm) feols(f1, data = Y[n_c >= 2], cluster = ~wid) else feglm(f1, data = Y[n_c >= 2], family = binomial, cluster = ~wid)
   b1 <- coef(m1); s1 <- se(m1)
   # ---- Model 2: composition without interactions (P2a, P2b) and with record interactions (P3)
@@ -47,7 +46,7 @@ run_check <- function(label, thr = 1, spec_rule = "kl05", sent_filter = NULL, wo
   m2a <- if (dv == "lowrating") feglm(f2a, data = R, family = binomial, cluster = ~country_f) else feols(f2a, data = R, cluster = ~country_f)
   b2 <- coef(m2a); s2 <- se(m2a)
   out <- data.table(check = label,
-    m1_n = nobs(m1), m1_lspec = b1["lspec"], m1_lspec_se = s1["lspec"], m1_number = b1["number"], m1_number_se = s1["number"], m1_assurance = b1["funcassurance"],
+    m1_n = nobs(m1), m1_spec = b1["specific"], m1_spec_se = s1["specific"], m1_number = b1["number"], m1_number_se = s1["number"], m1_assurance = b1["funcassurance"],
     m1_encounter = b1["funcencounter formula"], m1_rel = b1["rel"],
     dv = dv, m2_n = nobs(m2a), m2_authored_spec = b2["authored_spec"], m2_authored_spec_se = s2["authored_spec"], m2_shared_gen = b2["shared_gen"], m2_shared_gen_se = s2["shared_gen"],
     m2_shared_spec = b2["shared_spec"], m2_shared_spec_se = s2["shared_spec"], m2_shared_gen_0jobs = NA_real_, m2_shared_gen_50plus = NA_real_, m2_shared_gen_50plus_se = NA_real_)
@@ -84,7 +83,7 @@ checks <- list(
   list(label = "Shared = near-copy (J >= 0.7)", thr = 0.7, ml = TRUE),
   list(label = "Long sentences only (>= 15 words)", sent_filter = quote(nwords >= 15)),
   list(label = "Excluding agency members", worker_filter = quote(agency == FALSE), ml = TRUE),
-  list(label = "Stricter specificity (max word KL >= 1)", spec_rule = "kl1", m1_spec = "klmax"),
+  list(label = "Stricter specificity (max word KL >= 1)", spec_rule = "kl1"),
   list(label = "Never-edited profiles (text written at creation)", worker_filter = quote(text_dated == TRUE), ml = TRUE),
   list(label = "Ten largest countries", worker_filter = quote(country %in% top10)),
   list(label = "Excluding fully templated profiles (>= 90% shared)", worker_filter = quote(!(wid %in% X[, .(s = mean(maxJ >= 1)), by = wid][s >= 0.9, wid]))),
@@ -106,7 +105,7 @@ save_table(res, "robustness_estimates")
 sig <- function(b, s, dir) ifelse(is.na(b) | is.na(s), NA, if (dir < 0) b + 1.96 * s < 0 else b - 1.96 * s > 0)
 main_icc <- as.numeric(fread(file.path(OUT, "numbers", "13_model2.csv"))[name == "m2_icc_provenance", value])
 S <- res[, .(check, dv,
-  P1_authorship_allocation = sig(m1_lspec, m1_lspec_se, -1) & sig(m1_number, m1_number_se, -1) & m1_assurance > 0 & m1_encounter > m1_assurance & m1_rel > 0,
+  P1_authorship_allocation = sig(m1_spec, m1_spec_se, -1) & sig(m1_number, m1_number_se, -1) & m1_assurance > 0 & m1_encounter > m1_assurance & m1_rel > 0,
   P2a_authorship_premium = sig(m2_authored_spec, m2_authored_spec_se, 1),
   P2b_commons_discount_generic = sig(m2_shared_gen, m2_shared_gen_se, -1),
   P2b_shared_specific_discount = sig(m2_shared_spec, m2_shared_spec_se, -1),

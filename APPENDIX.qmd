@@ -25,7 +25,7 @@ The main sample-flow table separates that frame from the identifying sample of M
 Model 2 restricts posted USD hourly rates to 3–500 and requires the existing age covariate.
 {{< var m2-workers >}} workers meet these conditions.
 The age restriction is retained to match the original estimated specification.
-Completed jobs and recorded hours supply the platform-experience controls; the age spline is a separate timestamp-derived control.
+Completed-job groups supply the platform-experience control; description age is a separate timestamp-derived control.
 
 {{< include analysis/output/paper/tables/sample_descriptives.qmd >}}
 
@@ -51,8 +51,7 @@ $$
 $$
 
 We describe this variable as description/profile age, not worker tenure.
-Model 2 includes a five-degree-of-freedom natural spline of that age in addition to completed-job groups and log jobs/hours.
-Retaining it does not change the interpretation of the experience controls.
+Model 2 includes this age linearly, in addition to completed-job groups.
 
 The flag `text_dated` is true when the observed update–creation gap is at most one day.
 The existing outputs call these profiles “never-edited.”
@@ -145,10 +144,10 @@ There are {{< var lexicon >}} informative word types.
 The baseline is estimated from the workers contributing to this lexicon, rather than a hypothetical global occupation distribution.
 
 For each sentence, `spec_n` counts *distinct informative types*, not repeated occurrences of the same informative word.
-Model 1 uses $\log(1+\text{spec\_n})$.
-Model 2's specific/generic division is whether `spec_n` is greater than zero.
-The stricter robustness rule uses maximum token KL of at least one bit; its Model 1 predictor is that maximum, not the logarithmic type count.
-These different predictor scales make their odds ratios inappropriate for direct magnitude comparison.
+A sentence is specific if `spec_n` is greater than zero; Model 1 uses this indicator as its specificity predictor.
+Model 2's specific/generic division uses the same indicator.
+The stricter robustness rule counts a sentence as specific only if its maximum token KL is at least one bit, in both models.
+Its odds ratio is therefore not directly comparable in magnitude with the main one.
 
 The lexicon supplies an occupational concentration measure.
 It does not establish that a sentence describes one worker uniquely, that its claim is true, or that it cannot circulate unchanged within an occupation.
@@ -332,7 +331,8 @@ The non-interaction fixed-effects form describes the average composition slopes 
 The three shared-share interactions shift shared-generic and shared-specific slopes equally.
 Authored-specific interactions are estimated separately.
 The model does not estimate a completely unrestricted interaction of all four composition categories with record groups.
-The common controls are record group, log jobs, log hours, rating bands, a five-degree-of-freedom natural spline of profile/description age, agency affiliation, occupation count, log description characters, and log qualifying-sentence count.
+The common controls are completed-job group, rating bands, description age (linear), agency affiliation, occupation count, and log description characters.
+An earlier, fuller control set (adding log jobs, log hours, a five-degree-of-freedom age spline, and log qualifying-sentence count) gives form 2a composition contrasts within about one percentage point of those reported and a somewhat larger shared-generic contrast in the 50+ completed-job group.
 
 Rating bands are unrated, at least 4.95, 4.8–<4.95, and below 4.8.
 Countries with at least 200 workers in the qualifying frame retain separate categories; remaining and missing countries are “Other.”
@@ -380,7 +380,7 @@ The modified specifications are:
    Both worker outcomes and composition use non-agency workers.
    A constant agency indicator can be dropped for collinearity; the family component is also refitted.
 4. **Stricter specificity.**
-   Model 2 uses maximum token KL of at least one bit; Model 1 uses the maximum KL predictor.
+   Both models count a sentence as specific only if its maximum token KL is at least one bit.
    Shared-specific composition changes sign, limiting a universal shared-expertise discount.
 5. **Within-one-day edit subset.**
    Uses `text_dated` as defined in Appendix A.
@@ -398,7 +398,7 @@ The modified specifications are:
    A binary indicator of rating below 4.8 among rated workers with at least five completed jobs.
    The rating-band predictor is removed because it contains the outcome; the remaining applicable controls and country-clustered inference are retained.
 10. **Hours outcome.**
-    Uses $\log(1+\text{recorded hours})$, adds log asking rate, and removes hours as a predictor.
+    Uses $\log(1+\text{recorded hours})$ as the outcome and adds log asking rate as a predictor.
     Completed-job controls and other applicable covariates remain.
     A transformed unit contrast is therefore a percent difference in $1+\text{hours}$, approximately interpretable as hours only away from zero.
 

@@ -66,8 +66,8 @@ fromreg("lexicon", "03_content", "lexicon_informative")
 fromreg("m1-all", "12_model1", "m1_sentences_all")
 fromreg("m1-sentences", "12_model1", "m1_sentences_used")
 fromreg("m1-profiles", "12_model1", "m1_profiles_used")
-for (k in c("lspec", "number", "assurance", "encounter", "rel"))
-  fromreg(paste0("m1-or-", k), "12_model1", paste0("m1_or_", k), "decimal", if (k %in% c("lspec", "number")) 3 else 2)
+for (k in c("specific", "number", "assurance", "encounter", "rel"))
+  fromreg(paste0("m1-or-", k), "12_model1", paste0("m1_or_", k), "decimal", if (k %in% c("specific", "number")) 3 else 2)
 fromreg("m2-workers", "13_model2", "m2_workers")
 fromreg("m2-sharers", "13_model2", "m2_sharers")
 fromreg("m2-families", "13_model2", "m2_families")
@@ -120,13 +120,13 @@ md(data.frame(Record = record$Record, Workers = ni(record$N), Share = paste0(fx(
 
 # Model 1 main and appendix results.
 M1 <- read_tab("model1_coefficients")
-terms1 <- c("lspec", "number", "funcassurance", "funcencounter formula", "funcother", "rel", "lwords")
-labels1 <- c("Occupational specificity: log(1 + distinct informative types)", "Contains a numeric token", "Assurance", "Encounter formula", "Other function", "Relative position (0 = first, 1 = last qualifying sentence)", "Log sentence words")
+terms1 <- c("specific", "number", "funcassurance", "funcencounter formula", "funcother", "rel", "lwords")
+labels1 <- c("Occupationally specific (at least one informative type)", "Contains a numeric token", "Assurance", "Encounter formula", "Other function", "Relative position (0 = first, 1 = last qualifying sentence)", "Log sentence words")
 A <- M1[model == "M1 main (FE logit)"][match(terms1, term)]
 L <- M1[model == "M1 LPM (FE OLS)"][match(terms1, term)]
 md(data.frame(Predictor = labels1, `Logit coefficient (SE)` = bs(A$est, A$se), `Odds ratio` = fx(exp(A$est)), `95% interval for OR` = paste0("[", fx(exp(A$est - 1.96 * A$se)), ", ", fx(exp(A$est + 1.96 * A$se)), "]"), `Linear probability (SE)` = bs(L$est, L$se), check.names = FALSE),
    "model1", "Model 1: within-profile composition", "tbl-model1",
-   "773,424 sentences in 86,956 mixed profiles for the logit; worker fixed effects and worker-clustered standard errors. Function reference: dictionary-coded identity, credential, or capability (the estimation label is ‘individuating claim’); relative position runs from 0 (first qualifying sentence) to 1 (last). Intervals are normal-approximation Wald intervals. The specificity OR is per one-unit increase in log(1 + distinct informative types), not per additional word. The linear-probability column is a link-function check on direction; it uses all 2,309,694 eligible sentences, including profiles whose sharing outcome does not vary, and no odds-ratio transformation applies.")
+   "773,424 sentences in 86,956 mixed profiles for the logit; worker fixed effects and worker-clustered standard errors. Function reference: dictionary-coded identity, credential, or capability (the estimation label is ‘individuating claim’); relative position runs from 0 (first qualifying sentence) to 1 (last). Intervals are normal-approximation Wald intervals. The linear-probability column is a link-function check on direction; it uses all 2,309,694 eligible sentences, including profiles whose sharing outcome does not vary, and no odds-ratio transformation applies.")
 
 # Model 2 selected coefficients for the two fixed-effects forms and multilevel form.
 M2 <- read_tab("model2_fixed_effects_clustered")
@@ -140,7 +140,7 @@ show2 <- data.frame(Predictor = labels2, `2a: Composition (SE)` = bs(A$est, A$se
 vc <- read_tab("model2_variance_components")
 show2 <- rbind(show2, data.frame(Predictor = c("City variance", "Circulation-family variance", "Residual variance"), `2a: Composition (SE)` = "—", `2b: Record interactions (SE)` = "—", `2c: Multilevel (SE)` = fx(vc$var[match(c("city_f", "family", "Residual"), vc$grp)], 5), check.names = FALSE))
 md(show2, "model2", "Model 2: profile composition, verified records, and circulation families", "tbl-model2",
-   "Selected coefficients; dependent variable: log posted USD hourly rate; N = 352,986 throughout. Omitted composition: authored-generic share. All forms include country and first-listed-occupation effects, completed-job groups, log(1 + jobs), log(1 + hours), rating bands, a five-degree-of-freedom description-age spline, agency membership, occupation count, log description characters, and log qualifying-sentence count. Forms 2a/2b have country-clustered SEs. Form 2c has model-based SEs and ML city and sharer-only family random effects. In 2b/2c, composition main effects refer to zero jobs; shared-share interactions shift both shared categories equally. ML SEs are not country-clustered.")
+   "Selected coefficients; dependent variable: log posted USD hourly rate; N = 352,986 throughout. Omitted composition: authored-generic share. All forms include country and first-listed-occupation effects, completed-job groups, rating bands, description age (linear), agency membership, occupation count, and log description characters. Forms 2a/2b have country-clustered SEs. Form 2c has model-based SEs and ML city and sharer-only family random effects. In 2b/2c, composition main effects refer to zero jobs; shared-share interactions shift both shared categories equally. ML SEs are not country-clustered.")
 SL <- read_tab("model2_slopes_by_record")
 contrast <- function(b, se) paste0(sprintf("%+.1f", pc(b)), "% [", fx(pc(b - 1.96 * se), 1), ", ", fx(pc(b + 1.96 * se), 1), "]")
 md(data.frame(Record = gsub("-", "–", SL$record), `Authored-specific` = contrast(SL$authored_spec_est, SL$authored_spec_se), `Shared-generic` = contrast(SL$shared_gen_est, SL$shared_gen_se), `Shared-specific` = contrast(SL$shared_spec_est, SL$shared_spec_se), check.names = FALSE),
@@ -177,10 +177,10 @@ for (i in seq_len(nrow(ROB))) {
   }
 }
 md(rs, "robustness", "Robustness and outcome triangulation", "tbl-robustness",
-   "Rate rows show full-unit composition contrasts against authored-generic text; family share is family/(family + residual) variance, excluding city variance. ‘Retained’ denotes the saved joint composition signature, not validation of every dictionary label. The stricter rule uses maximum word KL ≥ 1 bit and changes the Model 1 specificity scale. The LPM row changes only Model 1; Model 2 is not an independent new rate fit. The two outcome rows are not price-discount tests. Blank family entries were not refit.")
-ra <- data.frame(Check = short, `M1 sentences` = ni(ROB$m1_n), `Worker outcome N` = ni(ROB$m2_n), `Specificity estimate (SE)` = bs(ROB$m1_lspec, ROB$m1_lspec_se), `Number estimate (SE)` = bs(ROB$m1_number, ROB$m1_number_se), check.names = FALSE)
+   "Rate rows show full-unit composition contrasts against authored-generic text; family share is family/(family + residual) variance, excluding city variance. ‘Retained’ denotes the saved joint composition signature, not validation of every dictionary label. The stricter rule counts a sentence as specific only if its most informative word has KL ≥ 1 bit. The LPM row changes only Model 1; Model 2 is not an independent new rate fit. The two outcome rows are not price-discount tests. Blank family entries were not refit.")
+ra <- data.frame(Check = short, `M1 sentences` = ni(ROB$m1_n), `Worker outcome N` = ni(ROB$m2_n), `Specificity estimate (SE)` = bs(ROB$m1_spec, ROB$m1_spec_se), `Number estimate (SE)` = bs(ROB$m1_number, ROB$m1_number_se), check.names = FALSE)
 md(ra, "robustness_samples", "Robustness samples and selected Model 1 coefficients", "tbl-robustness-samples",
-   "Model 1 entries are logit coefficients except the LPM row. Alternative-outcome entries repeat main Model 1 rather than estimating new composition relationships. The stricter rule uses maximum word KL, not log(1 + informative types). The ≥ 15-word check retains original qualifying-sentence position indicators.")
+   "Model 1 entries are logit coefficients except the LPM row. Alternative-outcome entries repeat main Model 1 rather than estimating new composition relationships. The stricter rule counts a sentence as specific only if its most informative word has KL ≥ 1 bit. The ≥ 15-word check retains original qualifying-sentence position indicators.")
 rb <- data.frame(Check = short, `Authored-specific (SE)` = bs(ROB$m2_authored_spec, ROB$m2_authored_spec_se), `Shared-generic (SE)` = bs(ROB$m2_shared_gen, ROB$m2_shared_gen_se), `Shared-specific (SE)` = bs(ROB$m2_shared_spec, ROB$m2_shared_spec_se), check.names = FALSE)
 md(rb, "robustness_coefficients", "Robustness worker-level coefficients", "tbl-robustness-coefficients",
    "Country-clustered SEs. Rate rows are log-rate coefficients without record interactions; the rating row is log odds and the hours row uses log(1 + recorded hours). Outcome-specific controls are described in Appendix D. The LPM row repeats the main worker-level estimates.")
@@ -371,7 +371,7 @@ fwrite(data.table(path = inputs, md5 = unname(tools::md5sum(inputs))), file.path
 writeLines(c("Publication assets assembled from saved estimates, without re-estimation.",
              "Tables: model coefficients, explicitly labeled SEs, and normal-approximation intervals.",
              "Figures: publication labels replace earlier causal or actor-direction wording.",
-             "Original age spline retained; tenure_yrs is DESCRIPTION/PROFILE AGE, distinct from job/hour experience controls.",
+             "Description age enters linearly; tenure_yrs is DESCRIPTION/PROFILE AGE, distinct from the completed-job controls.",
              "Within-one-day edit status does not establish that text preceded any completed work.",
              paste0("Quotation checks: all ", nrow(Q), " excerpts found in saved exact-shared, variant, or near-copy-pair units."),
              paste0("Model 2 frame check: ", nrow(R), " workers.")), file.path(OUT, "asset_checks.txt"))

@@ -1,17 +1,17 @@
 | Check | M1 composition | Authored-specific | Shared-generic | Shared-specific | Family share | Shared-generic: 0 → 50+ jobs |
 | :--- | ---: | ---: | ---: | ---: | ---: | ---: |
-| Main specification | Retained | +6.0% | -27.9% | -13.7% | 6.4% | -23.0% → -30.0% |
-| Sharing at J ≥ .7 | Retained | +5.6% | -27.1% | -13.9% | 6.4% | -22.8% → -28.8% |
-| Sentences ≥ 15 words | Retained | +3.4% | -23.0% | -16.1% | — | -16.4% → -26.1% |
-| Exclude agency members | Retained | +5.7% | -28.4% | -15.2% | 5.7% | -22.7% → -29.2% |
-| Stricter specificity | Retained | +9.5% | -27.4% | +7.0% | — | -22.9% → -28.5% |
-| Within-one-day edit subset | Retained | +5.4% | -29.2% | -14.5% | 1.8% | -22.4% → -46.8% |
-| Ten largest countries | Retained | +7.5% | -27.9% | -12.7% | — | -23.5% → -28.7% |
-| Exclude ≥ 90% shared profiles | Retained | +6.2% | -30.1% | -16.5% | — | -29.9% → -30.7% |
+| Main specification | Retained | +6.6% | -27.0% | -12.6% | 6.3% | -22.9% → -26.7% |
+| Sharing at J ≥ .7 | Retained | +6.3% | -26.2% | -12.8% | 6.3% | -22.7% → -25.5% |
+| Sentences ≥ 15 words | Retained | +4.0% | -22.2% | -15.2% | — | -16.2% → -23.1% |
+| Exclude agency members | Retained | +6.4% | -27.6% | -14.0% | 5.6% | -22.3% → -25.0% |
+| Stricter specificity | Retained | +10.2% | -26.7% | +8.1% | — | -23.2% → -25.4% |
+| Within-one-day edit subset | Retained | +5.8% | -28.6% | -13.7% | 1.7% | -22.4% → -45.2% |
+| Ten largest countries | Retained | +7.9% | -27.1% | -12.0% | — | -23.6% → -25.6% |
+| Exclude ≥ 90% shared profiles | Retained | +6.8% | -29.3% | -15.4% | — | -30.0% → -27.4% |
 | Model 1 linear probability | Retained | — | — | — | — | — |
-| Rating < 4.8 (≥ 5 jobs) | — | No association | OR 1.21 | OR 1.66 | — | — |
-| Hours conditional on rate | — | No association | +31% (1+hours) | +87% (1+hours) | — | — |
+| Rating < 4.8 (≥ 5 jobs) | — | No association | OR 1.24 | OR 1.74 | — | — |
+| Hours conditional on rate | — | No association | +51% (1+hours) | +115% (1+hours) | — | — |
 
 : Robustness and outcome triangulation {#tbl-robustness}
 
-*Note.* Rate rows show full-unit composition contrasts against authored-generic text; family share is family/(family + residual) variance, excluding city variance. ‘Retained’ denotes the saved joint composition signature, not validation of every dictionary label. The stricter rule uses maximum word KL ≥ 1 bit and changes the Model 1 specificity scale. The LPM row changes only Model 1; Model 2 is not an independent new rate fit. The two outcome rows are not price-discount tests. Blank family entries were not refit.
+*Note.* Rate rows show full-unit composition contrasts against authored-generic text; family share is family/(family + residual) variance, excluding city variance. ‘Retained’ denotes the saved joint composition signature, not validation of every dictionary label. The stricter rule counts a sentence as specific only if its most informative word has KL ≥ 1 bit. The LPM row changes only Model 1; Model 2 is not an independent new rate fit. The two outcome rows are not price-discount tests. Blank family entries were not refit.

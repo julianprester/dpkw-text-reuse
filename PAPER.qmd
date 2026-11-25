@@ -734,13 +734,13 @@ The potential cost lies in developing and fitting a presentation to the sender, 
 This is an interpretation to be developed from the composition pattern, not something text similarity directly observes.
 
 **Proposition 1—Selective profile composition.**
-*Under copyability, workers compose profiles selectively: (a) they copy portable claims and author claims that must fit them, and (b) when they copy wording, they adapt the elements that make it fit.*
+*Under copyability, workers compose profiles selectively: they copy portable claims and author claims that must fit them, and when they copy wording, they adapt the elements that make it fit.*
 
 The proposition also addresses why composition is mixed.
 Copyability explains why workers can copy, but a claim that applies narrowly must still be written to fit.
 In the data, most profiles contain no detected exact sharing, and among those that do, reuse is usually partial.
 Selective composition is then the plausible response: copy what is portable, and author what must fit.
-Part (b) rests on the near-copy evidence: where wording recurs with variation, the variation falls disproportionately on occupation-informative and numerical words, the elements that make copied wording fit a particular worker.
+The adaptation part rests on the near-copy evidence: where wording recurs with variation, the variation falls disproportionately on occupation-informative and numerical words, the elements that make copied wording fit a particular worker.
 The proposition describes a tendency, not a prohibition.
 It is consistent with detailed shared capabilities and person-specific claims that occur late.
 Occupational specificity narrows applicability without necessarily identifying one person, and a copied history claim can be applicable to more than one worker.
